@@ -8,7 +8,8 @@
 | Category | Astro | React |
 |----------|:-----:|:-----:|
 | Buttons | 22 | ✅ 22 |
-| Feedback, Forms, Cards, Layout, Navigation, Overlays, Typography, Data, Charts, E-commerce, App, Sections, Templates | ✔ | ⏳ pending |
+| Feedback | 22 | ✅ 22 |
+| Forms, Cards, Layout, Navigation, Overlays, Typography, Data, Charts, E-commerce, App, Sections, Templates | ✔ | ⏳ pending |
 
 ## Install & use
 
@@ -65,6 +66,17 @@ node scripts/extract-css.mjs feedback   # copies <style> blocks → src/componen
 ```
 
 Then write each `Name.tsx` following the table above, add `index.ts` barrel, export it from `src/components/index.ts`, add the `./feedback` entry to `package.json#exports`, and add demos in `playground/demos/`.
+
+`npm run check-css` (also run by `npm run build`) fails if two components define the same root class or `@keyframes` name, since all styles share one bundle.
+
+### Interactive components
+
+Where Astro relied on DOM scripts, the React port exposes state as props/callbacks:
+
+- `GlassModal`: controlled with `open` / `onClose` / `onConfirm`, built on native `<dialog>` (Esc, focus trap, backdrop click).
+- `ToastNotificationGroup`: `onAction` / `onDismiss`; unmounts itself after the exit animation.
+- `ShakeErrorGroup`: change its `key` to replay the shake.
+- `ConfettiFeedback`: deterministic piece layout (no SSR hydration mismatch).
 
 ## License
 

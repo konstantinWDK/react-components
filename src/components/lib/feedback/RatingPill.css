@@ -1,0 +1,21 @@
+/* RatingPill — ported from astro-component-kit (feedback/RatingPill.astro) */
+
+.rate-pill { 
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--sp-1, 4px) var(--sp-3, 12px); 
+  border-radius: var(--r-full, 100px); 
+  font-weight: 800; 
+  font-size: 0.75rem; 
+  color: #fff; 
+  width: fit-content; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.rate-pill--high { background: #10b981; }
+.rate-pill--mid { background: #f59e0b; }
+.rate-pill--low { background: #ef4444; }
+
+.rate-pill__star { font-size: 0.8rem; margin-top: -1px; }
+.rate-pill__val { font-family: inherit; }

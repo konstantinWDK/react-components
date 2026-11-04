@@ -1,0 +1,30 @@
+/* CircleProgress — ported from astro-component-kit (feedback/CircleProgress.astro) */
+
+.circle-box { 
+  position: relative; 
+  width: var(--gauge-size); 
+  height: var(--gauge-size); 
+  display: grid; place-items: center; 
+}
+
+svg { transform: rotate(-90deg); }
+
+circle { fill: transparent; stroke-width: 6; stroke-linecap: round; }
+
+.circle-bg { 
+  stroke: var(--c-bg-elev, rgba(255,255,255,0.05)); 
+  stroke-width: 5;
+}
+
+.circle-val { 
+  transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1); 
+  filter: drop-shadow(0 0 3px var(--gauge-color));
+}
+
+.circle-label { 
+  position: absolute; 
+  font-size: 0.85rem; 
+  font-weight: 800; 
+  color: var(--c-text-1, #fff); 
+  font-family: inherit;
+}

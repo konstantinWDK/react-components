@@ -1,0 +1,31 @@
+/* TypingIndicator — ported from astro-component-kit (feedback/TypingIndicator.astro) */
+
+.typing-wrap { 
+  display: flex; 
+  padding: var(--sp-3, 0.75rem) var(--sp-5, 1.25rem); 
+  background: var(--c-bg-elev, rgba(255,255,255,0.05)); 
+  border-radius: var(--r-xl, 20px); 
+  width: fit-content; 
+  border: 1px solid var(--c-border, rgba(255,255,255,0.1));
+}
+
+.typing-dots { display: flex; gap: var(--sp-1, 4px); }
+
+.typing-dots span { 
+  width: 6px; 
+  height: 6px; 
+  background: var(--c-text-muted, #64748b); 
+  border-radius: var(--r-full, 50%); 
+  animation: typing-indicator-typing-bounce 0.8s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+}
+
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-indicator-typing-bounce { 
+  to { 
+    transform: translateY(-4px); 
+    background: var(--dot-color); 
+    filter: drop-shadow(0 0 2px var(--dot-color));
+  } 
+}

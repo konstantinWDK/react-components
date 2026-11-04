@@ -15,6 +15,10 @@
       "types": "./dist/types/components/lib/buttons/index.d.ts",
       "import": "./dist/buttons.js"
     },
+    "./feedback": {
+      "types": "./dist/types/components/lib/feedback/index.d.ts",
+      "import": "./dist/feedback.js"
+    },
     "./styles.css": "./dist/styles.css",
     "./global.css": "./dist/global.css"
   },
@@ -28,11 +32,12 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode lib && tsc -p tsconfig.build.json && cp src/styles/global.css dist/global.css",
+    "build": "node scripts/check-css.mjs && vite build --mode lib && tsc -p tsconfig.build.json && cp src/styles/global.css dist/global.css",
     "build:playground": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "extract-css": "node scripts/extract-css.mjs"
+    "extract-css": "node scripts/extract-css.mjs",
+    "check-css": "node scripts/check-css.mjs"
   },
   "keywords": [
     "react",

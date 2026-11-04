@@ -1,0 +1,18 @@
+/* GlassProgress — ported from astro-component-kit (feedback/GlassProgress.astro) */
+
+.progress-container { 
+  height: 10px; 
+  background: var(--c-bg-elev, rgba(255,255,255,0.05)); 
+  border-radius: var(--r-full, 10px); 
+  overflow: hidden; 
+  border: 1px solid var(--c-border, rgba(255,255,255,0.1)); 
+  width: 100%;
+}
+
+.progress-fill { 
+  height: 100%; 
+  background: linear-gradient(90deg, var(--c-primary, #6366f1), var(--c-primary-light, #c084fc)); 
+  border-radius: inherit; 
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+  box-shadow: 0 0 10px rgba(99,102,241,0.3); 
+}

@@ -1,0 +1,28 @@
+/* ShakeErrorGroup — ported from astro-component-kit (feedback/ShakeErrorGroup.astro) */
+
+.shake-box { 
+  display: flex; 
+  align-items: center; 
+  gap: var(--sp-3, 0.75rem);
+  background: rgba(239, 68, 68, 0.08); 
+  border: 1px solid var(--c-error, #ef4444); 
+  color: #f87171; 
+  padding: var(--sp-4, 1rem); 
+  border-radius: var(--r-md, 10px); 
+  text-align: center; 
+  font-weight: 600; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.shake-box--active { animation: shake-error-group-shake-kb 0.5s cubic-bezier(.36,.07,.19,.97) both; }
+
+.shake-box__icon { font-size: 1rem; }
+.shake-box__msg { font-size: 0.9rem; }
+
+@keyframes shake-error-group-shake-kb { 
+  10%, 90% { transform: translateX(-1px); } 
+  20%, 80% { transform: translateX(2px); } 
+  30%, 50%, 70% { transform: translateX(-4px); } 
+  40%, 60% { transform: translateX(4px); } 
+}

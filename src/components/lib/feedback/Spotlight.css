@@ -1,0 +1,33 @@
+/* Spotlight — ported from astro-component-kit (feedback/Spotlight.astro) */
+
+.spotlight-wrap { 
+  position: relative; 
+  display: inline-block;
+  transition: z-index 0.3s;
+}
+
+.spotlight-wrap--active { z-index: 2000; }
+
+.spotlight-wrap--active::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,var(--spotlight-opacity));
+  backdrop-filter: blur(4px);
+  z-index: -1;
+  animation: spotlight-fade 0.3s forwards;
+  pointer-events: none;
+}
+
+.spotlight-content { 
+  position: relative;
+  border-radius: var(--r-md, 12px); 
+  transition: transform 0.3s;
+}
+
+.spotlight-wrap--active .spotlight-content {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(255,255,255,0.1);
+}
+
+@keyframes spotlight-fade { from { opacity: 0; } to { opacity: 1; } }

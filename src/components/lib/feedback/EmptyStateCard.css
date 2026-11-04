@@ -1,0 +1,30 @@
+/* EmptyStateCard — ported from astro-component-kit (feedback/EmptyStateCard.astro) */
+
+.empty-state { 
+  text-align: center; 
+  padding: var(--sp-16, 4rem) var(--sp-8, 2rem); 
+  border: 2px dashed var(--c-border, rgba(255,255,255,0.1)); 
+  border-radius: var(--r-xl, 24px); 
+  color: var(--c-text-2, #94a3b8); 
+  background: var(--c-bg-elev, rgba(255,255,255,0.02)); 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.empty-state__icon { font-size: 3.5rem; margin-bottom: var(--sp-4, 1rem); opacity: 0.6; filter: grayscale(0.5); }
+
+.empty-state__title { color: var(--c-text-1, #fff); margin: 0; font-size: 1.25rem; font-weight: 700; }
+
+.empty-state__message { font-size: 0.95rem; margin-top: 0.75rem; max-width: 320px; margin-inline: auto; line-height: 1.5; }
+
+.empty-state__btn { 
+  margin-top: var(--sp-6, 1.5rem); 
+  background: var(--c-primary, #6366f1); 
+  color: #fff; border: none; 
+  padding: 0.6rem 1.4rem; 
+  border-radius: var(--r-md, 8px); 
+  font-weight: 700; cursor: pointer; 
+  transition: transform 0.2s;
+}
+
+.empty-state__btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
