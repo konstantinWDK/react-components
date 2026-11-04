@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70">
+  <defs>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b8860b"/>
+      <stop offset="50%" style="stop-color:#d4a017"/>
+      <stop offset="100%" style="stop-color:#fef3c7"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Line 1: React Kit -->
+  <text x="0" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="800" fill="url(#textGrad)" filter="url(#softGlow)">
+    React Kit
+  </text>
+
+  <!-- Line 2: Components -->
+  <text x="0" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="url(#textGrad)" opacity="0.85" filter="url(#softGlow)">
+    Components
+  </text>
+</svg>

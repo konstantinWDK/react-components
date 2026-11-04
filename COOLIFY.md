@@ -41,8 +41,8 @@ Puedes comprobar la propagación con `dig +short reactcomponents.dev`.
 4. **Deploy**.
 
 Qué hace el [`Dockerfile`](./Dockerfile):
-- Etapa 1 (`node:22-alpine`): `npm ci`, comprueba colisiones CSS (`npm run check-css`) y compila la web estática con `npm run build:site` → `dist-playground/`.
-- Etapa 2 (`nginx:alpine`): sirve la web con [`nginx.conf`](./nginx.conf) + [`security-headers.conf`](./security-headers.conf): gzip, caché inmutable de 1 año para `/assets/*` (archivos con hash de Vite), HTML sin caché para que cada despliegue se vea al momento, cabeceras de seguridad y fallback SPA a `index.html`.
+- Etapa 1 (`node:22-alpine`): `npm ci`, comprueba colisiones CSS (`npm run check-css`) y genera la web estática con Next.js (`npm run build:site` → `out/`, una página HTML por ruta en EN/ES/RU).
+- Etapa 2 (`nginx:alpine`): sirve la web con [`nginx.conf`](./nginx.conf) + [`security-headers.conf`](./security-headers.conf): gzip, caché inmutable de 1 año para `/_next/static/*` (archivos con hash), HTML sin caché para que cada despliegue se vea al momento, cabeceras de seguridad y página `404.html` propia.
 - Incluye `HEALTHCHECK`, así Coolify sabe cuándo el contenedor está listo (despliegue sin caída).
 - Las cabeceras de seguridad están en un archivo aparte que se incluye en cada `location`, porque nginx descarta las cabeceras del bloque `server` en cuanto un `location` define las suyas.
 
@@ -51,7 +51,7 @@ Qué hace el [`Dockerfile`](./Dockerfile):
 - **Build Pack:** `Nixpacks` o `Static`
 - **Install Command:** `npm ci`
 - **Build Command:** `npm run build:site`
-- **Publish Directory:** `dist-playground`
+- **Publish Directory:** `out`
 
 ---
 
@@ -68,7 +68,7 @@ Qué hace el [`Dockerfile`](./Dockerfile):
 
 ```bash
 npm run typecheck
-npm run build:site            # genera dist-playground/
+npm run build:site            # genera out/
 
 # Contenedor igual que en producción
 docker build -t react-components-site .
@@ -82,7 +82,7 @@ docker run --rm -p 8080:80 react-components-site
 
 ```bash
 curl -I https://reactcomponents.dev                 # 200 + cabeceras de seguridad
-curl -I https://reactcomponents.dev/assets/<file>.js # Cache-Control: immutable
+curl -I https://reactcomponents.dev/_next/static/<file>.js # Cache-Control: immutable
 ssh vps3 'docker ps --filter "ancestor=nginx" --format "{{.Names}}  {{.Status}}"'
 ```
 

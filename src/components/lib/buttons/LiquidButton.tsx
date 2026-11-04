@@ -1,3 +1,5 @@
+'use client';
+
 import { useId } from 'react';
 import type { CSSProperties, ElementType, HTMLAttributes, ReactNode } from 'react';
 import './LiquidButton.css';

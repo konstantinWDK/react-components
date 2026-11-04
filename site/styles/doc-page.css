@@ -1,0 +1,122 @@
+/* ported from astro-components/src/components/docs/DocSlugPage.astro */
+.doc-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .doc-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-3);
+    border-bottom: 1px solid var(--c-border);
+  }
+  .doc-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--c-text-3);
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--r-sm);
+    transition: color 0.15s, background 0.15s;
+  }
+  .doc-nav-link:hover {
+    color: var(--c-primary-light);
+    background: rgba(255,255,255,0.04);
+  }
+  .doc-nav-link svg {
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s;
+  }
+  .doc-nav-link:hover svg { opacity: 1; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap;
+    font-size: 0.8rem; color: var(--c-text-3); margin-bottom: var(--sp-6);
+  }
+  .breadcrumb a { color: var(--c-text-3); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--c-text-1); }
+  .breadcrumb__sep { color: var(--c-text-3); opacity: 0.5; }
+  .breadcrumb__current { color: var(--c-text-2); font-weight: 500; }
+
+  .doc-header { margin-bottom: var(--sp-8); }
+  .doc-header__meta { display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap; margin-bottom: var(--sp-4); }
+
+  .doc-category-badge {
+    padding: 0.25rem 0.65rem; border-radius: var(--r-full);
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    background: rgba(234, 179, 8, 0.12); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3);
+  }
+  .doc-tag {
+    padding: 0.2rem 0.5rem; border-radius: var(--r-full);
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+    background: rgba(255,255,255,0.04); color: var(--c-text-3); border: 1px solid var(--c-border);
+  }
+
+  .doc-title {
+    font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 900; color: var(--c-text-1);
+    letter-spacing: -0.03em; margin-bottom: var(--sp-3);
+  }
+  .doc-description { font-size: 1.05rem; color: var(--c-text-2); line-height: 1.7; max-width: 100%; }
+
+  .preview-container {
+    padding: clamp(var(--sp-4), 2vw, var(--sp-8));
+    background: rgba(255, 255, 255, 0.02);
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    width: 100%;
+    box-shadow: 0 4px 24px -6px rgba(0, 0, 0, 0.3);
+  }
+
+  .anim-slide-up {
+    opacity: 0; transform: translateY(10px);
+    animation: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes slide-up { to { opacity: 1; transform: translateY(0); } }
+
+  .doc-section { margin-top: var(--sp-8); }
+  .doc-section__title {
+    font-size: 1.1rem; font-weight: 700; color: var(--c-text-1);
+    margin-bottom: var(--sp-4); padding-bottom: var(--sp-3);
+    border-bottom: 1px solid var(--c-border);
+  }
+  .doc-section__subtitle {
+    font-size: 0.9rem; color: var(--c-text-3); margin-bottom: var(--sp-4);
+  }
+
+  .usage-header {
+    display: flex; flex-direction: column; gap: var(--sp-2);
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-4);
+    border-bottom: 1px solid var(--c-border);
+  }
+  .usage-code-wrapper { margin-top: var(--sp-4); }
+
+  .manual-box { display: flex; flex-direction: column; gap: var(--sp-2); }
+  .manual-box p { font-size: 0.95rem; color: var(--c-text-2); line-height: 1.6; margin: 0; }
+  .manual-box code { color: #facc15; background: rgba(255,255,255,0.05); padding: 0.1rem 0.3rem; border-radius: 4px; overflow-wrap: anywhere; }
+
+  .props-list { display: flex; flex-direction: column; gap: 0; }
+  .props-row {
+    display: grid; grid-template-columns: 150px 1fr;
+    padding: var(--sp-3) var(--sp-4);
+    border-bottom: 1px solid var(--c-border); font-size: 0.875rem;
+  }
+  .props-row dt { color: var(--c-text-3); font-weight: 500; }
+  .props-row dd { color: var(--c-text-1); }
+  .props-row dd code {
+    background: rgba(255,255,255,0.06); padding: 0.1rem 0.4rem;
+    border-radius: 4px; font-size: 0.82em; color: #facc15;
+  }
+  .tags-row { display: flex; gap: var(--sp-2); flex-wrap: wrap; }

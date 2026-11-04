@@ -139,14 +139,14 @@ Light theme: add `data-theme="light"` to `<html>`.
 git clone https://github.com/konstantinWDK/react-components.git
 cd react-components
 npm install
-npm run dev          # playground → http://localhost:5173
+npm run dev          # website (Next.js) → http://localhost:3000
 ```
 
 | Script | What it does |
 |--------|--------------|
-| `npm run dev` | Playground / docs site with hot reload |
+| `npm run dev` | Website (Next.js) with hot reload |
 | `npm run build` | Library build → `dist/` (ESM, `.d.ts`, `styles.css`, `global.css`) |
-| `npm run build:site` | Static docs site → `dist-playground/` (what reactcomponents.dev serves) |
+| `npm run build:site` | Static website → `out/` (what reactcomponents.dev serves) |
 | `npm run typecheck` | TypeScript strict check |
 | `npm run check-css` | Fails if two components define the same class / `@keyframes` |
 | `npm run pack:check` | Build + list the files that would be published to npm |
@@ -164,8 +164,16 @@ src/
 │       │   └── index.ts         # category barrel → react-component-kit-ui/buttons
 │       └── feedback/ …
 └── styles/global.css            # design tokens + reset (shared with the Astro kit)
-playground/                      # reactcomponents.dev (Vite app)
-└── demos/<category>.tsx         # demo registry per category
+app/                             # Next.js routes: (en)/… at the root, [lang]/… for /es and /ru
+site/                            # reactcomponents.dev (same structure as astrocomponents.dev)
+├── config/site.ts               # site name, URL, SEO copy per locale
+├── i18n/                        # translations (copied from the Astro kit, adapted to React)
+├── data/registry.json           # component/section/template metadata exported from the Astro kit
+├── demos/
+│   ├── meta.ts                  # ported slugs → source file + usage snippet
+│   └── <category>.tsx           # live previews (one lazy chunk per category)
+├── layout/ docs/ home/ pages/   # header, sidebar, docs page, home, catalogs
+└── styles/                      # site CSS ported from the Astro pages
 scripts/
 ├── extract-css.mjs              # port <style> blocks from the Astro kit
 └── check-css.mjs                # class / keyframe collision guard
@@ -192,7 +200,13 @@ Then write each `Name.tsx` following these rules:
 | `Math.random()` ids | `useId()` |
 | `<div>` inside `<button>` | `<span>` (valid HTML) |
 
-Finally: add the category barrel, export it from `src/components/index.ts`, add the `./<category>` entry to `package.json#exports`, and add demos in `playground/demos/`.
+Finally: add the category barrel, export it from `src/components/index.ts`, add the `./<category>` entry to `package.json#exports`, then register the docs page:
+
+1. `site/demos/meta.ts` → `slug: { file, category, usage }` (the slug must match the Astro registry).
+2. `site/demos/<category>.tsx` → the live preview (same examples as `PreviewRenderer.astro`).
+3. `site/demos/DemoRenderer.tsx` → add the category loader.
+
+The page, sidebar entry, SEO metadata and sitemap entry are generated automatically in EN/ES/RU.
 
 ---
 

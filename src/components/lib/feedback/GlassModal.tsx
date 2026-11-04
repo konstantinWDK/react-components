@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 import type { DialogHTMLAttributes, ReactNode } from 'react';
 import './GlassModal.css';

@@ -1,0 +1,189 @@
+/* ported from astro-components/src/components/home/WhyBento.astro */
+.why-bento {
+    list-style: none;
+    margin: var(--sp-8, 2rem) 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--sp-4, 1rem);
+  }
+  .why-bento__card {
+    overflow: clip;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.6rem;
+    border-radius: var(--r-lg, 20px);
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+    border: 1px solid var(--c-border, rgba(255, 255, 255, 0.07));
+    overflow: hidden;
+    isolation: isolate;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    animation: why-bento-in 0.6s ease both;
+    animation-delay: calc(var(--i) * 70ms);
+  }
+  .why-bento__card--wide { grid-column: span 2; }
+  .why-bento__card:hover,
+  .why-bento__card:focus-within {
+    border-color: rgba(212, 160, 23, 0.35);
+    transform: translateY(-3px);
+  }
+  @keyframes why-bento-in {
+    from { opacity: 0; transform: translateY(12px); }
+  }
+  .why-bento__glow {
+    position: absolute;
+    inset: auto -30% -60% auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 160, 23, 0.16), transparent 65%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+  }
+  .why-bento__card--wide .why-bento__glow { opacity: 0.6; }
+  .why-bento__card:hover .why-bento__glow { opacity: 1; }
+  .why-bento__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+  .why-bento__icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(212, 160, 23, 0.1);
+    border: 1px solid rgba(212, 160, 23, 0.25);
+    color: var(--c-primary-light, #d4a017);
+  }
+  .why-bento__num {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.75rem;
+    color: var(--c-text-3, #737373);
+  }
+  .why-bento__tag {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-primary-light, #d4a017);
+  }
+  .why-bento__title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    color: var(--c-text-1, #fff);
+  }
+  .why-bento__card--wide .why-bento__title { font-size: 1.4rem; }
+  .why-bento__text {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--c-text-2, #a3a3a3);
+  }
+  .why-bento__card--wide .why-bento__text { max-width: 52ch; }
+  .why-bento__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: auto 0 0;
+    padding-top: 0.9rem;
+  }
+  .why-bento__stat {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .why-bento__stat dt { font-size: 0.6875rem; color: var(--c-text-3, #8a8a8a); }
+  .why-bento__stat dd {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 750;
+    color: var(--c-text-1, #fff);
+    font-variant-numeric: tabular-nums;
+  }
+  .why-bento__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 44px;
+    align-self: flex-start;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--c-text-1, #fff);
+    text-decoration: none;
+  }
+  .why-bento__link svg { color: var(--c-primary-light, #d4a017); transition: transform 0.2s ease; }
+  .why-bento__link:hover { color: var(--c-primary-light, #d4a017); }
+  .why-bento__link:hover svg { transform: translateX(3px); }
+  .why-bento__link:focus-visible { outline: 2px solid var(--c-primary-light, #d4a017); outline-offset: 2px; border-radius: 4px; }
+  .why-bento__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  @media (max-width: 1024px) {
+    .why-bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 640px) {
+    .why-bento { grid-template-columns: 1fr; }
+    .why-bento__card--wide { grid-column: auto; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .why-bento__card { animation: none; transition: none; }
+  }
+
+  /* Decorative visual on the wide cards (desktop only) */
+  .why-bento__visual {
+    position: absolute;
+    right: 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38%;
+    margin: 0;
+  }
+  .why-bento__card--wide .why-bento__text,
+  .why-bento__card--wide .why-bento__title { max-width: 56%; }
+  .why-bento__code {
+    padding: 1rem 1.1rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    font-family: var(--font-mono, monospace);
+    font-size: 0.75rem;
+    line-height: 1.7;
+    color: var(--c-text-2, #c4c4c4);
+    white-space: pre;
+    overflow: hidden;
+  }
+  .why-bento__code .k { color: #c792ea; }
+  .why-bento__code .t { color: #82aaff; }
+  .why-bento__code .s { color: #c3e88d; }
+  .why-bento__code .a { color: #ffcb6b; }
+  .why-bento__code .n { color: #f78c6c; }
+  .why-bento__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 120px;
+  }
+  .why-bento__bars span {
+    flex: 1;
+    height: var(--h);
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(to top, rgba(212, 160, 23, 0.15), rgba(212, 160, 23, 0.75));
+    transform-origin: bottom;
+    animation: why-bar-grow 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+    animation-delay: var(--d);
+  }
+  .why-bento__bars span:last-child { background: linear-gradient(to top, rgba(212, 160, 23, 0.3), var(--c-primary-light, #d4a017)); }
+  @keyframes why-bar-grow { from { transform: scaleY(0); } }
+  @media (max-width: 1180px) {
+    .why-bento__visual { display: none; }
+    .why-bento__card--wide .why-bento__text,
+    .why-bento__card--wide .why-bento__title { max-width: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .why-bento__bars span { animation: none; } }

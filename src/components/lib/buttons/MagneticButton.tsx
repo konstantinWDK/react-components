@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef } from 'react';
 import type { ElementType, HTMLAttributes, MouseEvent, ReactNode } from 'react';
 import './MagneticButton.css';

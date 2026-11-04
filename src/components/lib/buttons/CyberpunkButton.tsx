@@ -1,3 +1,5 @@
+'use client';
+
 import type { CSSProperties, ElementType, HTMLAttributes, ReactNode } from 'react';
 import './CyberpunkButton.css';
 

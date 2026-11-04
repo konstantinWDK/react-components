@@ -1,6 +1,6 @@
 # ==========================================
-# reactcomponents.dev — docs / playground site
-# Stage 1: build the static playground with Vite
+# reactcomponents.dev — documentation website
+# Stage 1: build the static site with Next.js (output: 'export' → /app/out)
 # ==========================================
 FROM node:22-alpine AS builder
 
@@ -10,7 +10,9 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# Copy source and build the static site to /app/dist-playground
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Copy source and build the static site to /app/out
 COPY . .
 RUN npm run check-css && npm run build:site
 
@@ -22,7 +24,7 @@ FROM nginx:alpine AS runner
 RUN rm -rf /usr/share/nginx/html/*
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY security-headers.conf /etc/nginx/snippets/security-headers.conf
-COPY --from=builder /app/dist-playground /usr/share/nginx/html
+COPY --from=builder /app/out /usr/share/nginx/html
 
 EXPOSE 80
 

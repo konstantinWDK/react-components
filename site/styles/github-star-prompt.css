@@ -1,0 +1,175 @@
+/* ported from astro-components/src/components/layout/GitHubStarPrompt.astro */
+.gh-prompt {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: min(360px, calc(100vw - 2rem));
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(234, 179, 8, 0.35);
+    border-radius: 18px;
+    padding: 1.25rem 1.35rem;
+    box-shadow: 
+      0 20px 45px -10px rgba(0, 0, 0, 0.8),
+      0 0 30px -10px rgba(234, 179, 8, 0.25);
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(25px) scale(0.96);
+    transition: 
+      opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0.4s;
+    overflow: hidden;
+  }
+
+  .gh-prompt.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  .gh-prompt__glow {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(234, 179, 8, 0.2), transparent 70%);
+    pointer-events: none;
+    filter: blur(20px);
+  }
+
+  .gh-prompt__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+  }
+
+  .gh-prompt__close:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .gh-prompt__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .gh-prompt__icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(217, 119, 6, 0.1));
+    border: 1px solid rgba(234, 179, 8, 0.4);
+    display: grid;
+    place-items: center;
+    color: #facc15;
+    flex-shrink: 0;
+  }
+
+  .gh-star-icon {
+    animation: starPulse 2.5s infinite ease-in-out;
+  }
+
+  @keyframes starPulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.15) rotate(10deg); filter: drop-shadow(0 0 6px #eab308); }
+  }
+
+  .gh-prompt__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .gh-prompt__badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #eab308;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .gh-prompt__title {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .gh-prompt__desc {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+  }
+
+  .gh-prompt__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .gh-prompt__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.95rem;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+
+  .gh-prompt__btn--star {
+    flex: 1;
+    background: linear-gradient(135deg, #eab308, #d97706);
+    color: #000;
+    box-shadow: 0 3px 12px rgba(234, 179, 8, 0.3);
+  }
+
+  .gh-prompt__btn--star:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(234, 179, 8, 0.45);
+  }
+
+  .gh-prompt__btn--later {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+  }
+
+  .gh-prompt__btn--later:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  @media (max-width: 480px) {
+    .gh-prompt {
+      bottom: 1rem;
+      right: 1rem;
+      left: 1rem;
+      width: auto;
+    }
+  }

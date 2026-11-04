@@ -1,3 +1,5 @@
+'use client';
+
 import type { ElementType, HTMLAttributes, ReactNode } from 'react';
 import './ShinyButton.css';
 

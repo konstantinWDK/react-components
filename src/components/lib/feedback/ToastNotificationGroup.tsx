@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import type { CSSProperties, HTMLAttributes, ReactNode } from 'react';
 import './ToastNotificationGroup.css';

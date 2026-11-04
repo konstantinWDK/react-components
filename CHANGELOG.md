@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added — reactcomponents.dev website
+- New Next.js (static export) website replicating astrocomponents.dev: same header menu, sidebar with search, docs page per component (live preview, usage, TSX + CSS source, quick info), installation guide, sections and templates catalogs, and the full home page (3D galaxy, particle background, carousels, interaction lab).
+- Three languages with the same URLs as the Astro site: English at `/`, Spanish at `/es/`, Russian at `/ru/`, with hreflang alternates and a multilingual sitemap.
+- Component metadata, descriptions and translations reused from the Astro registry.
+
+### Changed
+- All library components now carry `'use client'` in their source, so they can be copied straight into a Next.js App Router project.
+
 ## [0.1.0] - 2026-11-04
 
 First public release of **React Component Kit**: the React port of [astro-component-kit](https://astrocomponents.dev).

@@ -1,0 +1,5008 @@
+{
+ "categories": [
+  {
+   "id": "buttons",
+   "name": "Buttons",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"8\" width=\"18\" height=\"8\" rx=\"4\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/></svg>",
+   "description": "Interactive button components with premium styles and animations."
+  },
+  {
+   "id": "forms",
+   "name": "Forms",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18\"/></svg>",
+   "description": "Form elements with clean animations and validation states."
+  },
+  {
+   "id": "cards",
+   "name": "Cards",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"4\"/><path d=\"M3 15h18\"/></svg>",
+   "description": "Versatile card containers for content display."
+  },
+  {
+   "id": "feedback",
+   "name": "Feedback",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4\"/><path d=\"M12 8h.01\"/></svg>",
+   "description": "Badges, alerts, and notification components."
+  },
+  {
+   "id": "navigation",
+   "name": "Navigation",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12h18M3 6h18M3 18h18\"/></svg>",
+   "description": "Navbars, tabs, breadcrumbs and navigation patterns."
+  },
+  {
+   "id": "layout",
+   "name": "Layout",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"9\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"5\"/><rect x=\"14\" y=\"12\" width=\"7\" height=\"9\"/><rect x=\"3\" y=\"16\" width=\"7\" height=\"5\"/></svg>",
+   "description": "Grids, containers, and structural sections."
+  },
+  {
+   "id": "overlays",
+   "name": "Overlays",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"M10 4v16\"/></svg>",
+   "description": "Modals, drawers, and popovers."
+  },
+  {
+   "id": "data",
+   "name": "Data Display",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/></svg>",
+   "description": "Stats, tables, and visualization elements."
+  },
+  {
+   "id": "typography",
+   "name": "Typography",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"4 7 4 4 20 4 20 7\"/><line x1=\"9\" y1=\"20\" x2=\"15\" y2=\"20\"/><line x1=\"12\" y1=\"4\" x2=\"12\" y2=\"20\"/></svg>",
+   "description": "Headings and text patterns."
+  },
+  {
+   "id": "charts",
+   "name": "Charts",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\"/><line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\"/><line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\"/></svg>",
+   "description": "Charts and statistics: SVG line, bar, pie, funnel, heatmap, KPI and more."
+  },
+  {
+   "id": "ecommerce",
+   "name": "E-commerce",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 7h12l-1 13H7z\"/><path d=\"M9 7V6a3 3 0 0 1 6 0v1\"/></svg>",
+   "description": "Shop building blocks: product cards, cart drawer, filters, product page and checkout."
+  },
+  {
+   "id": "app",
+   "name": "App & Dashboard",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M9 3v18M9 9h12\"/></svg>",
+   "description": "SaaS building blocks: sidebar, topbar, data table, boards, settings and auth."
+  },
+  {
+   "id": "sections",
+   "name": "Sections",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18\"/><path d=\"M9 21V9\"/></svg>",
+   "description": "Complete page sections: heroes, features, pricing, CTAs, and more."
+  }
+ ],
+ "sectionCategories": [
+  {
+   "id": "hero",
+   "name": "Heroes",
+   "description": "High-impact full-screen landing heroes and headlines.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><polyline points=\"9 22 9 12 15 12 15 22\"/></svg>"
+  },
+  {
+   "id": "features",
+   "name": "Features & Grids",
+   "description": "Bento grids, timeline flows, and feature highlights.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"9\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"5\"/><rect x=\"14\" y=\"12\" width=\"7\" height=\"9\"/><rect x=\"3\" y=\"16\" width=\"7\" height=\"5\"/></svg>"
+  },
+  {
+   "id": "pricing",
+   "name": "Pricing & Plans",
+   "description": "Pricing tables, comparison matrices, and plan tiers.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"23\"/><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>"
+  },
+  {
+   "id": "testimonials",
+   "name": "Testimonials",
+   "description": "Wall of love, bento customer reviews, and verified badges.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/></svg>"
+  },
+  {
+   "id": "cta",
+   "name": "Call to Action",
+   "description": "Conversion glow banners, app downloads, and email subscription ribbons.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"/></svg>"
+  },
+  {
+   "id": "stats",
+   "name": "Stats & Metrics",
+   "description": "Numbers showcase, data proof, and milestone metrics.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\"/><line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\"/><line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\"/></svg>"
+  },
+  {
+   "id": "team",
+   "name": "Team & People",
+   "description": "Founder grids, advisor profiles, and leadership showcases.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/></svg>"
+  },
+  {
+   "id": "faq",
+   "name": "FAQ & Help",
+   "description": "Accordion questions and answers with glass styling.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"/></svg>"
+  },
+  {
+   "id": "contact",
+   "name": "Contact & Support",
+   "description": "Contact glass forms, support channels, and inquiries.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/></svg>"
+  },
+  {
+   "id": "content",
+   "name": "Blog & Content",
+   "description": "Article grids, featured posts and changelog timelines.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 19.5A2.5 2.5 0 0 1 6.5 17H20\"/><path d=\"M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z\"/></svg>"
+  },
+  {
+   "id": "footer",
+   "name": "Footers",
+   "description": "Complete site footers with link columns, newsletter and social links.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 15h18\"/></svg>"
+  },
+  {
+   "id": "commerce",
+   "name": "E-commerce",
+   "description": "Editorial store sections: shop header with mega menu, hero, collections, product rail, lookbook, reviews and footer.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 7h12l-1 13H7z\"/><path d=\"M9 7V6a3 3 0 0 1 6 0v1\"/></svg>"
+  },
+  {
+   "id": "logos",
+   "name": "Logos & Partners",
+   "description": "Client logo clouds, partner grids, and brand badges.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 3h12l4 6-10 12L2 9z\"/></svg>"
+  }
+ ],
+ "components": [
+  {
+   "slug": "glass-button",
+   "name": "Glass Button",
+   "description": "A premium button with glassmorphism effect, gradient border and smooth hover animations.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "glass",
+    "gradient",
+    "animated"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glow-button",
+   "name": "Glow Button",
+   "description": "A button with an animated glow effect that pulsates on hover.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "glow",
+    "animated",
+    "neon"
+   ]
+  },
+  {
+   "slug": "neumorphic-button",
+   "name": "Neumorphic Button",
+   "description": "A premium Soft UI button with beveled surface gradients and hue-tinted shadows.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "neumorphism",
+    "soft ui"
+   ]
+  },
+  {
+   "slug": "cyberpunk-button",
+   "name": "Cyberpunk Button",
+   "description": "A glitchy, neon-styled button inspired by futuristic sci-fi aesthetics.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "cyberpunk",
+    "glitch",
+    "neon"
+   ]
+  },
+  {
+   "slug": "pulse-button",
+   "name": "Pulse Button",
+   "description": "A button with a persistent circular pulse effect to draw attention.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "animated",
+    "attention"
+   ]
+  },
+  {
+   "slug": "shiny-button",
+   "name": "Shiny Button",
+   "description": "A button with a metallic shine effect that sweeps across on hover.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "shine",
+    "animated"
+   ]
+  },
+  {
+   "slug": "retro-arcade-button",
+   "name": "Retro Arcade Button",
+   "description": "Classic 8-bit style button with sharp pixelated edges and vibrant colors.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "retro",
+    "8-bit",
+    "game"
+   ]
+  },
+  {
+   "slug": "3d-push-button",
+   "name": "3D Push Button",
+   "description": "A button that physically sinks into the interface when clicked.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "3d",
+    "interactive"
+   ]
+  },
+  {
+   "slug": "loading-button",
+   "name": "Loading Spinner Button",
+   "description": "A button that shows a built-in spinner when in a loading state.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "loading",
+    "state"
+   ]
+  },
+  {
+   "slug": "shimmer-button",
+   "name": "Shimmer Button",
+   "description": "A highly elegant button with a moving shimmer outline.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "shimmer",
+    "elegant"
+   ]
+  },
+  {
+   "slug": "magnetic-button",
+   "name": "Magnetic Button",
+   "description": "A button that follows the cursor slightly when hovered (requires component-level JS).",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "interactive",
+    "magnetic"
+   ]
+  },
+  {
+   "slug": "double-border-button",
+   "name": "Double Border Button",
+   "description": "Elegant button with nested borders and smooth scaling.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "minimalist",
+    "border"
+   ]
+  },
+  {
+   "slug": "animated-icon-button",
+   "name": "Animated Icon Button",
+   "description": "A premium button generated dynamically from codebase.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "premium"
+   ]
+  },
+  {
+   "slug": "border-draw-button",
+   "name": "Border Draw Button",
+   "description": "A premium button generated dynamically from codebase.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "premium"
+   ]
+  },
+  {
+   "slug": "ghost-outline-button",
+   "name": "Ghost Outline Button",
+   "description": "A premium button generated dynamically from codebase.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "premium"
+   ]
+  },
+  {
+   "slug": "liquid-button",
+   "name": "Liquid Button",
+   "description": "A premium button generated dynamically from codebase.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "premium"
+   ]
+  },
+  {
+   "slug": "minimal-pill-button",
+   "name": "Minimal Pill Button",
+   "description": "A premium button generated dynamically from codebase.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "premium"
+   ]
+  },
+  {
+   "slug": "retro-shadow-button",
+   "name": "Retro Shadow Button",
+   "description": "A premium button generated dynamically from codebase.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "premium"
+   ]
+  },
+  {
+   "slug": "tilt-glow-button",
+   "name": "Tilt Glow Button",
+   "description": "A premium button generated dynamically from codebase.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "premium"
+   ]
+  },
+  {
+   "slug": "ripple-button",
+   "name": "Ripple Button",
+   "description": "A sleek interactive button that triggers localized expanding ripple rings on click.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "ripple",
+    "interactive",
+    "micro-interaction"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "neon-border-button",
+   "name": "Neon Border Button",
+   "description": "A futuristic cyber button with rotating conical neon laser border and glow reflection.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "neon",
+    "cyberpunk",
+    "glow",
+    "border"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "slide-reveal-button",
+   "name": "Slide Reveal Button",
+   "description": "A dual-state button that slides primary text out and reveals hidden secondary action text or icons.",
+   "category": "buttons",
+   "tags": [
+    "button",
+    "slide",
+    "reveal",
+    "animation",
+    "action"
+   ]
+  },
+  {
+   "slug": "animated-input",
+   "name": "Animated Input",
+   "description": "Input with floating label animation.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "animated"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "chip-input",
+   "name": "Chip/Tag Input",
+   "description": "Interactive tag management control.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "chips"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "color-picker-input",
+   "name": "Color Picker",
+   "description": "Custom hex color selector with preview.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "color"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "currency-input",
+   "name": "Currency Input",
+   "description": "Numeric input with currency prefix.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "currency"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "custom-radio-group",
+   "name": "Custom Radio Group",
+   "description": "Styled radio button collection.",
+   "category": "forms",
+   "tags": [
+    "radio",
+    "group"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "cyberpunk-checkbox",
+   "name": "Cyberpunk Checkbox",
+   "description": "Neon themed bold checkbox.",
+   "category": "forms",
+   "tags": [
+    "checkbox",
+    "cyberpunk"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "drag-drop-upload",
+   "name": "Drag & Drop Upload",
+   "description": "Large interactive file upload zone.",
+   "category": "forms",
+   "tags": [
+    "upload",
+    "file"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "error-input",
+   "name": "Error Input",
+   "description": "Input styled for validation error states.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "validation"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "floating-password",
+   "name": "Password Toggle",
+   "description": "Password field with reveal toggle.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "password"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "form-group-vertical",
+   "name": "Form Group",
+   "description": "Wrapper for labeling and help text.",
+   "category": "forms",
+   "tags": [
+    "layout",
+    "group"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-slider",
+   "name": "Glass Slider",
+   "description": "Translucent range slider with glow.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "range"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-textarea",
+   "name": "Glass Textarea",
+   "description": "Glassmorphism styled multiline input.",
+   "category": "forms",
+   "tags": [
+    "textarea",
+    "glass"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "modern-select",
+   "name": "Modern Select",
+   "description": "Custom styled dropdown selector.",
+   "category": "forms",
+   "tags": [
+    "select",
+    "modern"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "neumorphic-switch",
+   "name": "Neumorphic Switch",
+   "description": "Soft-UI toggle switch.",
+   "category": "forms",
+   "tags": [
+    "switch",
+    "neumorphism"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "otp-input",
+   "name": "OTP Input",
+   "description": "Professional form control.",
+   "category": "forms",
+   "tags": [
+    "form"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "rating-stars",
+   "name": "Star Rating",
+   "description": "Classic star-based feedback input.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "rating"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "search-reveal",
+   "name": "Search Reveal",
+   "description": "Minimal search that expands on hover.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "search"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "segmented-control",
+   "name": "Segmented Control",
+   "description": "Radio-based mode switcher.",
+   "category": "forms",
+   "tags": [
+    "segmented",
+    "switch"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "simple-file-input",
+   "name": "Simple File Input",
+   "description": "Minimalist file upload button.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "file"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "stepper-input",
+   "name": "Numeric Stepper",
+   "description": "Input with +/- increment buttons.",
+   "category": "forms",
+   "tags": [
+    "input",
+    "stepper"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "password-strength-input",
+   "name": "Password Strength Input",
+   "description": "Interactive password input with dynamic real-time entropy calculation, strength meter bar, and visibility toggle.",
+   "category": "forms",
+   "tags": [
+    "form",
+    "input",
+    "password",
+    "security",
+    "validation"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "tags-autocomplete-input",
+   "name": "Tags Autocomplete Input",
+   "description": "Multi-tag pill input component with keyboard tag addition, pill removal, and suggestion dropdown.",
+   "category": "forms",
+   "tags": [
+    "form",
+    "tags",
+    "input",
+    "autocomplete",
+    "pills"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-inline-toggle-group",
+   "name": "Glass Inline Toggle Group",
+   "description": "An iOS/macOS styled segmented control toggle group with glass sliding indicator and keyboard navigation.",
+   "category": "forms",
+   "tags": [
+    "form",
+    "toggle",
+    "segmented",
+    "control",
+    "switch"
+   ]
+  },
+  {
+   "slug": "phone-country-input",
+   "name": "Phone Country Input",
+   "description": "Clean phone number input featuring a country dial code selector and auto-formatting.",
+   "category": "forms",
+   "tags": [
+    "form",
+    "phone",
+    "input",
+    "country-code",
+    "international"
+   ]
+  },
+  {
+   "slug": "blog-horizontal-card",
+   "name": "Horizontal Blog Card",
+   "description": "Landscape card layout for blog feeds or news items.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "blog"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "cyber-feature-card",
+   "name": "Cyber Feature Card",
+   "description": "A feature card with sharp angles and neon stroke animations.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "cyberpunk"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "ecommerce-product-card",
+   "name": "Product Card",
+   "description": "Commercial card with price, rating and action buttons.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "ecommerce"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-card",
+   "name": "Glass Card",
+   "description": "A versatile glassmorphism card with hover lift effect.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "glass"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-event-card",
+   "name": "Glass Event Card",
+   "description": "Vibrant card for events with date badge and glass effect.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "event"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glow-portfolio-card",
+   "name": "Glow Portfolio Card",
+   "description": "Card with a hovering background glow that follows the card edges.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "glow"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "interactive-tilt-card",
+   "name": "Interactive Tilt Card",
+   "description": "Card that tilts in 3D space based on mouse position.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "tilt",
+    "3d"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "kanban-item-card",
+   "name": "Project Task Card",
+   "description": "Small card optimized for list-based project management.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "project"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "minimal-link-card",
+   "name": "Minimal Link Card",
+   "description": "Elegant arrow-link card for site navigation sections.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "link",
+    "minimal"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "music-player-mini",
+   "name": "Mini Music Player",
+   "description": "Compact player widget with controls and progress bar.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "music"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "neumorphic-card",
+   "name": "Neumorphic Card",
+   "description": "A soft UI card with deep shadows for a realistic elevated look.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "neumorphism"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "notification-card",
+   "name": "Notification Card",
+   "description": "Toast-like card for app notifications and alerts.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "notification"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "pricing-card",
+   "name": "Pricing Tier Card",
+   "description": "Optimized card for showing product plans and features.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "pricing"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "profile-card",
+   "name": "Profile Card",
+   "description": "Image-centric profile card with social links and blur effect.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "profile"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "retro-game-card",
+   "name": "Retro Arcade Game Card",
+   "description": "Bold gaming card with scanlines and pixel fonts.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "retro"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "stat-card",
+   "name": "Data Stat Card",
+   "description": "Compact card for displaying key metrics with an icon.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "stats"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "task-kanban-card",
+   "name": "Kanban Task Card",
+   "description": "Agile task card with priority labels and due dates.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "kanban",
+    "task"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "testimonial-card-clean",
+   "name": "Clean Testimonial Card",
+   "description": "Minimalist card for user quotes and reviews.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "testimonial"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "weather-widget-card",
+   "name": "Weather Widget",
+   "description": "Glassmorphism card showing weather conditions.",
+   "category": "cards",
+   "tags": [
+    "card",
+    "weather"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "pricing-compare-mini-card",
+   "name": "Pricing Compare Mini Card",
+   "description": "A compact pricing tier card with gradient spotlight highlight, feature checkmarks, and CTA.",
+   "category": "cards",
+   "tags": [
+    "cards",
+    "pricing",
+    "tier",
+    "plan",
+    "commerce"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "github-repo-card",
+   "name": "Github Repo Card",
+   "description": "Clean developer portfolio card displaying GitHub repository name, description, language dot, star count, and fork stats.",
+   "category": "cards",
+   "tags": [
+    "cards",
+    "github",
+    "repo",
+    "developer",
+    "portfolio"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "stats-trend-card",
+   "name": "Stats Trend Card",
+   "description": "Modern analytics KPI metric card displaying values, positive/negative delta trend badge, and mini sparkline bar visual.",
+   "category": "cards",
+   "tags": [
+    "cards",
+    "stats",
+    "analytics",
+    "kpi",
+    "dashboard"
+   ]
+  },
+  {
+   "slug": "animated-checkmark",
+   "name": "Success Checkmark",
+   "description": "Animated SVG success icon.",
+   "category": "feedback",
+   "tags": [
+    "icon",
+    "success"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "badge",
+   "name": "Badge",
+   "description": "Versatile status tags.",
+   "category": "feedback",
+   "tags": [
+    "badge",
+    "tag"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "circle-progress",
+   "name": "Circle Gauge",
+   "description": "Circular percentage-of-completion chart.",
+   "category": "feedback",
+   "tags": [
+    "progress",
+    "circle"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "confetti-feedback",
+   "name": "Confetti Success",
+   "description": "Feedback with falling confetti celebration.",
+   "category": "feedback",
+   "tags": [
+    "feedback",
+    "animation"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "cyber-glitch-alert",
+   "name": "Glitch Alert",
+   "description": "Loud cyberpunk-style alert.",
+   "category": "feedback",
+   "tags": [
+    "alert",
+    "cyber"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "empty-state-card",
+   "name": "Empty State",
+   "description": "Placeholder for missing content or results.",
+   "category": "feedback",
+   "tags": [
+    "placeholder",
+    "empty"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-alert",
+   "name": "Glass Alert",
+   "description": "Translucent feedback bar.",
+   "category": "feedback",
+   "tags": [
+    "alert",
+    "glass"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-modal",
+   "name": "Glass Modal",
+   "description": "Premium overlay confirmation box.",
+   "category": "feedback",
+   "tags": [
+    "modal",
+    "glass"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-progress",
+   "name": "Glass Progress",
+   "description": "Linear progress bar with glass effect.",
+   "category": "feedback",
+   "tags": [
+    "progress",
+    "bar"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "indicator-badge-minimal",
+   "name": "Notification Dot",
+   "description": "Corner-floating notification indicator.",
+   "category": "feedback",
+   "tags": [
+    "indicator",
+    "dot"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "neon-spinner",
+   "name": "Neon Spinner",
+   "description": "Glow-style loading spinner.",
+   "category": "feedback",
+   "tags": [
+    "loading",
+    "spinner"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "pulse-dot",
+   "name": "Pulse Dot",
+   "description": "Status label with pulsing effect.",
+   "category": "feedback",
+   "tags": [
+    "indicator",
+    "status"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "rating-pill",
+   "name": "Rating Pill",
+   "description": "Compact numeric score badge.",
+   "category": "feedback",
+   "tags": [
+    "rating",
+    "score"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "shake-error-group",
+   "name": "Shake Feedback",
+   "description": "Horizontal shake indicator for errors.",
+   "category": "feedback",
+   "tags": [
+    "error",
+    "feedback"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "simple-tooltip",
+   "name": "Simple Tooltip",
+   "description": "Hover-based hint message.",
+   "category": "feedback",
+   "tags": [
+    "tooltip",
+    "hint"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "skeleton-list",
+   "name": "Skeleton Loader",
+   "description": "Placeholder content for loading feeds.",
+   "category": "feedback",
+   "tags": [
+    "loading",
+    "skeleton"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "spotlight",
+   "name": "Focus Spotlight",
+   "description": "Highlighting effect for specific elements.",
+   "category": "feedback",
+   "tags": [
+    "focus",
+    "highlight"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "step-progress",
+   "name": "Step Tracker",
+   "description": "Multi-stage progress tracker.",
+   "category": "feedback",
+   "tags": [
+    "stepper",
+    "workflow"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "toast-notif",
+   "name": "Toast Message",
+   "description": "Transient snackbar notification.",
+   "category": "feedback",
+   "tags": [
+    "toast",
+    "notification"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "typing-indicator",
+   "name": "Typing Dots",
+   "description": "Classic messenger-style typing indicator.",
+   "category": "feedback",
+   "tags": [
+    "loading",
+    "typing"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "progress-ring-counter",
+   "name": "Progress Ring Counter",
+   "description": "Circular SVG progress gauge with smooth stroke dashoffset transition, customizable track colors, and centered value readout.",
+   "category": "feedback",
+   "tags": [
+    "feedback",
+    "progress",
+    "ring",
+    "circular",
+    "meter"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "toast-notification-group",
+   "name": "Toast Notification Group",
+   "description": "A modern stacked toast notification tray supporting success, error, warning, and info alert toasts with dismiss actions.",
+   "category": "feedback",
+   "tags": [
+    "feedback",
+    "toast",
+    "notification",
+    "alert",
+    "stack"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "glass-navbar",
+   "name": "Glass Navbar",
+   "description": "A sticky top navigation bar with glassmorphism blur and smooth scroll behavior.",
+   "category": "navigation",
+   "tags": [
+    "navbar",
+    "navigation",
+    "glass",
+    "sticky"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "minimal-sidebar",
+   "name": "Minimal Sidebar",
+   "description": "A vertical navigation sidebar for dashboard-style interfaces.",
+   "category": "navigation",
+   "tags": [
+    "sidebar",
+    "navigation",
+    "layout"
+   ]
+  },
+  {
+   "slug": "bottom-nav-mobile",
+   "name": "Floating Bottom Nav",
+   "description": "Icon-based navigation bar fixed to the bottom, optimized for mobile.",
+   "category": "navigation",
+   "tags": [
+    "mobile",
+    "navigation",
+    "bottom bar"
+   ]
+  },
+  {
+   "slug": "pagination-glass",
+   "name": "Glass Pagination",
+   "description": "Stylish page switcher with blurred background and active states.",
+   "category": "navigation",
+   "tags": [
+    "pagination",
+    "navigation",
+    "glass"
+   ]
+  },
+  {
+   "slug": "breadcrumbs-minimal",
+   "name": "Minimal Breadcrumbs",
+   "description": "Lean navigation path indicator with subtle separators.",
+   "category": "navigation",
+   "tags": [
+    "breadcrumbs",
+    "navigation",
+    "ux"
+   ]
+  },
+  {
+   "slug": "vertical-tabs",
+   "name": "Side Navigation Tabs",
+   "description": "Vertical list of tabs for settings or sub-navigation.",
+   "category": "navigation",
+   "tags": [
+    "tabs",
+    "navigation",
+    "vertical"
+   ]
+  },
+  {
+   "slug": "scroll-progress-top",
+   "name": "Scroll Indicator",
+   "description": "Thin loading bar at the top of the page reflecting scroll depth.",
+   "category": "navigation",
+   "tags": [
+    "scroll",
+    "navigation",
+    "indicator"
+   ]
+  },
+  {
+   "slug": "command-palette-ui",
+   "name": "Command Palette UI",
+   "description": "Visual placeholder for a searchable command interface.",
+   "category": "navigation",
+   "tags": [
+    "command",
+    "search",
+    "navigation"
+   ]
+  },
+  {
+   "slug": "mega-menu-glass",
+   "name": "Mega Menu Layout",
+   "description": "Multi-column dropdown menu for large navigation systems.",
+   "category": "navigation",
+   "tags": [
+    "mega menu",
+    "dropdown",
+    "navigation"
+   ]
+  },
+  {
+   "slug": "tab-underline",
+   "name": "Underline Tabs",
+   "description": "Clean tabbed navigation with an animated underline indicator.",
+   "category": "navigation",
+   "tags": [
+    "tabs",
+    "underline",
+    "animated"
+   ]
+  },
+  {
+   "slug": "anchor-side-nav",
+   "name": "On-Page Anchor Nav",
+   "description": "Side menu for navigating between sections of a single page.",
+   "category": "navigation",
+   "tags": [
+    "anchor",
+    "scroll",
+    "side nav"
+   ]
+  },
+  {
+   "slug": "retro-arcade-menu",
+   "name": "Retro Arcade Menu",
+   "description": "8-bit style navigation with pixelated font and selection arrows.",
+   "category": "navigation",
+   "tags": [
+    "retro",
+    "navigation",
+    "game"
+   ]
+  },
+  {
+   "slug": "dot-navigation-slider",
+   "name": "Dot Slide Indicators",
+   "description": "Abstract dot-based navigation for sliders or carousel components.",
+   "category": "navigation",
+   "tags": [
+    "dots",
+    "slider",
+    "carousel"
+   ]
+  },
+  {
+   "slug": "radial-icon-menu",
+   "name": "Radial Radial Menu",
+   "description": "Circular navigation menu that expands icons around a center point.",
+   "category": "navigation",
+   "tags": [
+    "radial",
+    "menu",
+    "animated"
+   ]
+  },
+  {
+   "slug": "burger-morph-icon",
+   "name": "Animated Burger Menu",
+   "description": "CSS burger icon that morphs into an ",
+   "category": "navigation",
+   "tags": [
+    "burger",
+    "icon",
+    "animated"
+   ]
+  },
+  {
+   "slug": "lang-switcher-pill",
+   "name": "Language Picker Pill",
+   "description": "Compact dropdown or group to switch between languages.",
+   "category": "navigation",
+   "tags": [
+    "language",
+    "picker",
+    "i18n"
+   ]
+  },
+  {
+   "slug": "user-profile-nav",
+   "name": "User Nav Dropdown",
+   "description": "Header link showing user avatar and quick actions menu.",
+   "category": "navigation",
+   "tags": [
+    "profile",
+    "user",
+    "dropdown"
+   ]
+  },
+  {
+   "slug": "pagination-infinite-ui",
+   "name": "Infinite Scroll UI",
+   "description": "Visual indicator for dynamic infinite loading lists.",
+   "category": "navigation",
+   "tags": [
+    "pagination",
+    "scroll",
+    "loading"
+   ]
+  },
+  {
+   "slug": "floating-tab-bar",
+   "name": "Floating Tab Bar",
+   "description": "Segmented navigation bar that sits above the content.",
+   "category": "navigation",
+   "tags": [
+    "tabs",
+    "navigation",
+    "floating"
+   ]
+  },
+  {
+   "slug": "simple-footer-glass",
+   "name": "Glass Footer",
+   "description": "Elegant bottom section with multi-column links and glass effect.",
+   "category": "navigation",
+   "tags": [
+    "footer",
+    "navigation",
+    "layout"
+   ]
+  },
+  {
+   "slug": "sub-navbar-pills",
+   "name": "Sub Navbar Pills",
+   "description": "A secondary sub-navigation pill bar with active glow background, badge indicators, and smooth scroll overflow for dashboards.",
+   "category": "navigation",
+   "tags": [
+    "navigation",
+    "navbar",
+    "pills",
+    "subnav",
+    "tabs"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "quick-jump-dock",
+   "name": "Quick Jump Dock",
+   "description": "Floating macOS inspired dock navigation featuring hover scale expansion, tooltips, and fast route shortcuts.",
+   "category": "navigation",
+   "tags": [
+    "navigation",
+    "dock",
+    "floating",
+    "shortcuts",
+    "macos"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "step-breadcrumb-bar",
+   "name": "Step Breadcrumb Bar",
+   "description": "Multi-step workflow progress breadcrumb indicating completed, current, and upcoming stages.",
+   "category": "navigation",
+   "tags": [
+    "navigation",
+    "breadcrumb",
+    "steps",
+    "workflow",
+    "wizard"
+   ]
+  },
+  {
+   "slug": "centered-container",
+   "name": "Centered Container",
+   "description": "A responsive container that limits content width and centers it.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "container",
+    "grid"
+   ]
+  },
+  {
+   "slug": "glass-card-grid",
+   "name": "Glass Card Grid",
+   "description": "A responsive grid specifically designed for card layouts with auto-fill columns.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "grid",
+    "cards"
+   ]
+  },
+  {
+   "slug": "split-screen-layout",
+   "name": "Split Screen",
+   "description": "A layout divided into two equal halves, perfect for landing pages.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "split",
+    "landing"
+   ]
+  },
+  {
+   "slug": "masonry-grid",
+   "name": "Masonry Layout",
+   "description": "A CSS-based masonry layout for items of varying heights.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "masonry",
+    "columns"
+   ]
+  },
+  {
+   "slug": "section-divider-text",
+   "name": "Divider with Text",
+   "description": "A minimalist line divider with a label in the middle.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "divider",
+    "typography"
+   ]
+  },
+  {
+   "slug": "feature-hero",
+   "name": "Feature Hero Section",
+   "description": "Impactful header section with large typography and CTA buttons.",
+   "category": "layout",
+   "tags": [
+    "hero",
+    "layout",
+    "landing"
+   ]
+  },
+  {
+   "slug": "vertical-stack",
+   "name": "Auto-Stack (Vertical)",
+   "description": "Utility layout for stacking elements with consistent spacing.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "stack",
+    "spacing"
+   ]
+  },
+  {
+   "slug": "sidebar-layout-wrapper",
+   "name": "Sidebar Page Layout",
+   "description": "Two-column layout with fixed-width sidebar and liquid content.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "sidebar",
+    "dashboard"
+   ]
+  },
+  {
+   "slug": "bento-grid-3",
+   "name": "Bento Grid (3 Column)",
+   "description": "Modern dashboard grid inspired by Bento-box layouts.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "grid",
+    "dashboard"
+   ]
+  },
+  {
+   "slug": "glass-section-header",
+   "name": "Glass Section Header",
+   "description": "Visual header for page sections with a blurred underline.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "header",
+    "glass"
+   ]
+  },
+  {
+   "slug": "full-bleed-section",
+   "name": "Full Bleed Section",
+   "description": "Section that breaks out of the container to hit viewport edges.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "full-width",
+    "design"
+   ]
+  },
+  {
+   "slug": "minimal-footer-grid",
+   "name": "Modern Footer Layout",
+   "description": "Multi-column grid footer for project links and brand info.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "footer",
+    "grid"
+   ]
+  },
+  {
+   "slug": "scroll-snap-section",
+   "name": "Scroll Snap Page",
+   "description": "Layout wrapper that snaps sections to the full viewport height.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "scroll-snap",
+    "ux"
+   ]
+  },
+  {
+   "slug": "sticky-sidebar-wrapper",
+   "name": "Sticky Side Column",
+   "description": "Main content area with a side column that remains fixed while scrolling.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "sticky",
+    "sidebar"
+   ]
+  },
+  {
+   "slug": "cluster-horizontal",
+   "name": "Horizontal Cluster",
+   "description": "Auto-wrapping flex row for buttons, badges, or list items.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "flex",
+    "spacing"
+   ]
+  },
+  {
+   "slug": "center-fixed-box",
+   "name": "Absolute Center Box",
+   "description": "Overlay or layout utility to fix content exactly in the screen center.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "utility",
+    "absolute"
+   ]
+  },
+  {
+   "slug": "gallery-grid-4",
+   "name": "4-Column Portfolio Grid",
+   "description": "Square aspect-ratio grid for visual galleries and photos.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "grid",
+    "gallery"
+   ]
+  },
+  {
+   "slug": "step-layout-vertical",
+   "name": "Vertical Progress Steps",
+   "description": "Large scale vertical steps with space for detailed descriptions.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "onboarding",
+    "steps"
+   ]
+  },
+  {
+   "slug": "landing-section-split",
+   "name": "Split Media Section",
+   "description": "Landing page section with text on one side and a large media placeholder on the other.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "landing",
+    "media"
+   ]
+  },
+  {
+   "slug": "footer-centered-minimal",
+   "name": "Bottom Brand Footer",
+   "description": "Extremely simple centered footer for portfolio or personal sites.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "footer",
+    "personal"
+   ]
+  },
+  {
+   "slug": "holy-grail-grid",
+   "name": "Holy Grail Grid",
+   "description": "Modern CSS grid-based responsive layout with header, collapsible left sidebar, dynamic main content area, right aside, and footer.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "grid",
+    "holygrail",
+    "dashboard",
+    "structure"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "diagonal-section-divider",
+   "name": "Diagonal Section Divider",
+   "description": "SVG slant angle section separator creating dynamic non-rectangular transitions between landing page sections.",
+   "category": "layout",
+   "tags": [
+    "layout",
+    "divider",
+    "diagonal",
+    "slant",
+    "separator"
+   ]
+  },
+  {
+   "slug": "overlay-modal",
+   "name": "Glass Modal",
+   "description": "A focused overlay window with a premium glassmorphism blur and smooth entrance animation.",
+   "category": "overlays",
+   "tags": [
+    "modal",
+    "overlay",
+    "glass"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "side-drawer-right",
+   "name": "Slide-over (Right)",
+   "description": "A panel that slides in from the right side of the screen, common for filters or settings.",
+   "category": "overlays",
+   "tags": [
+    "drawer",
+    "panel",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "bottom-sheet-mobile",
+   "name": "Bottom Sheet",
+   "description": "A mobile-optimized overlay that slides up from the bottom of the screen.",
+   "category": "overlays",
+   "tags": [
+    "mobile",
+    "sheet",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "popover-menu-glass",
+   "name": "Glass Popover",
+   "description": "A small floating menu that appears near a trigger element.",
+   "category": "overlays",
+   "tags": [
+    "popover",
+    "menu",
+    "glass"
+   ]
+  },
+  {
+   "slug": "command-dialog",
+   "name": "Command Palette Overlay",
+   "description": "Search-first command center overlay for advanced site navigation.",
+   "category": "overlays",
+   "tags": [
+    "command",
+    "overlay",
+    "search"
+   ]
+  },
+  {
+   "slug": "lightbox-overlay",
+   "name": "Image Lightbox",
+   "description": "Overlay for viewing high-resolution images in isolation.",
+   "category": "overlays",
+   "tags": [
+    "lightbox",
+    "image",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "cookie-banner-glass",
+   "name": "Cookie Consent",
+   "description": "Minimalist glass banner for privacy and cookie compliance.",
+   "category": "overlays",
+   "tags": [
+    "cookie",
+    "legal",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "loading-overlay-full",
+   "name": "Page Loader Overlay",
+   "description": "Blocking overlay used during initial page loads or heavy transitions.",
+   "category": "overlays",
+   "tags": [
+    "loading",
+    "overlay",
+    "fullscreen"
+   ]
+  },
+  {
+   "slug": "backdrop-blur-mask",
+   "name": "Backdrop Mask",
+   "description": "Simple reusable overlay for dimming/blurring the page behind menus.",
+   "category": "overlays",
+   "tags": [
+    "mask",
+    "overlay",
+    "utility"
+   ]
+  },
+  {
+   "slug": "help-bubble-overlay",
+   "name": "Support Chat Bubble",
+   "description": "Floating action triggered icon for chat or support requests.",
+   "category": "overlays",
+   "tags": [
+    "support",
+    "chat",
+    "floating"
+   ]
+  },
+  {
+   "slug": "search-overlay-fullscreen",
+   "name": "Fullscreen Search",
+   "description": "Immersive search interface that covers the entire viewport.",
+   "category": "overlays",
+   "tags": [
+    "search",
+    "fullscreen",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "age-verification-overlay",
+   "name": "Age Gate Modal",
+   "description": "Splash overlay for age-restricted content verification.",
+   "category": "overlays",
+   "tags": [
+    "legal",
+    "verification",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "context-menu-overlay",
+   "name": "Custom Context Menu",
+   "description": "Right-click menu replacement with custom actions and styling.",
+   "category": "overlays",
+   "tags": [
+    "menu",
+    "context",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "mobile-nav-overlay",
+   "name": "Mobile Menu Overlay",
+   "description": "Full-screen mobile drawer triggered by burger menu.",
+   "category": "overlays",
+   "tags": [
+    "mobile",
+    "navigation",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "floating-tray-actions",
+   "name": "Bottom Action Tray",
+   "description": "Compact set of floating actions locked to the bottom viewport.",
+   "category": "overlays",
+   "tags": [
+    "actions",
+    "overlay",
+    "mobile"
+   ]
+  },
+  {
+   "slug": "toast-stack-overlay",
+   "name": "Stacked Toast Center",
+   "description": "Container for multiple toasts appearing simultaneously.",
+   "category": "overlays",
+   "tags": [
+    "toast",
+    "feedback",
+    "stack"
+   ]
+  },
+  {
+   "slug": "exit-intent-overlay",
+   "name": "Exit Intent Popup",
+   "description": "Modal triggered when the user moves to close the tab.",
+   "category": "overlays",
+   "tags": [
+    "conversion",
+    "modal",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "tooltip-action-tray",
+   "name": "Action Tooltip",
+   "description": "Tooltip that contains interactive buttons instead of just text.",
+   "category": "overlays",
+   "tags": [
+    "tooltip",
+    "actions",
+    "ux"
+   ]
+  },
+  {
+   "slug": "splash-intro-overlay",
+   "name": "Entrance Splash",
+   "description": "Temporary full-screen intro animation for brand reveal.",
+   "category": "overlays",
+   "tags": [
+    "branding",
+    "animation",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "spotlight-indicator",
+   "name": "Step Spotlight",
+   "description": "Circular mask that highlights a specific element for onboarding.",
+   "category": "overlays",
+   "tags": [
+    "onboarding",
+    "highlight",
+    "overlay"
+   ]
+  },
+  {
+   "slug": "cookie-preferences-drawer",
+   "name": "Cookie Preferences Drawer",
+   "description": "Full GDPR-compliant cookie consent bottom drawer with category toggles for essential, analytics, and marketing cookies.",
+   "category": "overlays",
+   "tags": [
+    "overlays",
+    "cookie",
+    "gdpr",
+    "privacy",
+    "drawer"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "image-compare-slider",
+   "name": "Image Compare Slider",
+   "description": "Interactive before-and-after visual comparison slider with draggable separator handle and touch support.",
+   "category": "overlays",
+   "tags": [
+    "overlays",
+    "image",
+    "compare",
+    "slider",
+    "before-after"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "floating-feedback-widget",
+   "name": "Floating Feedback Widget",
+   "description": "Fixed bottom-right collapsible feedback trigger with emoji satisfaction ratings and text submission textarea.",
+   "category": "overlays",
+   "tags": [
+    "overlays",
+    "feedback",
+    "floating",
+    "widget",
+    "survey"
+   ]
+  },
+  {
+   "slug": "glass-table",
+   "name": "Glass Data Table",
+   "description": "A clean, translucent table for displaying structured data with sortable header styles.",
+   "category": "data",
+   "tags": [
+    "table",
+    "data",
+    "glass"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "vertical-timeline",
+   "name": "Vertical Timeline",
+   "description": "Chronological list of events with a continuous vertical line and dot indicators.",
+   "category": "data",
+   "tags": [
+    "timeline",
+    "events",
+    "data"
+   ]
+  },
+  {
+   "slug": "stats-grid-dashboard",
+   "name": "Metric Grid",
+   "description": "High-density grid of key performance indicators for dashboards.",
+   "category": "data",
+   "tags": [
+    "stats",
+    "dashboard",
+    "data"
+   ]
+  },
+  {
+   "slug": "accordion-group-glass",
+   "name": "Glass Accordion",
+   "description": "Expandable content sections with a subtle glass effect and smooth transitions.",
+   "category": "data",
+   "tags": [
+    "accordion",
+    "data",
+    "glass"
+   ]
+  },
+  {
+   "slug": "avatar-group-stack",
+   "name": "Overlapping Avatars",
+   "description": "A set of user avatars clustered together, perfect for ",
+   "category": "data",
+   "tags": [
+    "avatar",
+    "data",
+    "group"
+   ]
+  },
+  {
+   "slug": "file-tree-view",
+   "name": "File Tree Structure",
+   "description": "A nested folder and file list hierarchy for representing directories.",
+   "category": "data",
+   "tags": [
+    "tree",
+    "data",
+    "files"
+   ]
+  },
+  {
+   "slug": "calendar-grid-view",
+   "name": "Minimal Month Calendar",
+   "description": "Compact calendar grid for event scheduling and date selection.",
+   "category": "data",
+   "tags": [
+    "calendar",
+    "data",
+    "grid"
+   ]
+  },
+  {
+   "slug": "description-list-horiz",
+   "name": "Data Key-Value List",
+   "description": "Clean list for technical specifications or user details.",
+   "category": "data",
+   "tags": [
+    "data",
+    "list",
+    "details"
+   ]
+  },
+  {
+   "slug": "tag-cloud-data",
+   "name": "Metric Tag Cloud",
+   "description": "Visual group of tags or keywords for categorization.",
+   "category": "data",
+   "tags": [
+    "tags",
+    "cloud",
+    "data"
+   ]
+  },
+  {
+   "slug": "stepper-data-vertical",
+   "name": "Vertical Steps",
+   "description": "Visual path for multi-step data processes or wizards.",
+   "category": "data",
+   "tags": [
+    "steps",
+    "data",
+    "vertical"
+   ]
+  },
+  {
+   "slug": "rating-breakdown-bar",
+   "name": "Rating Distribution",
+   "description": "Bar graph breakdown of user ratings/reviews.",
+   "category": "data",
+   "tags": [
+    "rating",
+    "data",
+    "graph"
+   ]
+  },
+  {
+   "slug": "timeline-horiz-steps",
+   "name": "Horizontal Timeline",
+   "description": "Side-scrolling event tracker with distinct timestamps.",
+   "category": "data",
+   "tags": [
+    "timeline",
+    "horizontal",
+    "data"
+   ]
+  },
+  {
+   "slug": "price-compare-table",
+   "name": "Comparison Table",
+   "description": "Grid layout for comparing plan features side-by-side.",
+   "category": "data",
+   "tags": [
+    "table",
+    "pricing",
+    "compare"
+   ]
+  },
+  {
+   "slug": "user-directory-item",
+   "name": "Directory Card",
+   "description": "Compact row for listing users with avatar and online status.",
+   "category": "data",
+   "tags": [
+    "user",
+    "list",
+    "data"
+   ]
+  },
+  {
+   "slug": "data-chips-group",
+   "name": "Filter Chips List",
+   "description": "Group of interactive chips for data filtering.",
+   "category": "data",
+   "tags": [
+    "chips",
+    "filter",
+    "data"
+   ]
+  },
+  {
+   "slug": "sparkline-stat-card",
+   "name": "Metric with Sparkline",
+   "description": "Data card showing target metric and a miniature trend graph.",
+   "category": "data",
+   "tags": [
+    "graph",
+    "stat",
+    "data"
+   ]
+  },
+  {
+   "slug": "progress-list-small",
+   "name": "Minimal Progress List",
+   "description": "Set of progress bars labels for small dashboards.",
+   "category": "data",
+   "tags": [
+    "progress",
+    "data",
+    "stat"
+   ]
+  },
+  {
+   "slug": "tree-item-interactive",
+   "name": "Expandable Row",
+   "description": "List item that toggles visible child data on click.",
+   "category": "data",
+   "tags": [
+    "tree",
+    "interactive",
+    "data"
+   ]
+  },
+  {
+   "slug": "key-value-pill-group",
+   "name": "Metadata Pill List",
+   "description": "Dense grouping of status metadata for entities.",
+   "category": "data",
+   "tags": [
+    "metadata",
+    "pills",
+    "data"
+   ]
+  },
+  {
+   "slug": "gantt-chart-minimal",
+   "name": "Gantt Timeline UI",
+   "description": "Simplified bar-based timeline for project schedules.",
+   "category": "data",
+   "tags": [
+    "gantt",
+    "project",
+    "data"
+   ]
+  },
+  {
+   "slug": "metric-comparison-row",
+   "name": "Metric Comparison Row",
+   "description": "Compact horizontal metric row comparing Current vs Previous periods or A/B performance with ratio progress bars.",
+   "category": "data",
+   "tags": [
+    "data",
+    "metric",
+    "comparison",
+    "kpi",
+    "analytics"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "activity-heatmap-grid",
+   "name": "Activity Heatmap Grid",
+   "description": "GitHub-styled commit/activity frequency matrix visualizing contribution density across days and weeks.",
+   "category": "data",
+   "tags": [
+    "data",
+    "heatmap",
+    "activity",
+    "github",
+    "matrix"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "status-timeline-feed",
+   "name": "Status Timeline Feed",
+   "description": "Rich operational audit and incident log timeline feed with status color badges, author tags, and relative timestamps.",
+   "category": "data",
+   "tags": [
+    "data",
+    "timeline",
+    "status",
+    "audit",
+    "feed"
+   ]
+  },
+  {
+   "slug": "gradient-heading",
+   "name": "Gradient Heading",
+   "description": "A punchy hero heading with a customizable multi-color gradient text effect.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "heading",
+    "gradient"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "cyberpunk-glitch-text",
+   "name": "Glitch Text",
+   "description": "High-intensity cyberpunk glitch effect for attention-grabbing titles.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "glitch",
+    "cyberpunk"
+   ]
+  },
+  {
+   "slug": "glass-block-quote",
+   "name": "Glass Blockquote",
+   "description": "A stylish quote block with a blurred background and thick accent border.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "quote",
+    "glass"
+   ]
+  },
+  {
+   "slug": "typewriter-text",
+   "name": "Typewriter Effect",
+   "description": "Pure CSS typewriter animation for sequential text reveal.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "animation",
+    "typewriter"
+   ]
+  },
+  {
+   "slug": "drop-cap-paragraph",
+   "name": "Drop Cap Paragraph",
+   "description": "Editorial-style paragraph with a large, stylized first letter.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "editorial",
+    "paragraph"
+   ]
+  },
+  {
+   "slug": "neon-text-highlight",
+   "name": "Neon Highlight",
+   "description": "Custom text highlight with a glowing neon border effect.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "highlight",
+    "neon"
+   ]
+  },
+  {
+   "slug": "kbd-indicator",
+   "name": "KBD Key Cap",
+   "description": "Stylized keyboard shortcut indicator with a tactile UI look.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "utility",
+    "keyboard"
+   ]
+  },
+  {
+   "slug": "animated-underline-link",
+   "name": "Smart Underline Link",
+   "description": "A link with a smooth underline animation that expands from the center.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "link",
+    "navigation"
+   ]
+  },
+  {
+   "slug": "code-inline-glass",
+   "name": "Inline Code (Glass)",
+   "description": "Translucent inline code snippet for technical documentation.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "code",
+    "glass"
+   ]
+  },
+  {
+   "slug": "stroke-heading-outline",
+   "name": "Outlined Heading",
+   "description": "A bold empty heading with only the stroke/outline visible.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "heading",
+    "outline"
+   ]
+  },
+  {
+   "slug": "floating-text-label",
+   "name": "Floating Label",
+   "description": "Small text label that floats above a title or section.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "label",
+    "layout"
+   ]
+  },
+  {
+   "slug": "shadow-reveal-text",
+   "name": "Text Shadow Reveal",
+   "description": "Heading with a subtle double shadow that adds depth.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "heading",
+    "shadow"
+   ]
+  },
+  {
+   "slug": "letter-spacing-wide",
+   "name": "Cinematic Typography",
+   "description": "Text with extreme letter spacing for a luxury or cinematic look.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "luxury",
+    "headers"
+   ]
+  },
+  {
+   "slug": "monospace-stat-line",
+   "name": "Monospace Metrics",
+   "description": "Technical line for displaying raw metrics or logs.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "metrics",
+    "code"
+   ]
+  },
+  {
+   "slug": "background-clip-mask",
+   "name": "Image Masked Text",
+   "description": "Text that uses an image as its background fill.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "mask",
+    "heading"
+   ]
+  },
+  {
+   "slug": "glass-text-reveal",
+   "name": "Glass Text Shimmer",
+   "description": "Text with a moving translucent shimmer effect.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "shimmer",
+    "glass"
+   ]
+  },
+  {
+   "slug": "minimal-list-markers",
+   "name": "Custom List Markers",
+   "description": "Unordered list with clean, styled bullet points.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "list",
+    "ux"
+   ]
+  },
+  {
+   "slug": "text-3d-layer",
+   "name": "3D Stacked Text",
+   "description": "Text layers that create a three-dimensional depth effect.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "3d",
+    "creative"
+   ]
+  },
+  {
+   "slug": "gradient-underline-link",
+   "name": "Gradient Link",
+   "description": "Interactive link with a multi-color gradient underline.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "link",
+    "gradient"
+   ]
+  },
+  {
+   "slug": "faded-vertical-text",
+   "name": "Side Header Text",
+   "description": "Vertical text used for sidebars or decorative layout edges.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "vertical",
+    "decorative"
+   ]
+  },
+  {
+   "slug": "animated-counter-text",
+   "name": "Animated Counter Text",
+   "description": "Smooth number counter animation that counts up from 0 to target value on scroll into viewport.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "counter",
+    "animated",
+    "numbers",
+    "kpi"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "gradient-text-marquee",
+   "name": "Gradient Text Marquee",
+   "description": "Continuous smooth looping horizontal marquee ribbon featuring metallic gradient typography.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "marquee",
+    "gradient",
+    "loop",
+    "ticker"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "curved-path-heading",
+   "name": "Curved Path Heading",
+   "description": "SVG textOnPath arc headline for playful badges, stamp seals, and creative hero section headers.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "curved",
+    "path",
+    "svg",
+    "heading"
+   ]
+  },
+  {
+   "slug": "hacker-decode-text",
+   "name": "Hacker Decode Text",
+   "description": "Matrix/Cyberpunk scrambled text reveal effect that rapidly randomizes glyphs before resolving into the final string.",
+   "category": "typography",
+   "tags": [
+    "typography",
+    "cyberpunk",
+    "decode",
+    "glitch",
+    "matrix"
+   ]
+  },
+  {
+   "slug": "area-chart",
+   "name": "Area Chart",
+   "description": "A premium, smooth area chart with gradient fills and glassmorphism tooltips.",
+   "category": "charts",
+   "tags": [
+    "data",
+    "analytics",
+    "chart",
+    "area",
+    "premium"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "bar-chart",
+   "name": "Bar Chart",
+   "description": "A clean bar chart with rounded corners and multi-series support.",
+   "category": "charts",
+   "tags": [
+    "data",
+    "analytics",
+    "chart",
+    "bar"
+   ]
+  },
+  {
+   "slug": "donut-chart",
+   "name": "Donut Chart",
+   "description": "A minimalist donut chart with a centered label and interactive segments.",
+   "category": "charts",
+   "tags": [
+    "data",
+    "analytics",
+    "chart",
+    "donut",
+    "pie"
+   ]
+  },
+  {
+   "slug": "radar-metric-chart",
+   "name": "Radar Metric Chart",
+   "description": "Polygon spider radar chart visualizing multi-attribute scores (e.g. Speed, SEO, Accessibility, Security) with SVG canvas.",
+   "category": "charts",
+   "tags": [
+    "charts",
+    "radar",
+    "polygon",
+    "spider",
+    "metrics"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "linear-progress-gauge",
+   "name": "Linear Progress Gauge",
+   "description": "Segmented target quota and budget gauge bar with colored threshold markers and percent label.",
+   "category": "charts",
+   "tags": [
+    "charts",
+    "gauge",
+    "linear",
+    "progress",
+    "quota"
+   ]
+  },
+  {
+   "slug": "chart-frame",
+   "name": "Chart Frame",
+   "description": "Shared accessible chart shell: card surface, header, legend, hover tooltip and a data-table fallback used by every SVG chart.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "a11y",
+    "foundation",
+    "tooltip"
+   ]
+  },
+  {
+   "slug": "line-chart",
+   "name": "Line Chart",
+   "description": "Multi-series SVG line chart with smooth, linear or step curves, gradient area fill and a crosshair tooltip.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "line",
+    "trend",
+    "time-series",
+    "area"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "stacked-area-chart",
+   "name": "Stacked Area Chart",
+   "description": "Stacked or 100% normalised area chart showing how each layer contributes to a changing total.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "area",
+    "stacked",
+    "composition",
+    "time-series"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "range-area-chart",
+   "name": "Range Area Chart",
+   "description": "Min/max band with a central median line, ideal for latency percentiles, temperatures or price ranges.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "area",
+    "band",
+    "range",
+    "percentile"
+   ]
+  },
+  {
+   "slug": "forecast-line-chart",
+   "name": "Forecast Line Chart",
+   "description": "Actuals as a solid line and projections as a dashed line with a widening confidence cone and a Today divider.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "line",
+    "forecast",
+    "projection",
+    "confidence"
+   ]
+  },
+  {
+   "slug": "slope-chart",
+   "name": "Slope Chart",
+   "description": "Before/after comparison between two points in time with rising and falling lines in status colors.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "slope",
+    "comparison",
+    "before-after"
+   ]
+  },
+  {
+   "slug": "bump-chart",
+   "name": "Bump Chart",
+   "description": "Rank-over-time chart tracking each entity's position across periods with labelled rank nodes.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "rank",
+    "bump",
+    "leaderboard",
+    "time-series"
+   ]
+  },
+  {
+   "slug": "sparkline-chart",
+   "name": "Sparkline Chart",
+   "description": "Compact inline trend line, area or micro-bars for tables, KPI tiles and running text.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "sparkline",
+    "inline",
+    "micro",
+    "trend"
+   ]
+  },
+  {
+   "slug": "grouped-bar-chart",
+   "name": "Grouped Bar Chart",
+   "description": "Side-by-side vertical bars comparing several series across categories, with rounded data-ends.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "bar",
+    "grouped",
+    "comparison",
+    "column"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "stacked-bar-chart",
+   "name": "Stacked Bar Chart",
+   "description": "Vertical or horizontal stacked bars with optional 100% mode and 2px surface gaps between segments.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "bar",
+    "stacked",
+    "composition",
+    "horizontal"
+   ]
+  },
+  {
+   "slug": "horizontal-bar-chart",
+   "name": "Horizontal Bar Chart",
+   "description": "Ranked horizontal bars with labels and values, single color and optional highlight of one item.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "bar",
+    "horizontal",
+    "ranking",
+    "top-list"
+   ]
+  },
+  {
+   "slug": "diverging-bar-chart",
+   "name": "Diverging Bar Chart",
+   "description": "Horizontal bars extending left or right from zero for variance, sentiment and P&L deltas.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "bar",
+    "diverging",
+    "variance",
+    "positive-negative"
+   ]
+  },
+  {
+   "slug": "waterfall-chart",
+   "name": "Waterfall Chart",
+   "description": "Bridge chart showing how a starting value is built up or eroded by positive and negative steps.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "waterfall",
+    "bridge",
+    "finance",
+    "variance"
+   ]
+  },
+  {
+   "slug": "histogram-chart",
+   "name": "Histogram Chart",
+   "description": "Bins raw values into equal-width buckets and shows the distribution with mean and median markers.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "histogram",
+    "distribution",
+    "statistics"
+   ]
+  },
+  {
+   "slug": "lollipop-chart",
+   "name": "Lollipop Chart",
+   "description": "Thin stems with value dots and an optional goal line; a lighter alternative to bar charts.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "lollipop",
+    "dot",
+    "target",
+    "score"
+   ]
+  },
+  {
+   "slug": "dumbbell-chart",
+   "name": "Dumbbell Chart",
+   "description": "Two connected dots per row showing the gap between before/after or two groups.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "dumbbell",
+    "gap",
+    "comparison",
+    "before-after"
+   ]
+  },
+  {
+   "slug": "bullet-chart",
+   "name": "Bullet Chart",
+   "description": "Compact KPI-vs-target bars with qualitative performance bands and an explicit on-target status.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "bullet",
+    "kpi",
+    "target",
+    "performance"
+   ]
+  },
+  {
+   "slug": "population-pyramid",
+   "name": "Population Pyramid",
+   "description": "Back-to-back horizontal bars comparing two groups across ordered bands like age groups.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "pyramid",
+    "demographics",
+    "butterfly",
+    "comparison"
+   ]
+  },
+  {
+   "slug": "radial-bar-chart",
+   "name": "Radial Bar Chart",
+   "description": "Concentric progress arcs sharing a 0–100% scale with a labelled breakdown list.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "radial",
+    "progress",
+    "arc",
+    "adoption"
+   ]
+  },
+  {
+   "slug": "segmented-bar-chart",
+   "name": "Segmented Bar Chart",
+   "description": "A single tall part-to-whole bar with labelled segments and a breakdown list; clearer than a pie.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "segmented",
+    "part-to-whole",
+    "storage",
+    "breakdown"
+   ]
+  },
+  {
+   "slug": "pie-chart",
+   "name": "Pie Chart",
+   "description": "Pure SVG pie or donut with slice gaps, centre total and a value breakdown list.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "pie",
+    "donut",
+    "part-to-whole",
+    "share"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "gauge-chart",
+   "name": "Gauge Chart",
+   "description": "Semicircular progress gauge for a single KPI against a goal with the number always shown as text.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "gauge",
+    "kpi",
+    "goal",
+    "progress"
+   ]
+  },
+  {
+   "slug": "waffle-chart",
+   "name": "Waffle Chart",
+   "description": "10×10 grid where each square is 1% of the whole; an intuitive view of percentages.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "waffle",
+    "percentage",
+    "part-to-whole",
+    "grid"
+   ]
+  },
+  {
+   "slug": "treemap-chart",
+   "name": "Treemap Chart",
+   "description": "Squarified treemap where tile area is proportional to value, grouped by color.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "treemap",
+    "hierarchy",
+    "part-to-whole",
+    "bundle"
+   ]
+  },
+  {
+   "slug": "funnel-chart",
+   "name": "Funnel Chart",
+   "description": "Conversion funnel with tapered stages, step drop-off and overall conversion rate.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "funnel",
+    "conversion",
+    "marketing",
+    "drop-off"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "sunburst-chart",
+   "name": "Sunburst Chart",
+   "description": "Two-level hierarchical donut with parent categories inside and their children on the outer ring.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "sunburst",
+    "hierarchy",
+    "donut",
+    "breakdown"
+   ]
+  },
+  {
+   "slug": "activity-rings",
+   "name": "Activity Rings",
+   "description": "Concentric goal rings with values, targets and progress percentages; over-100% wraps around.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "rings",
+    "goals",
+    "progress",
+    "fitness"
+   ]
+  },
+  {
+   "slug": "scatter-plot",
+   "name": "Scatter Plot",
+   "description": "X/Y relationship plot for up to three groups with distinct shapes and a least-squares trend line.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "scatter",
+    "correlation",
+    "regression",
+    "statistics"
+   ]
+  },
+  {
+   "slug": "bubble-chart",
+   "name": "Bubble Chart",
+   "description": "Three-variable scatter where bubble area encodes a third measure such as revenue.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "bubble",
+    "scatter",
+    "portfolio",
+    "three-variables"
+   ]
+  },
+  {
+   "slug": "box-plot-chart",
+   "name": "Box Plot Chart",
+   "description": "Distribution summary per group with median, IQR box, whiskers and outliers computed from raw data.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "box-plot",
+    "distribution",
+    "statistics",
+    "quartiles"
+   ]
+  },
+  {
+   "slug": "heatmap-chart",
+   "name": "Heatmap Chart",
+   "description": "Matrix heatmap on a single-hue sequential ramp with values, scale legend and keyboard-focusable cells.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "heatmap",
+    "matrix",
+    "sequential",
+    "grid"
+   ]
+  },
+  {
+   "slug": "punch-card-chart",
+   "name": "Punch Card Chart",
+   "description": "Day × hour dot matrix where dot area encodes volume; shows when activity happens.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "punch-card",
+    "activity",
+    "time-of-day",
+    "dots"
+   ]
+  },
+  {
+   "slug": "polar-area-chart",
+   "name": "Polar Area Chart",
+   "description": "Equal-angle wedges with area-correct radius for cyclical categories like months or hours.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "polar",
+    "seasonality",
+    "radial",
+    "cyclical"
+   ]
+  },
+  {
+   "slug": "radar-chart",
+   "name": "Radar Chart",
+   "description": "Pure SVG spider chart comparing up to three entities across 5–8 attributes on a shared scale.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "radar",
+    "spider",
+    "comparison",
+    "attributes"
+   ]
+  },
+  {
+   "slug": "sankey-chart",
+   "name": "Sankey Chart",
+   "description": "Two-column flow diagram where ribbon thickness encodes the volume moving from sources to targets.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "sankey",
+    "flow",
+    "attribution",
+    "journey"
+   ]
+  },
+  {
+   "slug": "candlestick-chart",
+   "name": "Candlestick Chart",
+   "description": "OHLC price chart with hollow up-candles and filled down-candles so direction never relies on color.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "candlestick",
+    "ohlc",
+    "finance",
+    "trading"
+   ]
+  },
+  {
+   "slug": "kpi-stat-tile",
+   "name": "KPI Stat Tile",
+   "description": "Hero-number statistic tile with change chip (icon + text), comparison period and sparkline.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "kpi",
+    "stat",
+    "metric",
+    "dashboard",
+    "sparkline"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "kpi-trend-grid",
+   "name": "KPI Trend Grid",
+   "description": "Responsive grid of KPI tiles with sparklines; the classic top row of an analytics dashboard.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "kpi",
+    "dashboard",
+    "grid",
+    "overview"
+   ]
+  },
+  {
+   "slug": "meter-gauge",
+   "name": "Meter Gauge",
+   "description": "Speedometer dial with labelled status zones and an animated needle for live readings.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "gauge",
+    "meter",
+    "speedometer",
+    "threshold"
+   ]
+  },
+  {
+   "slug": "goal-progress-chart",
+   "name": "Goal Progress Chart",
+   "description": "Cumulative progress toward a goal versus the ideal linear pace with an ahead/behind readout.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "goal",
+    "burnup",
+    "pace",
+    "target"
+   ]
+  },
+  {
+   "slug": "retention-cohort-table",
+   "name": "Retention Cohort Table",
+   "description": "Triangular cohort retention matrix shaded on a single-hue ramp with per-period averages.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "cohort",
+    "retention",
+    "saas",
+    "table",
+    "heatmap"
+   ]
+  },
+  {
+   "slug": "metric-delta-table",
+   "name": "Metric Delta Table",
+   "description": "Comparison table with inline bars, current vs previous values, signed deltas and sparklines.",
+   "category": "charts",
+   "tags": [
+    "chart",
+    "svg",
+    "zero-dependency",
+    "table",
+    "comparison",
+    "delta",
+    "sparkline"
+   ]
+  },
+  {
+   "slug": "cart-store",
+   "name": "Cart Store",
+   "description": "Framework-free cart state shared by every shop component: localStorage persistence, cross-tab sync, add-to-cart binding and money formatting.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "cart",
+    "state",
+    "localStorage",
+    "foundation"
+   ]
+  },
+  {
+   "slug": "store-product-card",
+   "name": "Store Product Card",
+   "description": "Shop product tile with illustration or photo, badge, star rating, colour swatches, compare-at price, wishlist toggle and add-to-cart.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "card",
+    "product",
+    "add-to-cart",
+    "wishlist"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "product-grid",
+   "name": "Product Grid",
+   "description": "Responsive grid of product cards with an empty state — the target of FilterSidebar and ProductToolbar.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "grid",
+    "catalog",
+    "listing"
+   ]
+  },
+  {
+   "slug": "store-header",
+   "name": "Store Header",
+   "description": "Shop navbar with category dropdowns, search, account and a cart button whose badge updates live; collapses to a mobile menu.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "navbar",
+    "header",
+    "menu",
+    "cart"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "cart-drawer",
+   "name": "Cart Drawer",
+   "description": "Slide-in cart with quantity steppers, remove, free-shipping progress and subtotal. Accessible modal with focus trap.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "cart",
+    "drawer",
+    "overlay",
+    "checkout"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "promo-bar",
+   "name": "Promo Bar",
+   "description": "Slim announcement bar with rotating messages, pause on hover and a dismiss button remembered per session.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "announcement",
+    "banner",
+    "promo"
+   ]
+  },
+  {
+   "slug": "store-hero",
+   "name": "Store Hero",
+   "description": "Shop landing hero with gradient headline, CTAs, proof stats and a floating featured-product stage.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "hero",
+    "landing",
+    "product"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "category-tiles",
+   "name": "Category Tiles",
+   "description": "Category grid with illustrated tiles, product counts and an animated arrow.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "categories",
+    "grid",
+    "navigation"
+   ]
+  },
+  {
+   "slug": "trust-badges",
+   "name": "Trust Badges",
+   "description": "Row of store guarantees — shipping, returns, secure payment and support — in card, inline or divided style.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "trust",
+    "guarantee",
+    "features"
+   ]
+  },
+  {
+   "slug": "filter-sidebar",
+   "name": "Filter Sidebar",
+   "description": "Category, price, colour, rating and stock filters that filter and sort a ProductGrid instantly, synced with the URL.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "filters",
+    "catalog",
+    "search",
+    "form"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "product-toolbar",
+   "name": "Product Toolbar",
+   "description": "Catalogue heading with a live result count and a ModernSelect sort control wired to FilterSidebar.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "toolbar",
+    "sort",
+    "catalog"
+   ]
+  },
+  {
+   "slug": "product-gallery",
+   "name": "Product Gallery",
+   "description": "Product image viewer with large stage and keyboard-navigable thumbnails; generates illustrated angles when there are no photos.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "gallery",
+    "images",
+    "product-page"
+   ]
+  },
+  {
+   "slug": "variant-picker",
+   "name": "Variant Picker",
+   "description": "Colour swatches or size pills as a native radio group that keeps an add-to-cart button in sync.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "variants",
+    "swatch",
+    "size",
+    "radio"
+   ]
+  },
+  {
+   "slug": "product-buy-box",
+   "name": "Product Buy Box",
+   "description": "Product detail purchase panel: price, savings, colour/size pickers, quantity stepper, add to cart, buy now and expandable details.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "product-page",
+    "add-to-cart",
+    "pdp"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "order-summary",
+   "name": "Order Summary",
+   "description": "Checkout sidebar with cart lines, promo codes, shipping, tax and a live total that follows the chosen shipping method.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "checkout",
+    "summary",
+    "totals",
+    "promo"
+   ]
+  },
+  {
+   "slug": "checkout-form",
+   "name": "Checkout Form",
+   "description": "One-page checkout — contact, delivery, shipping and payment — with autocomplete hints, validation and an animated confirmation.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "checkout",
+    "form",
+    "payment"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "cart-toast",
+   "name": "Cart Toast",
+   "description": "Live stacked notifications: \"Added to cart\" with a View cart action, plus any custom notice sent through the ack:notify event.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "toast",
+    "notification",
+    "alert",
+    "live"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "live-activity-toast",
+   "name": "Live Activity Toast",
+   "description": "Rotating social-proof notice of recent purchases that slides in and out; pauses on hover and can be dismissed for the session.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "social-proof",
+    "toast",
+    "notification",
+    "conversion"
+   ]
+  },
+  {
+   "slug": "countdown-banner",
+   "name": "Countdown Banner",
+   "description": "Live sale countdown with days, hours, minutes and seconds, a CTA and an ended state; fixed date or rolling per-visitor deadline.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "countdown",
+    "timer",
+    "sale",
+    "banner",
+    "urgency"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "stock-indicator",
+   "name": "Stock Indicator",
+   "description": "Low-stock urgency notice with a level bar and a live \"people viewing\" counter for product pages.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "stock",
+    "urgency",
+    "inventory",
+    "product-page"
+   ]
+  },
+  {
+   "slug": "product-card-minimal",
+   "name": "Product Card Minimal",
+   "description": "Editorial product card: tall media that swaps view on hover, quick-add sizes, name, price and colour count.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "card",
+    "product",
+    "editorial",
+    "quick-add"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "filter-bar",
+   "name": "Filter Bar",
+   "description": "Horizontal catalogue toolbar with category chips, a refine panel (price, colour, stock), sort and live count.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "filters",
+    "toolbar",
+    "catalog",
+    "sort"
+   ]
+  },
+  {
+   "slug": "cart-page-list",
+   "name": "Cart Page List",
+   "description": "Full shopping-bag page: line items with quantity and remove, gift note, free-shipping progress and checkout summary.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "cart",
+    "bag",
+    "checkout",
+    "page"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "product-media",
+   "name": "Product Media",
+   "description": "Product visual: a real photo, or a hue-tinted backdrop with one of 16 line-art product illustrations.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "image",
+    "illustration",
+    "placeholder"
+   ]
+  },
+  {
+   "slug": "product-rating",
+   "name": "Product Rating",
+   "description": "Read-only star rating with fractional fill, value and review count, exposed as a single accessible label.",
+   "category": "ecommerce",
+   "tags": [
+    "ecommerce",
+    "shop",
+    "rating",
+    "stars",
+    "reviews"
+   ]
+  },
+  {
+   "slug": "app-sidebar",
+   "name": "App Sidebar",
+   "description": "SaaS sidebar with workspace switcher, grouped nav with icons and badges, collapsible icon rail and plan card.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "sidebar",
+    "navigation",
+    "shell"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "app-topbar",
+   "name": "App Topbar",
+   "description": "App top bar with ⌘K search, notifications dropdown with unread count, theme toggle and user menu.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "topbar",
+    "header",
+    "notifications",
+    "user-menu"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "page-header",
+   "name": "Page Header",
+   "description": "App page heading with breadcrumb, description, period switcher, action buttons and underline tabs.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "header",
+    "toolbar",
+    "tabs"
+   ]
+  },
+  {
+   "slug": "data-table",
+   "name": "Data Table",
+   "description": "Client-side table with search, status chips, sortable columns, row selection, bulk bar, pagination and typed cells.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "table",
+    "data",
+    "sort",
+    "pagination",
+    "filter"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "room-rack",
+   "name": "Room Rack",
+   "description": "Booking timeline (tape chart): rooms by days with status-coloured reservation bars, today marker and detail panel.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "timeline",
+    "calendar",
+    "booking",
+    "gantt",
+    "hotel"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "housekeeping-board",
+   "name": "Housekeeping Board",
+   "description": "Room status board by floor — clean, dirty, inspecting, occupied, out of order — with filters and quick status changes.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "status",
+    "board",
+    "grid",
+    "hotel",
+    "operations"
+   ]
+  },
+  {
+   "slug": "arrivals-board",
+   "name": "Arrivals Board",
+   "description": "Front-desk list with arrivals, departures and in-house tabs plus one-click check-in / check-out.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "list",
+    "tabs",
+    "check-in",
+    "hotel"
+   ]
+  },
+  {
+   "slug": "guest-profile-card",
+   "name": "Guest Profile Card",
+   "description": "CRM profile with avatar, loyalty tier, contact links, lifetime stats, preferences, upcoming stay and staff notes.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "profile",
+    "crm",
+    "customer",
+    "card"
+   ]
+  },
+  {
+   "slug": "settings-section",
+   "name": "Settings Section",
+   "description": "Settings block with title and help text beside a fields card with Save / Cancel and a saved confirmation.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "settings",
+    "form",
+    "account"
+   ]
+  },
+  {
+   "slug": "switch-row",
+   "name": "Switch Row",
+   "description": "Settings row with label, description and an accessible on/off switch.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "switch",
+    "toggle",
+    "settings",
+    "form"
+   ]
+  },
+  {
+   "slug": "team-members",
+   "name": "Team Members",
+   "description": "Team management with roles, status, invite form and two-step remove.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "team",
+    "users",
+    "roles",
+    "invite"
+   ]
+  },
+  {
+   "slug": "plan-usage-card",
+   "name": "Plan Usage Card",
+   "description": "Billing summary with plan, renewal, usage meters with thresholds, payment method and upgrade action.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "billing",
+    "plan",
+    "usage",
+    "meter"
+   ]
+  },
+  {
+   "slug": "auth-card",
+   "name": "Auth Card",
+   "description": "Split-screen sign-in / sign-up with SSO buttons, show-password toggle, validation and a brand panel.",
+   "category": "app",
+   "tags": [
+    "app",
+    "dashboard",
+    "saas",
+    "auth",
+    "login",
+    "sign-in",
+    "form"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "hero-gradient",
+   "name": "Hero Gradient",
+   "description": "Full-screen hero with animated gradient background, glassmorphism badge, and CTA group.",
+   "category": "sections",
+   "sectionCategory": "hero",
+   "tags": [
+    "hero",
+    "gradient",
+    "animated",
+    "glass",
+    "fullscreen"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "hero-split",
+   "name": "Hero Split",
+   "description": "Split-screen hero with content column and interactive preview mockup side.",
+   "category": "sections",
+   "sectionCategory": "hero",
+   "tags": [
+    "hero",
+    "split",
+    "browser-mockup",
+    "stats",
+    "responsive"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "hero-glass",
+   "name": "Hero Glass",
+   "description": "Centered hero with glassmorphism card overlay, animated glowing orbs, and action buttons.",
+   "category": "sections",
+   "sectionCategory": "hero",
+   "tags": [
+    "hero",
+    "glassmorphism",
+    "animated-orbs",
+    "trust",
+    "responsive"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "feature-bento-grid",
+   "name": "Feature Bento Grid",
+   "description": "Modern 6-slot Bento Grid feature showcase with live scores, telemetry badges, and code snippets.",
+   "category": "sections",
+   "sectionCategory": "features",
+   "tags": [
+    "features",
+    "bento",
+    "grid",
+    "metrics",
+    "glassmorphism"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "feature-timeline-flow",
+   "name": "Feature Timeline Flow",
+   "description": "Step-by-step product architecture workflow section with connected glowing nodes and code examples.",
+   "category": "sections",
+   "sectionCategory": "features",
+   "tags": [
+    "features",
+    "timeline",
+    "workflow",
+    "steps",
+    "architecture"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "pricing-comparison-matrix",
+   "name": "Pricing Comparison Matrix",
+   "description": "Interactive pricing matrix with monthly/annual billing toggle, highlighted plan, and full feature checklist.",
+   "category": "sections",
+   "sectionCategory": "pricing",
+   "tags": [
+    "pricing",
+    "matrix",
+    "comparison",
+    "toggle",
+    "saas"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "pricing-tier-cards",
+   "name": "Pricing Tier Cards",
+   "description": "3-tier pricing cards with featured highlight, feature breakdown, and money-back guarantee.",
+   "category": "sections",
+   "sectionCategory": "pricing",
+   "tags": [
+    "pricing",
+    "cards",
+    "tiers",
+    "subscription",
+    "responsive"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "testimonial-wall-glass",
+   "name": "Testimonial Wall Glass",
+   "description": "Social proof testimonial wall with verified customer badges, rating stats, and responsive masonry grid.",
+   "category": "sections",
+   "sectionCategory": "testimonials",
+   "tags": [
+    "testimonials",
+    "social-proof",
+    "reviews",
+    "ratings",
+    "glassmorphism"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "cta-glow-banner",
+   "name": "CTA Glow Banner",
+   "description": "High-conversion full-width glass banner with radial glowing mesh, trust badges, and email input.",
+   "category": "sections",
+   "sectionCategory": "cta",
+   "tags": [
+    "cta",
+    "banner",
+    "conversion",
+    "newsletter",
+    "glow"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "cta-app-download",
+   "name": "CTA App Download",
+   "description": "Mobile application showcase section with phone mockup preview, feature pills, and App Store badges.",
+   "category": "sections",
+   "sectionCategory": "cta",
+   "tags": [
+    "cta",
+    "mobile",
+    "app-store",
+    "download",
+    "mockup"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "faq-accordion-section",
+   "name": "FAQ Accordion Section",
+   "description": "Interactive FAQ section with category filter tabs, accessible animated accordions, and support box.",
+   "category": "sections",
+   "sectionCategory": "faq",
+   "tags": [
+    "faq",
+    "accordion",
+    "questions",
+    "support",
+    "accessible"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "stats-metric-showcase",
+   "name": "Stats Metric Showcase",
+   "description": "Data showcase section with 4 KPI cards, progress sparklines, and live network telemetry status.",
+   "category": "sections",
+   "sectionCategory": "stats",
+   "tags": [
+    "stats",
+    "metrics",
+    "kpi",
+    "telemetry",
+    "data"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "team-grid-section",
+   "name": "Team Grid Section",
+   "description": "Leadership & team showcase section with profile cards, social links, and open positions hiring banner.",
+   "category": "sections",
+   "sectionCategory": "team",
+   "tags": [
+    "team",
+    "people",
+    "leadership",
+    "hiring",
+    "social"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "contact-glass-form",
+   "name": "Contact Glass Form",
+   "description": "Interactive contact section with split support channels, SLA response badge, and glassmorphic inquiry form.",
+   "category": "sections",
+   "sectionCategory": "contact",
+   "tags": [
+    "contact",
+    "form",
+    "support",
+    "channels",
+    "inquiry"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "testimonial-grid-section",
+   "name": "Testimonial Grid Section",
+   "description": "High-converting customer review bento grid featuring avatar ratings, verified badges, and quote spotlights.",
+   "category": "sections",
+   "sectionCategory": "testimonials",
+   "tags": [
+    "sections",
+    "testimonials",
+    "reviews",
+    "social-proof",
+    "grid"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "logo-cloud-section",
+   "name": "Logo Cloud Section",
+   "description": "Trusted by industry leaders company logo cloud with grayscale filter, hover glow, and ticker animation.",
+   "category": "sections",
+   "sectionCategory": "logos",
+   "tags": [
+    "sections",
+    "logos",
+    "partners",
+    "cloud",
+    "social-proof"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "hero-showcase-split",
+   "name": "Hero Showcase Split",
+   "description": "High-impact landing hero section with dual-column layout, glowing typography, CTAs, and interactive live preview card.",
+   "category": "sections",
+   "sectionCategory": "hero",
+   "tags": [
+    "sections",
+    "hero",
+    "landing",
+    "showcase",
+    "split"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "hero-minimal-centered",
+   "name": "Hero Minimal Centered",
+   "description": "Typography-first centered hero with announcement pill, highlighted headline word, two CTAs and trust signals.",
+   "category": "sections",
+   "sectionCategory": "hero",
+   "tags": [
+    "hero",
+    "minimal",
+    "centered",
+    "typography"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "hero-terminal",
+   "name": "Hero Terminal",
+   "description": "Developer hero with an animated terminal transcript and a copy-to-clipboard install command.",
+   "category": "sections",
+   "sectionCategory": "hero",
+   "tags": [
+    "hero",
+    "developer",
+    "terminal",
+    "cli",
+    "copy"
+   ]
+  },
+  {
+   "slug": "hero-waitlist",
+   "name": "Hero Waitlist",
+   "description": "Pre-launch hero with aurora background, accessible email capture, inline validation and social proof.",
+   "category": "sections",
+   "sectionCategory": "hero",
+   "tags": [
+    "hero",
+    "waitlist",
+    "form",
+    "launch",
+    "email"
+   ]
+  },
+  {
+   "slug": "hero-dashboard-preview",
+   "name": "Hero Dashboard Preview",
+   "description": "SaaS hero with a live product dashboard mockup built from the kit’s KPI tiles and SVG line chart.",
+   "category": "sections",
+   "sectionCategory": "hero",
+   "tags": [
+    "hero",
+    "saas",
+    "dashboard",
+    "mockup",
+    "charts"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "feature-icon-grid",
+   "name": "Feature Icon Grid",
+   "description": "Responsive 2–4 column feature grid with SVG icons, descriptions and accessible learn-more links.",
+   "category": "sections",
+   "sectionCategory": "features",
+   "tags": [
+    "features",
+    "grid",
+    "icons",
+    "cards"
+   ]
+  },
+  {
+   "slug": "feature-alternating-rows",
+   "name": "Feature Alternating Rows",
+   "description": "Zig-zag feature rows alternating copy and pure-CSS illustrations (chart, code, token stack).",
+   "category": "sections",
+   "sectionCategory": "features",
+   "tags": [
+    "features",
+    "zig-zag",
+    "alternating",
+    "split"
+   ]
+  },
+  {
+   "slug": "feature-tabs-showcase",
+   "name": "Feature Tabs Showcase",
+   "description": "Interactive feature tabs following the WAI-ARIA tabs pattern with arrow-key navigation and stat panels.",
+   "category": "sections",
+   "sectionCategory": "features",
+   "tags": [
+    "features",
+    "tabs",
+    "interactive",
+    "aria"
+   ]
+  },
+  {
+   "slug": "how-it-works-steps",
+   "name": "How It Works Steps",
+   "description": "Numbered process steps connected by a line, horizontal on desktop and vertical on mobile.",
+   "category": "sections",
+   "sectionCategory": "features",
+   "tags": [
+    "process",
+    "steps",
+    "how-it-works",
+    "onboarding"
+   ]
+  },
+  {
+   "slug": "integrations-grid",
+   "name": "Integrations Grid",
+   "description": "Integrations directory with category filter chips, monogram tiles and availability badges.",
+   "category": "sections",
+   "sectionCategory": "features",
+   "tags": [
+    "integrations",
+    "filter",
+    "directory",
+    "apps"
+   ]
+  },
+  {
+   "slug": "pricing-toggle-cards",
+   "name": "Pricing Toggle Cards",
+   "description": "Three pricing tiers with an accessible monthly/yearly switch, savings badge and featured plan.",
+   "category": "sections",
+   "sectionCategory": "pricing",
+   "tags": [
+    "pricing",
+    "toggle",
+    "monthly-yearly",
+    "plans"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "pricing-single-plan",
+   "name": "Pricing Single Plan",
+   "description": "One-plan pricing with price card, struck-through original price, feature checklist and guarantee.",
+   "category": "sections",
+   "sectionCategory": "pricing",
+   "tags": [
+    "pricing",
+    "single-plan",
+    "lifetime",
+    "guarantee"
+   ]
+  },
+  {
+   "slug": "testimonial-carousel",
+   "name": "Testimonial Carousel",
+   "description": "Scroll-snap testimonial carousel with prev/next buttons, star ratings and no autoplay.",
+   "category": "sections",
+   "sectionCategory": "testimonials",
+   "tags": [
+    "testimonials",
+    "carousel",
+    "slider",
+    "reviews"
+   ]
+  },
+  {
+   "slug": "testimonial-featured",
+   "name": "Testimonial Featured",
+   "description": "Case-study style section with one large quote, company wordmark and headline outcome metrics.",
+   "category": "sections",
+   "sectionCategory": "testimonials",
+   "tags": [
+    "testimonials",
+    "case-study",
+    "quote",
+    "metrics"
+   ]
+  },
+  {
+   "slug": "cta-newsletter-section",
+   "name": "CTA Newsletter Section",
+   "description": "Newsletter signup band with benefits, labelled email field, inline validation and privacy note.",
+   "category": "sections",
+   "sectionCategory": "cta",
+   "tags": [
+    "cta",
+    "newsletter",
+    "email",
+    "form"
+   ]
+  },
+  {
+   "slug": "cta-split-image",
+   "name": "CTA Split Image",
+   "description": "Split conversion banner with copy and CTAs beside a gradient-mesh visual with floating stat chips.",
+   "category": "sections",
+   "sectionCategory": "cta",
+   "tags": [
+    "cta",
+    "split",
+    "banner",
+    "conversion"
+   ]
+  },
+  {
+   "slug": "stats-counter-band",
+   "name": "Stats Counter Band",
+   "description": "Headline numbers that count up on scroll, with real values in the HTML for no-JS and screen readers.",
+   "category": "sections",
+   "sectionCategory": "stats",
+   "tags": [
+    "stats",
+    "counter",
+    "numbers",
+    "animated"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "stats-dashboard-section",
+   "name": "Stats Dashboard Section",
+   "description": "Complete analytics section with KPI tiles, stacked area chart and ranked bar chart.",
+   "category": "sections",
+   "sectionCategory": "stats",
+   "tags": [
+    "stats",
+    "dashboard",
+    "charts",
+    "kpi",
+    "analytics"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "careers-openings",
+   "name": "Careers Openings",
+   "description": "Job listings grouped by department with location, type and remote badges plus a perks strip.",
+   "category": "sections",
+   "sectionCategory": "team",
+   "tags": [
+    "careers",
+    "jobs",
+    "hiring",
+    "team"
+   ]
+  },
+  {
+   "slug": "faq-two-column",
+   "name": "FAQ Two Column",
+   "description": "Two-column FAQ with sticky intro and native exclusive <details> accordions that work without JS.",
+   "category": "sections",
+   "sectionCategory": "faq",
+   "tags": [
+    "faq",
+    "accordion",
+    "details",
+    "support"
+   ]
+  },
+  {
+   "slug": "contact-split-map",
+   "name": "Contact Split Map",
+   "description": "Contact channels and office addresses beside a stylised SVG dot-map with animated location pins.",
+   "category": "sections",
+   "sectionCategory": "contact",
+   "tags": [
+    "contact",
+    "map",
+    "offices",
+    "support"
+   ]
+  },
+  {
+   "slug": "logo-wall-grid",
+   "name": "Logo Wall Grid",
+   "description": "Static customer logo wall with hairline dividers; text wordmarks by default or real logo images.",
+   "category": "sections",
+   "sectionCategory": "logos",
+   "tags": [
+    "logos",
+    "customers",
+    "social-proof",
+    "grid"
+   ]
+  },
+  {
+   "slug": "blog-grid-section",
+   "name": "Blog Grid Section",
+   "description": "Latest articles with a featured post and a grid of cards, gradient covers, categories and read time.",
+   "category": "sections",
+   "sectionCategory": "content",
+   "tags": [
+    "blog",
+    "articles",
+    "posts",
+    "content"
+   ]
+  },
+  {
+   "slug": "changelog-section",
+   "name": "Changelog Section",
+   "description": "Release-notes timeline with version tags, dates and new/improved/fixed entries labelled by text and icon.",
+   "category": "sections",
+   "sectionCategory": "content",
+   "tags": [
+    "changelog",
+    "releases",
+    "timeline",
+    "updates"
+   ]
+  },
+  {
+   "slug": "footer-mega-section",
+   "name": "Footer Mega Section",
+   "description": "Full site footer with brand, newsletter field, link columns, status pill, social icons and legal row.",
+   "category": "sections",
+   "sectionCategory": "footer",
+   "tags": [
+    "footer",
+    "navigation",
+    "newsletter",
+    "social"
+   ]
+  },
+  {
+   "slug": "shop-header-editorial",
+   "name": "Shop Header Editorial",
+   "description": "Editorial store header: announcement line, centred wordmark, mega menu with feature tile, theme toggle and live bag count.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "header",
+    "navbar",
+    "mega-menu",
+    "ecommerce",
+    "editorial"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "shop-hero-editorial",
+   "name": "Shop Hero Editorial",
+   "description": "Magazine-style shop hero with oversized serif headline, italic accent word, issue meta, feature image with caption and a running ticker.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "hero",
+    "ecommerce",
+    "editorial",
+    "typography"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "shop-collection-mosaic",
+   "name": "Shop Collection Mosaic",
+   "description": "Asymmetric collection grid with a tall feature tile, numbered tiles, item counts and underline links.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "collections",
+    "grid",
+    "ecommerce",
+    "categories"
+   ]
+  },
+  {
+   "slug": "shop-product-rail",
+   "name": "Shop Product Rail",
+   "description": "Scroll-snapping product carousel of minimal product cards with numbering, prev/next buttons and a progress line.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "carousel",
+    "products",
+    "ecommerce",
+    "slider"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "shop-lookbook",
+   "name": "Shop Lookbook",
+   "description": "\"Shop the look\" image with numbered hotspots that open product cards with add-to-bag, mirrored by an accessible product list.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "lookbook",
+    "hotspots",
+    "ecommerce",
+    "shoppable"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "shop-values-marquee",
+   "name": "Shop Values Marquee",
+   "description": "Brand promise band: oversized italic marquee followed by numbered value columns.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "marquee",
+    "values",
+    "ecommerce",
+    "brand"
+   ]
+  },
+  {
+   "slug": "shop-reviews-editorial",
+   "name": "Shop Reviews Editorial",
+   "description": "Large serif customer quotes, one at a time, with product context, numbered pager and overall score.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "reviews",
+    "testimonials",
+    "ecommerce",
+    "carousel"
+   ]
+  },
+  {
+   "slug": "shop-newsletter-editorial",
+   "name": "Shop Newsletter Editorial",
+   "description": "Oversized editorial sign-up with underline email field, consent note and inline validation.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "newsletter",
+    "form",
+    "ecommerce",
+    "cta"
+   ]
+  },
+  {
+   "slug": "shop-footer-wordmark",
+   "name": "Shop Footer Wordmark",
+   "description": "Store footer with link columns, contact block, payment labels and a giant edge-to-edge wordmark.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "footer",
+    "ecommerce",
+    "wordmark"
+   ]
+  },
+  {
+   "slug": "shop-category-hero",
+   "name": "Shop Category Hero",
+   "description": "Catalogue header with breadcrumb, oversized category title and count, intro, sub-category links and an image strip.",
+   "category": "sections",
+   "sectionCategory": "commerce",
+   "tags": [
+    "category",
+    "header",
+    "ecommerce",
+    "catalog"
+   ]
+  }
+ ],
+ "templates": [
+  {
+   "slug": "ecommerce",
+   "name": {
+    "en": "E-commerce Store",
+    "es": "Tienda e-commerce",
+    "ru": "Интернет-магазин"
+   },
+   "tagline": {
+    "en": "A complete, accessible online store: home, catalogue, product page, cart and checkout.",
+    "es": "Una tienda online completa y accesible: home, catálogo, ficha de producto, carrito y checkout.",
+    "ru": "Полноценный доступный интернет-магазин: главная, каталог, карточка товара, корзина и оформление заказа."
+   },
+   "description": {
+    "en": "Nova Store is a production-ready e-commerce template for Astro. Five pages share one cart that persists in the browser, the catalogue filters instantly without a backend, and the checkout validates, totals shipping, tax and promo codes and confirms the order. Every block is a library component, so you can use the whole store or just the pieces you need.",
+    "es": "Nova Store es una plantilla e-commerce lista para producción en Astro. Cinco páginas comparten un carrito que se guarda en el navegador, el catálogo filtra al instante sin backend y el checkout valida, calcula envío, impuestos y códigos promocionales y confirma el pedido. Cada bloque es un componente de la librería: puedes usar la tienda entera o solo las piezas que necesites.",
+    "ru": "Nova Store — готовый к продакшену шаблон интернет-магазина на Astro. Пять страниц используют общую корзину, которая сохраняется в браузере, каталог фильтруется мгновенно без бэкенда, а оформление заказа проверяет данные, считает доставку, налог и промокоды и подтверждает заказ. Каждый блок — компонент библиотеки: используйте весь магазин или только нужные части."
+   },
+   "highlights": {
+    "en": [
+     "Persistent cart with drawer and live badge",
+     "Instant filters: category, price, colour, rating, stock",
+     "Checkout with shipping, tax and promo codes",
+     "Zero runtime dependencies, WCAG AA, mobile-first",
+     "Product illustrations included — no images needed",
+     "Light and dark mode with a toggle",
+     "Live notices: cart toasts, sale countdown, low stock and recent purchases"
+    ],
+    "es": [
+     "Carrito persistente con panel lateral y contador en vivo",
+     "Filtros instantáneos: categoría, precio, color, valoración y stock",
+     "Checkout con envío, impuestos y códigos promocionales",
+     "Sin dependencias en runtime, WCAG AA y mobile-first",
+     "Ilustraciones de producto incluidas: no necesitas imágenes",
+     "Modo claro y oscuro con selector",
+     "Avisos en vivo: toasts del carrito, cuenta atrás, stock bajo y compras recientes"
+    ],
+    "ru": [
+     "Сохраняемая корзина с панелью и живым счётчиком",
+     "Мгновенные фильтры: категория, цена, цвет, рейтинг, наличие",
+     "Оформление заказа с доставкой, налогом и промокодами",
+     "Без runtime-зависимостей, WCAG AA, mobile-first",
+     "Иллюстрации товаров в комплекте — изображения не нужны",
+     "Светлая и тёмная тема с переключателем",
+     "Живые уведомления: корзина, обратный отсчёт, малый остаток и недавние покупки"
+    ]
+   },
+   "tags": [
+    "ecommerce",
+    "shop",
+    "store",
+    "cart",
+    "checkout",
+    "catalog"
+   ],
+   "previewBase": "/preview/ecommerce/",
+   "importPath": "astro-component-kit/templates/ecommerce",
+   "pages": [
+    {
+     "id": "home",
+     "path": "",
+     "name": {
+      "en": "Store home",
+      "es": "Home de la tienda",
+      "ru": "Главная магазина"
+     },
+     "description": {
+      "en": "Hero with featured product, guarantees, categories, best sellers, editorial banner, new arrivals and newsletter.",
+      "es": "Hero con producto destacado, garantías, categorías, más vendidos, banner editorial, novedades y newsletter.",
+      "ru": "Hero с избранным товаром, гарантии, категории, хиты продаж, баннер, новинки и рассылка."
+     },
+     "file": "src/pages/index.astro",
+     "code": "---\nimport { StoreHomePage } from 'astro-component-kit/templates/ecommerce';\n---\n\n<StoreHomePage />"
+    },
+    {
+     "id": "category",
+     "path": "shop/",
+     "name": {
+      "en": "Category page",
+      "es": "Página de categoría",
+      "ru": "Страница категории"
+     },
+     "description": {
+      "en": "Catalogue with breadcrumb, category chips, sticky filters, live result count and sorting.",
+      "es": "Catálogo con migas de pan, chips de categoría, filtros fijos, contador de resultados y ordenación.",
+      "ru": "Каталог с хлебными крошками, чипами категорий, фильтрами, счётчиком результатов и сортировкой."
+     },
+     "file": "src/pages/shop.astro",
+     "code": "---\nimport { StoreCategoryPage } from 'astro-component-kit/templates/ecommerce';\n---\n\n<!-- Category links use /shop/?category=audio -->\n<StoreCategoryPage />"
+    },
+    {
+     "id": "product",
+     "path": "product/aurora-headphones/",
+     "name": {
+      "en": "Product page",
+      "es": "Ficha de producto",
+      "ru": "Карточка товара"
+     },
+     "description": {
+      "en": "Gallery, buy box with colour/size pickers and quantity, reviews summary and related products.",
+      "es": "Galería, bloque de compra con color, talla y cantidad, resumen de reseñas y productos relacionados.",
+      "ru": "Галерея, блок покупки с выбором цвета, размера и количества, отзывы и похожие товары."
+     },
+     "file": "src/pages/product/[slug].astro",
+     "code": "---\nimport { StoreProductPage, demoStore } from 'astro-component-kit/templates/ecommerce';\n\nexport function getStaticPaths() {\n  return demoStore.products.map((p) => ({ params: { slug: p.slug } }));\n}\n---\n\n<StoreProductPage slug={Astro.params.slug} />"
+    },
+    {
+     "id": "checkout",
+     "path": "checkout/",
+     "name": {
+      "en": "Checkout",
+      "es": "Checkout",
+      "ru": "Оформление заказа"
+     },
+     "description": {
+      "en": "Focus-mode checkout with steps, contact, delivery, shipping, payment and live order summary.",
+      "es": "Checkout en modo foco con pasos, contacto, entrega, envío, pago y resumen del pedido en vivo.",
+      "ru": "Оформление заказа в режиме фокуса: шаги, контакты, доставка, оплата и итог заказа."
+     },
+     "file": "src/pages/checkout.astro",
+     "code": "---\nimport { StoreCheckoutPage } from 'astro-component-kit/templates/ecommerce';\n---\n\n<StoreCheckoutPage />"
+    }
+   ],
+   "newComponents": [
+    "store-header",
+    "promo-bar",
+    "cart-drawer",
+    "store-hero",
+    "category-tiles",
+    "trust-badges",
+    "store-product-card",
+    "product-grid",
+    "filter-sidebar",
+    "product-toolbar",
+    "product-gallery",
+    "variant-picker",
+    "product-buy-box",
+    "order-summary",
+    "checkout-form",
+    "product-media",
+    "product-rating",
+    "cart-toast",
+    "live-activity-toast",
+    "countdown-banner",
+    "stock-indicator",
+    "cart-store"
+   ],
+   "reusedComponents": [
+    "badge",
+    "stepper-input",
+    "animated-input",
+    "modern-select",
+    "custom-radio-group",
+    "animated-checkmark",
+    "step-breadcrumb-bar",
+    "footer-mega-section",
+    "logo-cloud-section",
+    "cta-newsletter-section"
+   ],
+   "storeConfigExample": "---\n// src/pages/index.astro — same store + routes on every page\nimport { StoreHomePage, demoStore, type StoreConfig } from 'astro-component-kit/templates/ecommerce';\n\nconst store: StoreConfig = {\n  ...demoStore,\n  name: 'My Shop',\n  currency: 'EUR',\n  locale: 'es-ES',\n  cartKey: 'my-shop-cart',\n  products: [\n    {\n      slug: 'linen-shirt',\n      name: 'Linen Shirt',\n      price: 59,\n      category: 'apparel',\n      image: '/products/linen-shirt.webp', // or icon: 'shirt'\n      sizes: ['S', 'M', 'L'],\n      rating: 4.7,\n      reviews: 40,\n    },\n  ],\n};\n---\n\n<StoreHomePage store={store} routes={{ home: '/', shop: '/shop/', product: '/product/', checkout: '/checkout/' }} />"
+  },
+  {
+   "slug": "ecommerce-editorial",
+   "name": {
+    "en": "E-commerce 2 · Editorial",
+    "es": "E-commerce 2 · Editorial",
+    "ru": "E-commerce 2 · Editorial"
+   },
+   "tagline": {
+    "en": "A magazine-style store for fashion and objects: serif type, square corners, a dedicated bag page.",
+    "es": "Una tienda estilo revista para moda y objetos: tipografía serif, esquinas rectas y página de bolsa propia.",
+    "ru": "Магазин в журнальном стиле для одежды и предметов: serif-шрифт, прямые углы и отдельная страница корзины."
+   },
+   "description": {
+    "en": "Forma Studio is the second e-commerce template and deliberately different from the first: an editorial layout with oversized serif headlines, a terracotta accent, thin rules and numbered indexes. Shoppers browse with a horizontal filter bar, add sizes straight from the grid, see a shoppable lookbook and review everything on a full bag page before a split-screen checkout. Every block is a section in the library, so you can drop the header, hero, product rail or lookbook into any site — in light or dark mode.",
+    "es": "Forma Studio es la segunda plantilla e-commerce y es distinta a propósito: un diseño editorial con titulares serif gigantes, acento terracota, líneas finas e índices numerados. Se navega con una barra de filtros horizontal, se añaden tallas directamente desde la cuadrícula, hay un lookbook comprable y una página de bolsa completa antes de un checkout a pantalla partida. Cada bloque es una sección de la librería, así que puedes usar la cabecera, el hero, el carrusel o el lookbook en cualquier web, en modo claro u oscuro.",
+    "ru": "Forma Studio — второй шаблон интернет-магазина, намеренно непохожий на первый: редакционная вёрстка с крупными serif-заголовками, терракотовым акцентом, тонкими линиями и нумерацией. Каталог фильтруется горизонтальной панелью, размер можно добавить прямо из сетки, есть лукбук с покупкой и полноценная страница корзины перед оформлением заказа на разделённом экране. Каждый блок — секция библиотеки, поэтому шапку, hero, карусель или лукбук можно использовать на любом сайте в светлой или тёмной теме."
+   },
+   "highlights": {
+    "en": [
+     "Editorial design: serif display type, square corners, terracotta accent",
+     "Light mode by default, dark mode with a toggle",
+     "Dedicated bag page with gift note and free-shipping progress",
+     "Quick-add sizes from the grid + horizontal filter bar",
+     "Shoppable lookbook with hotspots",
+     "10 reusable sections in Sections → E-commerce"
+    ],
+    "es": [
+     "Diseño editorial: tipografía serif, esquinas rectas y acento terracota",
+     "Modo claro por defecto y modo oscuro con selector",
+     "Página de bolsa con nota de regalo y progreso a envío gratis",
+     "Añadir tallas desde la cuadrícula + barra de filtros horizontal",
+     "Lookbook comprable con puntos interactivos",
+     "10 secciones reutilizables en Secciones → E-commerce"
+    ],
+    "ru": [
+     "Редакционный дизайн: serif-шрифт, прямые углы, терракотовый акцент",
+     "Светлая тема по умолчанию и тёмная с переключателем",
+     "Отдельная страница корзины с подарочной запиской",
+     "Быстрый выбор размера в сетке + горизонтальные фильтры",
+     "Лукбук с интерактивными точками",
+     "10 секций в разделе «Секции → E-commerce»"
+    ]
+   },
+   "tags": [
+    "ecommerce",
+    "editorial",
+    "fashion",
+    "store",
+    "light-mode",
+    "lookbook"
+   ],
+   "previewBase": "/preview/ecommerce-editorial/",
+   "importPath": "astro-component-kit/templates/ecommerce-editorial",
+   "pages": [
+    {
+     "id": "home",
+     "path": "",
+     "name": {
+      "en": "Home",
+      "es": "Home",
+      "ru": "Главная"
+     },
+     "description": {
+      "en": "Magazine hero, collection mosaic, new-in rail, shoppable lookbook, values, reviews and newsletter.",
+      "es": "Hero de revista, mosaico de colecciones, novedades, lookbook comprable, valores, reseñas y newsletter.",
+      "ru": "Журнальный hero, мозаика коллекций, новинки, лукбук, ценности, отзывы и подписка."
+     },
+     "file": "src/pages/index.astro",
+     "code": "---\nimport { EditorialHomePage } from 'astro-component-kit/templates/ecommerce-editorial';\n---\n\n<EditorialHomePage theme=\"light\" />"
+    },
+    {
+     "id": "shop",
+     "path": "shop/",
+     "name": {
+      "en": "Shop / category",
+      "es": "Tienda / categoría",
+      "ru": "Каталог"
+     },
+     "description": {
+      "en": "Category hero, sticky filter bar with refine panel and an editorial grid with quick add.",
+      "es": "Hero de categoría, barra de filtros fija con panel de refinado y cuadrícula editorial con añadido rápido.",
+      "ru": "Hero категории, липкая панель фильтров и редакционная сетка с быстрым добавлением."
+     },
+     "file": "src/pages/shop.astro",
+     "code": "---\nimport { EditorialShopPage } from 'astro-component-kit/templates/ecommerce-editorial';\n---\n\n<EditorialShopPage />"
+    },
+    {
+     "id": "product",
+     "path": "product/linen-overshirt/",
+     "name": {
+      "en": "Product",
+      "es": "Producto",
+      "ru": "Товар"
+     },
+     "description": {
+      "en": "Stacked images, sticky info with colour and size, stock notice, care notes and \"Complete the look\".",
+      "es": "Imágenes apiladas, info fija con color y talla, aviso de stock, cuidados y «Completa el look».",
+      "ru": "Фото столбцом, закреплённая информация с цветом и размером, остаток, уход и «Дополните образ»."
+     },
+     "file": "src/pages/product/[slug].astro",
+     "code": "---\nimport { EditorialProductPage, formaStore } from 'astro-component-kit/templates/ecommerce-editorial';\n\nexport function getStaticPaths() {\n  return formaStore.products.map((p) => ({ params: { slug: p.slug } }));\n}\n---\n\n<EditorialProductPage slug={Astro.params.slug} />"
+    },
+    {
+     "id": "bag",
+     "path": "bag/",
+     "name": {
+      "en": "Bag",
+      "es": "Bolsa",
+      "ru": "Корзина"
+     },
+     "description": {
+      "en": "Full bag page with quantities, gift note, free-shipping progress and summary.",
+      "es": "Página de bolsa con cantidades, nota de regalo, progreso a envío gratis y resumen.",
+      "ru": "Страница корзины с количеством, запиской, прогрессом доставки и итогом."
+     },
+     "file": "src/pages/bag.astro",
+     "code": "---\nimport { EditorialBagPage } from 'astro-component-kit/templates/ecommerce-editorial';\n---\n\n<EditorialBagPage />"
+    },
+    {
+     "id": "checkout",
+     "path": "checkout/",
+     "name": {
+      "en": "Checkout",
+      "es": "Checkout",
+      "ru": "Оформление"
+     },
+     "description": {
+      "en": "Split-screen checkout with the form on paper and a tinted order-summary panel.",
+      "es": "Checkout a pantalla partida con el formulario y un panel tintado con el resumen.",
+      "ru": "Оформление на разделённом экране: форма и тонированная панель итога."
+     },
+     "file": "src/pages/checkout.astro",
+     "code": "---\nimport { EditorialCheckoutPage } from 'astro-component-kit/templates/ecommerce-editorial';\n---\n\n<EditorialCheckoutPage />"
+    }
+   ],
+   "newComponents": [
+    "shop-header-editorial",
+    "shop-hero-editorial",
+    "shop-collection-mosaic",
+    "shop-product-rail",
+    "shop-lookbook",
+    "shop-values-marquee",
+    "shop-reviews-editorial",
+    "shop-newsletter-editorial",
+    "shop-footer-wordmark",
+    "shop-category-hero",
+    "product-card-minimal",
+    "filter-bar",
+    "cart-page-list"
+   ],
+   "reusedComponents": [
+    "cart-store",
+    "cart-toast",
+    "product-media",
+    "product-rating",
+    "variant-picker",
+    "stock-indicator",
+    "checkout-form",
+    "order-summary",
+    "animated-input",
+    "modern-select",
+    "custom-radio-group",
+    "animated-checkmark",
+    "badge"
+   ],
+   "storeConfigExample": "---\n// src/pages/index.astro — same store + routes on every page\nimport { EditorialHomePage, formaStore, type EditorialStore } from 'astro-component-kit/templates/ecommerce-editorial';\n\nconst store: EditorialStore = {\n  ...formaStore,\n  name: 'Atelier',\n  currency: 'USD',\n  locale: 'en-US',\n  cartKey: 'atelier-bag',\n};\n---\n\n<EditorialHomePage\n  store={store}\n  theme=\"auto\"\n  routes={{ home: '/', shop: '/shop/', product: '/product/', bag: '/bag/', checkout: '/checkout/' }}\n/>"
+  },
+  {
+   "slug": "saas-hotel",
+   "name": {
+    "en": "SaaS · Hotel management",
+    "es": "SaaS · Gestión hotelera",
+    "ru": "SaaS · Управление отелем"
+   },
+   "tagline": {
+    "en": "A complete SaaS for hotels: marketing site, sign-in and a full operations dashboard.",
+    "es": "Un SaaS completo para hoteles: web de marketing, inicio de sesión y un dashboard de operaciones entero.",
+    "ru": "Полноценный SaaS для отелей: маркетинговый сайт, вход и полный операционный дашборд."
+   },
+   "description": {
+    "en": "Lobby is a hotel operating system built from the library: a landing page made of existing sections, a sign-in screen and an app with dashboard, room rack, reservations table, housekeeping board, guest CRM, revenue reports and account settings with team and billing. Every chart is a zero-dependency SVG chart from the library, and the whole app switches between light and dark mode.",
+    "es": "Lobby es un sistema operativo hotelero hecho con la librería: una landing con secciones existentes, una pantalla de acceso y una app con dashboard, rack de habitaciones, tabla de reservas, tablero de limpieza, CRM de huéspedes, informes de ingresos y ajustes de cuenta con equipo y facturación. Todos los gráficos son gráficos SVG sin dependencias de la librería y toda la app cambia entre modo claro y oscuro.",
+    "ru": "Lobby — операционная система для отеля, собранная из библиотеки: лендинг из готовых секций, экран входа и приложение с дашбордом, шахматкой, таблицей бронирований, доской уборки, CRM гостей, отчётами о выручке и настройками аккаунта с командой и оплатой. Все графики — SVG-графики библиотеки без зависимостей, а приложение переключается между светлой и тёмной темой."
+   },
+   "highlights": {
+    "en": [
+     "8 pages: landing, sign-in and a 6-screen app",
+     "Room rack, housekeeping board and front-desk check-in",
+     "Sortable data tables with search, filters and bulk actions",
+     "13 SVG charts reused from the library",
+     "Settings with team roles, invites and plan usage",
+     "Light and dark mode with a topbar toggle"
+    ],
+    "es": [
+     "8 páginas: landing, acceso y una app de 6 pantallas",
+     "Rack de habitaciones, tablero de limpieza y check-in en recepción",
+     "Tablas ordenables con búsqueda, filtros y acciones masivas",
+     "13 gráficos SVG reutilizados de la librería",
+     "Ajustes con roles de equipo, invitaciones y uso del plan",
+     "Modo claro y oscuro con selector en la barra superior"
+    ],
+    "ru": [
+     "8 страниц: лендинг, вход и приложение из 6 экранов",
+     "Шахматка, доска уборки и заселение на ресепшене",
+     "Сортируемые таблицы с поиском, фильтрами и массовыми действиями",
+     "13 SVG-графиков из библиотеки",
+     "Настройки с ролями, приглашениями и использованием тарифа",
+     "Светлая и тёмная тема с переключателем"
+    ]
+   },
+   "tags": [
+    "saas",
+    "dashboard",
+    "hotel",
+    "admin",
+    "charts",
+    "crm"
+   ],
+   "previewBase": "/preview/saas-hotel/",
+   "importPath": "astro-component-kit/templates/saas-hotel",
+   "pages": [
+    {
+     "id": "landing",
+     "path": "",
+     "name": {
+      "en": "Landing",
+      "es": "Landing",
+      "ru": "Лендинг"
+     },
+     "description": {
+      "en": "Marketing site: hero, logos, features, how it works, stats, pricing toggle, testimonials and FAQ.",
+      "es": "Web de marketing: hero, logos, funciones, cómo funciona, cifras, precios con selector, testimonios y FAQ.",
+      "ru": "Маркетинговый сайт: hero, логотипы, функции, как это работает, цифры, тарифы, отзывы и FAQ."
+     },
+     "file": "src/pages/index.astro",
+     "code": "---\nimport { LandingPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<LandingPage />"
+    },
+    {
+     "id": "signin",
+     "path": "sign-in/",
+     "name": {
+      "en": "Sign in",
+      "es": "Inicio de sesión",
+      "ru": "Вход"
+     },
+     "description": {
+      "en": "Split-screen sign-in with SSO, password toggle and validation.",
+      "es": "Inicio de sesión a pantalla partida con SSO, mostrar contraseña y validación.",
+      "ru": "Вход на разделённом экране с SSO, показом пароля и проверкой."
+     },
+     "file": "src/pages/sign-in.astro",
+     "code": "---\nimport { SignInPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<SignInPage />"
+    },
+    {
+     "id": "dashboard",
+     "path": "app/",
+     "name": {
+      "en": "Dashboard",
+      "es": "Dashboard",
+      "ru": "Дашборд"
+     },
+     "description": {
+      "en": "KPIs, revenue mix, tonight gauge, front desk, channel mix, occupancy by room type and live activity.",
+      "es": "KPIs, ingresos, ocupación de esta noche, recepción, canales, ocupación por tipo y actividad en vivo.",
+      "ru": "KPI, выручка, загрузка на сегодня, ресепшен, каналы, загрузка по типам номеров и активность."
+     },
+     "file": "src/pages/app/index.astro",
+     "code": "---\nimport { DashboardPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<DashboardPage />"
+    },
+    {
+     "id": "reservations",
+     "path": "app/reservations/",
+     "name": {
+      "en": "Reservations",
+      "es": "Reservas",
+      "ru": "Бронирования"
+     },
+     "description": {
+      "en": "Room rack for 14 days and a searchable, sortable reservations table with bulk actions.",
+      "es": "Rack de habitaciones de 14 días y tabla de reservas con búsqueda, orden y acciones masivas.",
+      "ru": "Шахматка на 14 дней и таблица бронирований с поиском, сортировкой и массовыми действиями."
+     },
+     "file": "src/pages/app/reservations.astro",
+     "code": "---\nimport { ReservationsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<ReservationsPage />"
+    },
+    {
+     "id": "rooms",
+     "path": "app/rooms/",
+     "name": {
+      "en": "Rooms & housekeeping",
+      "es": "Habitaciones y limpieza",
+      "ru": "Номера и уборка"
+     },
+     "description": {
+      "en": "Status KPIs, inventory by type and an interactive housekeeping board by floor.",
+      "es": "KPIs de estado, inventario por tipo y tablero de limpieza interactivo por planta.",
+      "ru": "KPI статусов, фонд по типам и интерактивная доска уборки по этажам."
+     },
+     "file": "src/pages/app/rooms.astro",
+     "code": "---\nimport { RoomsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<RoomsPage />"
+    },
+    {
+     "id": "guests",
+     "path": "app/guests/",
+     "name": {
+      "en": "Guests",
+      "es": "Huéspedes",
+      "ru": "Гости"
+     },
+     "description": {
+      "en": "Guest directory with tiers, stays and spend next to a CRM profile.",
+      "es": "Directorio de huéspedes con niveles, estancias y gasto junto a una ficha CRM.",
+      "ru": "Справочник гостей с уровнями, визитами и тратами рядом с CRM-карточкой."
+     },
+     "file": "src/pages/app/guests.astro",
+     "code": "---\nimport { GuestsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<GuestsPage />"
+    },
+    {
+     "id": "reports",
+     "path": "app/reports/",
+     "name": {
+      "en": "Reports",
+      "es": "Informes",
+      "ru": "Отчёты"
+     },
+     "description": {
+      "en": "Forecast, booking pace heatmap, funnel, segments, ADR by channel and month-over-month table.",
+      "es": "Previsión, mapa de ritmo de reservas, embudo, segmentos, ADR por canal y comparativa mensual.",
+      "ru": "Прогноз, тепловая карта темпа бронирований, воронка, сегменты, ADR по каналам и сравнение месяцев."
+     },
+     "file": "src/pages/app/reports.astro",
+     "code": "---\nimport { ReportsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<ReportsPage />"
+    },
+    {
+     "id": "settings",
+     "path": "app/settings/",
+     "name": {
+      "en": "Settings & account",
+      "es": "Ajustes y cuenta",
+      "ru": "Настройки и аккаунт"
+     },
+     "description": {
+      "en": "Profile, property, notification switches, team roles and invites, plan and billing.",
+      "es": "Perfil, propiedad, notificaciones, equipo con roles e invitaciones, plan y facturación.",
+      "ru": "Профиль, отель, уведомления, команда с ролями и приглашениями, тариф и оплата."
+     },
+     "file": "src/pages/app/settings.astro",
+     "code": "---\nimport { SettingsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<SettingsPage />"
+    }
+   ],
+   "newComponents": [
+    "app-sidebar",
+    "app-topbar",
+    "page-header",
+    "data-table",
+    "room-rack",
+    "housekeeping-board",
+    "arrivals-board",
+    "guest-profile-card",
+    "settings-section",
+    "switch-row",
+    "team-members",
+    "plan-usage-card",
+    "auth-card"
+   ],
+   "reusedComponents": [
+    "kpi-stat-tile",
+    "stacked-area-chart",
+    "gauge-chart",
+    "pie-chart",
+    "grouped-bar-chart",
+    "forecast-line-chart",
+    "heatmap-chart",
+    "funnel-chart",
+    "segmented-bar-chart",
+    "horizontal-bar-chart",
+    "metric-delta-table",
+    "status-timeline-feed",
+    "animated-input",
+    "modern-select",
+    "hero-dashboard-preview",
+    "logo-wall-grid",
+    "feature-icon-grid",
+    "how-it-works-steps",
+    "stats-counter-band",
+    "pricing-toggle-cards",
+    "testimonial-carousel",
+    "faq-two-column",
+    "footer-mega-section"
+   ],
+   "storeConfigExample": "---\n// src/pages/app/index.astro — pass your own data (e.g. fetched from your API at build time)\nimport { DashboardPage, lobbyData, type LobbyData } from 'astro-component-kit/templates/saas-hotel';\n\nconst data: LobbyData = {\n  ...lobbyData,\n  workspace: { name: 'Casa Alba', plan: 'Starter', initials: 'CA' },\n  user: { name: 'Marta Gil', role: 'Owner', email: 'marta@casaalba.com' },\n};\n---\n\n<DashboardPage data={data} theme=\"auto\" />"
+  }
+ ]
+}

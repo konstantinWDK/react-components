@@ -1,0 +1,438 @@
+// @ts-nocheck — ported verbatim from astro-components/src/components/lib/Galaxy3D.astro
+/**
+ * Mounts the interactive 3D galaxy on a canvas. Returns a cleanup function.
+ * GPU particle shader, cursor-reactive, pauses off-screen / hidden tab, honours reduced motion.
+ */
+export function mountGalaxy(canvas, THREE) {
+
+    const container = canvas.parentElement;
+    if (!container) return () => {};
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ===== SCENE =====
+    const scene = new THREE.Scene();
+    const FOV = 75;
+    const camera = new THREE.PerspectiveCamera(FOV, 1, 0.1, 100);
+    camera.position.set(0, 0, 5);
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // ===== PARTICLE SHADER =====
+    // Shared by the galaxy and the background stars. Positions are static; the shader
+    // rotates them, projects them, and displaces them away from the cursor in view space
+    // so the effect lines up with the pointer at any depth.
+    const vertexShader = /* glsl */ `
+      uniform float uTime;
+      uniform float uRotation;
+      uniform float uSize;
+      uniform float uScale;
+      uniform float uAspect;
+      uniform float uTanHalfFov;
+      uniform vec2  uMouse;
+      uniform vec2  uMouseVel;
+      uniform float uStrength;
+      uniform float uRadius;
+      uniform float uPush;
+
+      attribute vec3 color;
+      attribute float aRandom;
+
+      varying vec3 vColor;
+      varying float vAlpha;
+      varying float vGlow;
+
+      void main() {
+        // Spin around the galaxy's own axis.
+        float c = cos(uRotation);
+        float s = sin(uRotation);
+        vec3 p = vec3(position.x * c - position.z * s, position.y, position.x * s + position.z * c);
+
+        vec4 view = viewMatrix * modelMatrix * vec4(p, 1.0);
+        vec4 clip = projectionMatrix * view;
+        vec2 ndc = clip.xy / clip.w;
+
+        // Distance to the cursor in aspect-corrected screen units.
+        vec2 d = (ndc - uMouse) * vec2(uAspect, 1.0);
+        float dist = length(d);
+        float falloff = exp(-(dist * dist) / (uRadius * uRadius)) * uStrength;
+        vec2 dir = d / max(dist, 1e-4);
+        vec2 swirl = vec2(-dir.y, dir.x);
+
+        // Soft repulsion + a little swirl + a wake in the direction of travel.
+        // Each star reacts slightly differently so the field never moves as a rigid disc.
+        float personal = 0.75 + aRandom * 0.5;
+        vec2 push = (dir * 0.85 + swirl * 0.35) * falloff * personal + uMouseVel * falloff * 0.9;
+
+        // Screen units -> view units at this particle's depth.
+        // (d is measured in NDC-y units on both axes, and one NDC-y unit = tan(fov/2) * depth.)
+        view.xy += push * uPush * uTanHalfFov * -view.z;
+        gl_Position = projectionMatrix * view;
+
+        // Per-star twinkle with its own speed and phase.
+        float twinkle = 0.7 + 0.3 * sin(uTime * (0.6 + aRandom * 1.8) + aRandom * 6.2831);
+
+        vColor = color;
+        vGlow = falloff;
+        vAlpha = twinkle;
+        gl_PointSize = max(uSize * (0.55 + aRandom * 1.0) * (1.0 + falloff * 0.6) * uScale / -view.z, 1.0);
+      }
+    `;
+
+    const fragmentShader = /* glsl */ `
+      uniform float uOpacity;
+      varying vec3 vColor;
+      varying float vAlpha;
+      varying float vGlow;
+
+      void main() {
+        // Round, soft-edged star instead of a hard square.
+        float r = length(gl_PointCoord - 0.5);
+        float a = smoothstep(0.5, 0.05, r);
+        if (a <= 0.0) discard;
+        vec3 col = vColor * (1.0 + vGlow * 0.9);
+        gl_FragColor = vec4(col, a * vAlpha * uOpacity);
+      }
+    `;
+
+    // Pointer state shared by every particle layer.
+    const pointerUniforms = {
+      uMouse: { value: new THREE.Vector2(0, 0) },
+      uMouseVel: { value: new THREE.Vector2(0, 0) },
+      uStrength: { value: 0 },
+      uAspect: { value: 1 },
+      uScale: { value: 1 },
+      uTanHalfFov: { value: Math.tan(THREE.MathUtils.degToRad(FOV / 2)) },
+      uTime: { value: 0 },
+    };
+
+    function particleMaterial({ size, opacity, radius, push }) {
+      return new THREE.ShaderMaterial({
+        vertexShader,
+        fragmentShader,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        uniforms: {
+          ...pointerUniforms,
+          uRotation: { value: 0 },
+          uSize: { value: size },
+          uOpacity: { value: opacity },
+          uRadius: { value: radius },
+          uPush: { value: push },
+        },
+      });
+    }
+
+    function resize() {
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+      if (w === 0 || h === 0) return;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      pointerUniforms.uAspect.value = w / h;
+      pointerUniforms.uScale.value = renderer.domElement.height * 0.5;
+      if (reduceMotion) renderer.render(scene, camera);
+    }
+
+    // ===== COLORS =====
+    const palette = [
+      new THREE.Color('#fef3c7'),
+      new THREE.Color('#fbbf24'),
+      new THREE.Color('#d4a017'),
+      new THREE.Color('#ffffff'),
+      new THREE.Color('#b8860b'),
+      new THREE.Color('#fde68a'),
+    ];
+
+    // ===== GALAXY PARTICLES =====
+    const GALAXY_COUNT = 20000;
+    const galaxyParams = {
+      radius: 3.5,
+      branches: 5,
+      spin: 1.5,
+      randomness: 0.5,
+      randomnessPower: 3,
+      inwardDrop: 0.05,
+    };
+
+    const galaxyGeometry = new THREE.BufferGeometry();
+    const galaxyPositions = new Float32Array(GALAXY_COUNT * 3);
+    const galaxyColors = new Float32Array(GALAXY_COUNT * 3);
+    const galaxyRandom = new Float32Array(GALAXY_COUNT);
+
+    for (let i = 0; i < GALAXY_COUNT; i++) {
+      const i3 = i * 3;
+      const radius = Math.random() * galaxyParams.radius;
+      const spinAngle = radius * galaxyParams.spin;
+      const branchIndex = i % galaxyParams.branches;
+      const branchAngle = (branchIndex / galaxyParams.branches) * Math.PI * 2;
+
+      const power = galaxyParams.randomnessPower;
+      const randomX = Math.pow(Math.random(), power) * (Math.random() < 0.5 ? 1 : -1) * galaxyParams.randomness * radius;
+      const randomY = Math.pow(Math.random(), power) * (Math.random() < 0.5 ? 1 : -1) * galaxyParams.randomness * radius * 0.1;
+      const randomZ = Math.pow(Math.random(), power) * (Math.random() < 0.5 ? 1 : -1) * galaxyParams.randomness * radius * 0.4;
+
+      const angle = branchAngle + spinAngle;
+      const spiralOffset = radius * galaxyParams.inwardDrop;
+
+      galaxyPositions[i3] = Math.cos(angle) * radius + randomX + Math.cos(angle + Math.PI / 2) * spiralOffset;
+      galaxyPositions[i3 + 1] = randomY;
+      galaxyPositions[i3 + 2] = Math.sin(angle) * radius + randomZ + Math.sin(angle + Math.PI / 2) * spiralOffset;
+
+      const colorMix = radius / galaxyParams.radius;
+      const baseColor = palette[Math.floor(Math.random() * 3)];
+      const outerColor = palette[3 + Math.floor(Math.random() * 2)];
+      const finalColor = baseColor.clone().lerp(outerColor, colorMix);
+      galaxyColors[i3] = finalColor.r;
+      galaxyColors[i3 + 1] = finalColor.g;
+      galaxyColors[i3 + 2] = finalColor.b;
+
+      galaxyRandom[i] = Math.random();
+    }
+
+    galaxyGeometry.setAttribute('position', new THREE.BufferAttribute(galaxyPositions, 3));
+    galaxyGeometry.setAttribute('color', new THREE.BufferAttribute(galaxyColors, 3));
+    galaxyGeometry.setAttribute('aRandom', new THREE.BufferAttribute(galaxyRandom, 1));
+
+    const galaxyMaterial = particleMaterial({ size: 0.011, opacity: 0.95, radius: 0.19, push: 0.12 });
+    const galaxyPoints = new THREE.Points(galaxyGeometry, galaxyMaterial);
+    galaxyPoints.rotation.x = -0.15;
+    galaxyPoints.rotation.z = 0.05;
+    scene.add(galaxyPoints);
+
+    // ===== BACKGROUND STARS =====
+    // Same shader with a much weaker push, so the deep field reacts subtly (parallax feel).
+    const STAR_COUNT = 2000;
+    const starGeometry = new THREE.BufferGeometry();
+    const starPositions = new Float32Array(STAR_COUNT * 3);
+    const starColors = new Float32Array(STAR_COUNT * 3);
+    const starRandom = new Float32Array(STAR_COUNT);
+    const white = new THREE.Color('#ffffff');
+
+    for (let i = 0; i < STAR_COUNT; i++) {
+      const i3 = i * 3;
+      starPositions[i3] = (Math.random() - 0.5) * 20;
+      starPositions[i3 + 1] = (Math.random() - 0.5) * 20;
+      starPositions[i3 + 2] = (Math.random() - 0.5) * 10 - 5;
+      starColors[i3] = white.r;
+      starColors[i3 + 1] = white.g;
+      starColors[i3 + 2] = white.b;
+      starRandom[i] = Math.random();
+    }
+
+    starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+    starGeometry.setAttribute('color', new THREE.BufferAttribute(starColors, 3));
+    starGeometry.setAttribute('aRandom', new THREE.BufferAttribute(starRandom, 1));
+
+    const starMaterial = particleMaterial({ size: 0.012, opacity: 0.5, radius: 0.3, push: 0.05 });
+    const stars = new THREE.Points(starGeometry, starMaterial);
+    scene.add(stars);
+
+    // ===== FLOATING DUST =====
+    const DUST_COUNT = 800;
+    const dustGeometry = new THREE.BufferGeometry();
+    const dustPositions = new Float32Array(DUST_COUNT * 3);
+    const dustColors = new Float32Array(DUST_COUNT * 3);
+    const dustVelocities = new Float32Array(DUST_COUNT * 3);
+
+    for (let i = 0; i < DUST_COUNT; i++) {
+      const i3 = i * 3;
+      dustPositions[i3] = (Math.random() - 0.5) * 8;
+      dustPositions[i3 + 1] = (Math.random() - 0.5) * 4;
+      dustPositions[i3 + 2] = (Math.random() - 0.5) * 3;
+
+      const c = palette[Math.floor(Math.random() * palette.length)];
+      dustColors[i3] = c.r;
+      dustColors[i3 + 1] = c.g;
+      dustColors[i3 + 2] = c.b;
+
+      dustVelocities[i3] = (Math.random() - 0.5) * 0.3;
+      dustVelocities[i3 + 1] = (Math.random() - 0.5) * 0.2;
+      dustVelocities[i3 + 2] = (Math.random() - 0.5) * 0.15;
+    }
+
+    dustGeometry.setAttribute('position', new THREE.BufferAttribute(dustPositions, 3));
+    dustGeometry.setAttribute('color', new THREE.BufferAttribute(dustColors, 3));
+
+    const dustMaterial = new THREE.PointsMaterial({
+      size: 0.005,
+      sizeAttenuation: true,
+      depthWrite: false,
+      transparent: true,
+      opacity: 0.3,
+      vertexColors: true,
+      blending: THREE.AdditiveBlending,
+    });
+
+    const dust = new THREE.Points(dustGeometry, dustMaterial);
+    scene.add(dust);
+
+    // ===== CENTRAL GLOW =====
+    const glowGeo = new THREE.SphereGeometry(0.6, 16, 16);
+    const glowMat = new THREE.MeshBasicMaterial({
+      color: new THREE.Color('#fef3c7'),
+      transparent: true,
+      opacity: 0.18,
+    });
+    const glow = new THREE.Mesh(glowGeo, glowMat);
+    scene.add(glow);
+
+    // ===== GLOW RING =====
+    const ringGeo = new THREE.RingGeometry(0.8, 1.2, 32);
+    const ringMat = new THREE.MeshBasicMaterial({
+      color: new THREE.Color('#fbbf24'),
+      transparent: true,
+      opacity: 0.1,
+      side: THREE.DoubleSide,
+    });
+    const ring = new THREE.Mesh(ringGeo, ringMat);
+    ring.position.z = -0.3;
+    scene.add(ring);
+
+    requestAnimationFrame(() => resize());
+    setTimeout(resize, 100);
+    setTimeout(resize, 500);
+    window.addEventListener('resize', resize);
+
+    // Reduced motion: one static frame, no interaction or animation loop.
+    if (reduceMotion) {
+      renderer.render(scene, camera);
+      return () => {
+        window.removeEventListener('resize', resize);
+        renderer.dispose();
+      };
+    }
+
+    // ===== POINTER TRACKING =====
+    // Listen on window so the title/buttons layered over the canvas don't block it.
+    const target = { x: 0, y: 0, inside: false };
+    const smooth = { x: 0, y: 0 };
+    const vel = { x: 0, y: 0 };
+    let hasPointer = false;
+    let lastMove = 0;
+
+    window.addEventListener('pointermove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const inside = e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+      target.inside = inside && e.pointerType !== 'touch';
+      if (!target.inside) return;
+      target.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      target.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+      if (!hasPointer) {
+        // First contact: start from the pointer instead of sliding in from the centre.
+        smooth.x = target.x;
+        smooth.y = target.y;
+        hasPointer = true;
+      }
+      lastMove = performance.now();
+    }, { passive: true });
+
+    document.addEventListener('pointerleave', () => { target.inside = false; });
+    window.addEventListener('blur', () => { target.inside = false; });
+
+    // ===== ANIMATION =====
+    const clock = new THREE.Clock();
+    let elapsed = 0;
+    let rafId = 0;
+    let disposed = false;
+    let visible = true;
+
+    // Frame-rate independent exponential smoothing.
+    const damp = (current, goal, lambda, dt) => current + (goal - current) * (1 - Math.exp(-lambda * dt));
+
+    function frame() {
+      rafId = requestAnimationFrame(frame);
+      const dt = Math.min(clock.getDelta(), 1 / 20);
+      elapsed += dt;
+      pointerUniforms.uTime.value = elapsed;
+
+      // Pointer: follows quickly but without jitter; velocity drives the wake.
+      const px = smooth.x;
+      const py = smooth.y;
+      smooth.x = damp(smooth.x, target.x, 9, dt);
+      smooth.y = damp(smooth.y, target.y, 9, dt);
+      const aspect = pointerUniforms.uAspect.value;
+      const rawVx = ((smooth.x - px) / Math.max(dt, 1e-4)) * aspect * 0.05;
+      const rawVy = ((smooth.y - py) / Math.max(dt, 1e-4)) * 0.05;
+      vel.x = damp(vel.x, rawVx, 6, dt);
+      vel.y = damp(vel.y, rawVy, 6, dt);
+      const vLen = Math.hypot(vel.x, vel.y);
+      const vMax = 0.6;
+      const vk = vLen > vMax ? vMax / vLen : 1;
+      pointerUniforms.uMouse.value.set(smooth.x, smooth.y);
+      pointerUniforms.uMouseVel.value.set(vel.x * vk, vel.y * vk);
+
+      // Influence eases in on hover, relaxes a little when the pointer rests, and fades out on leave.
+      const idle = performance.now() - lastMove > 1800;
+      const goalStrength = target.inside ? (idle ? 0.55 : 1) : 0;
+      pointerUniforms.uStrength.value = damp(pointerUniforms.uStrength.value, goalStrength, target.inside ? 3.5 : 1.8, dt);
+
+      // Galaxy spin (on the GPU) and a much slower drift for the deep field.
+      galaxyMaterial.uniforms.uRotation.value = elapsed * 0.025;
+      starMaterial.uniforms.uRotation.value = elapsed * 0.004;
+
+      // Dust drift.
+      const dustPos = dustGeometry.attributes.position.array;
+      for (let i = 0; i < DUST_COUNT; i++) {
+        const i3 = i * 3;
+        dustPos[i3] += dustVelocities[i3] * 0.12 * dt + Math.sin(elapsed * 0.3 + i) * 0.006 * dt;
+        dustPos[i3 + 1] += dustVelocities[i3 + 1] * 0.12 * dt + Math.cos(elapsed * 0.3 + i) * 0.006 * dt;
+        dustPos[i3 + 2] += dustVelocities[i3 + 2] * 0.12 * dt;
+
+        if (dustPos[i3] > 4) dustPos[i3] = -4;
+        if (dustPos[i3] < -4) dustPos[i3] = 4;
+        if (dustPos[i3 + 1] > 2) dustPos[i3 + 1] = -2;
+        if (dustPos[i3 + 1] < -2) dustPos[i3 + 1] = 2;
+      }
+      dustGeometry.attributes.position.needsUpdate = true;
+
+      // Central glow pulse.
+      const pulse = Math.sin(elapsed * 1.2);
+      const pulseScale = 1 + pulse * 0.04;
+      glow.scale.set(pulseScale, pulseScale, pulseScale);
+      glowMat.opacity = 0.12 + pulse * 0.02;
+
+      // Ring rotation.
+      ring.rotation.z = elapsed * 0.08;
+      ringMat.opacity = 0.06 + Math.sin(elapsed * 1.5) * 0.015;
+
+      // Gentle camera parallax that follows the pointer only while it is over the scene.
+      const s = pointerUniforms.uStrength.value;
+      camera.position.x = damp(camera.position.x, smooth.x * 0.18 * s, 2.2, dt);
+      camera.position.y = damp(camera.position.y, smooth.y * 0.12 * s, 2.2, dt);
+      camera.lookAt(0, 0, 0);
+
+      renderer.render(scene, camera);
+    }
+
+    function start() {
+      if (disposed || rafId || !visible || document.hidden) return;
+      clock.getDelta(); // drop the paused interval
+      rafId = requestAnimationFrame(frame);
+    }
+    function stop() {
+      cancelAnimationFrame(rafId);
+      rafId = 0;
+    }
+
+    // Pause when off-screen or when the tab is hidden.
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        visible = entries[0].isIntersecting;
+        visible ? start() : stop();
+      }).observe(container);
+    }
+    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+
+    start();
+  
+  return () => {
+    disposed = true;
+    stop();
+    window.removeEventListener('resize', resize);
+    renderer.dispose();
+  };
+}

@@ -1,0 +1,54 @@
+/* ported from astro-components/src/components/docs/CodeBlock.astro */
+.code-block {
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+    background: #0d1117;
+  }
+
+  .code-block__header {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: 0.65rem var(--sp-4);
+    background: rgba(255,255,255,0.02);
+    border-bottom: 1px solid var(--c-border);
+  }
+
+
+  .code-block__lang {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--c-text-3);
+    flex: 1;
+  }
+
+  .code-block__copy {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.65rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--c-text-2);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-sm);
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+    flex-shrink: 0;
+  }
+
+  .code-block__copy:hover { color: var(--c-text-1); background: rgba(255,255,255,0.09); }
+  .code-block__copy.copied { color: #34d399; border-color: rgba(52,211,153,0.3); }
+  .code-block__copy.copy-failed { color: #f87171; border-color: rgba(239,68,68,0.3); }
+
+  .code-block__pre pre {
+    margin: 0;
+    padding: var(--sp-6);
+    overflow-x: auto;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    background: transparent !important;
+  }

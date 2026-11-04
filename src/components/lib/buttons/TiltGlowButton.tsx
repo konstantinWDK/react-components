@@ -1,3 +1,5 @@
+'use client';
+
 import type { CSSProperties, ElementType, HTMLAttributes, MouseEvent, ReactNode } from 'react';
 import './TiltGlowButton.css';
 

@@ -1,3 +1,5 @@
+'use client';
+
 import type { HTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 import './EmptyStateCard.css';
 
