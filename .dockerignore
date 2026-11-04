@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-playground
+.git
+.github
+.gitignore
+.vscode
+.idea
+.DS_Store
+*.log
+COOLIFY.md
+PUBLISHING.md
+CHANGELOG.md

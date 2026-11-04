@@ -1,14 +1,14 @@
 {
-  "name": "react-component-kit",
+  "name": "react-component-kit-ui",
   "version": "0.1.0",
-  "description": "A free, open-source accessible UI component library for React \u2014 sister project of astro-component-kit",
+  "description": "Free, open-source, accessible UI component library for React: dark-first glassmorphism design, zero runtime dependencies. Sister project of astro-component-kit.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/types/components/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/types/components/index.d.ts",
       "import": "./dist/index.js"
     },
     "./buttons": {
@@ -25,34 +25,59 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "sideEffects": [
     "**/*.css"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/check-css.mjs && vite build --mode lib && tsc -p tsconfig.build.json && cp src/styles/global.css dist/global.css",
+    "build": "npm run check-css && npm run build:lib",
+    "build:lib": "vite build --mode lib && tsc -p tsconfig.build.json && cp src/styles/global.css dist/global.css",
+    "build:site": "vite build",
     "build:playground": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
+    "check-css": "node scripts/check-css.mjs",
     "extract-css": "node scripts/extract-css.mjs",
-    "check-css": "node scripts/check-css.mjs"
+    "pack:check": "npm run build && npm pack --dry-run",
+    "prepublishOnly": "npm run typecheck && npm run build",
+    "release:patch": "npm version patch -m \"release: v%s\" && npm publish",
+    "release:minor": "npm version minor -m \"release: v%s\" && npm publish",
+    "release:major": "npm version major -m \"release: v%s\" && npm publish"
   },
   "keywords": [
     "react",
     "react-components",
+    "react-component-library",
     "ui",
+    "ui-kit",
     "components",
     "accessible",
     "a11y",
-    "glassmorphism"
+    "glassmorphism",
+    "dark-mode",
+    "design-system",
+    "nextjs",
+    "typescript"
   ],
   "author": "konstantinwdk <entiplay@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konstantinWDK/react-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/konstantinWDK/react-components/issues"
+  },
+  "homepage": "https://reactcomponents.dev",
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": ">=20"
