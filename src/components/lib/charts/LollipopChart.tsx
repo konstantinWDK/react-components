@@ -80,7 +80,7 @@ export function LollipopChart({
             const cx = m.l + i * band + band / 2;
             const below = target !== undefined && target > it.value;
             return (
-              <g className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${it.label}: ${fmt(it.value)}${below ? ', below goal' : ''}`} data-tip-title={it.label} data-tip={`${color}::${fmt(it.value)}${target !== undefined ? `|${below ? 'Below' : 'Meets'} ${targetLabel.toLowerCase()}` : ''}`}>
+              <g key={i} className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${it.label}: ${fmt(it.value)}${below ? ', below goal' : ''}`} data-tip-title={it.label} data-tip={`${color}::${fmt(it.value)}${target !== undefined ? `|${below ? 'Below' : 'Meets'} ${targetLabel.toLowerCase()}` : ''}`}>
                 <line x1={cx} x2={cx} y1={y(0)} y2={y(it.value)} stroke={color} strokeWidth="2" strokeOpacity={below ? 0.5 : 1} />
                 <circle cx={cx} cy={y(it.value)} r="7" fill={below ? 'var(--chart-surface, #0d0d0f)' : color} stroke={color} strokeWidth="2.5" />
                 <rect x={cx - band / 2} y={m.t} width={band} height={H - m.t - m.b} fill="transparent" />

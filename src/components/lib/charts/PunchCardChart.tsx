@@ -70,7 +70,7 @@ export function PunchCardChart({
             const cx = m.l + hi * cellW + cellW / 2;
             const cy = m.t + di * cellH + cellH / 2;
             return (
-              <g className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${d} ${pad(h)}: ${v} ${unit}`} data-tip-title={`${d} · ${pad(h)}`} data-tip={`${color}::${v} ${unit}`}>
+              <g key={hi} className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${d} ${pad(h)}: ${v} ${unit}`} data-tip-title={`${d} · ${pad(h)}`} data-tip={`${color}::${v} ${unit}`}>
                 <rect x={cx - cellW / 2} y={cy - cellH / 2} width={cellW} height={cellH} fill="transparent" />
                 {rad > 0 && <circle cx={cx} cy={cy} r={rad} fill={color} fillOpacity={0.35 + (v / max) * 0.65} />}
               </g>

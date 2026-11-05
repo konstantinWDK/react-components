@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import './FooterMegaSection.css';
 
 interface Column { title: string; links: Array<{ label: string; href: string }> }
@@ -59,7 +60,7 @@ export function FooterMegaSection({
     discord: '<path d="M8 12h.01M16 12h.01"/><path d="M7.5 7.5c3-1 6-1 9 0M7 16.5c3 1 7 1 10 0"/><path d="M15.5 17l1 3c3-1 5-3 5.5-4.5.5-4-1-8-3-11-1.5-.8-3-1.2-4.5-1.5L14 4.5M8.5 17l-1 3c-3-1-5-3-5.5-4.5-.5-4 1-8 3-11 1.5-.8 3-1.2 4.5-1.5L10 4.5"/>',
     youtube: '<path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/>',
   };
-  const id = `fms-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `fms-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   return (
     <>
       <div className="cq-footer-mega-section-cq" data-rk-6cdbde="">

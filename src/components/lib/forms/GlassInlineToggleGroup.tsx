@@ -81,10 +81,10 @@ export function GlassInlineToggleGroup({
     <>
       <div className={cx(['glass-toggle-group', `glass-toggle-group--${size}`])} role="radiogroup" data-toggle-group data-rk-c99a88="">
         <div className="glass-toggle-group__slider" data-toggle-slider aria-hidden="true" data-rk-c99a88=""></div>
-        {options.map((opt) => {
+        {options.map((opt, __i: number) => {
           const isChecked = opt.value === defaultValue;
           return (
-            <label className="glass-toggle-group__item" data-rk-c99a88="">
+            <label key={__i} className="glass-toggle-group__item" data-rk-c99a88="">
               <input type="radio" name={name} defaultValue={opt.value} defaultChecked={isChecked} className="glass-toggle-group__radio" data-toggle-radio data-rk-c99a88="" />
               <span className="glass-toggle-group__label" data-rk-c99a88="">
                 {opt.icon && <span className="glass-toggle-group__icon" dangerouslySetInnerHTML={{ __html: opt.icon }} data-rk-c99a88="" />}

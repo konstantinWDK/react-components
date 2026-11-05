@@ -149,10 +149,10 @@ export function AppSidebar({
             <div key={__i} className="app-sb__group" data-rk-ad73bd="">
               {g.label && <p className="app-sb__group-label app-sb__label" data-rk-ad73bd="">{g.label}</p>}
               <ul data-rk-ad73bd="">
-                {g.items.map((item) => {
+                {g.items.map((item, __i: number) => {
                   const active = item.href === currentHref;
                   return (
-                    <li data-rk-ad73bd="">
+                    <li key={__i} data-rk-ad73bd="">
                       <a className={cx(['app-sb__link', { 'is-active': active }])} href={item.href} aria-current={active ? 'page' : undefined} data-tip={item.label} data-rk-ad73bd="">
                         <span className="app-sb__icon" aria-hidden="true" data-rk-ad73bd=""><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" data-rk-ad73bd=""><g dangerouslySetInnerHTML={{ __html: appIcon(item.icon) }} data-rk-ad73bd="" /></svg></span>
                         <span className="app-sb__text app-sb__label" data-rk-ad73bd="">{item.label}</span>

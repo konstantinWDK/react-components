@@ -84,9 +84,9 @@ export function MeterGauge({
         <div className="mg" role="meter" aria-valuemin={min} aria-valuemax={max} aria-valuenow={value} aria-valuetext={`${value}${unit}, ${current.label}`} aria-label={title} data-rk-fff4b2="">
           <svg viewBox={`0 0 ${W} ${H}`} aria-hidden="true" data-rk-fff4b2="">
             {arcs.map((a, __i: number) => <path key={__i} d={a.d} fill="none" stroke={toneColor[a.tone]} strokeWidth="14" strokeLinecap="butt" opacity={a.label === current.label ? 1 : 0.3} data-rk-fff4b2="" />)}
-            {ticks.map((t) => {
+            {ticks.map((t, __i: number) => {
               const [tx, ty] = polar(cx, cy - 20, r + 18, ang(t));
-              return <text className="cf-label" x={tx} y={ty + 4} textAnchor="middle" data-rk-fff4b2="">{t}</text>;
+              return <text key={__i} className="cf-label" x={tx} y={ty + 4} textAnchor="middle" data-rk-fff4b2="">{t}</text>;
             })}
             <line className="mg__needle" x1={cx} y1={cy - 20} x2={nx} y2={ny} stroke="var(--c-text-1, #fff)" strokeWidth="3" strokeLinecap="round" data-rk-fff4b2="" />
             <circle cx={cx} cy={cy - 20} r="7" fill="var(--c-text-1, #fff)" data-rk-fff4b2="" />

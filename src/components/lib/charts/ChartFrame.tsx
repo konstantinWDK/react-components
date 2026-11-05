@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import './ChartFrame.css';
 
@@ -77,7 +77,7 @@ export function ChartFrame({
   children,
   footer
 }: ChartFrameProps) {
-  const titleId = `cf-${Math.random().toString(36).slice(2, 9)}`;
+  const titleId = `cf-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
 
   // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
   const mounted = useRef(false);
@@ -142,7 +142,7 @@ export function ChartFrame({
                 </thead>
                 <tbody data-rk-0ca607="">
                   {table.rows.map((row, __i: number) => (
-                    <tr key={__i} data-rk-0ca607="">{row.map((cell, i) => (i === 0 ? <th scope="row" data-rk-0ca607="">{cell}</th> : <td data-rk-0ca607="">{cell}</td>))}</tr>
+                    <tr key={__i} data-rk-0ca607="">{row.map((cell, i) => (i === 0 ? <th key={i} scope="row" data-rk-0ca607="">{cell}</th> : <td key={i} data-rk-0ca607="">{cell}</td>))}</tr>
                   ))}
                 </tbody>
               </table>

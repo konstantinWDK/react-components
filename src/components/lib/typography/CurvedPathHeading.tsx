@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import type { CSSProperties } from 'react';
 import './CurvedPathHeading.css';
 
@@ -46,7 +47,7 @@ export function CurvedPathHeading({
   size = 260,
   animate = true,
 }: CurvedPathHeadingProps) {
-  const pathId = `curve-path-${Math.random().toString(36).substring(2, 8)}`;
+  const pathId = `curve-path-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   return (
     <>
       <div className={cx(['curved-heading', { 'is-animated': animate }])} style={st(`--curved-size: ${size}px;`)} data-rk-03862f="">

@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import type { CSSProperties } from 'react';
 import './CtaSplitImage.css';
 
@@ -59,7 +60,7 @@ export function CtaSplitImage({
   size = 'md',
   className = '',
 }: CtaSplitImageProps) {
-  const id = `csi-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `csi-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   return (
     <>
       <div className="cq-cta-split-image-cq" data-rk-56220c="">

@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import './ChangelogSection.css';
 
 interface Change { type: 'new' | 'improved' | 'fixed'; text: string }
@@ -62,7 +63,7 @@ export function ChangelogSection({
   size = 'md',
   className = '',
 }: ChangelogSectionProps) {
-  const id = `cls-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `cls-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const typeLabel = { new: 'New', improved: 'Improved', fixed: 'Fixed' };
   const typeIcon = {
     new: '<path d="M12 5v14M5 12h14"/>',

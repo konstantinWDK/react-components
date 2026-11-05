@@ -63,11 +63,11 @@ export function BulletChart({
     <>
       <ChartFrame title={title} subtitle={subtitle} variant={variant} size={size} className={className} table={{ headers: ['Metric', 'Value', 'Target', 'Status'], rows: metrics.map((mt) => [mt.label, `${mt.value}${mt.unit ?? ''}`, `${mt.target}${mt.unit ?? ''}`, mt.value >= mt.target ? 'On target' : 'Below target']) }}>
         <div className="bc" data-rk-d2b72d="">
-          {metrics.map((mt) => {
+          {metrics.map((mt, __i: number) => {
             const max = mt.ranges[2];
             const met = mt.value >= mt.target;
             return (
-              <div className="bc__row cf-mark" tabIndex={0} role="meter" aria-valuemin={0} aria-valuemax={max} aria-valuenow={mt.value} aria-label={`${mt.label}: ${mt.value}${mt.unit ?? ''} of target ${mt.target}${mt.unit ?? ''}`} data-tip-title={mt.label} data-tip={`Value: ${mt.value}${mt.unit ?? ''}|Target: ${mt.target}${mt.unit ?? ''}|${met ? 'var(--chart-pos)::On target' : 'var(--chart-neg)::Below target'}`} data-rk-d2b72d="">
+              <div key={__i} className="bc__row cf-mark" tabIndex={0} role="meter" aria-valuemin={0} aria-valuemax={max} aria-valuenow={mt.value} aria-label={`${mt.label}: ${mt.value}${mt.unit ?? ''} of target ${mt.target}${mt.unit ?? ''}`} data-tip-title={mt.label} data-tip={`Value: ${mt.value}${mt.unit ?? ''}|Target: ${mt.target}${mt.unit ?? ''}|${met ? 'var(--chart-pos)::On target' : 'var(--chart-neg)::Below target'}`} data-rk-d2b72d="">
                 <div className="bc__meta" data-rk-d2b72d="">
                   <span className="bc__label" data-rk-d2b72d="">{mt.label}</span>
                   <span className="bc__value" data-rk-d2b72d="">

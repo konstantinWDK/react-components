@@ -91,10 +91,10 @@ export function StackedBarChart({
             </g>
           ))}
       
-          {bars.map(({ c, ci, segs }) => {
+          {bars.map(({ c, ci, segs }, __i: number) => {
             const pos = (horizontal ? m.t : m.l) + ci * band + (band - thick) / 2;
             return (
-              <g>
+              <g key={__i}>
                 {horizontal
                   ? <text className="cf-label" x={m.l - 8} y={pos + thick / 2 + 4} textAnchor="end">{c}</text>
                   : <text className="cf-label" x={pos + thick / 2} y={H - 8} textAnchor="middle">{c}</text>}
@@ -108,7 +108,7 @@ export function StackedBarChart({
                     ? { x: a, y: pos, width: len, height: thick }
                     : { x: pos, y: b + (isLast ? 0 : GAP), width: thick, height: len };
                   return (
-                    <rect className="cf-mark cf-dim" {...rect} rx={isLast ? 3 : 0} fill={s.color} tabIndex={0} role="img" aria-label={`${c}, ${s.name}: ${fmt(s.raw)}${normalized ? ` (${s.val.toFixed(0)}%)` : ''}`} data-tip-title={c} data-tip={`${s.color}::${s.name}: ${fmt(s.raw)}${normalized ? ` · ${s.val.toFixed(0)}%` : ''}`} />
+                    <rect key={si} className="cf-mark cf-dim" {...rect} rx={isLast ? 3 : 0} fill={s.color} tabIndex={0} role="img" aria-label={`${c}, ${s.name}: ${fmt(s.raw)}${normalized ? ` (${s.val.toFixed(0)}%)` : ''}`} data-tip-title={c} data-tip={`${s.color}::${s.name}: ${fmt(s.raw)}${normalized ? ` · ${s.val.toFixed(0)}%` : ''}`} />
                   );
                 })}
               </g>

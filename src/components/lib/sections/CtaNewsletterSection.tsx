@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import './CtaNewsletterSection.css';
 
 /**
@@ -40,7 +40,7 @@ export function CtaNewsletterSection({
   size = 'md',
   className = '',
 }: CtaNewsletterSectionProps) {
-  const id = `cns-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `cns-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
 
   // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
   const mounted = useRef(false);

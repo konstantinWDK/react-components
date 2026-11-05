@@ -83,12 +83,12 @@ export function MetricDeltaTable({
               </tr>
             </thead>
             <tbody data-rk-df9b34="">
-              {rows.map((r) => {
+              {rows.map((r, __i: number) => {
                 const d = r.previous ? ((r.current - r.previous) / r.previous) * 100 : 0;
                 const up = d >= 0;
                 const good = r.invert ? !up : up;
                 return (
-                  <tr data-rk-df9b34="">
+                  <tr key={__i} data-rk-df9b34="">
                     <th scope="row" data-rk-df9b34="">
                       <span className="md__label" data-rk-df9b34="">{r.label}</span>
                       <span className="md__bar" aria-hidden="true" data-rk-df9b34=""><span style={st(`width:${(r.current / max) * 100}%; background:${color}`)} data-rk-df9b34=""></span></span>

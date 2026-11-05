@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import type { CSSProperties } from 'react';
 import './LogoWallGrid.css';
 
@@ -49,7 +50,7 @@ export function LogoWallGrid({
   size = 'md',
   className = '',
 }: LogoWallGridProps) {
-  const id = `lwg-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `lwg-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const glyphs = [
     '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/>',
     '<path d="M12 3 21 20H3z"/>',
@@ -73,7 +74,7 @@ export function LogoWallGrid({
                   </span>
                 );
               return (
-                <li className="lwg__cell" data-rk-c72122="">
+                <li key={i} className="lwg__cell" data-rk-c72122="">
                   {l.href ? <a href={l.href} className="lwg__link" data-rk-c72122="">{inner}</a> : inner}
                 </li>
               );

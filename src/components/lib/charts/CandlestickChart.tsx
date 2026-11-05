@@ -80,7 +80,7 @@ export function CandlestickChart({
             const top = y(Math.max(c.open, c.close));
             const h = Math.max(1.5, Math.abs(y(c.open) - y(c.close)));
             return (
-              <g className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${c.label}: open ${f(c.open)}, high ${f(c.high)}, low ${f(c.low)}, close ${f(c.close)}`} data-tip-title={c.label} data-tip={`${col}::${up ? 'Up' : 'Down'} ${(((c.close - c.open) / c.open) * 100).toFixed(2)}%|O ${f(c.open)} · H ${f(c.high)}|L ${f(c.low)} · C ${f(c.close)}`}>
+              <g key={i} className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${c.label}: open ${f(c.open)}, high ${f(c.high)}, low ${f(c.low)}, close ${f(c.close)}`} data-tip-title={c.label} data-tip={`${col}::${up ? 'Up' : 'Down'} ${(((c.close - c.open) / c.open) * 100).toFixed(2)}%|O ${f(c.open)} · H ${f(c.high)}|L ${f(c.low)} · C ${f(c.close)}`}>
                 <rect x={cx - band / 2} y={m.t} width={band} height={H - m.t - m.b} fill="transparent" />
                 <line x1={cx} x2={cx} y1={y(c.high)} y2={y(c.low)} stroke={col} strokeWidth="1.5" />
                 <rect x={cx - bw / 2} y={top} width={bw} height={h} rx="1.5" fill={up ? 'var(--chart-surface, #0d0d0f)' : col} stroke={col} strokeWidth="1.5" />

@@ -64,7 +64,7 @@ export function RadarChart({
               const [lx, ly] = polar(c, c, R + 18, ang(i));
               const anchor = 4 > Math.abs(lx - c) ? 'middle' : lx > c ? 'start' : 'end';
               return (
-                <g data-rk-b100db="">
+                <g key={i} data-rk-b100db="">
                   <line className="cf-grid" x1={c} y1={c} x2={x} y2={y} data-rk-b100db="" />
                   <text className="cf-label" x={lx} y={ly + 4} textAnchor={anchor} data-rk-b100db="">{a}</text>
                 </g>

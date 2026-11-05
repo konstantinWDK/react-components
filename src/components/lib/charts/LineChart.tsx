@@ -104,15 +104,15 @@ export function LineChart({
           ))}
       
           {categories.map((c, i) => i % labelEvery === 0 && (
-            <text className="cf-label" x={x(i)} y={H - 8} textAnchor="middle" data-rk-34cbfe="">{c}</text>
+            <text key={i} className="cf-label" x={x(i)} y={H - 8} textAnchor="middle" data-rk-34cbfe="">{c}</text>
           ))}
       
           {area && lines.map((l, i) => <path key={i} d={l.area} fill={`url(#${gid}-g${i})`} aria-hidden="true" data-rk-34cbfe="" />)}
           {lines.map((l, __i: number) => (
             <path key={__i} className="lc__line" d={l.d} fill="none" stroke={l.color} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" aria-hidden="true" data-rk-34cbfe="" />
           ))}
-          {dots && lines.map((l) => l.pts.map(([px, py], __i: number) => (
-            <circle key={__i} cx={px} cy={py} r="4" fill={l.color} stroke="var(--chart-surface, #0d0d0f)" strokeWidth="2" aria-hidden="true" data-rk-34cbfe="" />
+          {dots && lines.flatMap((l, li) => l.pts.map(([px, py], __i: number) => (
+            <circle key={`${li}-${__i}`} cx={px} cy={py} r="4" fill={l.color} stroke="var(--chart-surface, #0d0d0f)" strokeWidth="2" aria-hidden="true" data-rk-34cbfe="" />
           )))}
       
           {categories.map((c, i) => (

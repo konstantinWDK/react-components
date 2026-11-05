@@ -24,7 +24,7 @@
   .lang-picker__trigger:hover {
     color: var(--c-text-1);
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(234, 179, 8, 0.35);
+    border-color: rgba(56, 189, 248, 0.35);
   }
 
   .lang-picker__trigger:focus-visible {
@@ -96,8 +96,8 @@
   }
 
   .lang-picker__item.is-active {
-    color: #facc15;
-    background: rgba(234, 179, 8, 0.12);
+    color: #7dd3fc;
+    background: rgba(56, 189, 248, 0.12);
     font-weight: 700;
   }
 
@@ -106,5 +106,5 @@
   }
 
   .lang-picker__check {
-    color: #facc15;
+    color: #7dd3fc;
   }

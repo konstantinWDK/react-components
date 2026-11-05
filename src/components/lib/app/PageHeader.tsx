@@ -108,10 +108,10 @@ export function PageHeader({
                 ))}
               </div>
             )}
-            {actions.map((a) => {
+            {actions.map((a, __i: number) => {
               const Tag = a.href ? 'a' : 'button';
               return (
-                <Tag className={cx(['app-ph__btn', { 'app-ph__btn--primary': a.primary }])} href={a.href} type={a.href ? undefined : 'button'} data-rk-7bc64d="">
+                <Tag key={__i} className={cx(['app-ph__btn', { 'app-ph__btn--primary': a.primary }])} href={a.href} type={a.href ? undefined : 'button'} data-rk-7bc64d="">
                   {a.icon && <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" data-rk-7bc64d=""><g dangerouslySetInnerHTML={{ __html: appIcon(a.icon) }} data-rk-7bc64d="" /></svg>}
                   {a.label}
                 </Tag>

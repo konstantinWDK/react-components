@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import './HeroMinimalCentered.css';
 
 /**
@@ -42,7 +43,7 @@ export function HeroMinimalCentered({
   size = 'lg',
   className = '',
 }: HeroMinimalCenteredProps) {
-  const id = `hmc-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `hmc-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const parts = title.split(/\*(.+?)\*/);
   return (
     <>

@@ -74,7 +74,7 @@ export function HorizontalBarChart({
           {rows.map((r, i) => {
             const dim = highlight && highlight !== r.label;
             return (
-              <li className="hb__row cf-mark" tabIndex={0} style={st(`--hb-w:${(r.value / max) * 100}%; --hb-c:${color}; --hb-o:${dim ? 0.35 : 1}; --hb-i:${i}`)} data-tip-title={r.label} data-tip={`${color}::${fmt(r.value)} · ${((r.value / max) * 100).toFixed(0)}% of top`} aria-label={`${i + 1}. ${r.label}: ${fmt(r.value)}`} data-rk-344822="">
+              <li key={i} className="hb__row cf-mark" tabIndex={0} style={st(`--hb-w:${(r.value / max) * 100}%; --hb-c:${color}; --hb-o:${dim ? 0.35 : 1}; --hb-i:${i}`)} data-tip-title={r.label} data-tip={`${color}::${fmt(r.value)} · ${((r.value / max) * 100).toFixed(0)}% of top`} aria-label={`${i + 1}. ${r.label}: ${fmt(r.value)}`} data-rk-344822="">
                 <span className="hb__label" data-rk-344822="">{r.label}</span>
                 <span className="hb__track" aria-hidden="true" data-rk-344822=""><span className="hb__bar" data-rk-344822=""></span></span>
                 <span className="hb__value" data-rk-344822="">{fmt(r.value)}</span>

@@ -89,11 +89,11 @@ export function PlanUsageCard({
           {card && <p className="plan__card" data-rk-aac02d=""><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" data-rk-aac02d=""><rect x="2" y="5" width="20" height="14" rx="2" data-rk-aac02d="" /><path d="M2 10h20" data-rk-aac02d="" /></svg>{card}</p>}
         </header>
         <ul className="plan__meters" data-rk-aac02d="">
-          {usage.map((u) => {
+          {usage.map((u, __i: number) => {
             const pct = Math.min(100, Math.round((u.used / u.limit) * 100));
             const tone = pct >= 100 ? 'danger' : pct >= warnAt ? 'warning' : 'ok';
             return (
-              <li data-rk-aac02d="">
+              <li key={__i} data-rk-aac02d="">
                 <div className="plan__meter-head" data-rk-aac02d="">
                   <span data-rk-aac02d="">{u.label}</span>
                   <strong data-rk-aac02d="">{fmt(u.used)} <small data-rk-aac02d="">of {fmt(u.limit)}{u.unit ? ` ${u.unit}` : ''}</small></strong>

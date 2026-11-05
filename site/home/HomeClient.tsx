@@ -2,37 +2,30 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-type Mount = (canvas: HTMLCanvasElement, THREE: typeof import('three')) => () => void;
-
-/** Lazily loads three.js and mounts a scene on the canvas; cleans up on unmount. */
-function useThreeScene(loader: () => Promise<{ mount: Mount }>) {
+/** Hero background: rounded cubes assembling a voxel React atom (see cubes-scene.ts). */
+export function CubesHero() {
   const ref = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     let cleanup: (() => void) | undefined;
     let cancelled = false;
-    Promise.all([import('three'), loader()]).then(([THREE, { mount }]) => {
-      if (!cancelled && ref.current) cleanup = mount(ref.current, THREE);
+    Promise.all([
+      import('three'),
+      import('three/examples/jsm/geometries/RoundedBoxGeometry.js'),
+      import('./cubes-scene'),
+    ]).then(([THREE, { RoundedBoxGeometry }, { mountCubes }]) => {
+      if (!cancelled && ref.current) cleanup = mountCubes(ref.current, THREE, RoundedBoxGeometry);
     });
     return () => {
       cancelled = true;
       cleanup?.();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return ref;
-}
-
-/** Fixed gold particle field behind the whole home page. */
-export function ParticleBackground() {
-  const ref = useThreeScene(() => import('./particles.js').then((m) => ({ mount: m.mountParticles as Mount })));
   return (
-    <div className="particle-wrap" aria-hidden="true">
-      <canvas id="bg-3d-canvas" ref={ref} />
+    <div className="hero__cubes" aria-hidden="true">
+      <canvas ref={ref} />
     </div>
   );
 }
-
-export { Galaxy3D } from '../../src/components/lib/Galaxy3D';
 
 /**
  * Page-level effects that the Astro page ran as inline scripts:

@@ -70,7 +70,7 @@ export function DumbbellChart({
           {items.map((it, i) => {
             const cy = m.t + i * rowH + rowH / 2;
             return (
-              <g className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${it.label}: ${aLabel} ${fmt(it.a)}, ${bLabel} ${fmt(it.b)}`} data-tip-title={it.label} data-tip={`${ca}::${aLabel}: ${fmt(it.a)}|${cb}::${bLabel}: ${fmt(it.b)}|Δ ${fmt(it.b - it.a)}`}>
+              <g key={i} className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${it.label}: ${aLabel} ${fmt(it.a)}, ${bLabel} ${fmt(it.b)}`} data-tip-title={it.label} data-tip={`${ca}::${aLabel}: ${fmt(it.a)}|${cb}::${bLabel}: ${fmt(it.b)}|Δ ${fmt(it.b - it.a)}`}>
                 <rect x={m.l} y={cy - rowH / 2} width={W - m.l - m.r} height={rowH} fill="transparent" />
                 <text className="cf-label" x={m.l - 10} y={cy + 4} textAnchor="end">{it.label}</text>
                 <line x1={x(it.a)} x2={x(it.b)} y1={cy} y2={cy} stroke="rgb(var(--ink-rgb, 255 255 255) / 0.22)" strokeWidth="4" strokeLinecap="round" />

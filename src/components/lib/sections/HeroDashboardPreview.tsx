@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import LineChart from '../charts/LineChart';
 import KpiStatTile from '../charts/KpiStatTile';
 import './HeroDashboardPreview.css';
@@ -38,7 +39,7 @@ export function HeroDashboardPreview({
   size = 'md',
   className = '',
 }: HeroDashboardPreviewProps) {
-  const id = `hdp-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `hdp-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   return (
     <>
       <div className="cq-hero-dashboard-preview-cq" data-rk-d7155c="">

@@ -276,10 +276,10 @@ export function DataTable({
               {rows.map((r, i) => (
                 <tr key={i} data-row data-search={searchText(r)} data-filter-value={filterKey ? String(r[filterKey]) : ''} data-index={i} {...Object.fromEntries(columns.map((c) => [`data-v-${c.key.toLowerCase()}`, String(sortValue(c, r[c.key]))]))} data-rk-bf3c5c="">
                   {selectable && <td className="dt__check" data-rk-bf3c5c=""><input type="checkbox" aria-label={`Select ${columns[0] ? sortValue(columns[0], r[columns[0].key]) : `row ${i + 1}`}`} data-select data-rk-bf3c5c="" /></td>}
-                  {columns.map((c) => {
+                  {columns.map((c, __i: number) => {
                     const v = r[c.key];
                     return (
-                      <td className={cx([{ 'dt__right': c.align === 'right' }])} data-rk-bf3c5c="">
+                      <td key={__i} className={cx([{ 'dt__right': c.align === 'right' }])} data-rk-bf3c5c="">
                         {c.type === 'person' ? (
                           <span className="dt__person" data-rk-bf3c5c="">
                             <span className="dt__avatar" style={st(`--h: ${hueFrom(v?.name ?? '')}`)} aria-hidden="true" data-rk-bf3c5c="">{initials(v?.name ?? '?')}</span>

@@ -86,7 +86,7 @@ export function RadarMetricChart({
             {data.map((_, i) => {
               const x2 = center + radius * Math.cos(angleSlice * i - Math.PI / 2);
               const y2 = center + radius * Math.sin(angleSlice * i - Math.PI / 2);
-              return <line x1={center} y1={center} x2={x2} y2={y2} className="radar-spoke" data-rk-5aa1c8="" />;
+              return <line key={i} x1={center} y1={center} x2={x2} y2={y2} className="radar-spoke" data-rk-5aa1c8="" />;
             })}
       
             {/* Data polygon */}
@@ -97,7 +97,7 @@ export function RadarMetricChart({
               const r = radius * (d.value / 100);
               const cx = center + r * Math.cos(angleSlice * i - Math.PI / 2);
               const cy = center + r * Math.sin(angleSlice * i - Math.PI / 2);
-              return <circle cx={cx} cy={cy} r="4" className="radar-node" data-rk-5aa1c8="" />;
+              return <circle key={i} cx={cx} cy={cy} r="4" className="radar-node" data-rk-5aa1c8="" />;
             })}
       
             {/* Axis Labels */}
@@ -106,7 +106,7 @@ export function RadarMetricChart({
               const lx = center + labelRadius * Math.cos(angleSlice * i - Math.PI / 2);
               const ly = center + labelRadius * Math.sin(angleSlice * i - Math.PI / 2);
               return (
-                <text x={lx} y={ly} className="radar-label" textAnchor="middle" dominantBaseline="central" data-rk-5aa1c8="">
+                <text key={i} x={lx} y={ly} className="radar-label" textAnchor="middle" dominantBaseline="central" data-rk-5aa1c8="">
                   {d.axis} ({d.value})
                 </text>
               );

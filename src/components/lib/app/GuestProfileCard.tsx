@@ -82,9 +82,9 @@ export function GuestProfileCard({
             </p>
           </div>
           <div className="gp__actions" data-rk-333a1a="">
-            {actions.map((a) => {
+            {actions.map((a, __i: number) => {
               const Tag = a.href ? 'a' : 'button';
-              return <Tag className={cx(['gp__btn', { 'gp__btn--primary': a.primary }])} href={a.href} type={a.href ? undefined : 'button'} data-rk-333a1a="">{a.label}</Tag>;
+              return <Tag key={__i} className={cx(['gp__btn', { 'gp__btn--primary': a.primary }])} href={a.href} type={a.href ? undefined : 'button'} data-rk-333a1a="">{a.label}</Tag>;
             })}
           </div>
         </header>

@@ -55,4 +55,11 @@ edit('charts/DonutChart.tsx', [('w.globals.seriesGlobals.reduce', 'w.globals.ser
 # ApexCharts grid colour: CSS vars are not supported → neutral translucent grey (works in both themes)
 for f in ['charts/AreaChart.tsx', 'charts/BarChart.tsx']:
     edit(f, [("borderColor: 'rgb(var(--ink-rgb, 255 255 255) / 0.05)'", "borderColor: 'rgba(148, 163, 184, 0.12)'")])
+# React list keys the converter cannot infer
+edit('charts/ChartFrame.tsx', [('(i === 0 ? <th scope="row"', '(i === 0 ? <th key={i} scope="row"'), (' : <td data-rk-', ' : <td key={i} data-rk-')])
+edit('charts/LineChart.tsx', [('i % labelEvery === 0 && (\n            <text className="cf-label"', 'i % labelEvery === 0 && (\n            <text key={i} className="cf-label"'),
+  ('{dots && lines.map((l) => l.pts.map(([px, py], __i: number) => (\n            <circle key={__i}', '{dots && lines.flatMap((l, li) => l.pts.map(([px, py], __i: number) => (\n            <circle key={`${li}-${__i}`}')])
+s = open('sections/TestimonialCarousel.tsx').read()
+s = re.sub(r'(Array\.from\(\{ length: 5 \}, \(_, s\) => \(\s*<)(\w+)(?![^>]*key=)', r'\1\2 key={s}', s, count=1)
+open('sections/TestimonialCarousel.tsx', 'w').write(s)
 print('port-fixes applied')

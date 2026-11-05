@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import type { CSSProperties } from 'react';
 import './HowItWorksSteps.css';
 
@@ -53,7 +54,7 @@ export function HowItWorksSteps({
   size = 'md',
   className = '',
 }: HowItWorksStepsProps) {
-  const id = `hiw-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `hiw-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   return (
     <>
       <div className="cq-how-it-works-steps-cq" data-rk-1a3d09="">

@@ -126,7 +126,7 @@
   }
   .sidebar--install__link--active {
     color: var(--c-primary-light);
-    background: linear-gradient(90deg, rgba(184, 134, 11, 0.1), rgba(184, 134, 11, 0.02));
+    background: linear-gradient(90deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.02));
     font-weight: 600;
   }
   .sidebar--install__icon {

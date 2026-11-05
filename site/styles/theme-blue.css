@@ -1,0 +1,51 @@
+/* reactcomponents.dev — sky-blue site theme.
+   Only the website chrome is blue: component previews keep the library defaults (see below),
+   so every demo looks exactly like the component you install. */
+:root {
+  --c-bg:            #03060b;
+  --c-bg-1:          #070b12;
+  --c-bg-2:          #0c1220;
+  --c-border:        rgba(148, 197, 255, 0.07);
+  --c-primary:       #0ea5e9;
+  --c-primary-light: #38bdf8;
+  --c-primary-glow:  rgba(56, 189, 248, 0.12);
+  --c-accent:        #e0f2fe;
+  --c-on-primary:    #04121c;
+}
+:root[data-theme='light'] {
+  --c-bg:            #f4f8fc;
+  --c-bg-1:          #ffffff;
+  --c-bg-2:          #e8f0f8;
+  --c-border:        rgba(15, 40, 70, 0.1);
+  --c-primary:       #0369a1;
+  --c-primary-light: #0369a1;
+  --c-primary-glow:  rgba(3, 105, 161, 0.12);
+  --c-accent:        #0c4a6e;
+  --c-on-primary:    #ffffff;
+}
+
+.gradient-text {
+  background: linear-gradient(180deg, #bae6fd, #0284c7);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Library defaults inside every live preview (keeps the original component look) */
+.preview-container,
+.section-preview-full,
+.section-card__preview,
+.slide-card__viewport,
+.showcase-card__inner,
+.carousel-card,
+.lab-tile__stage,
+.td-prev__stage {
+  --c-bg:            #050505;
+  --c-bg-1:          #0a0a0a;
+  --c-bg-2:          #111111;
+  --c-border:        rgba(255, 255, 255, 0.05);
+  --c-primary:       #b8860b;
+  --c-primary-light: #d4a017;
+  --c-primary-glow:  rgba(184, 134, 11, 0.12);
+  --c-accent:        #fef3c7;
+  --c-on-primary:    #050505;
+}

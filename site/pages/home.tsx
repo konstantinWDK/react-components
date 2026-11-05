@@ -9,7 +9,7 @@ import { SiteHeader } from '../layout/SiteHeader';
 import { WhyBento } from '../home/WhyBento';
 import { TemplatesPromo } from '../home/TemplatesPromo';
 import { SectionRenderer } from '../docs/SectionRenderer';
-import { CopyCommand, Galaxy3D, HomeEffects, ParticleBackground, SectionsCarouselNav } from '../home/HomeClient';
+import { CopyCommand, CubesHero, HomeEffects, SectionsCarouselNav } from '../home/HomeClient';
 import { CyberpunkButton, GlowButton, LiquidButton, MagneticButton, NeonBorderButton, RetroArcadeButton, RippleButton, ShimmerButton } from '../../src/components/lib/buttons';
 import { SparklineChart, RadialBarChart, KpiStatTile, GaugeChart, ActivityRings, MeterGauge, WaffleChart, BulletChart, PieChart, FunnelChart } from '../../src/components/lib/charts';
 import { NotificationCard, MusicPlayerMini, InteractiveTiltCard } from '../../src/components/lib/cards';
@@ -100,10 +100,6 @@ const SECTION_SLIDES: { slug: string; name: string; cat: Tri; summary: Tri }[] =
 const Arrow = ({ size = 16, w = 2.5 }: { size?: number; w?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
 );
-const Stars = () => (
-  <span className="showcase-card__stars" aria-hidden="true"><i /><i /><i /><i /></span>
-);
-
 export function HomePage({ lang }: { lang: Locale }) {
   const t = (x: Tri) => tr(lang, x);
   const ui = UI[lang];
@@ -156,7 +152,6 @@ export function HomePage({ lang }: { lang: Locale }) {
 
   return (
     <>
-      <ParticleBackground />
       <HomeEffects />
 
       <div className="brutal-line brutal-line--1" aria-hidden="true" />
@@ -168,14 +163,12 @@ export function HomePage({ lang }: { lang: Locale }) {
       <main>
         {/* ==================== HERO ==================== */}
         <section className="hero">
+          <CubesHero />
           <div className="hero__scene">
-            <div className="hero__galaxy-bg" aria-hidden="true"><Galaxy3D /></div>
-            <div className="hero__orbits" aria-hidden="true"><span /><span /></div>
 
             {heroCards.map((card, i) => (
               <a key={card.slug} href={href(`/docs/${card.slug}`)} className={`showcase-card showcase-card--${i + 1} is-${card.depth}`} aria-label={card.slug}>
                 <div className="showcase-card__body">
-                  <Stars />
                   <div className={`showcase-card__inner ${card.inner ? `showcase-card__inner--${card.inner}` : ''}`} inert>
                     {card.node}
                   </div>

@@ -48,10 +48,10 @@ export function LinearProgressGauge({
         </div>
       
         <div className="linear-gauge__bar" role="progressbar" aria-valuemax={100} aria-valuemin={0} data-rk-4f95ee="">
-          {segments.map((seg) => {
+          {segments.map((seg, __i: number) => {
             const pct = (seg.value / totalSum) * 100;
             return (
-              <div className="linear-gauge__chunk" style={st(`width: ${pct}%; background-color: ${seg.color};`)} title={`${seg.label}: ${seg.value}%`} data-rk-4f95ee="" />
+              <div key={__i} className="linear-gauge__chunk" style={st(`width: ${pct}%; background-color: ${seg.color};`)} title={`${seg.label}: ${seg.value}%`} data-rk-4f95ee="" />
             );
           })}
         </div>

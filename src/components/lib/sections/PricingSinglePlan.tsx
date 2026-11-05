@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import './PricingSinglePlan.css';
 
 /**
@@ -57,7 +58,7 @@ export function PricingSinglePlan({
   size = 'md',
   className = '',
 }: PricingSinglePlanProps) {
-  const id = `psp-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `psp-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   return (
     <>
       <div className="cq-pricing-single-plan-cq" data-rk-ed3ab2="">

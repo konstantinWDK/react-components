@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import type { CSSProperties } from 'react';
 import './BlogGridSection.css';
 
@@ -63,7 +64,7 @@ export function BlogGridSection({
   size = 'md',
   className = '',
 }: BlogGridSectionProps) {
-  const id = `bgs-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `bgs-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const gradients = [
     'radial-gradient(circle at 20% 20%, rgba(57,135,229,.65), transparent 55%), radial-gradient(circle at 80% 80%, rgba(144,133,233,.55), transparent 50%), #101018',
     'radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--c-primary-light, #d4a017) 60%, transparent), transparent 50%), #15120a',

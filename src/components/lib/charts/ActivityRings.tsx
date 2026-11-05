@@ -62,11 +62,11 @@ export function ActivityRings({
       <ChartFrame title={title} subtitle={subtitle} variant={variant} size={size} className={className} table={{ headers: ['Goal', 'Value', 'Target', 'Progress'], rows: items.map((r) => [r.label, `${r.value}${r.unit ?? ''}`, `${r.goal}${r.unit ?? ''}`, `${Math.round(r.pct * 100)}%`]) }}>
         <div className="ar" data-rk-2006ec="">
           <svg viewBox={`0 0 ${S} ${S}`} role="img" aria-label={`${title}: ${items.map((r) => `${r.label} ${Math.round(r.pct * 100)}%`).join(', ')}`} data-rk-2006ec="">
-            {items.map((r) => {
+            {items.map((r, __i: number) => {
               const main = Math.min(r.pct, 0.9999);
               const extra = r.pct > 1 ? Math.min(r.pct - 1, 0.9999) : 0;
               return (
-                <g data-rk-2006ec="">
+                <g key={__i} data-rk-2006ec="">
                   <circle cx={c} cy={c} r={r.radius} fill="none" stroke={r.color} strokeOpacity="0.16" strokeWidth={stroke} data-rk-2006ec="" />
                   {main > 0 && <path className="ar__arc" d={arcStroke(c, c, r.radius, 0, Math.PI * 2 * main)} fill="none" stroke={r.color} strokeWidth={stroke} strokeLinecap="round" data-rk-2006ec="" />}
                   {extra > 0 && <path d={arcStroke(c, c, r.radius, 0, Math.PI * 2 * extra)} fill="none" stroke={r.color} strokeWidth={stroke} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 3px rgba(0,0,0,0.6)) brightness(1.15)" }} data-rk-2006ec="" />}

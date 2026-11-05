@@ -82,7 +82,7 @@ export function HistogramChart({
             const bx = x(lo + i * width) + 1;
             const bw = x(lo + (i + 1) * width) - x(lo + i * width) - 2;
             return (
-              <rect className="cf-mark cf-dim" x={bx} y={y(c)} width={Math.max(1, bw)} height={Math.max(0, y(0) - y(c))} rx="2" fill={color} tabIndex={0} role="img" aria-label={`${edge(i)} to ${edge(i + 1)}${unit}: ${c} values`} data-tip-title={`${edge(i)}–${edge(i + 1)}${unit}`} data-tip={`${color}::${c} values · ${((c / values.length) * 100).toFixed(1)}%`} />
+              <rect key={i} className="cf-mark cf-dim" x={bx} y={y(c)} width={Math.max(1, bw)} height={Math.max(0, y(0) - y(c))} rx="2" fill={color} tabIndex={0} role="img" aria-label={`${edge(i)} to ${edge(i + 1)}${unit}: ${c} values`} data-tip-title={`${edge(i)}–${edge(i + 1)}${unit}`} data-tip={`${color}::${c} values · ${((c / values.length) * 100).toFixed(1)}%`} />
             );
           })}
           {Array.from({ length: bins + 1 }, (_, i) => i).filter((i) => i % 2 === 0).map((i, __i: number) => (

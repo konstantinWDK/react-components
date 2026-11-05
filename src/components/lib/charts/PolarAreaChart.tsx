@@ -63,7 +63,7 @@ export function PolarAreaChart({
               const [lx, ly] = polar(c, c, R + 14, i * sweep + sweep / 2);
               const isMax = it.value === max;
               return (
-                <g data-rk-5b5eb9="">
+                <g key={i} data-rk-5b5eb9="">
                   <path className="cf-mark cf-dim" d={arcPath(c, c, r, 0, a0, a1)} fill={color} fillOpacity={0.35 + 0.6 * (it.value / max)} tabIndex={0} role="img" aria-label={`${it.label}: ${fmt(it.value)}`} data-tip-title={it.label} data-tip={`${color}::${fmt(it.value)}`} data-rk-5b5eb9="" />
                   <text className={isMax ? 'cf-label cf-label--strong' : 'cf-label'} x={lx} y={ly + 4} textAnchor="middle" data-rk-5b5eb9="">{it.label}</text>
                 </g>

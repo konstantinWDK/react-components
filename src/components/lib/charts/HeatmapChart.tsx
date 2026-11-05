@@ -82,7 +82,7 @@ export function HeatmapChart({
                 {columns.map((c, ci) => {
                   const v = values[ri]?.[ci] ?? 0;
                   return (
-                    <span className="hm__cell cf-mark" role="gridcell" tabIndex={0} style={st(`background:${fill(v)}`)} aria-label={`${r}, ${c}: ${v}${suffix}`} data-tip-title={`${r} · ${c}`} data-tip={`${v}${suffix}`} data-rk-9ca6f8="">
+                    <span key={ci} className="hm__cell cf-mark" role="gridcell" tabIndex={0} style={st(`background:${fill(v)}`)} aria-label={`${r}, ${c}: ${v}${suffix}`} data-tip-title={`${r} · ${c}`} data-tip={`${v}${suffix}`} data-rk-9ca6f8="">
                       {showValues && <span className={t(v) > 0.55 ? 'hm__v hm__v--strong' : 'hm__v'} data-rk-9ca6f8="">{v}</span>}
                     </span>
                   );

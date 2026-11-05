@@ -83,7 +83,7 @@ export function BoxPlotChart({
           {stats.map((s, i) => {
             const cx = m.l + i * band + band / 2;
             return (
-              <g className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${s.label}: median ${f(s.med)}, IQR ${f(s.q1)}–${f(s.q3)}, range ${f(s.lo)}–${f(s.hi)}, ${s.outliers.length} outliers`} data-tip-title={s.label} data-tip={`Max: ${f(s.hi)}|Q3: ${f(s.q3)}|${color}::Median: ${f(s.med)}|Q1: ${f(s.q1)}|Min: ${f(s.lo)}${s.outliers.length ? `|Outliers: ${s.outliers.length}` : ''}`}>
+              <g key={i} className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${s.label}: median ${f(s.med)}, IQR ${f(s.q1)}–${f(s.q3)}, range ${f(s.lo)}–${f(s.hi)}, ${s.outliers.length} outliers`} data-tip-title={s.label} data-tip={`Max: ${f(s.hi)}|Q3: ${f(s.q3)}|${color}::Median: ${f(s.med)}|Q1: ${f(s.q1)}|Min: ${f(s.lo)}${s.outliers.length ? `|Outliers: ${s.outliers.length}` : ''}`}>
                 <rect x={cx - band / 2} y={m.t} width={band} height={H - m.t - m.b} fill="transparent" />
                 <line x1={cx} x2={cx} y1={y(s.hi)} y2={y(s.q3)} stroke="var(--c-text-2, #a3a3a3)" strokeWidth="1.5" />
                 <line x1={cx} x2={cx} y1={y(s.q1)} y2={y(s.lo)} stroke="var(--c-text-2, #a3a3a3)" strokeWidth="1.5" />

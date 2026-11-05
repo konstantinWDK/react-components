@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import type { CSSProperties } from 'react';
 import './FeatureIconGrid.css';
 
@@ -71,7 +72,7 @@ export function FeatureIconGrid({
   size = 'md',
   className = '',
 }: FeatureIconGridProps) {
-  const id = `fig-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `fig-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   return (
     <>
       <section className={`fig fig--${variant} fig--${size} ${className}`} aria-labelledby={id} style={st(`--fig-cols:${columns}`)} data-rk-d09f2e="">

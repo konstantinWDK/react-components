@@ -19,7 +19,7 @@
     transition: color 0.2s ease;
   }
   .breadcrumb a:hover {
-    color: #facc15;
+    color: #7dd3fc;
   }
   .breadcrumb__sep {
     color: #475569;
@@ -42,9 +42,9 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    background: rgba(234, 179, 8, 0.12);
-    color: #facc15;
-    border: 1px solid rgba(234, 179, 8, 0.25);
+    background: rgba(56, 189, 248, 0.12);
+    color: #7dd3fc;
+    border: 1px solid rgba(56, 189, 248, 0.25);
     margin-bottom: 1rem;
   }
   .sections-header__title {
@@ -90,9 +90,9 @@
     border-color: rgba(255, 255, 255, 0.2);
   }
   .filter-tab--active {
-    background: rgba(234, 179, 8, 0.15);
-    color: #facc15;
-    border-color: rgba(234, 179, 8, 0.4);
+    background: rgba(56, 189, 248, 0.15);
+    color: #7dd3fc;
+    border-color: rgba(56, 189, 248, 0.4);
   }
   .filter-count {
     padding: 0.1rem 0.45rem;
@@ -121,9 +121,9 @@
     overflow: hidden;
   }
   .section-card:hover {
-    border-color: rgba(234, 179, 8, 0.35);
+    border-color: rgba(56, 189, 248, 0.35);
     transform: translateY(-4px);
-    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6), 0 0 25px -10px rgba(234, 179, 8, 0.15);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6), 0 0 25px -10px rgba(56, 189, 248, 0.15);
   }
 
   .section-card__preview {
@@ -184,9 +184,9 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #facc15;
-    background: rgba(234, 179, 8, 0.1);
-    border: 1px solid rgba(234, 179, 8, 0.2);
+    color: #7dd3fc;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
     padding: 0.15rem 0.5rem;
     border-radius: 9999px;
   }
@@ -221,7 +221,7 @@
   .section-card__link { color: inherit; text-decoration: none; }
   .section-card__link::after { content: ''; position: absolute; inset: 0; z-index: 2; border-radius: inherit; }
   .section-card__link:focus-visible { outline: none; }
-  .section-card:focus-within { outline: 2px solid #facc15; outline-offset: 3px; }
+  .section-card:focus-within { outline: 2px solid #7dd3fc; outline-offset: 3px; }
   .section-card__arrow {
     padding: 0.85rem 1.25rem;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -235,8 +235,8 @@
     transition: all 0.2s ease;
   }
   .section-card:hover .section-card__arrow {
-    color: #facc15;
-    background: rgba(234, 179, 8, 0.06);
+    color: #7dd3fc;
+    background: rgba(56, 189, 248, 0.06);
   }
   .section-card:hover .section-card__arrow svg {
     transform: translateX(4px);
@@ -252,9 +252,9 @@
 .section-card__soon {
   padding: 0.2rem 0.6rem;
   border-radius: var(--r-full);
-  background: rgba(234, 179, 8, 0.12);
-  border: 1px solid rgba(234, 179, 8, 0.3);
-  color: #facc15;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #7dd3fc;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;

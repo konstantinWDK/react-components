@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import './CareersOpenings.css';
 
 interface Job { title: string; department: string; location: string; type: string; remote?: boolean; href: string }
@@ -43,7 +44,7 @@ export function CareersOpenings({
   size = 'md',
   className = '',
 }: CareersOpeningsProps) {
-  const id = `co-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `co-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const departments = [...new Set(jobs.map((j) => j.department))];
   return (
     <>

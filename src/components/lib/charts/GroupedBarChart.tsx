@@ -79,13 +79,13 @@ export function GroupedBarChart({
           {categories.map((c, ci) => {
             const gx = m.l + ci * groupW + (groupW - inner) / 2;
             return (
-              <g data-rk-1a0e25="">
+              <g key={ci} data-rk-1a0e25="">
                 <text className="cf-label" x={m.l + ci * groupW + groupW / 2} y={H - 8} textAnchor="middle" data-rk-1a0e25="">{c}</text>
                 {series.slice(0, 8).map((s, si) => {
                   const bx = gx + si * (barW + gap);
                   const v = s.data[ci] ?? 0;
                   return (
-                    <path className="cf-mark cf-dim gb__bar" d={barPath(bx, y(v), barW, y(0))} fill={colorAt(si, colors)} tabIndex={0} role="img" aria-label={`${c}, ${s.name}: ${fmt(v)}`} data-tip-title={c} data-tip={`${colorAt(si, colors)}::${s.name}: ${fmt(v)}`} data-rk-1a0e25="" />
+                    <path key={si} className="cf-mark cf-dim gb__bar" d={barPath(bx, y(v), barW, y(0))} fill={colorAt(si, colors)} tabIndex={0} role="img" aria-label={`${c}, ${s.name}: ${fmt(v)}`} data-tip-title={c} data-tip={`${colorAt(si, colors)}::${s.name}: ${fmt(v)}`} data-rk-1a0e25="" />
                   );
                 })}
               </g>

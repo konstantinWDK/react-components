@@ -77,7 +77,7 @@ export function DivergingBarChart({
             const c = pos ? positiveColor : negativeColor;
             const w = Math.abs(x1 - x0);
             return (
-              <g>
+              <g key={i}>
                 <text className="cf-label" x={m.l - 10} y={cy + 4} textAnchor="end">{it.label}</text>
                 <rect className="cf-mark cf-dim" x={Math.min(x0, x1)} y={cy - 9} width={Math.max(1, w)} height="18" rx="4" fill={c} tabIndex={0} role="img" aria-label={`${it.label}: ${fmt(it.value)}`} data-tip-title={it.label} data-tip={`${c}::${pos ? positiveLabel : negativeLabel}: ${fmt(it.value)}`} />
                 <text className="cf-label cf-label--strong" x={pos ? x1 + 6 : x1 - 6} y={cy + 4} textAnchor={pos ? 'start' : 'end'}>{fmt(it.value)}</text>

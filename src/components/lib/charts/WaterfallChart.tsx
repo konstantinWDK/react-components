@@ -92,7 +92,7 @@ export function WaterfallChart({
             const c = colorOf(b.kind);
             const next = bars[i + 1];
             return (
-              <g>
+              <g key={i}>
                 {next && <line className="cf-axis" x1={bx + bw} x2={bx + band} y1={y(b.to)} y2={y(b.to)} opacity="0.7" />}
                 <rect className="cf-mark cf-dim" x={bx} y={top} width={bw} height={h} rx="3" fill={c} tabIndex={0} role="img" aria-label={`${b.label}: ${b.kind === 'total' ? fmt(b.value) : fmtSigned(b.value)}, total ${fmt(b.to)}`} data-tip-title={b.label} data-tip={b.kind === 'total' ? `${c}::Total: ${fmt(b.value)}` : `${c}::Change: ${fmtSigned(b.value)}|Running: ${fmt(b.to)}`} />
                 <text className="cf-label cf-label--strong" x={bx + bw / 2} y={top - 6} textAnchor="middle">

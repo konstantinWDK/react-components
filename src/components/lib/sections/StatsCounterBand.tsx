@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import './StatsCounterBand.css';
 
 /** class:list → className */
@@ -52,7 +52,7 @@ export function StatsCounterBand({
   size = 'md',
   className = '',
 }: StatsCounterBandProps) {
-  const id = `scb-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `scb-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const fmt = (s: Stat) => `${s.prefix ?? ''}${s.value.toLocaleString('en-US', { minimumFractionDigits: s.decimals ?? 0, maximumFractionDigits: s.decimals ?? 0 })}${s.suffix ?? ''}`;
 
   // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).

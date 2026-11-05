@@ -3,6 +3,7 @@ import { LOCALES, siteConfig, DEFAULT_LOCALE, type Locale } from '../config/site
 import { StarGoalBanner } from './StarGoalBanner';
 import { GitHubStarPrompt } from './GitHubStarPrompt';
 import '../../src/styles/global.css';
+import '../styles/theme-blue.css';
 
 /** <html>/<body> for one locale. Mirrors astro BaseLayout (JSON-LD, analytics, banners). */
 export function RootShell({ lang, children }: { lang: Locale; children: ReactNode }) {

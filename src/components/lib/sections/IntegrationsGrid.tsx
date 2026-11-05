@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import type { CSSProperties } from 'react';
 import './IntegrationsGrid.css';
 
@@ -55,7 +55,7 @@ export function IntegrationsGrid({
   size = 'md',
   className = '',
 }: IntegrationsGridProps) {
-  const id = `ig-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `ig-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const categories = ['All', ...new Set(items.map((i) => i.category))];
   const hues = ['var(--chart-1, #3987e5)', 'var(--chart-2, #d95926)', 'var(--chart-3, #199e70)', 'var(--chart-4, #c98500)', 'var(--chart-5, #d55181)', 'var(--chart-7, #9085e9)'];
   const statusLabel = { available: 'Available', beta: 'Beta', soon: 'Coming soon' };

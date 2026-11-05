@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import KpiStatTile from '../charts/KpiStatTile';
 import StackedAreaChart from '../charts/StackedAreaChart';
 import HorizontalBarChart from '../charts/HorizontalBarChart';
@@ -43,7 +44,7 @@ export function StatsDashboardSection({
   size = 'md',
   className = '',
 }: StatsDashboardSectionProps) {
-  const id = `sds-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `sds-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   return (
     <>
       <div className="cq-stats-dashboard-section-cq" data-rk-e3f5a0="">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import type { CSSProperties } from 'react';
 import './HeroTerminal.css';
 
@@ -63,7 +63,7 @@ export function HeroTerminal({
   size = 'md',
   className = '',
 }: HeroTerminalProps) {
-  const id = `ht-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `ht-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
 
   // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
   const mounted = useRef(false);

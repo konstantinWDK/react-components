@@ -78,11 +78,11 @@ export function BubbleChart({
           <text className="cf-label" x={(m.l + W - m.r) / 2} y={H - 4} textAnchor="middle">{xLabel}</text>
           <text className="cf-label" transform={`translate(12 ${(m.t + H - m.b) / 2}) rotate(-90)`} textAnchor="middle">{yLabel}</text>
       
-          {sorted.map((it) => {
+          {sorted.map((it, __i: number) => {
             const col = colorAt(it.group ?? 0, colors);
             const rad = r(it.z);
             return (
-              <g className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${it.label}: ${xLabel} ${it.x}, ${yLabel} ${it.y}, ${zLabel} ${it.z}`} data-tip-title={it.label} data-tip={`${col}::${groups[it.group ?? 0] ?? ''}|${xLabel}: ${it.x}|${yLabel}: ${it.y}|${zLabel}: ${it.z}`}>
+              <g key={__i} className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${it.label}: ${xLabel} ${it.x}, ${yLabel} ${it.y}, ${zLabel} ${it.z}`} data-tip-title={it.label} data-tip={`${col}::${groups[it.group ?? 0] ?? ''}|${xLabel}: ${it.x}|${yLabel}: ${it.y}|${zLabel}: ${it.z}`}>
                 <circle cx={x(it.x)} cy={y(it.y)} r={rad} fill={col} fillOpacity="0.55" stroke={col} strokeWidth="1.5" />
                 {rad > 18 && <text x={x(it.x)} y={y(it.y) + 4} textAnchor="middle" fill="#fff" fontSize="11" fontWeight="600">{it.label}</text>}
               </g>

@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import './FaqTwoColumn.css';
 
 /**
@@ -42,7 +43,7 @@ export function FaqTwoColumn({
   size = 'md',
   className = '',
 }: FaqTwoColumnProps) {
-  const uid = Math.random().toString(36).slice(2, 8);
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   const id = `ftc-${uid}`;
   return (
     <>

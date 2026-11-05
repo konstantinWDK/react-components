@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import type { CSSProperties } from 'react';
 import './TestimonialCarousel.css';
 
@@ -49,7 +49,7 @@ export function TestimonialCarousel({
   size = 'md',
   className = '',
 }: TestimonialCarouselProps) {
-  const id = `tc-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `tc-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const initials = (n: string) => n.split(' ').map((p) => p[0]).slice(0, 2).join('');
   const hues = ['var(--chart-1, #3987e5)', 'var(--chart-2, #d95926)', 'var(--chart-3, #199e70)', 'var(--chart-5, #d55181)', 'var(--chart-7, #9085e9)'];
 
@@ -103,7 +103,7 @@ export function TestimonialCarousel({
                   {t.rating && (
                     <div className="tc__stars" role="img" aria-label={`${t.rating} out of 5 stars`} data-rk-a626d8="">
                       {Array.from({ length: 5 }, (_, s) => (
-                        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" className={(t.rating ?? 0) > s ? 'is-on' : ''} data-rk-a626d8=""><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z" fill="currentColor" data-rk-a626d8="" /></svg>
+                        <svg key={s} width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" className={(t.rating ?? 0) > s ? 'is-on' : ''} data-rk-a626d8=""><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z" fill="currentColor" data-rk-a626d8="" /></svg>
                       ))}
                     </div>
                   )}

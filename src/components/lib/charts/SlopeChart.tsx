@@ -71,12 +71,12 @@ export function SlopeChart({
           <text className="cf-label cf-label--strong" x={x0} y={14} textAnchor="middle">{fromLabel}</text>
           <text className="cf-label cf-label--strong" x={x1} y={14} textAnchor="middle">{toLabel}</text>
       
-          {items.map((it) => {
+          {items.map((it, __i: number) => {
             const up = it.to >= it.from;
             const c = up ? POSITIVE : NEGATIVE;
             const dim = highlight && highlight !== it.label;
             return (
-              <g className="cf-mark cf-dim" tabIndex={0} role="img" opacity={dim ? 0.35 : 1} aria-label={`${it.label}: ${fmt(it.from)} to ${fmt(it.to)} (${up ? 'up' : 'down'})`} data-tip-title={it.label} data-tip={`${fromLabel}: ${fmt(it.from)}|${toLabel}: ${fmt(it.to)}|${c}::${up ? 'Up' : 'Down'} ${Math.abs(it.to - it.from).toFixed(1)}`}>
+              <g key={__i} className="cf-mark cf-dim" tabIndex={0} role="img" opacity={dim ? 0.35 : 1} aria-label={`${it.label}: ${fmt(it.from)} to ${fmt(it.to)} (${up ? 'up' : 'down'})`} data-tip-title={it.label} data-tip={`${fromLabel}: ${fmt(it.from)}|${toLabel}: ${fmt(it.to)}|${c}::${up ? 'Up' : 'Down'} ${Math.abs(it.to - it.from).toFixed(1)}`}>
                 <line x1={x0} y1={y(it.from)} x2={x1} y2={y(it.to)} stroke={c} strokeWidth="2" />
                 <line x1={x0} y1={y(it.from)} x2={x1} y2={y(it.to)} stroke="transparent" strokeWidth="14" />
                 <circle cx={x0} cy={y(it.from)} r="4.5" fill={c} stroke="var(--chart-surface, #0d0d0f)" strokeWidth="2" />

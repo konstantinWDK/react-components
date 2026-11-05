@@ -70,7 +70,7 @@ export function TreemapChart({
             const h = Math.max(0, r.h - GAP);
             const showLabel = w > 64 && h > 34;
             return (
-              <g className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${it.label}: ${fmt(it.value)}`} data-tip-title={it.label} data-tip={`${c}::${fmt(it.value)} · ${((it.value / total) * 100).toFixed(1)}%`}>
+              <g key={i} className="cf-mark cf-dim" tabIndex={0} role="img" aria-label={`${it.label}: ${fmt(it.value)}`} data-tip-title={it.label} data-tip={`${c}::${fmt(it.value)} · ${((it.value / total) * 100).toFixed(1)}%`}>
                 <rect x={r.x + GAP / 2} y={r.y + GAP / 2} width={w} height={h} rx="6" fill={c} fillOpacity="0.85" />
                 {showLabel && (
                   <>

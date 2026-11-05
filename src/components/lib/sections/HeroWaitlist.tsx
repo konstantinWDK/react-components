@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import type { CSSProperties } from 'react';
 import './HeroWaitlist.css';
 
@@ -56,7 +56,7 @@ export function HeroWaitlist({
   size = 'lg',
   className = '',
 }: HeroWaitlistProps) {
-  const id = `hw-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `hw-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const initials = ['AK', 'MR', 'JS', 'LP', 'TW'];
   const hues = ['var(--chart-1, #3987e5)', 'var(--chart-2, #d95926)', 'var(--chart-3, #199e70)', 'var(--chart-5, #d55181)', 'var(--chart-7, #9085e9)'];
 

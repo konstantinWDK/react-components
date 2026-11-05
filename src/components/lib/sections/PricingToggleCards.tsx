@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import './PricingToggleCards.css';
 
 interface Plan { name: string; monthly: number; yearly: number; description: string; features: string[]; cta: string; href: string; featured?: boolean }
@@ -43,7 +43,7 @@ export function PricingToggleCards({
   size = 'md',
   className = '',
 }: PricingToggleCardsProps) {
-  const id = `ptc-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `ptc-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
 
   // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
   const mounted = useRef(false);

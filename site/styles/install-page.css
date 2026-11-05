@@ -13,7 +13,7 @@
   .install-header__badge {
     display: inline-block; padding: 0.25rem 0.65rem; border-radius: var(--r-full);
     font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
-    background: rgba(234, 179, 8, 0.12); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3);
+    background: rgba(56, 189, 248, 0.12); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.3);
     margin-bottom: var(--sp-3);
   }
   .install-header__title {
@@ -62,9 +62,9 @@
     font-size: 0.875rem; line-height: 1.6; color: var(--c-text-2);
   }
   .info-box--tip {
-    background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.25);
+    background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25);
   }
-  .info-box--tip svg { color: #facc15; flex-shrink: 0; margin-top: 2px; }
+  .info-box--tip svg { color: #7dd3fc; flex-shrink: 0; margin-top: 2px; }
   .info-box code {
     background: rgba(255,255,255,0.08); padding: 0.1rem 0.35rem;
     border-radius: 4px; font-size: 0.85em; color: var(--c-text-1);
@@ -83,7 +83,7 @@
     transition: color 0.15s, background 0.15s;
   }
   .install-tabs__tab:hover { color: var(--c-text-1); background: rgba(255,255,255,0.05); }
-  .install-tabs__tab.active { color: #facc15; background: rgba(234, 179, 8, 0.15); }
+  .install-tabs__tab.active { color: #7dd3fc; background: rgba(56, 189, 248, 0.15); }
   .install-tabs__panel { display: none; }
   .install-tabs__panel.active { display: block; }
 
@@ -126,15 +126,15 @@
   .ref-table code {
     font-family: var(--font-mono); font-size: 0.82em;
     background: rgba(255,255,255,0.05); padding: 0.15rem 0.4rem;
-    border-radius: 4px; color: #facc15;
+    border-radius: 4px; color: #7dd3fc;
   }
-  .ref-table a { color: #facc15; text-decoration: none; font-weight: 500; }
+  .ref-table a { color: #7dd3fc; text-decoration: none; font-weight: 500; }
   .ref-table a:hover { text-decoration: underline; }
 
   .install-cta {
     text-align: center; padding: var(--sp-12) var(--sp-6);
-    background: radial-gradient(circle at 50% 50%, rgba(234, 179, 8, 0.08), transparent 70%);
-    border: 1px solid rgba(234, 179, 8, 0.25); border-radius: var(--r-xl);
+    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08), transparent 70%);
+    border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--r-xl);
     margin-top: var(--sp-8);
   }
   .install-cta h2 { font-size: 1.75rem; font-weight: 900; color: var(--c-text-1); margin-bottom: var(--sp-2); }
@@ -147,9 +147,9 @@
     transition: all 0.2s ease;
   }
   .cta-btn--primary {
-    background: linear-gradient(135deg, #facc15, #eab308); color: #000; font-weight: 700;
+    background: linear-gradient(135deg, #7dd3fc, #eab308); color: #000; font-weight: 700;
   }
-  .cta-btn--primary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(234, 179, 8, 0.4); }
+  .cta-btn--primary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4); }
   .cta-btn--secondary {
     background: rgba(255,255,255,0.05); color: var(--c-text-1); border: 1px solid var(--c-border);
   }

@@ -66,7 +66,7 @@ export function FunnelChart({
             const step = i ? (s.value / stages[i - 1].value) * 100 : 100;
             const shade = 100 - i * (55 / Math.max(1, stages.length - 1));
             return (
-              <li className="fn__stage" data-rk-9aefa4="">
+              <li key={i} className="fn__stage" data-rk-9aefa4="">
                 <div className="fn__meta" data-rk-9aefa4="">
                   <span className="fn__label" data-rk-9aefa4="">{s.label}</span>
                   <span className="fn__value" data-rk-9aefa4="">{fmt(s.value)}</span>

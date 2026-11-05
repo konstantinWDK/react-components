@@ -278,7 +278,44 @@ function addMapKeys(code) {
     out += code.slice(last, m.index) + head + ` key={${idx}}`;
     last = m.index + m[0].length;
   }
-  return out + code.slice(last);
+  return addBlockMapKeys(out + code.slice(last));
+}
+
+/** Same for block-bodied callbacks: `.map((x) => { …; return (<tag …` */
+function addBlockMapKeys(code) {
+  const re = /\.map\(\s*(\(([^()]*)\)|([A-Za-z_$][\w$]*))\s*=>\s*\{/g;
+  let m;
+  while ((m = re.exec(code))) {
+    const open = m.index + m[0].length - 1;
+    let depth = 0, end = open;
+    for (; end < code.length; end++) {
+      if (code[end] === '{') depth++;
+      else if (code[end] === '}' && --depth === 0) break;
+    }
+    const body = code.slice(open, end);
+    const r = /return\s*\(?\s*<([A-Za-z][\w.]*)/.exec(body);
+    if (!r) continue;
+    const tagStart = open + r.index + r[0].length;
+    const tagEnd = code.indexOf('>', tagStart);
+    if (/\bkey=/.test(code.slice(tagStart, tagEnd))) continue;
+    const params = (m[2] !== undefined ? m[2] : m[3]).trim();
+    let depthP = 0, split = -1;
+    for (let k = 0; k < params.length; k++) {
+      const c = params[k];
+      if ('{[('.includes(c)) depthP++;
+      else if ('}])'.includes(c)) depthP--;
+      else if (c === ',' && depthP === 0) { split = k; break; }
+    }
+    let idx = split > -1 ? params.slice(split + 1).split(/[,:=]/)[0].trim() : '';
+    let head = m[0];
+    if (!/^[A-Za-z_$][\w$]*$/.test(idx)) {
+      idx = '__i';
+      head = `.map((${params || '_'}, __i: number) => {`;
+    }
+    code = code.slice(0, m.index) + head + code.slice(m.index + m[0].length, tagStart) + ` key={${idx}}` + code.slice(tagStart);
+    re.lastIndex = m.index + head.length;
+  }
+  return code;
 }
 
 // ───────────────────────────── frontmatter ─────────────────────────────
@@ -347,6 +384,11 @@ function convertFrontmatter(fm, ctx, compName) {
     return `(${p} != null)`;
   });
   if (/Astro\./.test(code)) ctx.todo.add('frontmatter uses Astro.* (url/request/slots.render)');
+  // Random ids differ between server and client render → React's useId()
+  code = code.replace(/Math\.random\(\)\.toString\(36\)\.(?:slice|substring)\(\d+(?:,\s*\d+)?\)/g, () => {
+    ctx.usesUseId = true;
+    return "useId().replace(/[^a-zA-Z0-9]/g, '')";
+  });
   // `const Tag = href ? 'a' : 'button'` → ElementType so JSX accepts it
   code = code.replace(/const\s+(Tag|Element|Wrapper|Heading|As|Component)\s*=\s*/g, 'const $1: any = ');
   return { imports, propsDecl, params, body: code.trim() };
@@ -448,6 +490,7 @@ function convertFile(file, category) {
   const hasScripts = scripts.length > 0;
   const reactImports = new Set();
   if (hasScripts) { reactImports.add('useEffect'); reactImports.add('useRef'); }
+  if (ctx.usesUseId) reactImports.add('useId');
   const typeImports = new Set();
 
   const helpers = [];

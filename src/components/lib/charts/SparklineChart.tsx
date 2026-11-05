@@ -53,7 +53,7 @@ export function SparklineChart({
         {variant === 'bars' ? (
           data.map((v, i) => {
             const top = y(v);
-            return <rect x={pad + i * (barW + 2)} y={top} width={Math.max(1, barW)} height={Math.max(1, H - pad - top)} rx="1.5" fill={stroke} opacity={i === data.length - 1 ? 1 : 0.55} data-rk-cd2e33="" />;
+            return <rect key={i} x={pad + i * (barW + 2)} y={top} width={Math.max(1, barW)} height={Math.max(1, H - pad - top)} rx="1.5" fill={stroke} opacity={i === data.length - 1 ? 1 : 0.55} data-rk-cd2e33="" />;
           })
         ) : (
           <>

@@ -1,5 +1,6 @@
 'use client';
 
+import { useId } from 'react';
 import type { CSSProperties } from 'react';
 import './FeatureAlternatingRows.css';
 
@@ -67,7 +68,7 @@ export function FeatureAlternatingRows({
   size = 'md',
   className = '',
 }: FeatureAlternatingRowsProps) {
-  const id = `far-${Math.random().toString(36).slice(2, 8)}`;
+  const id = `far-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const bars = [38, 62, 48, 80, 66, 92, 74];
   return (
     <>
@@ -78,7 +79,7 @@ export function FeatureAlternatingRows({
           {rows.map((r, i) => {
             const reversed = startReversed ? i % 2 === 0 : i % 2 === 1;
             return (
-              <article className={`far__row ${reversed ? 'far__row--rev' : ''}`} data-rk-43b840="">
+              <article key={i} className={`far__row ${reversed ? 'far__row--rev' : ''}`} data-rk-43b840="">
                 <div className="far__copy" data-rk-43b840="">
                   <p className="far__eyebrow" data-rk-43b840="">{r.eyebrow}</p>
                   <h3 className="far__title" data-rk-43b840="">{r.title}</h3>

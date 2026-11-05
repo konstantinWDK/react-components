@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import './FeatureTabsShowcase.css';
 
 interface Tab { label: string; title: string; text: string; points: string[]; stat: string; statLabel: string }
@@ -37,7 +37,7 @@ export function FeatureTabsShowcase({
   size = 'md',
   className = '',
 }: FeatureTabsShowcaseProps) {
-  const uid = Math.random().toString(36).slice(2, 8);
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
   const id = `fts-${uid}`;
 
   // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).

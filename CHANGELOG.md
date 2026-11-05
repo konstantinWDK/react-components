@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed — reactcomponents.dev look
+- New three.js hero: hundreds of thin rounded cubes (sky blue glass and black) fly in from the sky and diagonally from both sides to build a voxel React atom; cubes keep detaching and returning, and hovering makes them breathe like water (shader ripples).
+- Sky-blue site theme and a new cube logo / favicon. Component previews keep the library's default tokens, so demos look exactly like the installed components.
+- The galaxy and star backgrounds are no longer used by the website (`Galaxy3D` stays in the library).
+- Header link to the Astro version of the kit, with tooltip.
+
+### Fixed
+- Render-time ids (`Math.random()`) replaced by `useId()` in 25 components (no more hydration mismatches).
+- Missing React list keys in 37 components.
+
+
 ### Added — complete catalogue
 - All remaining categories ported from the Astro kit: forms, cards, navigation, layout, overlays, data, typography, charts, e-commerce and app (290 components in total).
 - 51 full-page sections (`react-component-kit-ui/sections`) with their own pages on reactcomponents.dev (`/sections/<slug>`), real miniatures in the catalog and the home spotlight.

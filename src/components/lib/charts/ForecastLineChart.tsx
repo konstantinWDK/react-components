@@ -102,7 +102,7 @@ export function ForecastLineChart({
               ? `${color}::Forecast: ${fmt(v)}|Range: ${fmt(lo[i - a])} – ${fmt(hi[i - a])}`
               : `${color}::Actual: ${fmt(v)}`;
             return (
-              <g className="cf-hit-group">
+              <g key={i} className="cf-hit-group">
                 <line className="cf-cross" x1={x(i)} x2={x(i)} y1={m.t} y2={H - m.b} />
                 <circle className="cf-cross" cx={x(i)} cy={y(v)} r="4.5" fill={color} stroke="#fff" strokeWidth="1.5" />
                 <rect className="cf-hit" x={x(i) - step / 2} y={m.t} width={step} height={H - m.t - m.b} tabIndex={0} role="img" aria-label={`${c}: ${isF ? 'forecast' : 'actual'} ${fmt(v)}`} data-tip-title={c} data-tip={tip} />
