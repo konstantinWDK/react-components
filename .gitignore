@@ -12,3 +12,6 @@ scripts/smoke/audit-results.json
 .env.*
 !.env.example
 
+
+# MCP server bundle
+mcp-dist/

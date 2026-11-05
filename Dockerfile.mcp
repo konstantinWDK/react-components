@@ -1,0 +1,25 @@
+# ==========================================
+# mcp.reactcomponents.dev — MCP server for React Components Kit
+# Stage 1: bundle the server (SDK + zod + registry data) into one file
+# ==========================================
+FROM node:22-alpine AS builder
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --ignore-scripts
+COPY . .
+RUN npm run mcp:build
+
+# ==========================================
+# Stage 2: tiny runtime — the bundle + component sources it serves
+# ==========================================
+FROM node:22-alpine
+WORKDIR /app
+ENV NODE_ENV=production PORT=3000 HOST=0.0.0.0
+COPY --from=builder /app/mcp-dist ./mcp-dist
+COPY --from=builder /app/src/components/lib ./src/components/lib
+COPY --from=builder /app/src/styles/global.css ./src/styles/global.css
+USER node
+EXPOSE 3000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD wget -qO- http://127.0.0.1:3000/health >/dev/null || exit 1
+CMD ["node", "mcp-dist/server.mjs"]

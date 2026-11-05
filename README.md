@@ -149,6 +149,26 @@ Light theme: add `data-theme="light"` to `<html>`.
 
 ---
 
+## 🤖 MCP server (AI agents)
+
+Give Claude, Cursor, Copilot or any MCP client the whole kit: it can search components, read their props and usage, copy the source and scaffold the templates as Next.js files — always from the current code.
+
+**Endpoint:** `https://mcp.reactcomponents.dev/mcp` (Streamable HTTP, no API key · legacy SSE at `/sse`)
+
+```bash
+# Claude Code
+claude mcp add --transport http react-components https://mcp.reactcomponents.dev/mcp
+```
+
+```json
+// Cursor (~/.cursor/mcp.json)
+{ "mcpServers": { "react-components": { "url": "https://mcp.reactcomponents.dev/mcp" } } }
+```
+
+Tools: `search_components`, `list_components`, `get_component`, `get_component_code`, `list_categories`, `list_templates`, `get_template`, `get_design_tokens`, `get_library_info`.
+
+Run it locally with `npm run mcp:dev` (HTTP on :3000) or `npm run mcp:build && node mcp-dist/server.mjs --stdio`. It is deployed from `Dockerfile.mcp` (see [COOLIFY.md](./COOLIFY.md)).
+
 ## 🛠 Development
 
 ```bash

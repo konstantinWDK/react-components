@@ -87,3 +87,19 @@ ssh vps3 'docker ps --filter "ancestor=nginx" --format "{{.Names}}  {{.Status}}"
 ```
 
 Si algo falla, revisa en Coolify: *Deployments → último despliegue → Logs*.
+
+## MCP server — mcp.reactcomponents.dev
+
+A second Coolify application from the **same repository**:
+
+| Setting | Value |
+|---|---|
+| Build pack | Dockerfile |
+| Dockerfile location | `/Dockerfile.mcp` |
+| Domain | `https://mcp.reactcomponents.dev` |
+| Port exposed | `3000` |
+| Health check | `GET /health` (also built into the image) |
+| Env (optional) | `RATE_LIMIT_MAX` (requests/min per IP, default 120) |
+
+The image bundles the server with esbuild and only ships `mcp-dist/` plus the component sources it serves. Redeploy it whenever components change, so agents get the new code.
+
