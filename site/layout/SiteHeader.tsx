@@ -6,6 +6,7 @@ import { siteConfig } from '../config/site';
 import { getLocalizedPath, useTranslations } from '../i18n/translations';
 import { NAV_ITEMS } from './nav';
 import { LanguagePicker } from './LanguagePicker';
+import { SisterSiteLink } from './SisterSiteLink';
 
 export const GitHubIcon = ({ size = 18 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -34,6 +35,7 @@ export function SiteHeader({ lang, path }: { lang: Locale; path: string }) {
             </a>
           ))}
           <LanguagePicker lang={lang} path={path} />
+          <SisterSiteLink lang={lang} path={path} />
           <a href={siteConfig.github} target="_blank" rel="noopener" className="gh-link">
             <GitHubIcon />
             GitHub
