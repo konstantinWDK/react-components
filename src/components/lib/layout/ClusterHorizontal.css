@@ -1,0 +1,17 @@
+/* ClusterHorizontal — ported from astro-component-kit (layout/ClusterHorizontal.astro) */
+
+.cluster:where([data-rk-fff909]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 0.75rem);
+  align-items: var(--align, center);
+  width: 100%;
+}
+.cluster-tag:where([data-rk-fff909]) {
+  padding: 0.4rem 0.8rem;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.05);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.1);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}

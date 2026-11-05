@@ -1,0 +1,7 @@
+/* MobileNavOverlay — ported from astro-component-kit (overlays/MobileNavOverlay.astro) */
+
+.mob-nav:where([data-rk-69811e]) { position: fixed; inset: 0; background: #080b14; z-index: 4000; padding: 4rem 2rem; display: flex; flex-direction: column; }
+.mob-close:where([data-rk-69811e]) { font-size: 3rem; color: #fff; align-self: flex-end; cursor: pointer; margin-bottom: 2rem; }
+.mob-links:where([data-rk-69811e]) { display: flex; flex-direction: column; gap: 1.5rem; }
+.mob-links:where([data-rk-69811e]) a:where([data-rk-69811e]) { font-size: 2.2rem; font-weight: 800; color: #fff; text-decoration: none; transition: 0.2s; }
+.mob-links:where([data-rk-69811e]) a:hover:where([data-rk-69811e]) { color: #6366f1; padding-left: 10px; }

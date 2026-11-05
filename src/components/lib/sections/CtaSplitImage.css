@@ -1,0 +1,75 @@
+/* CtaSplitImage — ported from astro-component-kit (sections/CtaSplitImage.astro) */
+
+.cq-cta-split-image-cq:where([data-rk-56220c]) { container-type: inline-size; }
+.csi:where([data-rk-56220c]) {
+  --csi-py: 5rem;
+  padding: var(--csi-py) var(--sp-6, 1.5rem);
+  background: var(--c-bg, #050505);
+}
+.csi--sm:where([data-rk-56220c]) { --csi-py: 3rem; }
+.csi--lg:where([data-rk-56220c]) { --csi-py: 7rem; }
+.csi__box:where([data-rk-56220c]) {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: var(--r-xl, 28px);
+  overflow: hidden;
+  border: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.08));
+  background: var(--c-bg-1, #0a0a0a);
+}
+.csi--outline:where([data-rk-56220c]) .csi__box:where([data-rk-56220c]) { background: transparent; border-color: rgb(var(--ink-rgb, 255 255 255) / 0.15); }
+.csi__copy:where([data-rk-56220c]) { padding: clamp(2rem, 6vw, 4rem); display: flex; flex-direction: column; justify-content: center; }
+.csi__title:where([data-rk-56220c]) { margin: 0 0 1rem; font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; color: var(--c-text-1, #fff); text-wrap: balance; }
+.csi__text:where([data-rk-56220c]) { margin: 0 0 2rem; font-size: 1.0625rem; line-height: 1.6; color: var(--c-text-2, #a3a3a3); max-width: 460px; }
+.csi__actions:where([data-rk-56220c]) { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.csi__btn:where([data-rk-56220c]) { display: inline-flex; align-items: center; min-height: 48px; padding: 0 1.5rem; border-radius: var(--r-md, 12px); font-weight: 650; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+.csi__btn--primary:where([data-rk-56220c]) { background: var(--c-primary-light, #d4a017); color: var(--c-on-primary, #0a0a0a); }
+.csi__btn--primary:hover:where([data-rk-56220c]) { background: var(--c-accent, #fef3c7); color: var(--c-on-primary, #0a0a0a); }
+.csi__btn--ghost:where([data-rk-56220c]) { border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.15); color: var(--c-text-1, #fff); }
+.csi__btn--ghost:hover:where([data-rk-56220c]) { border-color: rgb(var(--ink-rgb, 255 255 255) / 0.32); color: var(--c-text-1, #fff); }
+.csi__btn:focus-visible:where([data-rk-56220c]) { outline: 2px solid var(--c-primary-light, #d4a017); outline-offset: 3px; }
+.csi__visual:where([data-rk-56220c]) { position: relative; min-height: 320px; }
+.csi__visual:where([data-rk-56220c]) img:where([data-rk-56220c]) { width: 100%; height: 100%; object-fit: cover; display: block; }
+.csi__mesh:where([data-rk-56220c]) {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.csi--mesh:where([data-rk-56220c]) .csi__mesh:where([data-rk-56220c]) {
+  background:
+    radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--c-primary-light, #d4a017) 55%, transparent), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(144, 133, 233, 0.55), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(57, 135, 229, 0.5), transparent 50%),
+    #121218;
+}
+.csi--solid:where([data-rk-56220c]) .csi__mesh:where([data-rk-56220c]) { background: linear-gradient(135deg, #1a1408, #0c0c10); }
+.csi--outline:where([data-rk-56220c]) .csi__mesh:where([data-rk-56220c]) { background: repeating-linear-gradient(45deg, rgb(var(--ink-rgb, 255 255 255) / 0.03) 0 12px, transparent 12px 24px); }
+.csi__chip:where([data-rk-56220c]) {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: var(--r-md, 14px);
+  background: rgba(10, 10, 12, 0.6);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.14);
+  backdrop-filter: blur(12px);
+  color: var(--c-text-2, #c4c4c4);
+  font-size: 0.875rem;
+  animation: cta-split-image-csi-float 6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -2s);
+}
+.csi__chip:nth-child(2):where([data-rk-56220c]) { transform: translateX(2.5rem); }
+.csi__chip:nth-child(3):where([data-rk-56220c]) { transform: translateX(-2rem); }
+.csi__chip:where([data-rk-56220c]) strong:where([data-rk-56220c]) { font-size: 1.25rem; color: var(--c-text-1, #fff); font-variant-numeric: tabular-nums; }
+@keyframes cta-split-image-csi-float { 50% { translate: 0 -8px; } }
+@container (max-width: 820px) {
+  .csi__box:where([data-rk-56220c]) { grid-template-columns: 1fr; }
+  .csi__visual:where([data-rk-56220c]) { min-height: 240px; }
+}
+@media (prefers-reduced-motion: reduce) { .csi__chip:where([data-rk-56220c]) { animation: none; } }

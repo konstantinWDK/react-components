@@ -1,0 +1,25 @@
+/* TaskKanbanCard — ported from astro-component-kit (cards/TaskKanbanCard.astro) */
+
+.task-card:where([data-rk-11d45c]) { 
+  background: var(--c-bg-elev, #1e293b); 
+  padding: var(--sp-4, 1rem); 
+  border-radius: var(--r-md, 10px); 
+  border: 1px solid var(--c-border, #334155); 
+}
+.task-card__tag:where([data-rk-11d45c]) { 
+  font-size: 0.7rem; font-weight: 700; 
+  padding: 2px 8px; border-radius: 4px; 
+}
+.task-card__tag--high:where([data-rk-11d45c]) { background: rgba(239,68,68,0.1); color: #f87171; }
+.task-card__tag--med:where([data-rk-11d45c]) { background: rgba(245,158,11,0.1); color: #fbbf24; }
+.task-card__tag--low:where([data-rk-11d45c]) { background: rgba(52,211,153,0.1); color: #34d399; }
+
+.task-card__desc:where([data-rk-11d45c]) { font-size: 0.85rem; color: var(--c-text-1, #e2e8f0); margin: 0.75rem 0; font-weight: 500; }
+.task-card__footer:where([data-rk-11d45c]) { display: flex; justify-content: space-between; align-items: center; }
+.task-card__date:where([data-rk-11d45c]) { font-size: 0.75rem; color: var(--c-text-2, #64748b); }
+.task-card__assignee:where([data-rk-11d45c]) { 
+  width: 24px; height: 24px; 
+  background: var(--c-primary, #6366f1); color: #fff; 
+  font-size: 0.65rem; border-radius: 50%; 
+  display: grid; place-items: center; font-weight: 700; 
+}

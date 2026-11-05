@@ -1,0 +1,13 @@
+/* GroupedBarChart — ported from astro-component-kit (charts/GroupedBarChart.astro) */
+
+.gb__bar:where([data-rk-1a0e25]) {
+  transform-origin: bottom;
+  transform-box: fill-box;
+  animation: grouped-bar-chart-gb-grow 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes grouped-bar-chart-gb-grow {
+  from { transform: scaleY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gb__bar:where([data-rk-1a0e25]) { animation: none; }
+}

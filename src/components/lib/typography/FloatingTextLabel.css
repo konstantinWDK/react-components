@@ -1,0 +1,4 @@
+/* FloatingTextLabel — ported from astro-component-kit (typography/FloatingTextLabel.astro) */
+
+.f-label-wrap:where([data-rk-f9cb2b]) { position: relative; padding-top: 1.5rem; }
+.f-label:where([data-rk-f9cb2b]) { position: absolute; top: 0; left: 0; font-size: 0.7rem; font-weight: 800; color: #6366f1; letter-spacing: 0.2em; text-transform: uppercase; }

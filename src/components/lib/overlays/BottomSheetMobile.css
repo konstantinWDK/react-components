@@ -1,0 +1,7 @@
+/* BottomSheetMobile — ported from astro-component-kit (overlays/BottomSheetMobile.astro) */
+
+.sheet-overlay:where([data-rk-61863a]) { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: flex-end; z-index: 2000; }
+.sheet-content:where([data-rk-61863a]) { width: 100%; background: #0f172a; border-radius: 20px 20px 0 0; padding: 1.5rem; transform: translateY(0); }
+.drag-handle:where([data-rk-61863a]) { width: 40px; height: 4px; background: #334155; border-radius: 2px; margin: 0 auto 1.5rem; }
+h3:where([data-rk-61863a]) { color: #fff; text-align: center; margin-bottom: 1.5rem; }
+.options:where([data-rk-61863a]) div:where([data-rk-61863a]) { padding: 1rem; color: #e2e8f0; border-bottom: 1px solid #1e293b; text-align: center; cursor: pointer; }

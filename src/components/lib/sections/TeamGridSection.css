@@ -1,0 +1,225 @@
+/* TeamGridSection — ported from astro-component-kit (sections/TeamGridSection.astro) */
+
+.cq-team-grid-section-cq:where([data-rk-e56c49]) { container-type: inline-size; }
+.team-section:where([data-rk-e56c49]) {
+  position: relative;
+  padding: var(--sp-20, 5rem) var(--sp-6, 1.5rem);
+  background: var(--c-bg-primary, #030712);
+  overflow: hidden;
+}
+
+.team-bg:where([data-rk-e56c49]) {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.team-glow:where([data-rk-e56c49]) {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.08), transparent 70%);
+  filter: blur(120px);
+}
+
+.container:where([data-rk-e56c49]) {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header:where([data-rk-e56c49]) {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-badge:where([data-rk-e56c49]) {
+  display: inline-flex;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  margin-bottom: var(--sp-4, 1rem);
+}
+
+.section-title:where([data-rk-e56c49]) {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--sp-4, 1rem);
+}
+
+.section-subtitle:where([data-rk-e56c49]) {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.team-grid:where([data-rk-e56c49]) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.member-card:where([data-rk-e56c49]) {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: var(--r-xl, 20px);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.member-card:hover:where([data-rk-e56c49]) {
+  transform: translateY(-4px);
+  border-color: rgb(var(--ink-rgb, 255 255 255) / 0.2);
+}
+
+.member-avatar:where([data-rk-e56c49]) {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  border: 2px solid rgb(var(--ink-rgb, 255 255 255) / 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.member-name:where([data-rk-e56c49]) {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.25rem;
+}
+
+.member-role:where([data-rk-e56c49]) {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #eab308;
+  margin-bottom: 0.85rem;
+}
+
+.member-bio:where([data-rk-e56c49]) {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0 0 1.25rem;
+  flex: 1;
+}
+
+.member-socials:where([data-rk-e56c49]) {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon:where([data-rk-e56c49]) {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.05);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover:where([data-rk-e56c49]) {
+  color: #fff;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.12);
+  border-color: rgb(var(--ink-rgb, 255 255 255) / 0.2);
+}
+
+/* Hiring Banner */
+.hiring-banner:where([data-rk-e56c49]) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(135deg, rgba(25, 30, 60, 0.8), rgba(15, 20, 40, 0.9));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+.hiring-tag:where([data-rk-e56c49]) {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #c084fc;
+  margin-bottom: 0.25rem;
+}
+
+.hiring-info:where([data-rk-e56c49]) h4:where([data-rk-e56c49]) {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.25rem;
+}
+
+.hiring-info:where([data-rk-e56c49]) p:where([data-rk-e56c49]) {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.hiring-btn:where([data-rk-e56c49]) {
+  padding: 0.8rem 1.6rem;
+  background: #a855f7;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+.hiring-btn:hover:where([data-rk-e56c49]) {
+  background: #9333ea;
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.45);
+}
+
+@container (max-width: 1024px) {
+  .team-grid:where([data-rk-e56c49]) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container (max-width: 640px) {
+  .team-grid:where([data-rk-e56c49]) {
+    grid-template-columns: 1fr;
+  }
+  .hiring-banner:where([data-rk-e56c49]) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+}

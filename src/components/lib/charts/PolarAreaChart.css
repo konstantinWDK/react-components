@@ -1,0 +1,3 @@
+/* PolarAreaChart — ported from astro-component-kit (charts/PolarAreaChart.astro) */
+
+.pa:where([data-rk-5b5eb9]) { max-width: 360px; margin: 0 auto; }

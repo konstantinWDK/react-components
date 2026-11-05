@@ -1,0 +1,21 @@
+/* TestimonialCardClean — ported from astro-component-kit (cards/TestimonialCardClean.astro) */
+
+.testi-card:where([data-rk-49942c]) { 
+  background: var(--c-bg-elev, rgba(255,255,255,0.03)); 
+  padding: var(--sp-8, 2rem); 
+  border-radius: var(--r-xl, 20px); 
+  border: 1px solid var(--c-border, rgba(255,255,255,0.1)); 
+}
+.testi-card__quote:where([data-rk-49942c]) { 
+  font-size: 1rem; color: var(--c-text-1, #e2e8f0); 
+  font-style: italic; line-height: 1.6; 
+  margin: 0 0 2rem 0; 
+}
+.testi-card__author:where([data-rk-49942c]) { display: flex; align-items: center; gap: var(--sp-4, 1rem); }
+.testi-card__pic:where([data-rk-49942c]) { 
+  width: 40px; height: 40px; 
+  background: var(--c-bg, #334155); 
+  border-radius: var(--r-full, 50%); 
+}
+.testi-card__name:where([data-rk-49942c]) { margin: 0; color: var(--c-text-1, #fff); font-size: 0.95rem; }
+.testi-card__role:where([data-rk-49942c]) { font-size: 0.75rem; color: var(--c-text-2, #64748b); }

@@ -1,0 +1,61 @@
+/* StepLayoutVertical — ported from astro-component-kit (layout/StepLayoutVertical.astro) */
+
+.step-lay:where([data-rk-3280db]) {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.step-line:where([data-rk-3280db]) {
+  width: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.step-line:where([data-rk-3280db])::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.1);
+  z-index: 0;
+}
+.step-point:where([data-rk-3280db]) {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #6366f1;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+  z-index: 1;
+}
+.step-content:where([data-rk-3280db]) {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+.step-block:where([data-rk-3280db]) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50px;
+}
+.step-block:where([data-rk-3280db]) h4:where([data-rk-3280db]) {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+}
+.step-block:where([data-rk-3280db]) p:where([data-rk-3280db]) {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0;
+}

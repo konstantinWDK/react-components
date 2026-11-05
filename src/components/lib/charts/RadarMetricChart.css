@@ -1,0 +1,60 @@
+/* RadarMetricChart — ported from astro-component-kit (charts/RadarMetricChart.astro) */
+
+.radar-card:where([data-rk-5aa1c8]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--sp-6, 1.5rem);
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.02);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: var(--r-xl, 24px);
+  width: 100%;
+  max-width: fit-content;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.radar-card__title:where([data-rk-5aa1c8]) {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--c-text-1, #ffffff);
+  margin: 0 0 12px 0;
+}
+
+.radar-card__wrap:where([data-rk-5aa1c8]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-web:where([data-rk-5aa1c8]) {
+  fill: none;
+  stroke: rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  stroke-width: 1;
+}
+
+.radar-spoke:where([data-rk-5aa1c8]) {
+  stroke: rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  stroke-width: 1;
+}
+
+.radar-data:where([data-rk-5aa1c8]) {
+  fill: rgba(184, 134, 11, 0.25);
+  stroke: var(--radar-color);
+  stroke-width: 2.5;
+  transition: all 0.4s ease;
+}
+
+.radar-node:where([data-rk-5aa1c8]) {
+  fill: var(--radar-color);
+  stroke: #050505;
+  stroke-width: 2;
+}
+
+.radar-label:where([data-rk-5aa1c8]) {
+  fill: var(--c-text-2, #a3a3a3);
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

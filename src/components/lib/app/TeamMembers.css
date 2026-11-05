@@ -1,0 +1,46 @@
+/* TeamMembers — ported from astro-component-kit (app/TeamMembers.astro) */
+
+.team:where([data-rk-5c76e9]) { container-type: inline-size; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-3, 0.75rem); min-width: 0; }
+.team--card:where([data-rk-5c76e9]) { padding: var(--sp-5, 1.25rem); border-radius: var(--r-lg, 16px); border: 1px solid var(--c-border, rgba(255, 255, 255, 0.08)); background: var(--c-bg-1, #0a0a0a); }
+.team__title:where([data-rk-5c76e9]) { margin: 0; font-size: 1rem; font-weight: 700; color: var(--c-text-1, #fff); }
+.team__seats:where([data-rk-5c76e9]) { margin: 2px 0 0; font-size: 0.8rem; color: var(--c-text-3, #737373); }
+.team__invite:where([data-rk-5c76e9]) { display: flex; gap: var(--sp-2, 0.5rem); }
+.team__invite:where([data-rk-5c76e9]) input:where([data-rk-5c76e9]), .team__invite:where([data-rk-5c76e9]) select:where([data-rk-5c76e9]), .team__role:where([data-rk-5c76e9]) {
+  min-height: 40px;
+  padding: 0 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--c-border, rgba(255, 255, 255, 0.12));
+  background: var(--c-bg, #050505);
+  color: var(--c-text-1, #fff);
+  font: inherit;
+  font-size: 0.85rem;
+}
+.team__invite:where([data-rk-5c76e9]) input:where([data-rk-5c76e9]) { flex: 1; min-width: 0; }
+.team__invite:where([data-rk-5c76e9]) button:where([data-rk-5c76e9]) { min-height: 40px; padding: 0 1rem; border: 0; border-radius: 10px; background: var(--app-accent, var(--c-primary-light, #d4a017)); color: var(--c-on-primary, #050505); font: inherit; font-size: 0.85rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.team__msg:where([data-rk-5c76e9]) { min-height: 1.2em; margin: 0; font-size: 0.8rem; color: var(--c-text-2, #a3a3a3); }
+.team__list:where([data-rk-5c76e9]) { display: grid; margin: 0; padding: 0; list-style: none; }
+.team__list:where([data-rk-5c76e9]) .team__row { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto 150px 40px; align-items: center; gap: var(--sp-3, 0.75rem); padding: var(--sp-3, 0.75rem) 0; border-top: 1px solid var(--c-border, rgba(255, 255, 255, 0.06)); }
+.team__list:where([data-rk-5c76e9]) .team__row.is-new { animation: team-members-team-in 0.3s ease-out; }
+@keyframes team-members-team-in { from { opacity: 0; transform: translateY(-4px); } }
+.team__list:where([data-rk-5c76e9]) .team__avatar { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: hsl(var(--h) 50% 45%); color: #fff; font-size: 0.72rem; font-weight: 700; }
+.team__list:where([data-rk-5c76e9]) .team__who { display: grid; min-width: 0; }
+.team__list:where([data-rk-5c76e9]) .team__who strong { font-size: 0.88rem; color: var(--c-text-1, #fff); }
+.team__list:where([data-rk-5c76e9]) .team__who em { font-style: normal; font-weight: 500; color: var(--c-text-3, #737373); }
+.team__list:where([data-rk-5c76e9]) .team__who small { font-size: 0.76rem; color: var(--c-text-3, #737373); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.team__list:where([data-rk-5c76e9]) .team__status { padding: 2px 8px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; background: color-mix(in srgb, var(--c-success, #34d399) 14%, transparent); color: var(--c-success, #34d399); }
+.team__list:where([data-rk-5c76e9]) .team__status--invited { background: color-mix(in srgb, var(--c-warning, #fbbf24) 14%, transparent); color: var(--c-warning, #fbbf24); }
+.team__list:where([data-rk-5c76e9]) .team__status--suspended { background: color-mix(in srgb, var(--c-danger, #f87171) 14%, transparent); color: var(--c-danger, #f87171); }
+.team__list:where([data-rk-5c76e9]) .team__role-static { font-size: 0.85rem; color: var(--c-text-2, #a3a3a3); padding-left: 0.75rem; }
+.team__role:disabled:where([data-rk-5c76e9]) { opacity: 0.6; }
+.team__list:where([data-rk-5c76e9]) .team__remove { display: grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; color: var(--c-text-3, #737373); cursor: pointer; }
+.team__list:where([data-rk-5c76e9]) .team__remove:hover { background: color-mix(in srgb, var(--c-danger, #f87171) 12%, transparent); color: var(--c-danger, #f87171); }
+.team__list:where([data-rk-5c76e9]) .team__remove.is-armed { background: var(--c-danger, #f87171); color: #fff; }
+.team__list:where([data-rk-5c76e9]) .team__remove:disabled { visibility: hidden; }
+.team:where([data-rk-5c76e9]) :is(input, select, button):focus-visible:where([data-rk-5c76e9]), .team__list:where([data-rk-5c76e9]) button:focus-visible { outline: 2px solid var(--app-accent, var(--c-primary-light, #d4a017)); outline-offset: 2px; }
+.sr-only:where([data-rk-5c76e9]) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@container (max-width: 620px) {
+  .team__invite:where([data-rk-5c76e9]) { flex-wrap: wrap; }
+  .team__list:where([data-rk-5c76e9]) .team__row { grid-template-columns: 36px minmax(0, 1fr) 40px; }
+  .team__list:where([data-rk-5c76e9]) .team__status { display: none; }
+  .team__role:where([data-rk-5c76e9]), .team__list:where([data-rk-5c76e9]) .team__role-static { grid-column: 2; }
+}

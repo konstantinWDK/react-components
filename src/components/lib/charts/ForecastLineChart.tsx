@@ -1,0 +1,118 @@
+'use client';
+
+import ChartFrame from './ChartFrame';
+import { scaleLinear, niceTicks, linePath, bandPath, formatValue, type Point } from './chart-utils';
+
+/**
+ * ForecastLineChart — Actuals as a solid line, projection as a dashed line with
+ * a widening confidence cone and a "today" divider.
+ *
+ * @param {string[]} categories - X-axis labels covering actual + forecast periods.
+ * @param {number[]} actual - Observed values (first N periods).
+ * @param {number[]} forecast - Projected values for the remaining periods.
+ * @param {number} confidence - Relative spread of the cone (0.1 = ±10% at the end).
+ * @param {string} prefix - Value prefix.
+ * @param {string} suffix - Value suffix.
+ * @param {string} variant - Card style (glass|solid|ghost).
+ * @param {string} size - Density (sm|md|lg).
+ */
+export interface ForecastLineChartProps {
+  title?: string;
+  subtitle?: string;
+  categories?: string[];
+  actual?: number[];
+  forecast?: number[];
+  confidence?: number;
+  prefix?: string;
+  suffix?: string;
+  height?: number;
+  color?: string;
+  variant?: 'glass' | 'solid' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+export function ForecastLineChart({
+  title = 'MRR forecast',
+  subtitle = 'Actuals vs. projected, with 80% confidence',
+  categories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  actual = [48, 51, 55, 54, 59, 63, 68],
+  forecast = [72, 76, 80, 85, 90],
+  confidence = 0.14,
+  prefix = '$',
+  suffix = 'k',
+  height = 280,
+  color = 'var(--chart-1, #3987e5)',
+  variant = 'glass',
+  size = 'md',
+  className = '',
+}: ForecastLineChartProps) {
+  const W = 640;
+  const H = height;
+  const m = { t: 16, r: 16, b: 28, l: 48 };
+  const n = categories.length;
+  const a = actual.length;
+  const all = [...actual, ...forecast];
+  const hi = forecast.map((v, i) => v * (1 + confidence * ((i + 1) / forecast.length)));
+  const lo = forecast.map((v, i) => v * (1 - confidence * ((i + 1) / forecast.length)));
+  const ticks = niceTicks(Math.min(...all, ...lo) * 0.9, Math.max(...hi), 4);
+  const y = scaleLinear(ticks[0], ticks[ticks.length - 1], H - m.b, m.t);
+  const x = (i: number) => m.l + (i / Math.max(1, n - 1)) * (W - m.l - m.r);
+  const step = (W - m.l - m.r) / Math.max(1, n - 1);
+  
+  const actualPts: Point[] = actual.map((v, i) => [x(i), y(v)]);
+  const anchor = actualPts[a - 1];
+  const fcPts: Point[] = [anchor, ...forecast.map((v, i): Point => [x(a + i), y(v)])];
+  const conePts = {
+    up: [anchor, ...hi.map((v, i): Point => [x(a + i), y(v)])],
+    down: [anchor, ...lo.map((v, i): Point => [x(a + i), y(v)])],
+  };
+  const growth = ((forecast[forecast.length - 1] - actual[a - 1]) / actual[a - 1]) * 100;
+  const fmt = (v: number) => formatValue(v, prefix, suffix);
+  return (
+    <>
+      <ChartFrame title={title} subtitle={subtitle} value={fmt(forecast[forecast.length - 1])} delta={`${growth >= 0 ? '+' : ''}${growth.toFixed(0)}% projected`} deltaPositive={growth >= 0} variant={variant} size={size} className={className} legend={[{ label: 'Actual', color }, { label: 'Forecast', color: `color-mix(in srgb, ${color} 55%, transparent)` }]} table={{
+          headers: ['Period', 'Actual', 'Forecast', 'Low', 'High'],
+          rows: categories.map((c, i) => a > i
+            ? [c, fmt(actual[i]), '—', '—', '—']
+            : [c, '—', fmt(forecast[i - a]), fmt(lo[i - a]), fmt(hi[i - a])]),
+        }}>
+        <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${title}: actuals and forecast line chart`}>
+          {ticks.map((t, __i: number) => (
+            <g key={__i}>
+              <line className="cf-grid" x1={m.l} x2={W - m.r} y1={y(t)} y2={y(t)} />
+              <text className="cf-label" x={m.l - 8} y={y(t) + 4} textAnchor="end">{fmt(t)}</text>
+            </g>
+          ))}
+          {categories.map((c, i) => <text key={i} className="cf-label" x={x(i)} y={H - 8} textAnchor="middle">{c}</text>)}
+      
+          <rect x={anchor[0]} y={m.t} width={W - m.r - anchor[0]} height={H - m.t - m.b} fill="rgb(var(--ink-rgb, 255 255 255) / 0.025)" aria-hidden="true" />
+          <line className="cf-axis" x1={anchor[0]} x2={anchor[0]} y1={m.t} y2={H - m.b} />
+          <text className="cf-label" x={anchor[0] + 6} y={m.t + 10}>Today</text>
+      
+          <path d={bandPath(conePts.up, conePts.down, 'linear')} fill={color} fillOpacity="0.14" aria-hidden="true" />
+          <path d={linePath(fcPts)} fill="none" stroke={color} strokeWidth="2" strokeDasharray="5 5" strokeOpacity="0.85" aria-hidden="true" />
+          <path d={linePath(actualPts)} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" aria-hidden="true" />
+          <circle cx={anchor[0]} cy={anchor[1]} r="4.5" fill={color} stroke="var(--chart-surface, #0d0d0f)" strokeWidth="2" aria-hidden="true" />
+      
+          {categories.map((c, i) => {
+            const isF = i >= a;
+            const v = isF ? forecast[i - a] : actual[i];
+            const tip = isF
+              ? `${color}::Forecast: ${fmt(v)}|Range: ${fmt(lo[i - a])} – ${fmt(hi[i - a])}`
+              : `${color}::Actual: ${fmt(v)}`;
+            return (
+              <g className="cf-hit-group">
+                <line className="cf-cross" x1={x(i)} x2={x(i)} y1={m.t} y2={H - m.b} />
+                <circle className="cf-cross" cx={x(i)} cy={y(v)} r="4.5" fill={color} stroke="#fff" strokeWidth="1.5" />
+                <rect className="cf-hit" x={x(i) - step / 2} y={m.t} width={step} height={H - m.t - m.b} tabIndex={0} role="img" aria-label={`${c}: ${isF ? 'forecast' : 'actual'} ${fmt(v)}`} data-tip-title={c} data-tip={tip} />
+              </g>
+            );
+          })}
+        </svg>
+      </ChartFrame>
+    </>
+  );
+}
+
+export default ForecastLineChart;

@@ -1,0 +1,5 @@
+/* KeyValuePillGroup — ported from astro-component-kit (data/KeyValuePillGroup.astro) */
+
+.meta-row:where([data-rk-ffdece]) { display: flex; gap: 8px; flex-wrap: wrap; }
+.m-pill:where([data-rk-ffdece]) { background: rgba(0,0,0,0.2); color: #64748b; font-size: 0.7rem; padding: 4px 12px; border-radius: 8px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.05); }
+span:where([data-rk-ffdece]) { color: #e2e8f0; margin-left: 6px; }

@@ -1,0 +1,28 @@
+/* GlowPortfolioCard — ported from astro-component-kit (cards/GlowPortfolioCard.astro) */
+
+.glow-wrap:where([data-rk-a93656]) { 
+  position: relative; 
+  padding: 2px; 
+  border-radius: var(--r-xl, 20px); 
+  background: var(--c-border, rgba(255,255,255,0.1)); 
+  overflow: hidden; 
+}
+.glow-wrap:where([data-rk-a93656])::before { 
+  content: ''; 
+  position: absolute; 
+  inset: -50%; 
+  background: conic-gradient(from 0deg, transparent, var(--glow-color), transparent); 
+  animation: glow-portfolio-card-rotate-glow 4s linear infinite; 
+}
+.glow-content:where([data-rk-a93656]) { 
+  position: relative; 
+  background: var(--c-bg, #080b14); 
+  padding: var(--sp-8, 2rem); 
+  border-radius: calc(var(--r-xl, 20px) - 2px); 
+  z-index: 1; 
+  text-align: center; 
+}
+.glow-content__title:where([data-rk-a93656]) { margin: 0; color: var(--c-text-1, #fff); font-size: 1.25rem; }
+.glow-content__subtitle:where([data-rk-a93656]) { color: var(--c-text-2, #94a3b8); font-size: 0.9rem; margin-top: 0.5rem; }
+
+@keyframes glow-portfolio-card-rotate-glow { 100% { transform: rotate(360deg); } }

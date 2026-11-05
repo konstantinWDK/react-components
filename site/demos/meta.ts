@@ -1,13 +1,10 @@
 // Server-safe demo metadata: which slugs are ported, their source file and the usage snippet.
 // The interactive previews live in ./<category>.tsx (client components).
 
-export interface DemoMeta {
-  /** Component file name inside src/components/lib/<category>/ */
-  file: string;
-  category: string;
-  /** Snippet shown in the "Usage" section. */
-  usage: string;
-}
+import type { DemoMeta } from './meta-types';
+import { generatedMeta } from './generated-meta';
+
+export type { DemoMeta };
 
 const b = (file: string, usage: string): DemoMeta => ({ file, category: 'buttons', usage });
 const f = (file: string, usage: string): DemoMeta => ({ file, category: 'feedback', usage });
@@ -15,7 +12,7 @@ const f = (file: string, usage: string): DemoMeta => ({ file, category: 'feedbac
 /** Buttons whose preview stage needs extra room for glow / tilt / magnet effects (same list as Astro). */
 export const SPACIOUS_PREVIEW = new Set(['glow-button', 'pulse-button', 'magnetic-button', 'tilt-glow-button', 'double-border-button']);
 
-export const demoMeta: Record<string, DemoMeta> = {
+const manualMeta: Record<string, DemoMeta> = {
   // ── Buttons ──────────────────────────────────────────────
   'glass-button': b('GlassButton', `<GlassButton variant="primary" onClick={save}>Save changes</GlassButton>
 <GlassButton variant="secondary">Secondary</GlassButton>
@@ -112,3 +109,6 @@ export const demoMeta: Record<string, DemoMeta> = {
 />`),
   'typing-indicator': f('TypingIndicator', `<TypingIndicator label="Ana is typing…" dotColor="#d4a017" />`),
 };
+
+/** Every ported component: generated from the Astro registry, hand-written entries win. */
+export const demoMeta: Record<string, DemoMeta> = { ...generatedMeta, ...manualMeta };

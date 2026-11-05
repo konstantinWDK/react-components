@@ -1,0 +1,33 @@
+/* LogoWithGalaxy — ported from astro-component-kit (./LogoWithGalaxy.astro) */
+
+.logo-container:where([data-rk-7f5ef8]) {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.galaxy-wrap:where([data-rk-7f5ef8]) {
+  position: absolute;
+  top: v-bind('s.galaxyTop');
+  left: v-bind('s.galaxyLeft');
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.galaxy-wrap:where([data-rk-7f5ef8]) .galaxy-svg {
+  display: block;
+  opacity: 0.7;
+}
+
+.logo-text:where([data-rk-7f5ef8]) {
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.logo-text:where([data-rk-7f5ef8]) img:where([data-rk-7f5ef8]) {
+  height: v-bind('s.logoHeight');
+  width: auto;
+  display: block;
+}

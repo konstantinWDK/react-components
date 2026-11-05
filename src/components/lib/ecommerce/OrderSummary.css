@@ -1,0 +1,104 @@
+/* OrderSummary — ported from astro-component-kit (ecommerce/OrderSummary.astro) */
+
+.o-summary:where([data-rk-abd13c]) {
+  display: grid;
+  gap: var(--sp-4, 1rem);
+  align-self: start;
+  min-width: 0;
+}
+.o-summary--glass:where([data-rk-abd13c]) {
+  padding: var(--sp-6, 1.5rem);
+  border-radius: var(--r-xl, 28px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.07);
+  background: linear-gradient(180deg, rgb(var(--ink-rgb, 255 255 255) / 0.035), rgb(var(--ink-rgb, 255 255 255) / 0.012));
+}
+.o-summary--sticky:where([data-rk-abd13c]) { position: sticky; top: calc(var(--store-header-h, 68px) + 1.5rem); }
+
+.o-summary__head:where([data-rk-abd13c]) { display: flex; justify-content: space-between; align-items: baseline; }
+.o-summary__title:where([data-rk-abd13c]) { margin: 0; font-size: 1.15rem; font-weight: 800; color: var(--c-text-1, #fff); }
+.o-summary__edit:where([data-rk-abd13c]) { font-size: 0.85rem; font-weight: 600; }
+
+.o-summary__lines:where([data-rk-abd13c]) { display: grid; gap: var(--sp-3, 0.75rem); margin: 0; padding: 0; list-style: none; }
+.o-summary__lines:where([data-rk-abd13c]) .o-line { display: grid; grid-template-columns: 60px 1fr auto; gap: var(--sp-3, 0.75rem); align-items: center; }
+.o-summary__lines:where([data-rk-abd13c]) .o-line__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--r-md, 12px);
+  color: hsl(var(--h) var(--pm-ink-s, 80%) var(--pm-ink-l, 80%));
+  background: radial-gradient(circle at 50% 40%, hsl(var(--h) 70% 50% / 0.3), transparent 70%), var(--c-bg-2, #111);
+  border: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.05));
+}
+.o-summary__lines:where([data-rk-abd13c]) .o-line__media svg { width: 58%; }
+.o-summary__lines:where([data-rk-abd13c]) .o-line__media img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+.o-summary__lines:where([data-rk-abd13c]) .o-line__qty {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--c-text-1, #fff);
+  color: var(--c-bg, #050505);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 22px;
+  text-align: center;
+}
+.o-summary__lines:where([data-rk-abd13c]) .o-line__info { display: grid; gap: 2px; min-width: 0; }
+.o-summary__lines:where([data-rk-abd13c]) .o-line__name { font-size: 0.88rem; font-weight: 700; color: var(--c-text-1, #fff); line-height: 1.3; }
+.o-summary__lines:where([data-rk-abd13c]) .o-line__meta { font-size: 0.78rem; color: var(--c-text-2, #a3a3a3); }
+.o-summary__lines:where([data-rk-abd13c]) .o-line__price { font-size: 0.9rem; font-weight: 700; color: var(--c-text-1, #fff); }
+.o-summary__empty:where([data-rk-abd13c]) { margin: 0; color: var(--c-text-2, #a3a3a3); }
+
+.o-summary__promo:where([data-rk-abd13c]) { display: flex; gap: var(--sp-2, 0.5rem); padding-top: var(--sp-4, 1rem); border-top: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.05)); }
+.o-summary__promo:where([data-rk-abd13c]) input:where([data-rk-abd13c]) {
+  flex: 1;
+  min-width: 0;
+  min-height: 46px;
+  padding: 0 var(--sp-4, 1rem);
+  border-radius: var(--r-md, 12px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.1);
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.03);
+  color: var(--c-text-1, #fff);
+  font: inherit;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.o-summary__promo:where([data-rk-abd13c]) input:where([data-rk-abd13c])::placeholder { text-transform: none; color: var(--c-text-2, #a3a3a3); }
+.o-summary__promo:where([data-rk-abd13c]) input:focus:where([data-rk-abd13c]) { outline: none; border-color: var(--c-primary-light, #d4a017); }
+.o-summary__promo:where([data-rk-abd13c]) button:where([data-rk-abd13c]) {
+  min-height: 46px;
+  padding: 0 var(--sp-5, 1.25rem);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.14);
+  border-radius: var(--r-md, 12px);
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.05);
+  color: var(--c-text-1, #fff);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.o-summary__promo:where([data-rk-abd13c]) button:hover:where([data-rk-abd13c]) { background: rgb(var(--ink-rgb, 255 255 255) / 0.09); }
+.o-summary__promo:where([data-rk-abd13c]) button:focus-visible:where([data-rk-abd13c]) { outline: 2px solid var(--c-primary-light, #d4a017); outline-offset: 2px; }
+.o-summary__promo-msg:where([data-rk-abd13c]) { margin: calc(var(--sp-2, 0.5rem) * -1) 0 0; min-height: 1em; font-size: 0.8rem; }
+.o-summary__promo-msg:empty:where([data-rk-abd13c]) { display: none; }
+.o-summary__promo-msg[data-state='ok']:where([data-rk-abd13c]) { color: var(--c-success, #34d399); }
+.o-summary__promo-msg[data-state='error']:where([data-rk-abd13c]) { color: var(--c-danger, #f87171); }
+
+.o-summary__totals:where([data-rk-abd13c]) { display: grid; gap: var(--sp-2, 0.5rem); margin: 0; padding-top: var(--sp-4, 1rem); border-top: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.05)); }
+.o-summary__totals:where([data-rk-abd13c]) div:where([data-rk-abd13c]) { display: flex; justify-content: space-between; font-size: 0.9rem; }
+.o-summary__totals:where([data-rk-abd13c]) div[hidden]:where([data-rk-abd13c]) { display: none; }
+.o-summary__totals:where([data-rk-abd13c]) dt:where([data-rk-abd13c]) { color: var(--c-text-2, #a3a3a3); }
+.o-summary__totals:where([data-rk-abd13c]) dd:where([data-rk-abd13c]) { margin: 0; color: var(--c-text-1, #fff); font-weight: 600; }
+.o-summary__totals:where([data-rk-abd13c]) [data-discount-row]:where([data-rk-abd13c]) dd:where([data-rk-abd13c]) { color: var(--c-success, #34d399); }
+.o-summary__total:where([data-rk-abd13c]) { margin-top: var(--sp-2, 0.5rem); padding-top: var(--sp-3, 0.75rem); border-top: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.05)); }
+.o-summary__totals:where([data-rk-abd13c]) .o-summary__total:where([data-rk-abd13c]) dt:where([data-rk-abd13c]) { color: var(--c-text-1, #fff); font-weight: 700; font-size: 1rem; }
+.o-summary__totals:where([data-rk-abd13c]) .o-summary__total:where([data-rk-abd13c]) dd:where([data-rk-abd13c]) { font-size: 1.4rem; font-weight: 900; letter-spacing: -0.02em; }
+
+.sr-only:where([data-rk-abd13c]) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 960px) { .o-summary--sticky:where([data-rk-abd13c]) { position: static; } }

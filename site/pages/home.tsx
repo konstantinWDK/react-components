@@ -8,22 +8,19 @@ import { getLocalizedCategory } from '../i18n/catalog';
 import { SiteHeader } from '../layout/SiteHeader';
 import { WhyBento } from '../home/WhyBento';
 import { TemplatesPromo } from '../home/TemplatesPromo';
+import { SectionRenderer } from '../docs/SectionRenderer';
 import { CopyCommand, Galaxy3D, HomeEffects, ParticleBackground, SectionsCarouselNav } from '../home/HomeClient';
-import {
-  CyberpunkButton, GlowButton, LiquidButton, MagneticButton, NeonBorderButton, RetroArcadeButton, RippleButton,
-  ShimmerButton, SlideRevealButton, ThreeDPushButton, TiltGlowButton, AnimatedIconButton,
-} from '../../src/components/lib/buttons';
-import {
-  Badge, CircleProgress, CyberGlitchAlert, GlassAlert, GlassProgress, ProgressRingCounter, PulseDot, RatingPill,
-  StepProgress, TypingIndicator,
-} from '../../src/components/lib/feedback';
+import { CyberpunkButton, GlowButton, LiquidButton, MagneticButton, NeonBorderButton, RetroArcadeButton, RippleButton, ShimmerButton } from '../../src/components/lib/buttons';
+import { SparklineChart, RadialBarChart, KpiStatTile, GaugeChart, ActivityRings, MeterGauge, WaffleChart, BulletChart, PieChart, FunnelChart } from '../../src/components/lib/charts';
+import { NotificationCard, MusicPlayerMini, InteractiveTiltCard } from '../../src/components/lib/cards';
+import { SegmentedControl, GlassSlider, SearchReveal, StepperInput, PasswordStrengthInput, GlassInlineToggleGroup } from '../../src/components/lib/forms';
+import { FloatingTabBar } from '../../src/components/lib/navigation';
+import { HackerDecodeText } from '../../src/components/lib/typography';
 import pkg from '../../package.json';
 import '../styles/home.css';
 
 /*
- * Port of astro-components/src/components/home/HomePage.astro.
- * Same blocks and order. Widgets whose React port is not ready yet (charts, forms, cards,
- * sections) are temporarily replaced by already-ported components — see `TODO(port)`.
+ * Port of astro-components/src/components/home/HomePage.astro — same blocks, order and demo widgets.
  */
 
 type Tri = Record<Locale, string>;
@@ -90,7 +87,7 @@ const UI = {
   ru: { copyInstall: 'Скопировать команду установки', copy: 'Скопировать команду', prev: 'Предыдущая секция', next: 'Следующая секция', marquee: 'Главное', explore: 'Все компоненты', license: 'Лицензия MIT' },
 };
 
-/** Section spotlight slides (same as Astro); miniatures show "Coming soon" until each section is ported. */
+/** Section spotlight slides (same as Astro). */
 const SECTION_SLIDES: { slug: string; name: string; cat: Tri; summary: Tri }[] = [
   { slug: 'stats-dashboard-section', name: 'Stats Dashboard Section', cat: { en: 'Stats & Metrics', es: 'Métricas', ru: 'Метрики' }, summary: { en: 'KPI tiles, stacked area and ranked bar charts in one analytics block.', es: 'Tarjetas KPI, áreas apiladas y ranking en barras en un solo bloque.', ru: 'KPI-плитки, накопительные области и рейтинг в одном блоке.' } },
   { slug: 'pricing-toggle-cards', name: 'Pricing Toggle Cards', cat: { en: 'Pricing & Plans', es: 'Precios', ru: 'Тарифы' }, summary: { en: 'Three tiers with an accessible monthly/yearly switch and featured plan.', es: 'Tres planes con interruptor mensual/anual accesible y plan destacado.', ru: 'Три тарифа с переключателем месяц/год и выделенным планом.' } },
@@ -113,49 +110,45 @@ export function HomePage({ lang }: { lang: Locale }) {
   const adv = ADVANTAGES[lang];
   const marquee = MARQUEE[lang];
   const href = (p: string) => getLocalizedPath(p, lang);
-  const ported = new Set(components.map((c) => c.slug));
 
-  // TODO(port): restore SparklineChart, NotificationCard, SegmentedControl, RadialBarChart, MusicPlayerMini, GlassSlider.
   const heroCards: { slug: string; depth: 'near' | 'mid' | 'far'; inner?: string; node: ReactNode }[] = [
     {
-      slug: 'glass-progress', depth: 'near', inner: 'kpi',
+      slug: 'sparkline-chart', depth: 'near', inner: 'kpi',
       node: (
         <>
           <span className="hero-kpi__label">{t({ en: 'Monthly revenue', es: 'Ingresos mensuales', ru: 'Выручка за месяц' })}</span>
           <span className="hero-kpi__row"><strong className="hero-kpi__value">$48.2k</strong><span className="hero-kpi__delta">+24%</span></span>
-          <GlassProgress value={72} label="Monthly revenue goal" />
+          <SparklineChart data={[18, 22, 19, 26, 24, 31, 28, 35, 33, 41, 39, 48]} size="lg" variant="area" label="Monthly revenue" />
         </>
       ),
     },
-    { slug: 'glass-alert', depth: 'far', inner: 'flush', node: <GlassAlert type="success" title={t({ en: 'Deploy succeeded', es: 'Despliegue completado', ru: 'Деплой завершён' })}>{t({ en: '1,029 pages built in 18s', es: '1.029 páginas generadas en 18s', ru: '1029 страниц собрано за 18 с' })}</GlassAlert> },
-    { slug: 'badge', depth: 'mid', node: <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}><Badge variant="success" dot pulse>Live</Badge><Badge variant="info">v{pkg.version}</Badge><Badge>React 19</Badge></div> },
-    { slug: 'circle-progress', depth: 'mid', inner: 'chart', node: <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}><CircleProgress percent={82} size={76} color="#d4a017" /><span className="hero-kpi__label">{t({ en: 'Adoption', es: 'Adopción', ru: 'Внедрение' })}</span></div> },
-    { slug: 'pulse-dot', depth: 'far', inner: 'flush', node: <div style={{ padding: '1rem 1.1rem', display: 'grid', gap: '0.6rem' }}><PulseDot label={t({ en: 'All systems operational', es: 'Todo operativo', ru: 'Все системы в норме' })} /><TypingIndicator /></div> },
-    { slug: 'progress-ring-counter', depth: 'near', inner: 'slider', node: <ProgressRingCounter value={68} size={84} strokeWidth={6} label={t({ en: 'BLUR', es: 'DESENFOQUE', ru: 'РАЗМЫТИЕ' })} /> },
+    { slug: 'notification-card', depth: 'far', inner: 'flush', node: <NotificationCard type="success" title={t({ en: 'Deploy succeeded', es: 'Despliegue completado', ru: 'Деплой завершён' })} message={t({ en: '1,029 pages built in 18s', es: '1.029 páginas generadas en 18s', ru: '1029 страниц собрано за 18 с' })} /> },
+    { slug: 'segmented-control', depth: 'mid', node: <SegmentedControl name="hero-range" idPrefix="hero-seg" options={[{ label: '7D', value: '7d' }, { label: '30D', value: '30d', checked: true }, { label: '90D', value: '90d' }, { label: '1Y', value: '1y' }]} /> },
+    { slug: 'radial-bar-chart', depth: 'mid', inner: 'chart', node: <RadialBarChart size="sm" variant="ghost" title={t({ en: 'Adoption', es: 'Adopción', ru: 'Внедрение' })} subtitle="" items={[{ label: 'Charts', value: 82 }, { label: 'Sections', value: 64 }, { label: 'Forms', value: 47 }]} /> },
+    { slug: 'music-player-mini', depth: 'far', inner: 'flush', node: <MusicPlayerMini title="Midnight Build" artist="React Kit · Lo-fi" progress={62} /> },
+    { slug: 'glass-slider', depth: 'near', inner: 'slider', node: <GlassSlider id="hero-slider" label={t({ en: 'Blur intensity', es: 'Desenfoque', ru: 'Размытие' })} value={68} /> },
   ];
 
-  // TODO(port): SearchReveal, StepperInput and FloatingTabBar replace the last three buttons once forms/navigation are ported.
   const track1: { slug: string; label: string; node: ReactNode; minWidth?: number }[] = [
     { slug: 'shimmer-button', label: 'Shimmer Button', node: <ShimmerButton variant="primary" size="md">Deploy Project</ShimmerButton> },
     { slug: 'cyberpunk-button', label: 'Cyber Button', node: <CyberpunkButton size="sm" label="EXECUTE">CYBER RUN</CyberpunkButton> },
     { slug: 'liquid-button', label: 'Liquid Button', node: <LiquidButton size="sm" color="#8b5cf6">Fluid Flow</LiquidButton> },
     { slug: 'retro-arcade-button', label: 'Arcade Button', node: <RetroArcadeButton variant="yellow" size="sm">START 1P</RetroArcadeButton> },
     { slug: 'glow-button', label: 'Glow Button', node: <GlowButton color="#d4a017" size="sm">GLOW PULSE</GlowButton> },
-    { slug: 'neon-border-button', label: 'Neon Border Button', node: <NeonBorderButton size="sm">Neon Launch</NeonBorderButton> },
-    { slug: '3d-push-button', label: '3D Push Button', node: <ThreeDPushButton size="sm">Push me</ThreeDPushButton> },
-    { slug: 'slide-reveal-button', label: 'Slide Reveal Button', node: <SlideRevealButton size="sm">Get started</SlideRevealButton> },
+    { slug: 'search-reveal', label: 'Search Reveal', minWidth: 260, node: <SearchReveal id="car-search" placeholder="Search library..." /> },
+    { slug: 'stepper-input', label: 'Stepper Input', node: <StepperInput id="car-step" value={3} min={1} max={10} /> },
+    { slug: 'floating-tab-bar', label: 'Floating Tab Bar', node: <FloatingTabBar /> },
   ];
 
-  // TODO(port): KPI / gauge / rings / funnel / meter / waffle / bullet / pie charts once charts are ported.
   const track2: { slug: string; label: string; width: number; node: ReactNode }[] = [
-    { slug: 'progress-ring-counter', label: 'Progress Ring Counter', width: 220, node: <ProgressRingCounter value={8} max={10} label="TASKS" color="#34d399" /> },
-    { slug: 'step-progress', label: 'Step Progress', width: 400, node: <StepProgress activeIndex={1} /> },
-    { slug: 'circle-progress', label: 'Circle Progress', width: 200, node: <CircleProgress percent={64} size={96} color="#d4a017" /> },
-    { slug: 'glass-alert', label: 'Glass Alert', width: 380, node: <GlassAlert type="info" title="Information">A helpful informational alert.</GlassAlert> },
-    { slug: 'rating-pill', label: 'Rating Pill', width: 260, node: <div style={{ display: 'flex', gap: '0.5rem' }}><RatingPill score={4.8} /><RatingPill score={3.4} /><RatingPill score={2.1} /></div> },
-    { slug: 'glass-progress', label: 'Glass Progress', width: 320, node: <GlassProgress value={75} label="Uploading files" /> },
-    { slug: 'typing-indicator', label: 'Typing Indicator', width: 200, node: <TypingIndicator dotColor="#d4a017" /> },
-    { slug: 'pulse-dot', label: 'Pulse Dot', width: 300, node: <PulseDot label="All systems operational" /> },
+    { slug: 'kpi-stat-tile', label: 'KPI Stat Tile', width: 300, node: <KpiStatTile label="Monthly revenue" value="$84.2k" change={12.4} /> },
+    { slug: 'gauge-chart', label: 'Gauge Chart', width: 320, node: <GaugeChart variant="ghost" size="sm" title="Sales goal" subtitle="November" /> },
+    { slug: 'activity-rings', label: 'Activity Rings', width: 440, node: <ActivityRings variant="ghost" size="sm" /> },
+    { slug: 'funnel-chart', label: 'Funnel Chart', width: 440, node: <FunnelChart variant="ghost" size="sm" stages={[{ label: 'Visited', value: 48200 }, { label: 'Trial', value: 6400 }, { label: 'Paid', value: 1240 }]} /> },
+    { slug: 'meter-gauge', label: 'Meter Gauge', width: 320, node: <MeterGauge variant="ghost" size="sm" /> },
+    { slug: 'waffle-chart', label: 'Waffle Chart', width: 440, node: <WaffleChart variant="ghost" size="sm" /> },
+    { slug: 'bullet-chart', label: 'Bullet Chart', width: 400, node: <BulletChart variant="ghost" size="sm" metrics={[{ label: 'Revenue ($k)', value: 270, target: 250, ranges: [150, 225, 300] }, { label: 'NPS', value: 44, target: 50, ranges: [30, 50, 70] }]} /> },
+    { slug: 'pie-chart', label: 'Pie Chart', width: 480, node: <PieChart variant="ghost" size="sm" /> },
   ];
 
   const viewLabel = t({ en: 'View', es: 'Ver', ru: 'Открыть' });
@@ -368,7 +361,7 @@ export function HomePage({ lang }: { lang: Locale }) {
           <div className="sections-carousel__track-wrapper">
             <div className="sections-carousel__track" id="sectionsTrack">
               {SECTION_SLIDES.map((slide) => {
-                const link = ported.has(slide.slug) ? href(`/sections/${slide.slug}`) : href('/sections');
+                const link = href(`/sections/${slide.slug}`);
                 return (
                   <article key={slide.slug} className="sections-carousel__slide">
                     <header className="slide-card__header">
@@ -383,10 +376,8 @@ export function HomePage({ lang }: { lang: Locale }) {
                       </a>
                     </header>
                     <div className="slide-card__viewport">
-                      {/* TODO(port): render the real section miniature once sections are ported. */}
-                      <div className="slide-card__miniature slide-card__miniature--soon" inert aria-hidden="true">
-                        <span>{slide.name}</span>
-                        <em>{t({ en: 'Coming soon', es: 'Próximamente', ru: 'Скоро' })}</em>
+                      <div className="slide-card__miniature" inert aria-hidden="true">
+                        <SectionRenderer slug={slide.slug} />
                       </div>
                       <div className="slide-card__glass-fade">
                         <a href={link} className="slide-card__explore-btn">
@@ -422,7 +413,6 @@ export function HomePage({ lang }: { lang: Locale }) {
         </section>
 
         {/* ==================== INTERACTION LAB ==================== */}
-        {/* TODO(port): InteractiveTiltCard, HackerDecodeText, PasswordStrengthInput, GlassInlineToggleGroup. */}
         <section className="section section--lab" id="interactions">
           <div className="container">
             <span className="section__eyebrow">{t({ en: 'Interaction lab', es: 'Laboratorio de interacciones', ru: 'Лаборатория взаимодействий' })}</span>
@@ -432,13 +422,13 @@ export function HomePage({ lang }: { lang: Locale }) {
             </p>
             <div className="lab-grid" data-lab="">
               {[
-                { cls: 'tilt', slug: 'tilt-glow-button', name: 'Tilt Glow Button', hint: t({ en: 'Move your cursor', es: 'Mueve el cursor', ru: 'Двигайте курсор' }), node: <TiltGlowButton size="lg">{t({ en: 'Tilt me', es: 'Inclíname', ru: 'Наклони меня' })}</TiltGlowButton> },
-                { cls: 'decode', slug: 'cyber-glitch-alert', name: 'Cyber Glitch Alert', hint: t({ en: 'Watch it glitch', es: 'Mira el glitch', ru: 'Смотрите на глитч' }), node: <CyberGlitchAlert message={`REACT KIT ${pkg.version}`} accentColor="#d4a017" /> },
+                { cls: 'tilt', slug: 'interactive-tilt-card', name: 'Interactive Tilt Card', hint: t({ en: 'Move your cursor', es: 'Mueve el cursor', ru: 'Двигайте курсор' }), node: <InteractiveTiltCard title={t({ en: 'Tilt me', es: 'Inclíname', ru: 'Наклони меня' })} description={t({ en: '3D perspective that follows your cursor with a soft glare.', es: 'Perspectiva 3D que sigue al cursor con un brillo suave.', ru: '3D-перспектива следует за курсором с мягким бликом.' })} /> },
+                { cls: 'decode', slug: 'hacker-decode-text', name: 'Hacker Decode Text', hint: t({ en: 'Hover the text', es: 'Pasa el ratón', ru: 'Наведите на текст' }), node: <HackerDecodeText text={`REACT KIT ${pkg.version}`} tag="p" className="lab-decode" /> },
                 { cls: 'ripple', slug: 'ripple-button', name: 'Ripple Button', hint: t({ en: 'Click', es: 'Haz clic', ru: 'Нажмите' }), node: <RippleButton variant="primary" size="md">{t({ en: 'Click me', es: 'Haz clic', ru: 'Нажми' })}</RippleButton> },
                 { cls: 'magnetic', slug: 'magnetic-button', name: 'Magnetic Button', hint: t({ en: 'Get close', es: 'Acércate', ru: 'Поднесите курсор' }), node: <MagneticButton variant="secondary" size="md">{t({ en: 'Magnetic', es: 'Magnético', ru: 'Магнит' })}</MagneticButton> },
-                { cls: 'password', slug: 'liquid-button', name: 'Liquid Button', hint: t({ en: 'Hover', es: 'Pasa el ratón', ru: 'Наведите' }), node: <LiquidButton color="#d4a017">{t({ en: 'Liquid', es: 'Líquido', ru: 'Жидкость' })}</LiquidButton> },
+                { cls: 'password', slug: 'password-strength-input', name: 'Password Strength Input', hint: t({ en: 'Type a password', es: 'Escribe una contraseña', ru: 'Введите пароль' }), node: <PasswordStrengthInput id="lab-password" label={t({ en: 'Password', es: 'Contraseña', ru: 'Пароль' })} placeholder={t({ en: 'Try something strong…', es: 'Prueba algo seguro…', ru: 'Попробуйте надёжный…' })} /> },
                 { cls: 'neon', slug: 'neon-border-button', name: 'Neon Border Button', hint: t({ en: 'Hover', es: 'Pasa el ratón', ru: 'Наведите' }), node: <NeonBorderButton size="md">{t({ en: 'Neon', es: 'Neón', ru: 'Неон' })}</NeonBorderButton> },
-                { cls: 'toggle', slug: 'animated-icon-button', name: 'Animated Icon Button', hint: t({ en: 'Hover', es: 'Pasa el ratón', ru: 'Наведите' }), node: <AnimatedIconButton variant="secondary">{t({ en: 'Next step', es: 'Siguiente', ru: 'Далее' })}</AnimatedIconButton> },
+                { cls: 'toggle', slug: 'glass-inline-toggle-group', name: 'Glass Toggle Group', hint: t({ en: 'Pick one', es: 'Elige una', ru: 'Выберите' }), node: <GlassInlineToggleGroup name="lab-view" size="sm" defaultValue="week" options={[{ label: t({ en: 'Day', es: 'Día', ru: 'День' }), value: 'day' }, { label: t({ en: 'Week', es: 'Semana', ru: 'Неделя' }), value: 'week' }, { label: t({ en: 'Month', es: 'Mes', ru: 'Месяц' }), value: 'month' }]} /> },
               ].map((tile) => (
                 <article key={tile.slug} className={`lab-tile lab-tile--${tile.cls}`}>
                   <div className="lab-tile__stage">{tile.node}</div>

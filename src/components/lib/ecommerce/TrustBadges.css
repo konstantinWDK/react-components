@@ -1,0 +1,44 @@
+/* TrustBadges — ported from astro-component-kit (ecommerce/TrustBadges.astro) */
+
+.trust-badges-cq:where([data-rk-dbc985]) { container-type: inline-size; }
+.trust-badges:where([data-rk-dbc985]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--sp-4, 1rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.trust-badge:where([data-rk-dbc985]) { display: flex; align-items: center; gap: var(--sp-3, 0.75rem); }
+.trust-badges--cards:where([data-rk-dbc985]) .trust-badge:where([data-rk-dbc985]) {
+  padding: var(--sp-4, 1rem) var(--sp-5, 1.25rem);
+  border-radius: var(--r-md, 12px);
+  border: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.05));
+  background: var(--c-surface, rgb(var(--ink-rgb, 255 255 255) / 0.02));
+}
+.trust-badges--divided:where([data-rk-dbc985]) { gap: 0; border-block: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.05)); }
+.trust-badges--divided:where([data-rk-dbc985]) .trust-badge:where([data-rk-dbc985]) { padding: var(--sp-5, 1.25rem); }
+.trust-badges--divided:where([data-rk-dbc985]) .trust-badge:where([data-rk-dbc985]) + .trust-badge:where([data-rk-dbc985]) { border-left: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.05)); }
+.trust-badges--sm:where([data-rk-dbc985]) .trust-badge:where([data-rk-dbc985]) { padding-block: var(--sp-3, 0.75rem); }
+.trust-badges--lg:where([data-rk-dbc985]) .trust-badge:where([data-rk-dbc985]) { padding-block: var(--sp-6, 1.5rem); }
+
+.trust-badge__icon:where([data-rk-dbc985]) {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-sm, 8px);
+  background: rgba(212, 160, 23, 0.1);
+  color: var(--c-primary-light, #d4a017);
+}
+.trust-badges--inline:where([data-rk-dbc985]) .trust-badge__icon:where([data-rk-dbc985]) { width: 32px; height: 32px; background: transparent; }
+.trust-badge__text:where([data-rk-dbc985]) { display: grid; gap: 1px; }
+.trust-badge__text:where([data-rk-dbc985]) strong:where([data-rk-dbc985]) { font-size: 0.92rem; color: var(--c-text-1, #fff); }
+.trust-badge__text:where([data-rk-dbc985]) span:where([data-rk-dbc985]) { font-size: 0.8rem; color: var(--c-text-2, #a3a3a3); }
+
+@container (max-width: 640px) {
+  .trust-badges:where([data-rk-dbc985]) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-2, 0.5rem); }
+  .trust-badges--divided:where([data-rk-dbc985]) .trust-badge:where([data-rk-dbc985]) + .trust-badge:where([data-rk-dbc985]) { border-left: 0; }
+  .trust-badge:where([data-rk-dbc985]) { flex-direction: column; align-items: flex-start; }
+}

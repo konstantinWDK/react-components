@@ -1,0 +1,37 @@
+/* SplitScreenLayout — ported from astro-component-kit (layout/SplitScreenLayout.astro) */
+
+.split-layout:where([data-rk-aa2173]) {
+  display: flex;
+  min-height: 50vh;
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: var(--r-xl, 16px);
+  overflow: hidden;
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+}
+.split-side:where([data-rk-aa2173]) {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+.left:where([data-rk-aa2173]) {
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.02);
+}
+.right:where([data-rk-aa2173]) {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.06);
+}
+.demo-split-block:where([data-rk-aa2173]) {
+  text-align: center;
+}
+.demo-split-block:where([data-rk-aa2173]) h3:where([data-rk-aa2173]) {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.demo-split-block:where([data-rk-aa2173]) p:where([data-rk-aa2173]) {
+  color: #94a3b8;
+}

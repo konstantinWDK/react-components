@@ -1,0 +1,16 @@
+/* HackerDecodeText — ported from astro-component-kit (typography/HackerDecodeText.astro) */
+
+.hacker-text:where([data-rk-415ed5]) {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--c-primary-light, #d4a017);
+  letter-spacing: 0.08em;
+  cursor: default;
+  user-select: none;
+  transition: text-shadow 0.2s ease;
+}
+
+.hacker-text:hover:where([data-rk-415ed5]) {
+  text-shadow: 0 0 12px rgba(212, 160, 23, 0.7);
+}

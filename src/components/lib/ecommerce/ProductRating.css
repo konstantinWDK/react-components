@@ -1,0 +1,30 @@
+/* ProductRating — ported from astro-component-kit (ecommerce/ProductRating.astro) */
+
+.p-rating:where([data-rk-0ac791]) {
+  --p-rating-star: var(--c-primary-light, #d4a017);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--c-text-2, #a3a3a3);
+}
+.p-rating--md:where([data-rk-0ac791]) { font-size: 0.95rem; }
+.p-rating--lg:where([data-rk-0ac791]) { font-size: 1.15rem; }
+
+.p-rating__stars:where([data-rk-0ac791]) {
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.08em;
+}
+.p-rating__base:where([data-rk-0ac791]) { color: rgb(var(--ink-rgb, 255 255 255) / 0.14); }
+.p-rating__fill:where([data-rk-0ac791]) {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--p-rating-fill);
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--p-rating-star);
+}
+.p-rating__value:where([data-rk-0ac791]) { font-weight: 700; color: var(--c-text-1, #fff); }
+.p-rating__count:where([data-rk-0ac791]) { color: var(--c-text-3, #737373); }

@@ -1,0 +1,9 @@
+/* TreeItemInteractive — ported from astro-component-kit (data/TreeItemInteractive.astro) */
+
+.exp-row:where([data-rk-a57501]) { border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 12px; }
+.main:where([data-rk-a57501]) { color: #fff; font-size: 0.85rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
+.main:where([data-rk-a57501]) span:where([data-rk-a57501]) { font-size: 0.6rem; color: #64748b; transition: 0.3s; }
+.child:where([data-rk-a57501]) { margin-top: 12px; padding-left: 24px; color: #64748b; font-size: 0.8rem; display: none; line-height: 1.5; }
+.exp-row:hover:where([data-rk-a57501]) .main:where([data-rk-a57501]) { color: #818cf8; }
+.exp-row:hover:where([data-rk-a57501]) .main:where([data-rk-a57501]) span:where([data-rk-a57501]) { transform: rotate(90deg); color: #818cf8; }
+.exp-row:hover:where([data-rk-a57501]) .child:where([data-rk-a57501]) { display: block; }

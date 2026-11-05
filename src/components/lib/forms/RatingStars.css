@@ -1,0 +1,29 @@
+/* RatingStars — ported from astro-component-kit (forms/RatingStars.astro) */
+
+.rating-stars:where([data-rk-fddc65]) { display: flex; flex-direction: row-reverse; gap: 4px; width: fit-content; }
+
+.rating-stars__input:where([data-rk-fddc65]) { display: none; }
+
+.rating-stars__star:where([data-rk-fddc65]) { 
+  width: 32px; height: 32px; 
+  cursor: pointer; transition: all 0.2s ease; 
+  color: var(--c-border, #334155);
+}
+
+.rating-stars__star:where([data-rk-fddc65]) svg:where([data-rk-fddc65]) { width: 100%; height: 100%; fill: transparent; transition: all 0.2s; }
+
+/* Hover and check logic using sibling selectors (requires row-reverse) */
+.rating-stars__star:hover:where([data-rk-fddc65]), 
+.rating-stars__star:hover:where([data-rk-fddc65]) ~ .rating-stars__star:where([data-rk-fddc65]),
+.rating-stars__input:checked:where([data-rk-fddc65]) ~ .rating-stars__star:where([data-rk-fddc65]) { 
+  color: #fbbf24; 
+}
+
+.rating-stars__star:hover:where([data-rk-fddc65]) svg:where([data-rk-fddc65]), 
+.rating-stars__star:hover:where([data-rk-fddc65]) ~ .rating-stars__star:where([data-rk-fddc65]) svg:where([data-rk-fddc65]),
+.rating-stars__input:checked:where([data-rk-fddc65]) ~ .rating-stars__star:where([data-rk-fddc65]) svg:where([data-rk-fddc65]) { 
+  fill: #fbbf24;
+  filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.4));
+}
+
+.rating-stars__star:active:where([data-rk-fddc65]) { transform: scale(0.9); }

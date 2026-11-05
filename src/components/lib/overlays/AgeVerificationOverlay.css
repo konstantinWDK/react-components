@@ -1,0 +1,11 @@
+/* AgeVerificationOverlay — ported from astro-component-kit (overlays/AgeVerificationOverlay.astro) */
+
+.age-gate:where([data-rk-99adbd]) { position: fixed; inset: 0; background: #000; z-index: 9999; display: grid; place-items: center; }
+.age-card:where([data-rk-99adbd]) { text-align: center; color: #fff; max-width: 350px; padding: 2rem; }
+h2:where([data-rk-99adbd]) { font-size: 2rem; font-weight: 900; margin-bottom: 1rem; }
+p:where([data-rk-99adbd]) { color: #94a3b8; line-height: 1.6; margin-bottom: 2.5rem; }
+.acts-row:where([data-rk-99adbd]) { display: flex; gap: 1rem; }
+button:where([data-rk-99adbd]) { flex: 1; padding: 1rem; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; }
+.no:where([data-rk-99adbd]) { background: #1e293b; color: #fff; }
+.yes:where([data-rk-99adbd]) { background: #6366f1; color: #fff; }
+button:hover:where([data-rk-99adbd]) { transform: translateY(-2px); }

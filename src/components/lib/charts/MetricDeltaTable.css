@@ -1,0 +1,27 @@
+/* MetricDeltaTable — ported from astro-component-kit (charts/MetricDeltaTable.astro) */
+
+.md:where([data-rk-df9b34]) { overflow-x: auto; }
+.md__table:where([data-rk-df9b34]) { width: 100%; border-collapse: collapse; font-size: 0.8125rem; font-variant-numeric: tabular-nums; }
+.md__table:where([data-rk-df9b34]) th:where([data-rk-df9b34]), .md__table:where([data-rk-df9b34]) td:where([data-rk-df9b34]) {
+  padding: 0.7rem 0.6rem;
+  border-bottom: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.06);
+  text-align: left;
+  vertical-align: middle;
+}
+.md__table:where([data-rk-df9b34]) thead:where([data-rk-df9b34]) th:where([data-rk-df9b34]) { font-size: 0.6875rem; font-weight: 600; color: var(--c-text-3, #8a8a8a); text-transform: uppercase; letter-spacing: 0.04em; }
+.md__table:where([data-rk-df9b34]) tbody:where([data-rk-df9b34]) tr:where([data-rk-df9b34]) { transition: background 0.2s ease; }
+.md__table:where([data-rk-df9b34]) tbody:where([data-rk-df9b34]) tr:hover:where([data-rk-df9b34]) { background: rgb(var(--ink-rgb, 255 255 255) / 0.03); }
+.md__table:where([data-rk-df9b34]) tbody:where([data-rk-df9b34]) th:where([data-rk-df9b34]) { font-weight: 500; min-width: 9rem; }
+.md__label:where([data-rk-df9b34]) { display: block; color: var(--c-text-1, #fff); margin-bottom: 0.35rem; }
+.md__bar:where([data-rk-df9b34]) { display: block; height: 4px; border-radius: 2px; background: rgb(var(--ink-rgb, 255 255 255) / 0.05); overflow: hidden; }
+.md__bar:where([data-rk-df9b34]) span:where([data-rk-df9b34]) { display: block; height: 100%; border-radius: 2px; }
+.md__num:where([data-rk-df9b34]) { text-align: right !important; white-space: nowrap; color: var(--c-text-2, #a3a3a3); }
+.md__strong:where([data-rk-df9b34]) { color: var(--c-text-1, #fff); font-weight: 650; }
+.md__delta:where([data-rk-df9b34]) { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--c-text-1, #fff); font-weight: 600; }
+.md__delta--good:where([data-rk-df9b34]) svg:where([data-rk-df9b34]) { color: var(--chart-pos, #34c38f); }
+.md__delta--bad:where([data-rk-df9b34]) svg:where([data-rk-df9b34]) { color: var(--chart-neg, #f06a6a); }
+.sr-only:where([data-rk-df9b34]) {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+@media (max-width: 560px) { .md__hide-sm:where([data-rk-df9b34]) { display: none; } }

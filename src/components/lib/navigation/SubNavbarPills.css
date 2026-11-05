@@ -1,0 +1,61 @@
+/* SubNavbarPills — ported from astro-component-kit (navigation/SubNavbarPills.astro) */
+
+.subnav-pills:where([data-rk-101a64]) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.subnav-pills:where([data-rk-101a64])::-webkit-scrollbar {
+  display: none;
+}
+
+.subnav-pills__track:where([data-rk-101a64]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 4px;
+}
+
+.subnav-pills__link:where([data-rk-101a64]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-full, 9999px);
+  color: var(--c-text-2, #a3a3a3);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.subnav-pills__link:hover:where([data-rk-101a64]) {
+  color: var(--c-text-1, #ffffff);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.subnav-pills__link.is-active:where([data-rk-101a64]) {
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.25), rgba(212, 160, 23, 0.25));
+  border-color: rgba(184, 134, 11, 0.5);
+  color: var(--c-accent, #fef3c7);
+}
+
+.subnav-pills__count:where([data-rk-101a64]) {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1px 7px;
+  border-radius: var(--r-full, 9999px);
+  color: inherit;
+}

@@ -1,0 +1,38 @@
+/* StepperInput — ported from astro-component-kit (forms/StepperInput.astro) */
+
+.stepper-container:where([data-rk-dbf2a1]) { display: flex; flex-direction: column; gap: var(--sp-2, 0.5rem); }
+.stepper-label:where([data-rk-dbf2a1]) { font-size: 0.85rem; font-weight: 600; color: var(--c-text-2, #94a3b8); margin-left: 0.5rem; }
+
+.stepper:where([data-rk-dbf2a1]) { 
+  display: flex; align-items: center; 
+  background: var(--c-bg-elev, rgba(255,255,255,0.05)); 
+  border-radius: var(--r-md, 12px); 
+  border: 1px solid var(--c-border, rgba(255,255,255,0.1)); 
+  overflow: hidden; 
+  width: fit-content;
+}
+
+.stepper-btn:where([data-rk-dbf2a1]) { 
+  width: 40px; height: 40px; 
+  background: var(--c-primary, #6366f1); 
+  border: none; color: #fff; 
+  font-size: 1.25rem; font-weight: 600; 
+  cursor: pointer; transition: all 0.2s; 
+  display: grid; place-items: center;
+}
+
+.stepper-btn:hover:where([data-rk-dbf2a1]) { background: var(--c-primary-light, #818cf8); }
+.stepper-btn:active:where([data-rk-dbf2a1]) { transform: scale(0.95); }
+
+.stepper-input:where([data-rk-dbf2a1]) { 
+  width: 60px; height: 40px; 
+  background: transparent; 
+  border: none; text-align: center; 
+  color: var(--c-text-1, #fff); 
+  font-size: 1rem; font-weight: 700;
+  outline: none; -moz-appearance: textfield; 
+  font-family: inherit;
+}
+
+.stepper-input:where([data-rk-dbf2a1])::-webkit-inner-spin-button,
+.stepper-input:where([data-rk-dbf2a1])::-webkit-outer-spin-button { display: none; }

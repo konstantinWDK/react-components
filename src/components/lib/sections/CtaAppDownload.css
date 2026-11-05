@@ -1,0 +1,184 @@
+/* CtaAppDownload — ported from astro-component-kit (sections/CtaAppDownload.astro) */
+
+.cq-cta-app-download-cq:where([data-rk-68c50b]) { container-type: inline-size; }
+.app-download-section:where([data-rk-68c50b]) {
+  padding: var(--sp-20, 5rem) var(--sp-6, 1.5rem);
+  background: var(--c-bg-primary, #030712);
+}
+
+.container:where([data-rk-68c50b]) {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-card:where([data-rk-68c50b]) {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(10, 15, 30, 0.9) 100%);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.1);
+  border-radius: var(--r-2xl, 24px);
+  padding: clamp(2rem, 5vw, 4rem);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.app-badge:where([data-rk-68c50b]) {
+  display: inline-flex;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--c-primary, #b8860b) 12%, transparent);
+  color: #eab308;
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  margin-bottom: var(--sp-4, 1rem);
+}
+
+.app-title:where([data-rk-68c50b]) {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+
+.app-subtitle:where([data-rk-68c50b]) {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0 0 1.75rem;
+}
+
+.app-features-mini:where([data-rk-68c50b]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.feat-pill:where([data-rk-68c50b]) {
+  padding: 0.4rem 0.85rem;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.05);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+.store-buttons:where([data-rk-68c50b]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.store-btn:where([data-rk-68c50b]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1.25rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.15);
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.store-btn:hover:where([data-rk-68c50b]) {
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.1);
+  border-color: rgb(var(--ink-rgb, 255 255 255) / 0.3);
+}
+
+.store-btn__text:where([data-rk-68c50b]) {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.store-btn__sub:where([data-rk-68c50b]) {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.store-btn__name:where([data-rk-68c50b]) {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Phone visual mockup */
+.app-visual:where([data-rk-68c50b]) {
+  display: flex;
+  justify-content: center;
+}
+
+.phone-frame:where([data-rk-68c50b]) {
+  width: 250px;
+  height: 400px;
+  background: #020617;
+  border: 3px solid rgb(var(--ink-rgb, 255 255 255) / 0.2);
+  border-radius: 36px;
+  padding: 12px;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-notch:where([data-rk-68c50b]) {
+  width: 70px;
+  height: 12px;
+  background: #0f172a;
+  border-radius: 999px;
+  margin: 0 auto 12px;
+}
+
+.phone-screen:where([data-rk-68c50b]) {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 24px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.phone-header:where([data-rk-68c50b]) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.phone-live:where([data-rk-68c50b]) {
+  font-size: 0.65rem;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+}
+
+.phone-chart:where([data-rk-68c50b]) {
+  height: 80px;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.3) 0%, transparent 100%);
+  border-bottom: 2px solid #6366f1;
+  border-radius: 8px;
+}
+
+.phone-card-mini:where([data-rk-68c50b]) {
+  padding: 0.5rem;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.05);
+  border-radius: 8px;
+  font-size: 0.72rem;
+  color: #cbd5e1;
+}
+
+@container (max-width: 960px) {
+  .app-card:where([data-rk-68c50b]) {
+    grid-template-columns: 1fr;
+  }
+}

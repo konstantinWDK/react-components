@@ -1,0 +1,15 @@
+/* SettingsSection — ported from astro-component-kit (app/SettingsSection.astro) */
+
+.set:where([data-rk-d579d6]) { container-type: inline-size; display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr); gap: var(--sp-6, 1.5rem); padding-block: var(--sp-6, 1.5rem); border-bottom: 1px solid var(--c-border, rgba(255, 255, 255, 0.08)); }
+.set--stacked:where([data-rk-d579d6]) { grid-template-columns: 1fr; }
+.set__title:where([data-rk-d579d6]) { margin: 0; font-size: 1rem; font-weight: 700; color: var(--c-text-1, #fff); }
+.set__desc:where([data-rk-d579d6]) { margin: 4px 0 0; font-size: 0.85rem; line-height: 1.55; color: var(--c-text-2, #a3a3a3); }
+.set__card:where([data-rk-d579d6]) { border-radius: var(--r-lg, 16px); border: 1px solid var(--c-border, rgba(255, 255, 255, 0.08)); background: var(--c-bg-1, #0a0a0a); overflow: hidden; }
+.set__fields:where([data-rk-d579d6]) { display: grid; gap: var(--sp-4, 1rem); padding: var(--sp-5, 1.25rem); }
+.set__foot:where([data-rk-d579d6]) { display: flex; align-items: center; justify-content: flex-end; gap: var(--sp-2, 0.5rem); padding: var(--sp-3, 0.75rem) var(--sp-5, 1.25rem); border-top: 1px solid var(--c-border, rgba(255, 255, 255, 0.08)); background: rgb(var(--ink-rgb, 255 255 255) / 0.02); }
+.set__saved:where([data-rk-d579d6]) { margin: 0 auto 0 0; font-size: 0.8rem; font-weight: 600; color: var(--c-success, #34d399); }
+.set__btn:where([data-rk-d579d6]) { min-height: 38px; padding: 0 0.9rem; border-radius: 10px; border: 1px solid var(--c-border, rgba(255, 255, 255, 0.12)); background: transparent; color: var(--c-text-1, #fff); font: inherit; font-size: 0.82rem; font-weight: 600; cursor: pointer; }
+.set__btn--primary:where([data-rk-d579d6]) { border-color: transparent; background: var(--app-accent, var(--c-primary-light, #d4a017)); color: var(--c-on-primary, #050505); }
+.set__btn:focus-visible:where([data-rk-d579d6]) { outline: 2px solid var(--app-accent, var(--c-primary-light, #d4a017)); outline-offset: 2px; }
+.set:where([data-rk-d579d6]) .anim-input, .set:where([data-rk-d579d6]) .custom-select { background: var(--c-bg, #050505); }
+@container (max-width: 640px) { .set__intro:where([data-rk-d579d6]), .set__card:where([data-rk-d579d6]) { grid-column: 1 / -1; } }

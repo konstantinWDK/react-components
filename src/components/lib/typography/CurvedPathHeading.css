@@ -1,0 +1,46 @@
+/* CurvedPathHeading — ported from astro-component-kit (typography/CurvedPathHeading.astro) */
+
+.curved-heading:where([data-rk-03862f]) {
+  position: relative;
+  width: var(--curved-size);
+  height: var(--curved-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  user-select: none;
+}
+
+.curved-heading.is-animated:where([data-rk-03862f]) svg:where([data-rk-03862f]) {
+  animation: curved-path-heading-curved-spin 20s linear infinite;
+}
+
+.curved-heading__text:where([data-rk-03862f]) {
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  fill: var(--c-primary-light, #d4a017);
+}
+
+.curved-heading__core:where([data-rk-03862f]) {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(184, 134, 11, 0.12);
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  color: var(--c-accent, #fef3c7);
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+}
+
+@keyframes curved-path-heading-curved-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curved-heading.is-animated:where([data-rk-03862f]) svg:where([data-rk-03862f]) { animation: none; }
+}

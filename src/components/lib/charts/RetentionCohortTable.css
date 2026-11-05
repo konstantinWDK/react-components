@@ -1,0 +1,33 @@
+/* RetentionCohortTable — ported from astro-component-kit (charts/RetentionCohortTable.astro) */
+
+.rc:where([data-rk-14b914]) { overflow-x: auto; }
+.rc__table:where([data-rk-14b914]) {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+.rc__table:where([data-rk-14b914]) th:where([data-rk-14b914]) {
+  padding: 0.4rem 0.5rem;
+  font-weight: 600;
+  color: var(--c-text-3, #8a8a8a);
+  text-align: center;
+  white-space: nowrap;
+}
+.rc__table:where([data-rk-14b914]) tbody:where([data-rk-14b914]) th:where([data-rk-14b914]), .rc__table:where([data-rk-14b914]) tfoot:where([data-rk-14b914]) th:where([data-rk-14b914]) { text-align: left; color: var(--c-text-1, #fff); }
+.rc__size:where([data-rk-14b914]) { color: var(--c-text-2, #a3a3a3); text-align: right; padding-right: 0.6rem; }
+.rc__cell:where([data-rk-14b914]) {
+  min-width: 3rem;
+  padding: 0.55rem 0.4rem;
+  text-align: center;
+  border-radius: 4px;
+  color: rgb(var(--ink-rgb, 255 255 255) / 0.78);
+}
+.rc__cell[data-strong]:where([data-rk-14b914]) { color: #fff; font-weight: 650; }
+.rc__empty:where([data-rk-14b914]) { background: rgb(var(--ink-rgb, 255 255 255) / 0.02); border-radius: 4px; }
+.rc__avg:where([data-rk-14b914]) { text-align: center; color: var(--c-text-1, #fff); font-weight: 600; padding-top: 0.5rem; }
+.sr-only:where([data-rk-14b914]) {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}

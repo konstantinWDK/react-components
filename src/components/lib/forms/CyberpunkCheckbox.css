@@ -1,0 +1,46 @@
+/* CyberpunkCheckbox — ported from astro-component-kit (forms/CyberpunkCheckbox.astro) */
+
+.cyber-check:where([data-rk-43f10f]) { 
+  display: flex; align-items: center; gap: var(--sp-4, 1rem); 
+  cursor: pointer; 
+  color: var(--c-primary-light, #00e0ff); 
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: 800; 
+  text-transform: uppercase;
+  user-select: none;
+  padding: var(--sp-2, 0.5rem);
+  transition: 0.2s;
+}
+
+.cyber-check:hover:where([data-rk-43f10f]) .checkmark:where([data-rk-43f10f]) { border-color: var(--c-primary-light); }
+
+.cyber-check:where([data-rk-43f10f]) input:where([data-rk-43f10f]) { display: none; }
+
+.checkmark:where([data-rk-43f10f]) { 
+  width: 20px; height: 20px; 
+  border: 2px solid var(--c-primary, #ff003c); 
+  position: relative; transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  flex-shrink: 0;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.cyber-check:where([data-rk-43f10f]) input:checked:where([data-rk-43f10f]) + .checkmark:where([data-rk-43f10f]) { 
+  background: var(--c-primary, #ff003c); 
+  box-shadow: 0 0 15px var(--c-primary, #ff003c); 
+  transform: rotate(5deg) scale(1.1);
+}
+
+.checkmark:where([data-rk-43f10f])::after { 
+  content: ''; position: absolute; display: none; 
+  left: 7px; top: 2px; width: 4px; height: 10px; 
+  border: solid #fff; border-width: 0 3px 3px 0; 
+  transform: rotate(45deg); 
+}
+
+.cyber-check:where([data-rk-43f10f]) input:checked:where([data-rk-43f10f]) + .checkmark:where([data-rk-43f10f])::after { display: block; }
+
+.cyber-text:where([data-rk-43f10f]) { letter-spacing: 0.05em; font-size: 0.9rem; }
+
+.cyber-check:where([data-rk-43f10f]) input:checked:where([data-rk-43f10f]) ~ .cyber-text:where([data-rk-43f10f]) {
+  text-shadow: 0 0 8px var(--c-primary-light);
+}

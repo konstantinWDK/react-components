@@ -1,0 +1,26 @@
+/* SidebarLayoutWrapper — ported from astro-component-kit (layout/SidebarLayoutWrapper.astro) */
+
+.cq-sidebar-layout-wrapper-cq:where([data-rk-8aeea2]) { container-type: inline-size; }
+.sidebar-layout:where([data-rk-8aeea2]) {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  min-height: 100vh;
+}
+.sidebar-layout__sidebar:where([data-rk-8aeea2]) {
+  border-right: 1px solid var(--c-border);
+  background: var(--c-bg-1);
+  overflow-y: auto;
+}
+.sidebar-layout__main:where([data-rk-8aeea2]) {
+  padding: var(--sp-6);
+}
+
+@container (max-width: 768px) {
+  .sidebar-layout:where([data-rk-8aeea2]) {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-layout__sidebar:where([data-rk-8aeea2]) {
+    border-right: none;
+    border-bottom: 1px solid var(--c-border);
+  }
+}

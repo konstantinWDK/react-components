@@ -1,0 +1,25 @@
+/* NotificationCard — ported from astro-component-kit (cards/NotificationCard.astro) */
+
+.notify-card:where([data-rk-7cf369]) { 
+  display: flex; gap: var(--sp-4, 1rem); 
+  padding: var(--sp-4, 1rem); 
+  background: var(--c-bg-elev, #0f172a); 
+  border-radius: var(--r-md, 12px); 
+  border: 1px solid var(--c-border, rgba(255,255,255,0.1)); 
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4); 
+  max-width: 300px; 
+}
+.notify-card__dot:where([data-rk-7cf369]) { 
+  width: 8px; height: 8px; 
+  border-radius: var(--r-full, 50%); 
+  margin-top: 5px; 
+  flex-shrink: 0;
+}
+.notify-card__content:where([data-rk-7cf369]) { flex: 1; }
+.notify-card__title:where([data-rk-7cf369]) { font-size: 0.9rem; color: var(--c-text-1, #fff); }
+.notify-card__message:where([data-rk-7cf369]) { margin: 2px 0 0; font-size: 0.82rem; color: var(--c-text-2, #94a3b8); line-height: 1.4; }
+
+.notify-card--info:where([data-rk-7cf369]) .notify-card__dot:where([data-rk-7cf369]) { background: var(--c-primary, #6366f1); }
+.notify-card--success:where([data-rk-7cf369]) .notify-card__dot:where([data-rk-7cf369]) { background: #10b981; }
+.notify-card--warning:where([data-rk-7cf369]) .notify-card__dot:where([data-rk-7cf369]) { background: #f59e0b; }
+.notify-card--error:where([data-rk-7cf369]) .notify-card__dot:where([data-rk-7cf369]) { background: #ef4444; }

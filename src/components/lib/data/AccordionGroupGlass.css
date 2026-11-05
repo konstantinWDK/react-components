@@ -1,0 +1,9 @@
+/* AccordionGroupGlass — ported from astro-component-kit (data/AccordionGroupGlass.astro) */
+
+.acc-wrap:where([data-rk-1f7d60]) { display: flex; flex-direction: column; gap: 0.5rem; }
+details:where([data-rk-1f7d60]) { background: rgba(255,255,255,0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; }
+summary:where([data-rk-1f7d60]) { padding: 1rem 1.5rem; cursor: pointer; color: #fff; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
+summary:hover:where([data-rk-1f7d60]) { background: rgba(255,255,255,0.02); }
+summary:where([data-rk-1f7d60])::after { content: "+"; font-size: 1.25rem; transition: transform 0.3s; }
+details[open]:where([data-rk-1f7d60]) summary:where([data-rk-1f7d60])::after { transform: rotate(45deg); }
+.content:where([data-rk-1f7d60]) { padding: 0 1.5rem 1rem; color: #94a3b8; font-size: 0.9rem; line-height: 1.6; }

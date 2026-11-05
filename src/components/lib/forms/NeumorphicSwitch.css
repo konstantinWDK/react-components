@@ -1,0 +1,56 @@
+/* NeumorphicSwitch — ported from astro-component-kit (forms/NeumorphicSwitch.astro) */
+
+.neu-switch-wrapper:where([data-rk-3cc0c3]) { display: flex; align-items: center; gap: var(--sp-3, 0.75rem); }
+
+.neu-switch:where([data-rk-3cc0c3]) {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.neu-label:where([data-rk-3cc0c3]) { font-size: 0.9rem; color: var(--c-text-2, #94a3b8); cursor: pointer; }
+
+.neu-switch:where([data-rk-3cc0c3]) input:where([data-rk-3cc0c3]) {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider:where([data-rk-3cc0c3]) {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: var(--c-bg, #1a1f2e);
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 34px;
+  border: 1px solid var(--c-border, rgba(255, 255, 255, 0.05));
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.04);
+}
+
+.slider:where([data-rk-3cc0c3]):before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 3px;
+  background: #374151;
+  transition: 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+input:checked:where([data-rk-3cc0c3]) + .slider:where([data-rk-3cc0c3]) {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+input:checked:where([data-rk-3cc0c3]) + .slider:where([data-rk-3cc0c3]):before {
+  transform: translateX(28px);
+  background: var(--c-primary, #818cf8);
+  box-shadow: 0 0 15px rgba(129, 140, 248, 0.5);
+}

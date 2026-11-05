@@ -1,0 +1,96 @@
+/* FeatureHero — ported from astro-component-kit (layout/FeatureHero.astro) */
+
+.cq-feature-hero-cq:where([data-rk-4c81ec]) { container-type: inline-size; }
+.feature-hero:where([data-rk-4c81ec]) {
+  position: relative;
+  padding: var(--sp-16) var(--sp-6);
+  text-align: center;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at top,
+    var(--gradient-from, rgba(99,102,241,0.15)) 0%,
+    var(--gradient-to, transparent) 70%
+  );
+}
+
+.feature-hero__bg:where([data-rk-4c81ec]) {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.feature-hero__gradient:where([data-rk-4c81ec]) {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    var(--gradient-from, rgba(99,102,241,0.15)) 0%,
+    var(--gradient-to, transparent) 60%
+  );
+  animation: feature-hero-hero-pulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes feature-hero-hero-pulse {
+  0% { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.05); }
+}
+
+.feature-hero__overlay:where([data-rk-4c81ec]) {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.6) 100%
+  );
+  pointer-events: none;
+}
+
+.feature-hero__inner:where([data-rk-4c81ec]) {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature-hero__title:where([data-rk-4c81ec]) {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 var(--sp-6);
+  color: var(--c-text-1);
+  text-shadow:
+    0 2px 20px rgba(0,0,0,0.5),
+    0 0 40px rgba(99,102,241,0.3);
+}
+
+.feature-hero__subtitle:where([data-rk-4c81ec]) {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--c-text-2);
+  line-height: 1.6;
+  margin: 0 0 var(--sp-8);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-hero__actions:where([data-rk-4c81ec]) {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-hero__gradient:where([data-rk-4c81ec]) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@container (max-width: 640px) {
+  .feature-hero:where([data-rk-4c81ec]) {
+    padding: var(--sp-12) var(--sp-4);
+  }
+}

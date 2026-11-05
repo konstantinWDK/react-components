@@ -1,0 +1,19 @@
+/* RetroGameCard — ported from astro-component-kit (cards/RetroGameCard.astro) */
+
+.retro-game:where([data-rk-d37617]) { 
+  background: #22c55e; border: 4px solid #000; 
+  padding: var(--sp-4, 1rem); position: relative; 
+  box-shadow: 8px 8px 0 #000; 
+  font-family: 'Courier New', Courier, monospace; 
+}
+.retro-game__screen:where([data-rk-d37617]) { 
+  background: #000; color: #22c55e; 
+  padding: var(--sp-4, 1rem); text-align: center; 
+  font-weight: 900; margin-bottom: 0.5rem; text-transform: uppercase;
+}
+.retro-game__scanlines:where([data-rk-d37617]) { 
+  position: absolute; inset: 0; pointer-events: none; 
+  background: linear-gradient(rgba(0,0,0,0.1) 50%, transparent 50%); background-size: 100% 4px; 
+}
+.retro-game__title:where([data-rk-d37617]) { margin: 0; font-size: 1.1rem; color: #000; font-weight: 900; text-transform: uppercase; }
+.retro-game__score:where([data-rk-d37617]) { font-size: 0.8rem; color: #000; margin-top: 0.5rem; font-weight: bold; }

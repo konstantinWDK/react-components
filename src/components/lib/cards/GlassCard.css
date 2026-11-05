@@ -1,0 +1,9 @@
+/* GlassCard — ported from astro-component-kit (cards/GlassCard.astro) */
+
+.glass-card:where([data-rk-30e66c]) { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 20px; position: relative; overflow: hidden; transition: 0.3s; }
+.glass-card:where([data-rk-30e66c])::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); }
+.glass-card--hoverable:hover:where([data-rk-30e66c]) { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); border-color: rgba(99, 102, 241, 0.25); }
+.glass-card__header:where([data-rk-30e66c]) { border-bottom: 1px solid rgba(255, 255, 255, 0.07); margin-bottom: 1rem; padding-bottom: 0.75rem; }
+.glass-card__title:where([data-rk-30e66c]) { margin: 0 0 0.25rem; font-size: 1.05rem; font-weight: 600; color: #f1f5f9; }
+.glass-card__subtitle:where([data-rk-30e66c]) { margin: 0; font-size: 0.82rem; color: #64748b; }
+.glass-card--psm:where([data-rk-30e66c]) { padding: 1rem; } .glass-card--pmd:where([data-rk-30e66c]) { padding: 1.5rem; } .glass-card--plg:where([data-rk-30e66c]) { padding: 2rem; }

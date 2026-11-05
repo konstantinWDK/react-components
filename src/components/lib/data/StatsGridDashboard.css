@@ -1,0 +1,9 @@
+/* StatsGridDashboard — ported from astro-component-kit (data/StatsGridDashboard.astro) */
+
+.s-grid:where([data-rk-ea2277]) { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+.s-card:where([data-rk-ea2277]) { background: rgba(255,255,255,0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 1.25rem; border-radius: 12px; }
+span:where([data-rk-ea2277]) { font-size: 0.75rem; color: #64748b; font-weight: 600; text-transform: uppercase; }
+h3:where([data-rk-ea2277]) { font-size: 1.5rem; color: #fff; margin: 0.25rem 0; }
+small:where([data-rk-ea2277]) { font-size: 0.7rem; font-weight: 700; }
+.up:where([data-rk-ea2277]) { color: #10b981; }
+.down:where([data-rk-ea2277]) { color: #ef4444; }

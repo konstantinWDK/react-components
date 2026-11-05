@@ -1,0 +1,85 @@
+{
+ "ecommerce": {
+  "pages": {
+   "home": {
+    "file": "app/page.tsx",
+    "code": "import { StoreHomePage } from 'react-component-kit-ui/templates/ecommerce';\n\nexport default function Page() {\n  return <StoreHomePage />;\n}\n"
+   },
+   "category": {
+    "file": "app/shop/page.tsx",
+    "code": "import { StoreCategoryPage } from 'react-component-kit-ui/templates/ecommerce';\n\nexport default function Page() {\n  return (\n    <>\n      {/* Category links use /shop/?category=audio */}\n      <StoreCategoryPage />\n    </>\n  );\n}\n"
+   },
+   "product": {
+    "file": "app/product/[slug]/page.tsx",
+    "code": "import { StoreProductPage, demoStore } from 'react-component-kit-ui/templates/ecommerce';\n\nexport const generateStaticParams = () => demoStore.products.map((p) => ({ slug: p.slug }));\n\nexport default async function Page({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params;\n  return <StoreProductPage slug={slug} />;\n}\n"
+   },
+   "checkout": {
+    "file": "app/checkout/page.tsx",
+    "code": "import { StoreCheckoutPage } from 'react-component-kit-ui/templates/ecommerce';\n\nexport default function Page() {\n  return <StoreCheckoutPage />;\n}\n"
+   }
+  },
+  "storeConfigExample": "import { StoreHomePage, demoStore, type StoreConfig } from 'react-component-kit-ui/templates/ecommerce';\n\nconst store: StoreConfig = {\n  ...demoStore,\n  name: 'My Shop',\n  currency: 'EUR',\n  locale: 'es-ES',\n  cartKey: 'my-shop-cart',\n  products: [\n    {\n      slug: 'linen-shirt',\n      name: 'Linen Shirt',\n      price: 59,\n      category: 'apparel',\n      image: '/products/linen-shirt.webp', // or icon: 'shirt'\n      sizes: ['S', 'M', 'L'],\n      rating: 4.7,\n      reviews: 40,\n    },\n  ],\n};\n\nexport default function Page() {\n  return <StoreHomePage store={store} routes={{ home: '/', shop: '/shop/', product: '/product/', checkout: '/checkout/' }} />;\n}\n"
+ },
+ "ecommerce-editorial": {
+  "pages": {
+   "home": {
+    "file": "app/page.tsx",
+    "code": "import { EditorialHomePage } from 'react-component-kit-ui/templates/ecommerce-editorial';\n\nexport default function Page() {\n  return <EditorialHomePage theme=\"light\" />;\n}\n"
+   },
+   "shop": {
+    "file": "app/shop/page.tsx",
+    "code": "import { EditorialShopPage } from 'react-component-kit-ui/templates/ecommerce-editorial';\n\nexport default function Page() {\n  return <EditorialShopPage />;\n}\n"
+   },
+   "product": {
+    "file": "app/product/[slug]/page.tsx",
+    "code": "import { EditorialProductPage, formaStore } from 'react-component-kit-ui/templates/ecommerce-editorial';\n\nexport const generateStaticParams = () => formaStore.products.map((p) => ({ slug: p.slug }));\n\nexport default async function Page({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params;\n  return <EditorialProductPage slug={slug} />;\n}\n"
+   },
+   "bag": {
+    "file": "app/bag/page.tsx",
+    "code": "import { EditorialBagPage } from 'react-component-kit-ui/templates/ecommerce-editorial';\n\nexport default function Page() {\n  return <EditorialBagPage />;\n}\n"
+   },
+   "checkout": {
+    "file": "app/checkout/page.tsx",
+    "code": "import { EditorialCheckoutPage } from 'react-component-kit-ui/templates/ecommerce-editorial';\n\nexport default function Page() {\n  return <EditorialCheckoutPage />;\n}\n"
+   }
+  },
+  "storeConfigExample": "import { EditorialHomePage, formaStore, type EditorialStore } from 'react-component-kit-ui/templates/ecommerce-editorial';\n\nconst store: EditorialStore = {\n  ...formaStore,\n  name: 'Atelier',\n  currency: 'USD',\n  locale: 'en-US',\n  cartKey: 'atelier-bag',\n};\n\nexport default function Page() {\n  return <EditorialHomePage store={store} theme=\"auto\" routes={{ home: '/', shop: '/shop/', product: '/product/', bag: '/bag/', checkout: '/checkout/' }} />;\n}\n"
+ },
+ "saas-hotel": {
+  "pages": {
+   "landing": {
+    "file": "app/page.tsx",
+    "code": "import { LandingPage } from 'react-component-kit-ui/templates/saas-hotel';\n\nexport default function Page() {\n  return <LandingPage />;\n}\n"
+   },
+   "signin": {
+    "file": "app/sign-in/page.tsx",
+    "code": "import { SignInPage } from 'react-component-kit-ui/templates/saas-hotel';\n\nexport default function Page() {\n  return <SignInPage />;\n}\n"
+   },
+   "dashboard": {
+    "file": "app/app/page.tsx",
+    "code": "import { DashboardPage } from 'react-component-kit-ui/templates/saas-hotel';\n\nexport default function Page() {\n  return <DashboardPage />;\n}\n"
+   },
+   "reservations": {
+    "file": "app/app/reservations/page.tsx",
+    "code": "import { ReservationsPage } from 'react-component-kit-ui/templates/saas-hotel';\n\nexport default function Page() {\n  return <ReservationsPage />;\n}\n"
+   },
+   "rooms": {
+    "file": "app/app/rooms/page.tsx",
+    "code": "import { RoomsPage } from 'react-component-kit-ui/templates/saas-hotel';\n\nexport default function Page() {\n  return <RoomsPage />;\n}\n"
+   },
+   "guests": {
+    "file": "app/app/guests/page.tsx",
+    "code": "import { GuestsPage } from 'react-component-kit-ui/templates/saas-hotel';\n\nexport default function Page() {\n  return <GuestsPage />;\n}\n"
+   },
+   "reports": {
+    "file": "app/app/reports/page.tsx",
+    "code": "import { ReportsPage } from 'react-component-kit-ui/templates/saas-hotel';\n\nexport default function Page() {\n  return <ReportsPage />;\n}\n"
+   },
+   "settings": {
+    "file": "app/app/settings/page.tsx",
+    "code": "import { SettingsPage } from 'react-component-kit-ui/templates/saas-hotel';\n\nexport default function Page() {\n  return <SettingsPage />;\n}\n"
+   }
+  },
+  "storeConfigExample": "import { DashboardPage, lobbyData, type LobbyData } from 'react-component-kit-ui/templates/saas-hotel';\n\nconst data: LobbyData = {\n  ...lobbyData,\n  workspace: { name: 'Casa Alba', plan: 'Starter', initials: 'CA' },\n  user: { name: 'Marta Gil', role: 'Owner', email: 'marta@casaalba.com' },\n};\n\nexport default function Page() {\n  return <DashboardPage data={data} theme=\"auto\" />;\n}\n"
+ }
+}

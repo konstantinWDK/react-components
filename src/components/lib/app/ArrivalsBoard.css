@@ -1,0 +1,30 @@
+/* ArrivalsBoard — ported from astro-component-kit (app/ArrivalsBoard.astro) */
+
+.fd:where([data-rk-d17d3a]) { container-type: inline-size; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-3, 0.75rem); min-width: 0; }
+.fd--card:where([data-rk-d17d3a]) { padding: var(--sp-5, 1.25rem); border-radius: var(--r-lg, 16px); border: 1px solid var(--c-border, rgba(255, 255, 255, 0.08)); background: var(--c-bg-1, #0a0a0a); }
+.fd__head:where([data-rk-d17d3a]) { display: flex; align-items: baseline; justify-content: space-between; gap: var(--sp-3, 0.75rem); }
+.fd__title:where([data-rk-d17d3a]) { margin: 0; font-size: 1rem; font-weight: 700; color: var(--c-text-1, #fff); }
+.fd__progress:where([data-rk-d17d3a]) { margin: 0; font-size: 0.78rem; color: var(--c-text-3, #737373); }
+.fd__tabs:where([data-rk-d17d3a]) { display: flex; gap: 4px; padding: 3px; border-radius: 10px; background: rgb(var(--ink-rgb, 255 255 255) / 0.04); }
+.fd__tabs:where([data-rk-d17d3a]) button:where([data-rk-d17d3a]) { flex: 1; min-height: 34px; border: 0; border-radius: 7px; background: transparent; color: var(--c-text-2, #a3a3a3); font: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+.fd__tabs:where([data-rk-d17d3a]) button:where([data-rk-d17d3a]) span:where([data-rk-d17d3a]) { padding: 0 6px; border-radius: 999px; background: rgb(var(--ink-rgb, 255 255 255) / 0.08); font-size: 0.7rem; }
+.fd__tabs:where([data-rk-d17d3a]) [aria-selected='true']:where([data-rk-d17d3a]) { background: var(--c-bg-1, #0a0a0a); color: var(--c-text-1, #fff); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 0 1px var(--c-border, rgba(255, 255, 255, 0.08)); }
+.fd__list:where([data-rk-d17d3a]) { display: grid; margin: 0; padding: 0; list-style: none; }
+.fd__list[hidden]:where([data-rk-d17d3a]) { display: none; }
+.fd__row:where([data-rk-d17d3a]) { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto auto; align-items: center; gap: var(--sp-3, 0.75rem); padding: var(--sp-3, 0.75rem) 0; border-bottom: 1px solid var(--c-border, rgba(255, 255, 255, 0.06)); }
+.fd__row:last-child:where([data-rk-d17d3a]) { border-bottom: 0; }
+.fd__avatar:where([data-rk-d17d3a]) { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: hsl(var(--h) 50% 45%); color: #fff; font-size: 0.72rem; font-weight: 700; }
+.fd__who:where([data-rk-d17d3a]) { display: grid; min-width: 0; }
+.fd__who:where([data-rk-d17d3a]) strong:where([data-rk-d17d3a]) { display: flex; align-items: center; gap: 6px; font-size: 0.88rem; color: var(--c-text-1, #fff); }
+.fd__who:where([data-rk-d17d3a]) small:where([data-rk-d17d3a]) { font-size: 0.75rem; color: var(--c-text-3, #737373); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fd__vip:where([data-rk-d17d3a]) { padding: 1px 6px; border-radius: 6px; background: color-mix(in srgb, var(--c-warning, #fbbf24) 18%, transparent); color: var(--c-warning, #fbbf24); font-size: 0.62rem; font-style: normal; font-weight: 800; letter-spacing: 0.06em; }
+.fd__time:where([data-rk-d17d3a]) { font-size: 0.8rem; color: var(--c-text-2, #a3a3a3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.fd__action:where([data-rk-d17d3a]) { min-height: 34px; padding: 0 0.8rem; border-radius: 8px; border: 1px solid var(--app-accent, var(--c-primary-light, #d4a017)); background: transparent; color: var(--app-accent, var(--c-primary-light, #d4a017)); font: inherit; font-size: 0.78rem; font-weight: 700; white-space: nowrap; cursor: pointer; }
+.fd__action:hover:where([data-rk-d17d3a]) { background: color-mix(in srgb, var(--app-accent, var(--c-primary-light, #d4a017)) 12%, transparent); }
+.fd__action[aria-pressed='true']:where([data-rk-d17d3a]) { border-color: transparent; background: color-mix(in srgb, var(--c-success, #34d399) 14%, transparent); color: var(--c-success, #34d399); }
+.fd:where([data-rk-d17d3a]) :is(button):focus-visible:where([data-rk-d17d3a]) { outline: 2px solid var(--app-accent, var(--c-primary-light, #d4a017)); outline-offset: 2px; }
+.sr-only:where([data-rk-d17d3a]) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@container (max-width: 420px) {
+  .fd__row:where([data-rk-d17d3a]) { grid-template-columns: 36px minmax(0, 1fr) auto; }
+  .fd__time:where([data-rk-d17d3a]) { display: none; }
+}

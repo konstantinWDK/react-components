@@ -1,0 +1,28 @@
+/* FullBleedSection — ported from astro-component-kit (layout/FullBleedSection.astro) */
+
+.full-bleed:where([data-rk-4e57ad]) {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: rgba(30, 41, 59, 0.4);
+  border-top: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.06);
+  border-bottom: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.06);
+  padding: 3.5rem 1.5rem;
+  box-sizing: border-box;
+}
+.full-bleed-inner:where([data-rk-4e57ad]) {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.full-bleed-inner:where([data-rk-4e57ad]) h3:where([data-rk-4e57ad]) {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.full-bleed-inner:where([data-rk-4e57ad]) p:where([data-rk-4e57ad]) {
+  color: #94a3b8;
+  margin: 0;
+}

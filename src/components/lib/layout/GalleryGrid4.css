@@ -1,0 +1,19 @@
+/* GalleryGrid4 — ported from astro-component-kit (layout/GalleryGrid4.astro) */
+
+.gal-grid:where([data-rk-fb6612]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+.gal-grid:where([data-rk-fb6612]) > *, .gal-item:where([data-rk-fb6612]) {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.04);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-weight: 600;
+}

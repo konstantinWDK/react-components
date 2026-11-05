@@ -1,0 +1,57 @@
+/* LogoCloudSection — ported from astro-component-kit (sections/LogoCloudSection.astro) */
+
+.logo-cloud:where([data-rk-b88031]) {
+  padding: var(--sp-8, 2rem) var(--sp-6, 1.5rem);
+  width: 100%;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.logo-cloud__inner:where([data-rk-b88031]) {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo-cloud__title:where([data-rk-b88031]) {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--c-text-3, #737373);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.logo-cloud__grid:where([data-rk-b88031]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.logo-badge:where([data-rk-b88031]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.65rem 1.4rem;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.06);
+  border-radius: var(--r-full, 9999px);
+  color: var(--c-text-2, #a3a3a3);
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.logo-badge:hover:where([data-rk-b88031]) {
+  color: var(--c-text-1, #ffffff);
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.06);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 40%, transparent);
+  transform: translateY(-2px);
+}
+
+.logo-badge__symbol:where([data-rk-b88031]) {
+  font-size: 1.1rem;
+  color: var(--c-primary-light, #d4a017);
+}

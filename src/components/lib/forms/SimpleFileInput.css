@@ -1,0 +1,38 @@
+/* SimpleFileInput — ported from astro-component-kit (forms/SimpleFileInput.astro) */
+
+.file-btn:where([data-rk-908bfa]) { 
+  position: relative; 
+  overflow: hidden; 
+  display: inline-block; 
+  cursor: pointer; 
+}
+
+.file-btn__input:where([data-rk-908bfa]) { 
+  position: absolute; 
+  left: 0; top: 0; 
+  width: 100%; height: 100%;
+  opacity: 0; cursor: pointer; 
+  font-size: 0;
+}
+
+.file-btn__label:where([data-rk-908bfa]) { 
+  background: var(--c-primary, #6366f1); 
+  color: #fff; 
+  padding: 0.8rem 1.6rem; 
+  border-radius: var(--r-md, 10px); 
+  font-weight: 700; 
+  display: inline-block; 
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+  font-size: 0.95rem;
+}
+
+.file-btn:hover:where([data-rk-908bfa]) .file-btn__label:where([data-rk-908bfa]) { 
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
+.file-btn:active:where([data-rk-908bfa]) .file-btn__label:where([data-rk-908bfa]) {
+  transform: translateY(0);
+}

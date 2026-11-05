@@ -1,0 +1,7 @@
+/* VerticalStack — ported from astro-component-kit (layout/VerticalStack.astro) */
+
+.vertical-stack:where([data-rk-5bc495]) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap);
+}

@@ -1,0 +1,9 @@
+/* GlassNavbar — ported from astro-component-kit (navigation/GlassNavbar.astro) */
+
+.glass-nav:where([data-rk-947bdc]) { position: sticky; top: 0; z-index: 100; background: rgba(10, 10, 20, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+.glass-nav__inner:where([data-rk-947bdc]) { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 80px; display: flex; align-items: center; gap: 2rem; }
+.glass-nav__brand:where([data-rk-947bdc]) { text-decoration: none; display: flex; align-items: center; }
+.glass-nav__brand:hover:where([data-rk-947bdc]) { opacity: 0.9; }
+.glass-nav__links:where([data-rk-947bdc]) { display: flex; align-items: center; gap: 0.25rem; flex: 1; }
+.glass-nav__links:where([data-rk-947bdc]) a { padding: 0.4rem 0.8rem; font-size: 0.875rem; font-weight: 500; color: #94a3b8; text-decoration: none; border-radius: 8px; transition: 0.2s; }
+.glass-nav__links:where([data-rk-947bdc]) a:hover { color: #e2e8f0; background: rgba(255, 255, 255, 0.06); }

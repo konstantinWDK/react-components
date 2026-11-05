@@ -1,0 +1,3 @@
+/* SpotlightIndicator — ported from astro-component-kit (overlays/SpotlightIndicator.astro) */
+
+.spot-mask:where([data-rk-48346e]) { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 500; clip-path: circle(60px at 50% 50%); pointer-events: none; }

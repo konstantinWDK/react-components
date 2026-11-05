@@ -1,0 +1,8 @@
+/* FileTreeView — ported from astro-component-kit (data/FileTreeView.astro) */
+
+.tree:where([data-rk-7f8c09]) { font-family: monospace; font-size: 0.85rem; color: #94a3b8; line-height: 1.8; }
+.indent:where([data-rk-7f8c09]) { padding-left: 1.25rem; border-left: 1px solid rgba(255,255,255,0.1); }
+.folder:where([data-rk-7f8c09]) { color: #fff; font-weight: 700; cursor: pointer; }
+.folder.active:where([data-rk-7f8c09]) { color: #818cf8; }
+.file:where([data-rk-7f8c09]) { cursor: pointer; padding-left: 4px; }
+.file:hover:where([data-rk-7f8c09]) { color: #fff; }

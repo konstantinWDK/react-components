@@ -1,0 +1,32 @@
+/* EcommerceProductCard — ported from astro-component-kit (cards/EcommerceProductCard.astro) */
+
+.prod-card:where([data-rk-0a44ca]) { 
+  background: var(--c-bg-elev, #0f172a); 
+  border-radius: var(--r-lg, 16px); 
+  border: 1px solid var(--c-border, rgba(255,255,255,0.1)); 
+  overflow: hidden; 
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease; 
+}
+.prod-card:hover:where([data-rk-0a44ca]) { 
+  border-color: var(--c-primary, #6366f1); 
+  transform: translateY(-3px); 
+}
+.prod-card__image:where([data-rk-0a44ca]) { 
+  height: 180px; 
+  background-color: var(--c-bg, #1e293b); 
+}
+.prod-card__info:where([data-rk-0a44ca]) { padding: var(--sp-5, 1.25rem); }
+.prod-card__meta:where([data-rk-0a44ca]) { 
+  display: flex; justify-content: space-between; 
+  font-size: 0.75rem; color: var(--c-primary-light, #818cf8); 
+  font-weight: 700; margin-bottom: 0.5rem; 
+}
+.prod-card__title:where([data-rk-0a44ca]) { color: var(--c-text-1, #fff); margin: 0; font-size: 1.1rem; }
+.prod-card__bot:where([data-rk-0a44ca]) { display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; }
+.prod-card__price:where([data-rk-0a44ca]) { font-weight: 800; color: var(--c-text-1, #fff); font-size: 1.25rem; }
+.prod-card__cta:where([data-rk-0a44ca]) { 
+  background: var(--c-primary, #6366f1); border: none; color: #fff; 
+  padding: 0.5rem 1.2rem; border-radius: var(--r-md, 8px); 
+  font-weight: 600; cursor: pointer; transition: 0.2s;
+}
+.prod-card__cta:hover:where([data-rk-0a44ca]) { filter: brightness(1.1); }

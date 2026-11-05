@@ -1,0 +1,7 @@
+/* ContextMenuOverlay — ported from astro-component-kit (overlays/ContextMenuOverlay.astro) */
+
+.ctx-menu:where([data-rk-5a94ea]) { width: 200px; background: #111; border: 1px solid #333; border-radius: 10px; padding: 4px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); position: fixed; top: 100px; left: 100px; z-index: 5000; }
+.ctx-item:where([data-rk-5a94ea]) { padding: 8px 12px; font-size: 0.85rem; color: #e2e8f0; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+.ctx-item:hover:where([data-rk-5a94ea]) { background: #6366f1; color: #fff; }
+.danger:hover:where([data-rk-5a94ea]) { background: #ef4444 !important; }
+hr:where([data-rk-5a94ea]) { border: none; border-top: 1px solid #222; margin: 4px 0; }

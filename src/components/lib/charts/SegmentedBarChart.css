@@ -1,0 +1,37 @@
+/* SegmentedBarChart — ported from astro-component-kit (charts/SegmentedBarChart.astro) */
+
+.sb__bar:where([data-rk-740040]) {
+  display: flex;
+  gap: 2px;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sb__seg:where([data-rk-740040]) {
+  flex-basis: 0;
+  min-width: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 0.6rem;
+  transition: filter 0.2s ease;
+}
+.sb__seg:hover:where([data-rk-740040]) { filter: brightness(1.15); }
+.sb__seg:focus-visible:where([data-rk-740040]) { outline: 2px solid var(--c-text-1, #fff); outline-offset: -2px; }
+.sb__pct:where([data-rk-740040]) {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+.sb__list:where([data-rk-740040]) {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.6rem 1.25rem;
+}
+.sb__list:where([data-rk-740040]) li:where([data-rk-740040]) { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; }
+.sb__dot:where([data-rk-740040]) { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+.sb__name:where([data-rk-740040]) { color: var(--c-text-2, #a3a3a3); }
+.sb__val:where([data-rk-740040]) { margin-left: auto; color: var(--c-text-1, #fff); font-weight: 600; font-variant-numeric: tabular-nums; }

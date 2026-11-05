@@ -1,0 +1,5 @@
+/* AnchorSideNav — ported from astro-component-kit (navigation/AnchorSideNav.astro) */
+
+.anchor-nav:where([data-rk-f60bfc]) { list-style: none; padding: 0.5rem; border-left: 1px solid rgba(255, 255, 255, 0.1); position: sticky; top: 100px; }
+.anchor-nav:where([data-rk-f60bfc]) a:where([data-rk-f60bfc]) { display: block; padding: 0.4rem 1rem; color: #64748b; text-decoration: none; font-size: 0.85rem; border-left: 2px solid transparent; margin-left: -1.5px; }
+.anchor-nav:where([data-rk-f60bfc]) a.active:where([data-rk-f60bfc]) { color: #818cf8; border-left-color: #6366f1; }

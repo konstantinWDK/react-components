@@ -1,0 +1,30 @@
+/* MusicPlayerMini — ported from astro-component-kit (cards/MusicPlayerMini.astro) */
+
+.music-mini:where([data-rk-ff2e10]) { 
+  display: flex; align-items: center; gap: var(--sp-4, 1rem); 
+  background: var(--c-bg-elev, #111); 
+  padding: var(--sp-3, 0.75rem); 
+  border-radius: var(--r-md, 14px); border: 1px solid var(--c-border, #333); 
+  width: 100%; max-width: 320px; 
+}
+.music-mini__art:where([data-rk-ff2e10]) { 
+  width: 50px; height: 50px; 
+  background-color: var(--c-primary-light, #818cf8); 
+  border-radius: var(--r-sm, 8px); flex-shrink: 0; 
+}
+.music-mini__track:where([data-rk-ff2e10]) { flex: 1; }
+.music-mini__title:where([data-rk-ff2e10]) { font-size: 0.85rem; color: var(--c-text-1, #fff); margin: 0; }
+.music-mini__artist:where([data-rk-ff2e10]) { font-size: 0.7rem; color: var(--c-text-2, #64748b); margin: 0; }
+.music-mini__progress:where([data-rk-ff2e10]) { 
+  height: 3px; background: rgba(255,255,255,0.1); 
+  border-radius: 2px; margin-top: 8px; position: relative; overflow: hidden;
+}
+.music-mini__bar:where([data-rk-ff2e10]) { 
+  position: absolute; left: 0; top: 0; height: 100%; 
+  background: var(--c-primary, #6366f1); border-radius: 2px; 
+}
+.music-mini__play:where([data-rk-ff2e10]) { 
+  font-size: 1.2rem; cursor: pointer; color: var(--c-text-1, #fff); 
+  background: none; border: none; padding: 0.25rem; display: grid; place-items: center;
+}
+.music-mini__play:hover:where([data-rk-ff2e10]) { color: var(--c-primary-light, #818cf8); }

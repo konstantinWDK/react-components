@@ -1,0 +1,25 @@
+/* StatCard — ported from astro-component-kit (cards/StatCard.astro) */
+
+.stat-card:where([data-rk-913005]) { 
+  display: flex; align-items: center; gap: var(--sp-5, 1.25rem); 
+  padding: var(--sp-6, 1.5rem); 
+  background: var(--c-bg-elev, rgba(99,102,241,0.06)); 
+  border: 1px solid var(--c-border, rgba(99,102,241,0.2)); 
+  border-radius: var(--r-lg, 16px); 
+}
+.stat-card__icon:where([data-rk-913005]) { 
+  font-size: 1.5rem; 
+  background: rgba(99,102,241,0.1); 
+  width: 50px; height: 50px; 
+  display: grid; place-items: center; 
+  border-radius: var(--r-md, 12px); 
+}
+.stat-card__label:where([data-rk-913005]) { 
+  display: block; font-size: 0.8rem; 
+  color: var(--c-text-2, #94a3b8); 
+  font-weight: 600; text-transform: uppercase; 
+}
+.stat-card__value:where([data-rk-913005]) { 
+  display: block; font-size: 1.4rem; 
+  font-weight: 800; color: var(--c-text-1, #fff); 
+}

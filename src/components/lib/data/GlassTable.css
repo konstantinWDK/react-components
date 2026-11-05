@@ -1,0 +1,11 @@
+/* GlassTable — ported from astro-component-kit (data/GlassTable.astro) */
+
+.table-wrap:where([data-rk-8d3010]) { width: 100%; overflow-x: auto; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; backdrop-filter: blur(10px); }
+table:where([data-rk-8d3010]) { width: 100%; border-collapse: collapse; text-align: left; }
+th:where([data-rk-8d3010]) { padding: 1rem 1.5rem; background: rgba(255,255,255,0.03); color: #818cf8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px solid rgba(255,255,255,0.06); }
+td:where([data-rk-8d3010]) { padding: 1rem 1.5rem; color: #e2e8f0; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+tr:hover:where([data-rk-8d3010]) td:where([data-rk-8d3010]) { background: rgba(255,255,255,0.02); }
+.st:where([data-rk-8d3010]) { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; }
+.st-active:where([data-rk-8d3010]) { background: rgba(16,185,129,0.1); color: #34d399; }
+.st-away:where([data-rk-8d3010]) { background: rgba(245,158,11,0.1); color: #fbbf24; }
+.st-offline:where([data-rk-8d3010]) { background: rgba(100,116,139,0.1); color: #94a3b8; }

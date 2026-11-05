@@ -1,0 +1,3 @@
+/* ScrollProgressTop — ported from astro-component-kit (navigation/ScrollProgressTop.astro) */
+
+.scroll-ind:where([data-rk-75c240]) { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: #6366f1; z-index: 1000; box-shadow: 0 0 10px #6366f1; }

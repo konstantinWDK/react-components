@@ -1,0 +1,75 @@
+/* QuickJumpDock — ported from astro-component-kit (navigation/QuickJumpDock.astro) */
+
+.quick-dock:where([data-rk-6aad51]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(14, 14, 18, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--r-full, 9999px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.quick-dock__item:where([data-rk-6aad51]) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--c-text-2, #a3a3a3);
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, color 0.2s ease;
+}
+
+.quick-dock__item:hover:where([data-rk-6aad51]) {
+  transform: translateY(-8px) scale(1.15);
+  background: rgba(184, 134, 11, 0.2);
+  border-color: rgba(184, 134, 11, 0.4);
+  color: var(--c-primary-light, #d4a017);
+}
+
+.quick-dock__icon:where([data-rk-6aad51]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-dock__tooltip:where([data-rk-6aad51]) {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  padding: 4px 10px;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.quick-dock__tooltip:where([data-rk-6aad51])::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+.quick-dock__item:hover:where([data-rk-6aad51]) .quick-dock__tooltip:where([data-rk-6aad51]) {
+  opacity: 1;
+  transform: translateY(0);
+}

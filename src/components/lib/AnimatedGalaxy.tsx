@@ -1,0 +1,195 @@
+'use client';
+
+import type { CSSProperties } from 'react';
+
+/** AnimatedGalaxy — ported from astro-component-kit. */
+export interface AnimatedGalaxyProps {
+  className?: string;
+  style?: CSSProperties;
+}
+
+export function AnimatedGalaxy({ className = '', style }: AnimatedGalaxyProps) {
+  return (
+    <>
+      <svg className={`animated-galaxy-svg ${className}`.trim()} style={style} viewBox="0 0 800 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          {/* Very subtle core glow */}
+          <radialGradient id="galaxyCoreGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style={{ stopColor: "#ffffff", stopOpacity: "0.5" }} />
+            <stop offset="20%" style={{ stopColor: "#fef3c7", stopOpacity: "0.2" }} />
+            <stop offset="50%" style={{ stopColor: "#fbbf24", stopOpacity: "0.05" }} />
+            <stop offset="100%" style={{ stopColor: "#000000", stopOpacity: "0" }} />
+          </radialGradient>
+      
+          {/* Particle gradient - almost invisible */}
+          <radialGradient id="galaxyParticleGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style={{ stopColor: "#ffffff", stopOpacity: "0.9" }} />
+            <stop offset="60%" style={{ stopColor: "#fef3c7", stopOpacity: "0.4" }} />
+            <stop offset="100%" style={{ stopColor: "#000000", stopOpacity: "0" }} />
+          </radialGradient>
+      
+          {/* Spiral arm gradient - very subtle */}
+          <radialGradient id="galaxyArmGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" style={{ stopColor: "#fef3c7", stopOpacity: "0.5" }} />
+            <stop offset="70%" style={{ stopColor: "#fbbf24", stopOpacity: "0.15" }} />
+            <stop offset="100%" style={{ stopColor: "#000000", stopOpacity: "0" }} />
+          </radialGradient>
+      
+          {/* Minimal soft glow */}
+          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+      
+          <filter id="galaxyGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+      
+          <filter id="heavyBlur">
+            <feGaussianBlur stdDeviation="12" />
+          </filter>
+        </defs>
+      
+        {/* Background glow */}
+        <ellipse cx="400" cy="250" rx="300" ry="180" fill="url(#galaxyCoreGlow)" opacity="0.15" filter="url(#heavyBlur)" />
+      
+        {/* Galaxy spiral arms */}
+        <g filter="url(#galaxyGlow)">
+          <animateTransform attributeName="transform" type="rotate" from="0 400 250" to="360 400 250" dur="80s" repeatCount="indefinite" />
+      
+          {/* Main spiral arms */}
+          <path d="M400,250 Q470,220 540,200 Q610,180 670,190 Q730,200 760,220" fill="none" stroke="url(#galaxyArmGrad)" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
+          <path d="M400,250 Q330,280 260,300 Q190,320 130,310 Q70,300 40,280" fill="none" stroke="url(#galaxyArmGrad)" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
+      
+          {/* Secondary spiral arms */}
+          <path d="M400,250 Q450,230 510,210 Q570,195 620,200 Q670,205 700,225" fill="none" stroke="url(#galaxyArmGrad)" strokeWidth="1.2" strokeLinecap="round" opacity="0.35" />
+          <path d="M400,250 Q350,270 290,290 Q230,305 180,300 Q130,295 100,275" fill="none" stroke="url(#galaxyArmGrad)" strokeWidth="1.2" strokeLinecap="round" opacity="0.35" />
+      
+          {/* Particles on spiral arms */}
+          <circle cx="470" cy="225" r="1.5" fill="url(#galaxyParticleGrad)" opacity="0.8">
+            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="560" cy="205" r="1.2" fill="url(#galaxyParticleGrad)" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;0.25;0.7" dur="3.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="650" cy="210" r="1" fill="url(#galaxyParticleGrad)" opacity="0.65">
+            <animate attributeName="opacity" values="0.65;0.2;0.65" dur="3.2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="310" cy="285" r="1.3" fill="url(#galaxyParticleGrad)" opacity="0.75">
+            <animate attributeName="opacity" values="0.75;0.28;0.75" dur="2.8s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="210" cy="305" r="0.9" fill="url(#galaxyParticleGrad)" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;0.22;0.6" dur="3.8s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="110" cy="295" r="0.8" fill="url(#galaxyParticleGrad)" opacity="0.55">
+            <animate attributeName="opacity" values="0.55;0.18;0.55" dur="4s" repeatCount="indefinite" />
+          </circle>
+      
+          {/* More tiny particles */}
+          <circle cx="510" cy="215" r="0.8" fill="url(#galaxyParticleGrad)" opacity="0.55">
+            <animate attributeName="opacity" values="0.55;0.2;0.55" dur="2.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="600" cy="210" r="0.7" fill="url(#galaxyParticleGrad)" opacity="0.5">
+            <animate attributeName="opacity" values="0.5;0.18;0.5" dur="3s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="350" cy="270" r="0.7" fill="url(#galaxyParticleGrad)" opacity="0.48">
+            <animate attributeName="opacity" values="0.48;0.16;0.48" dur="2.6s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="250" cy="295" r="0.6" fill="url(#galaxyParticleGrad)" opacity="0.45">
+            <animate attributeName="opacity" values="0.45;0.15;0.45" dur="3.2s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      
+        {/* Counter-rotating inner group */}
+        <g filter="url(#galaxyGlow)">
+          <animateTransform attributeName="transform" type="rotate" from="360 400 250" to="0 400 250" dur="50s" repeatCount="indefinite" />
+      
+          {/* Inner ellipses */}
+          <ellipse cx="400" cy="250" rx="150" ry="40" fill="none" stroke="url(#galaxyParticleGrad)" strokeWidth="1" opacity="0.35" />
+          <ellipse cx="400" cy="250" rx="100" ry="25" fill="none" stroke="url(#galaxyParticleGrad)" strokeWidth="0.8" opacity="0.4" />
+          <ellipse cx="400" cy="250" rx="70" ry="18" fill="none" stroke="url(#galaxyParticleGrad)" strokeWidth="0.6" opacity="0.45" />
+      
+          {/* Inner particles */}
+          <circle cx="480" cy="228" r="1" fill="url(#galaxyParticleGrad)" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;0.25;0.7" dur="2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="310" cy="272" r="0.8" fill="url(#galaxyParticleGrad)" opacity="0.65">
+            <animate attributeName="opacity" values="0.65;0.22;0.65" dur="2.3s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="440" cy="240" r="0.7" fill="url(#galaxyParticleGrad)" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.8s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="350" cy="260" r="0.6" fill="url(#galaxyParticleGrad)" opacity="0.55">
+            <animate attributeName="opacity" values="0.55;0.18;0.55" dur="2.2s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      
+        {/* Orbiting particles - outer ring */}
+        <g filter="url(#galaxyGlow)">
+          <circle r="2" fill="url(#galaxyParticleGrad)">
+            <animateMotion dur="25s" repeatCount="indefinite" path="M400,150 A300,100 0 1 1 399.9,150" />
+            <animate attributeName="opacity" values="0.7;0.25;0.7" dur="2s" repeatCount="indefinite" />
+          </circle>
+          <circle r="1.5" fill="url(#galaxyParticleGrad)">
+            <animateMotion dur="25s" repeatCount="indefinite" path="M400,150 A300,100 0 1 1 399.9,150" />
+            <animate attributeName="opacity" values="0.6;0.22;0.6" dur="2.5s" repeatCount="indefinite" />
+          </circle>
+          <circle r="1.2" fill="url(#galaxyParticleGrad)">
+            <animateMotion dur="25s" repeatCount="indefinite" path="M400,150 A300,100 0 1 1 399.9,150" />
+            <animate attributeName="opacity" values="0.55;0.2;0.55" dur="2.8s" repeatCount="indefinite" />
+          </circle>
+          <circle r="1" fill="url(#galaxyParticleGrad)">
+            <animateMotion dur="25s" repeatCount="indefinite" path="M400,150 A300,100 0 1 1 399.9,150" />
+            <animate attributeName="opacity" values="0.5;0.18;0.5" dur="3s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      
+        {/* Orbiting particles - inner ring */}
+        <g filter="url(#galaxyGlow)">
+          <circle r="1.5" fill="url(#galaxyParticleGrad)">
+            <animateMotion dur="15s" repeatCount="indefinite" path="M400,185 A200,50 0 1 1 399.9,185" />
+            <animate attributeName="opacity" values="0.75;0.3;0.75" dur="1.5s" repeatCount="indefinite" />
+          </circle>
+          <circle r="1.2" fill="url(#galaxyParticleGrad)">
+            <animateMotion dur="15s" repeatCount="indefinite" path="M400,185 A200,50 0 1 1 399.9,185" />
+            <animate attributeName="opacity" values="0.65;0.25;0.65" dur="1.8s" repeatCount="indefinite" />
+          </circle>
+          <circle r="1" fill="url(#galaxyParticleGrad)">
+            <animateMotion dur="15s" repeatCount="indefinite" path="M400,185 A200,50 0 1 1 399.9,185" />
+            <animate attributeName="opacity" values="0.55;0.2;0.55" dur="2s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      
+        {/* Center core glow */}
+        <g filter="url(#heavyBlur)">
+          <ellipse cx="400" cy="250" rx="50" ry="15" fill="url(#galaxyCoreGlow)" opacity="0.7">
+            <animate attributeName="rx" values="50;58;50" dur="4s" repeatCount="indefinite" />
+          </ellipse>
+          <circle cx="400" cy="250" r="8" fill="#fef3c7" opacity="0.9">
+            <animate attributeName="r" values="8;11;8" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.9;0.6;0.9" dur="2s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      
+        {/* Background star field - ASCII style stars */}
+        <g className="galaxy-stars-bg" fontFamily="monospace" fontSize="8" fontWeight="bold">
+          <g className="star" data-parallax-speed="0.15"><text x="150" y="80" fill="#ffffff" opacity="0.8">+</text></g>
+          <g className="star" data-parallax-speed="0.4"><text x="620" y="100" fill="#fef3c7" opacity="0.75">✦</text></g>
+          <g className="star" data-parallax-speed="0.25"><text x="500" y="70" fill="#ffffff" opacity="0.7">·</text></g>
+          <g className="star" data-parallax-speed="0.55"><text x="200" y="380" fill="#fef3c7" opacity="0.65">+</text></g>
+          <g className="star" data-parallax-speed="0.35"><text x="680" y="400" fill="#ffffff" opacity="0.7">✦</text></g>
+          <g className="star" data-parallax-speed="0.7"><text x="100" y="300" fill="#fef3c7" opacity="0.6">·</text></g>
+        </g>
+      </svg>
+    </>
+  );
+}
+
+export default AnimatedGalaxy;

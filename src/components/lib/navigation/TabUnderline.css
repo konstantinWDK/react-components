@@ -1,0 +1,6 @@
+/* TabUnderline — ported from astro-component-kit (navigation/TabUnderline.astro) */
+
+.u-tabs:where([data-rk-f35f3a]) { display: flex; gap: 2rem; border-bottom: 2px solid rgba(255,255,255,0.05); position: relative; }
+.u-tabs:where([data-rk-f35f3a]) a:where([data-rk-f35f3a]) { padding: 1rem 0; color: #64748b; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+.u-tabs:where([data-rk-f35f3a]) a.active:where([data-rk-f35f3a]) { color: #fff; }
+.indicator:where([data-rk-f35f3a]) { position: absolute; bottom: -2px; left: 0; width: 50px; height: 2px; background: #6366f1; transition: 0.3s; }

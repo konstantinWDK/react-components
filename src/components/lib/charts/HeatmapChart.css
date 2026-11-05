@@ -1,0 +1,37 @@
+/* HeatmapChart — ported from astro-component-kit (charts/HeatmapChart.astro) */
+
+.hm:where([data-rk-9ca6f8]) { overflow-x: auto; }
+.hm__grid:where([data-rk-9ca6f8]) { display: grid; gap: 3px; min-width: calc(5rem + var(--hm-cols) * 2.4rem); }
+.hm__row:where([data-rk-9ca6f8]) {
+  display: grid;
+  grid-template-columns: 5rem repeat(var(--hm-cols), minmax(2.2rem, 1fr));
+  gap: 3px;
+}
+.hm__col:where([data-rk-9ca6f8]) { text-align: center; font-size: 0.6875rem; color: var(--c-text-3, #8a8a8a); padding-bottom: 0.2rem; }
+.hm__rowlabel:where([data-rk-9ca6f8]) {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--c-text-2, #a3a3a3);
+  font-family: var(--font-mono, monospace);
+}
+.hm__cell:where([data-rk-9ca6f8]) {
+  display: grid;
+  place-items: center;
+  min-height: 34px;
+  border-radius: 4px;
+  transition: transform 0.15s ease;
+}
+.hm__cell:hover:where([data-rk-9ca6f8]) { transform: scale(1.06); }
+.hm__cell:focus-visible:where([data-rk-9ca6f8]) { outline: 2px solid var(--c-text-1, #fff); outline-offset: 1px; }
+.hm__v:where([data-rk-9ca6f8]) { font-size: 0.6875rem; color: rgb(var(--ink-rgb, 255 255 255) / 0.7); font-variant-numeric: tabular-nums; }
+.hm__v--strong:where([data-rk-9ca6f8]) { color: #fff; font-weight: 650; }
+.hm__scale:where([data-rk-9ca6f8]) {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+  font-size: 0.6875rem;
+  color: var(--c-text-3, #8a8a8a);
+}
+.hm__ramp:where([data-rk-9ca6f8]) { flex: 0 1 160px; height: 8px; border-radius: 4px; }

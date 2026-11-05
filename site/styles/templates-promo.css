@@ -155,33 +155,3 @@
     .tpl-promo__pulse, .tpl-promo__chip { animation: none; }
     .tpl-promo__win { transition: none; }
   }
-
-/* React port: placeholder windows until the templates are ported (no cross-origin iframes) */
-.tpl-promo__placeholder {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  width: 100%;
-  aspect-ratio: 1280 / 1000;
-  background:
-    radial-gradient(ellipse 70% 60% at 50% 35%, rgba(234, 179, 8, 0.12), transparent 70%),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 22px),
-    var(--c-bg-1);
-}
-.tpl-promo__placeholder-bar { position: absolute; top: 10px; left: 12px; display: flex; gap: 5px; }
-.tpl-promo__placeholder-bar i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, 0.18); }
-.tpl-promo__placeholder-name { font-weight: 800; color: var(--c-text-1); font-size: 1rem; letter-spacing: -0.01em; }
-.tpl-promo__placeholder-badge {
-  padding: 0.15rem 0.6rem;
-  border-radius: 9999px;
-  background: rgba(234, 179, 8, 0.12);
-  border: 1px solid rgba(234, 179, 8, 0.3);
-  color: #facc15;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}

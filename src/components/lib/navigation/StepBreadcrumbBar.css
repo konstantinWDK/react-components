@@ -1,0 +1,102 @@
+/* StepBreadcrumbBar — ported from astro-component-kit (navigation/StepBreadcrumbBar.astro) */
+
+.step-nav:where([data-rk-71122f]) {
+  width: 100%;
+  max-width: 680px;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.step-nav__list:where([data-rk-71122f]) {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.step-nav__item:where([data-rk-71122f]) {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step-nav__item:last-child:where([data-rk-71122f]) {
+  flex: 0 0 auto;
+}
+
+.step-nav__link:where([data-rk-71122f]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--c-text-3, #737373);
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.step-nav__link:hover:where([data-rk-71122f]) {
+  color: var(--c-text-1, #ffffff);
+}
+
+.step-nav__circle:where([data-rk-71122f]) {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--c-text-2, #a3a3a3);
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+/* Status modifiers */
+.step-nav__item--complete:where([data-rk-71122f]) .step-nav__circle:where([data-rk-71122f]) {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.step-nav__item--complete:where([data-rk-71122f]) .step-nav__label:where([data-rk-71122f]) {
+  color: var(--c-text-1, #ffffff);
+}
+
+.step-nav__item--active:where([data-rk-71122f]) .step-nav__circle:where([data-rk-71122f]) {
+  background: linear-gradient(135deg, #d4a017, #b8860b);
+  border-color: #d4a017;
+  color: #050505;
+  box-shadow: 0 0 12px rgba(212, 160, 23, 0.4);
+}
+
+.step-nav__item--active:where([data-rk-71122f]) .step-nav__label:where([data-rk-71122f]) {
+  color: var(--c-primary-light, #d4a017);
+  font-weight: 700;
+}
+
+.step-nav__line:where([data-rk-71122f]) {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0 12px;
+}
+
+.step-nav__item--complete:where([data-rk-71122f]) .step-nav__line:where([data-rk-71122f]) {
+  background: #10b981;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .step-nav__label:where([data-rk-71122f]) {
+    display: none;
+  }
+  .step-nav__line:where([data-rk-71122f]) {
+    margin: 0 6px;
+  }
+}

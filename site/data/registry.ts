@@ -27,6 +27,6 @@ export const allSections = allComponents.filter((c) => c.category === 'sections'
 export const counts = {
   components: docsComponents.length,
   sections: sectionComponents.length,
-  templates: 0,
+  templates: templates.length,
   totalAstro: allComponents.length,
 };

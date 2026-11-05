@@ -44,11 +44,7 @@ export function getSidebarData(lang: Locale): SidebarData {
     }))
     .filter((g) => g.items.length > 0);
 
-  // Templates appear once they are ported (none yet).
-  const ported = new Set<string>();
-  const tpl = templates
-    .filter((x) => ported.has(x.slug))
-    .map((x) => ({ slug: x.slug, name: (x.name as unknown as Record<string, string>)[lang], pages: x.pages.length }));
+  const tpl = templates.map((x) => ({ slug: x.slug, name: (x.name as unknown as Record<string, string>)[lang], pages: x.pages.length }));
 
   const keys = ['sidebar.navLabel', 'sidebar.getStarted', 'sidebar.search', 'sidebar.results', 'sidebar.noResultsFor', 'sidebar.clear', 'sidebar.viewAll', 'sidebar.new', 'sidebar.pages', 'sidebar.explore', 'sidebar.exploreLabel', 'nav.install', 'nav.templates', 'nav.components', 'nav.sections'] as const;
   const labels = Object.fromEntries(keys.map((k) => [k, t(k)]));

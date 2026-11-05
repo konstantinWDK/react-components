@@ -1,0 +1,50 @@
+/* CareersOpenings — ported from astro-component-kit (sections/CareersOpenings.astro) */
+
+.cq-careers-openings-cq:where([data-rk-6d35fa]) { container-type: inline-size; }
+.co:where([data-rk-6d35fa]) {
+  --co-py: 5.5rem;
+  padding: var(--co-py) var(--sp-6, 1.5rem);
+  background: var(--c-bg, #050505);
+}
+.co--sm:where([data-rk-6d35fa]) { --co-py: 3.5rem; }
+.co--lg:where([data-rk-6d35fa]) { --co-py: 7.5rem; }
+.co__inner:where([data-rk-6d35fa]) { max-width: 960px; margin: 0 auto; }
+.co__head:where([data-rk-6d35fa]) { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.co__title:where([data-rk-6d35fa]) { margin: 0 0 0.5rem; font-size: clamp(1.9rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--c-text-1, #fff); }
+.co__subtitle:where([data-rk-6d35fa]) { margin: 0; font-size: 1.0625rem; color: var(--c-text-2, #a3a3a3); }
+.co__count:where([data-rk-6d35fa]) { padding: 0.35rem 0.85rem; border-radius: 999px; background: rgba(52, 195, 143, 0.12); color: #7ee2b8; font-size: 0.8125rem; font-weight: 650; }
+.co__perks:where([data-rk-6d35fa]) { list-style: none; margin: 0 0 2.5rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.co__perks:where([data-rk-6d35fa]) li:where([data-rk-6d35fa]) { padding: 0.4rem 0.85rem; border-radius: 999px; border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.1); font-size: 0.8125rem; color: var(--c-text-2, #a3a3a3); }
+.co__dept:where([data-rk-6d35fa]) + .co__dept:where([data-rk-6d35fa]) { margin-top: 2rem; }
+.co__dept-title:where([data-rk-6d35fa]) { margin: 0 0 0.75rem; font-size: 0.8125rem; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-primary-light, #d4a017); }
+.co__jobs:where([data-rk-6d35fa]) { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.co--list:where([data-rk-6d35fa]) .co__jobs:where([data-rk-6d35fa]) { gap: 0; border-top: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.07); }
+.co__job:where([data-rk-6d35fa]) {
+  display: grid;
+  grid-template-columns: 1fr auto 24px;
+  align-items: center;
+  gap: 1rem;
+  min-height: 64px;
+  padding: 0.85rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.co--list:where([data-rk-6d35fa]) .co__job:where([data-rk-6d35fa]) { border-bottom: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.07); }
+.co--cards:where([data-rk-6d35fa]) .co__job:where([data-rk-6d35fa]) { border-radius: var(--r-md, 14px); background: rgb(var(--ink-rgb, 255 255 255) / 0.025); border: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.07)); }
+.co--minimal:where([data-rk-6d35fa]) .co__job:where([data-rk-6d35fa]) { padding-inline: 0; }
+.co__job:hover:where([data-rk-6d35fa]) { background: rgb(var(--ink-rgb, 255 255 255) / 0.035); }
+.co__job:focus-visible:where([data-rk-6d35fa]) { outline: 2px solid var(--c-primary-light, #d4a017); outline-offset: 2px; border-radius: 10px; }
+.co__job-title:where([data-rk-6d35fa]) { font-size: 1.0625rem; font-weight: 600; color: var(--c-text-1, #fff); }
+.co__meta:where([data-rk-6d35fa]) { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: flex-end; }
+.co__tag:where([data-rk-6d35fa]) { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.6rem; border-radius: 999px; background: rgb(var(--ink-rgb, 255 255 255) / 0.05); font-size: 0.75rem; color: var(--c-text-2, #a3a3a3); }
+.co__tag--remote:where([data-rk-6d35fa]) { background: rgba(57, 135, 229, 0.14); color: #a9cdf7; }
+.co__arrow:where([data-rk-6d35fa]) { color: var(--c-text-3, #8a8a8a); transition: transform 0.2s ease, color 0.2s ease; }
+.co__job:hover:where([data-rk-6d35fa]) .co__arrow:where([data-rk-6d35fa]) { transform: translate(2px, -2px); color: var(--c-text-1, #fff); }
+.co__cta:where([data-rk-6d35fa]) { margin: 2.5rem 0 0; text-align: center; color: var(--c-text-2, #a3a3a3); }
+.co__cta:where([data-rk-6d35fa]) a:where([data-rk-6d35fa]) { color: var(--c-primary-light, #d4a017); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+@container (max-width: 640px) {
+  .co__job:where([data-rk-6d35fa]) { grid-template-columns: 1fr 24px; }
+  .co__meta:where([data-rk-6d35fa]) { grid-column: 1; grid-row: 2; justify-content: flex-start; }
+  .co__arrow:where([data-rk-6d35fa]) { grid-row: 1 / span 2; grid-column: 2; }
+}

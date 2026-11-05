@@ -1,0 +1,59 @@
+/* PromoBar — ported from astro-component-kit (ecommerce/PromoBar.astro) */
+
+.promo-bar:where([data-rk-ca2577]) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 48px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.promo-bar[hidden]:where([data-rk-ca2577]) { display: none; }
+.promo-bar--md:where([data-rk-ca2577]) { min-height: 44px; font-size: 0.875rem; }
+.promo-bar--gold:where([data-rk-ca2577]) { background: linear-gradient(90deg, #b8860b, #d4a017, #b8860b); color: #140f00; }
+.promo-bar--glass:where([data-rk-ca2577]) { background: rgb(var(--ink-rgb, 255 255 255) / 0.04); border-bottom: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.05)); color: var(--c-text-1, #fff); }
+.promo-bar--dark:where([data-rk-ca2577]) { background: var(--c-bg-2, #111); color: var(--c-text-1, #fff); }
+
+.promo-bar__track:where([data-rk-ca2577]) {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+a.promo-bar__track:hover:where([data-rk-ca2577]) { text-decoration: underline; color: inherit; }
+.promo-bar__msg:where([data-rk-ca2577]) {
+  grid-area: 1 / 1;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.promo-bar__msg.is-active:where([data-rk-ca2577]) { opacity: 1; transform: none; pointer-events: auto; }
+
+.promo-bar__close:where([data-rk-ca2577]) {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: var(--r-full, 9999px);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.75;
+}
+.promo-bar__close:hover:where([data-rk-ca2577]) { opacity: 1; background: rgba(0, 0, 0, 0.1); }
+.promo-bar__close:focus-visible:where([data-rk-ca2577]) { outline: 2px solid currentColor; outline-offset: -2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-bar__msg:where([data-rk-ca2577]) { transition: none; }
+}

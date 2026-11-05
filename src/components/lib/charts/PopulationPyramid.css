@@ -1,0 +1,39 @@
+/* PopulationPyramid — ported from astro-component-kit (charts/PopulationPyramid.astro) */
+
+.pp:where([data-rk-b22a54]) { display: grid; gap: 4px; }
+.pp__row:where([data-rk-b22a54]) {
+  display: grid;
+  grid-template-columns: 1fr 4rem 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pp__side:where([data-rk-b22a54]) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 24px;
+}
+.pp__side--l:where([data-rk-b22a54]) { justify-content: flex-end; }
+.pp__bar:where([data-rk-b22a54]) {
+  height: 100%;
+  min-width: 2px;
+  max-width: calc(100% - 3rem);
+  transition: opacity 0.2s ease;
+}
+.pp__side--l:where([data-rk-b22a54]) .pp__bar:where([data-rk-b22a54]) { border-radius: 4px 0 0 4px; }
+.pp__side--r:where([data-rk-b22a54]) .pp__bar:where([data-rk-b22a54]) { border-radius: 0 4px 4px 0; }
+.pp__bar:hover:where([data-rk-b22a54]) { opacity: 0.85; }
+.pp__bar:focus-visible:where([data-rk-b22a54]) { outline: 2px solid var(--c-text-1, #fff); outline-offset: 1px; }
+.pp__band:where([data-rk-b22a54]) {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-text-1, #fff);
+}
+.pp__val:where([data-rk-b22a54]) {
+  font-size: 0.75rem;
+  color: var(--c-text-2, #a3a3a3);
+  font-variant-numeric: tabular-nums;
+  min-width: 2.5rem;
+}
+.pp__side--l:where([data-rk-b22a54]) .pp__val:where([data-rk-b22a54]) { text-align: right; }

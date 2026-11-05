@@ -1,0 +1,47 @@
+/* BentoGrid3 — ported from astro-component-kit (layout/BentoGrid3.astro) */
+
+.cq-bento-grid3-cq:where([data-rk-356029]) { container-type: inline-size; }
+.bento:where([data-rk-356029]) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  gap: 1rem;
+  width: 100%;
+}
+.item:where([data-rk-356029]) {
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.03);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item:where([data-rk-356029]) h4:where([data-rk-356029]) {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+}
+.item:where([data-rk-356029]) p:where([data-rk-356029]) {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0;
+}
+.wide:where([data-rk-356029]) {
+  grid-column: span 2;
+}
+.tall:where([data-rk-356029]) {
+  grid-row: span 2;
+}
+@container (max-width: 768px) {
+  .bento:where([data-rk-356029]) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .wide:where([data-rk-356029]) {
+    grid-column: span 1;
+  }
+  .tall:where([data-rk-356029]) {
+    grid-row: span 1;
+  }
+}

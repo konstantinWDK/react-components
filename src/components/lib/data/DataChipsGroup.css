@@ -1,0 +1,7 @@
+/* DataChipsGroup — ported from astro-component-kit (data/DataChipsGroup.astro) */
+
+.chips-row:where([data-rk-9c64b0]) { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+.chips-row:where([data-rk-9c64b0])::-webkit-scrollbar { display: none; }
+.chips-row:where([data-rk-9c64b0]) span:where([data-rk-9c64b0]) { padding: 6px 16px; background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.05); color: #94a3b8; font-size: 0.8rem; border-radius: 100px; cursor: pointer; white-space: nowrap; transition: 0.2s; font-weight: 600; }
+.chips-row:where([data-rk-9c64b0]) span:hover:where([data-rk-9c64b0]) { color: #fff; border-color: rgba(255, 255, 255, 0.2); }
+.chip-active:where([data-rk-9c64b0]) { background: #6366f1 !important; color: #fff !important; border-color: transparent !important; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4); }

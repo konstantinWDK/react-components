@@ -4,6 +4,8 @@ import { siteConfig } from '../config/site';
 import { docsComponents, getComponentBySlug, categories } from '../data/registry';
 import { demoMeta, SPACIOUS_PREVIEW } from '../demos/meta';
 import { DemoRenderer } from '../demos/DemoRenderer';
+import HardcodedPreview from '../demos/HardcodedPreview';
+import { HARDCODED_SLUGS } from '../demos/hardcoded-slugs';
 import { useTranslations, getLocalizedPath } from '../i18n/translations';
 import { getLocalizedCategory, getLocalizedComponent } from '../i18n/catalog';
 import { DocsLayout } from '../layout/DocsLayout';
@@ -68,6 +70,9 @@ export function DocPage({ slug, lang }: { slug: string; lang: Locale }) {
         <section className="doc-section anim-slide-up" id="section-preview">
           <h2 className="doc-section__title visually-hidden">{t('doc.livePreview')}</h2>
           <div className="preview-container">
+            {HARDCODED_SLUGS.has(slug) && !['buttons', 'feedback'].includes(meta.category) ? (
+              <div className="preview-renderer"><HardcodedPreview slug={slug} /></div>
+            ) : (
             <div className="preview-renderer">
               <div
                 className={[
@@ -79,6 +84,7 @@ export function DocPage({ slug, lang }: { slug: string; lang: Locale }) {
                 <DemoRenderer category={meta.category} slug={slug} />
               </div>
             </div>
+            )}
           </div>
         </section>
 

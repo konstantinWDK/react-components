@@ -1,0 +1,26 @@
+/* DiagonalSectionDivider — ported from astro-component-kit (layout/DiagonalSectionDivider.astro) */
+
+.diagonal-divider:where([data-rk-9b90ea]) {
+  position: relative;
+  width: 100%;
+  height: var(--div-height);
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.diagonal-divider--bottom:where([data-rk-9b90ea]) {
+  margin-bottom: calc(-1 * var(--div-height));
+}
+
+.diagonal-divider--top:where([data-rk-9b90ea]) {
+  margin-top: calc(-1 * var(--div-height));
+}
+
+.diagonal-divider__svg:where([data-rk-9b90ea]) {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

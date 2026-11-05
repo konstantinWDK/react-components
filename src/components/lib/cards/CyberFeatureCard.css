@@ -1,0 +1,34 @@
+/* CyberFeatureCard — ported from astro-component-kit (cards/CyberFeatureCard.astro) */
+
+.cyber-card:where([data-rk-3d31cd]) { 
+  background: var(--c-bg-elev, #000); 
+  color: var(--c-text-1, #00e0ff); 
+  border: 1px solid var(--c-primary, #ff003c); 
+  padding: var(--sp-6, 1.5rem); 
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); 
+  position: relative; 
+}
+.cyber-card__glitch-line:where([data-rk-3d31cd]) { 
+  position: absolute; 
+  height: 1px; 
+  width: 100%; 
+  background: var(--c-primary, #ff003c); 
+  top: 10%; left: 0; 
+  opacity: 0.5; 
+  animation: cyber-feature-card-glitch-anim 4s infinite; 
+}
+.cyber-card__title:where([data-rk-3d31cd]) {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: var(--c-text-1);
+}
+.cyber-card__subtitle:where([data-rk-3d31cd]) {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--c-text-2, #ccc);
+}
+
+@keyframes cyber-feature-card-glitch-anim { 
+  0%, 100% { top: 10%; } 
+  50% { top: 90%; } 
+}

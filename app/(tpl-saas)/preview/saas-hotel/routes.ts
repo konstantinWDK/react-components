@@ -1,0 +1,2 @@
+// Preview URLs of the saas-hotel template.
+export const previewRoutes = { landing: '/preview/saas-hotel/', signIn: '/preview/saas-hotel/sign-in/', dashboard: '/preview/saas-hotel/app/', reservations: '/preview/saas-hotel/app/reservations/', rooms: '/preview/saas-hotel/app/rooms/', guests: '/preview/saas-hotel/app/guests/', reports: '/preview/saas-hotel/app/reports/', settings: '/preview/saas-hotel/app/settings/' };

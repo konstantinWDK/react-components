@@ -1,0 +1,32 @@
+/* ShopValuesMarquee — ported from astro-component-kit (sections/ShopValuesMarquee.astro) */
+
+.svm:where([data-rk-6a922c]) { container-type: inline-size; --svm-fs: clamp(3rem, 9vw, 7.5rem); color: var(--c-text-1, #fff); overflow: hidden; }
+.svm--sm:where([data-rk-6a922c]) { --svm-fs: clamp(2rem, 6vw, 4.5rem); }
+.svm--lg:where([data-rk-6a922c]) { --svm-fs: clamp(4rem, 12vw, 10rem); }
+.svm--inverted:where([data-rk-6a922c]) { background: var(--c-text-1, #fff); color: var(--c-bg, #050505); }
+.svm__marquee:where([data-rk-6a922c]) { border-block: 1px solid currentColor; overflow: hidden; }
+.svm__track:where([data-rk-6a922c]) { display: flex; width: max-content; animation: shop-values-marquee-svm-run var(--svm-speed) linear infinite; }
+.svm:hover:where([data-rk-6a922c]) .svm__track:where([data-rk-6a922c]) { animation-play-state: paused; }
+.svm__track:where([data-rk-6a922c]) span:where([data-rk-6a922c]) { display: inline-flex; align-items: center; gap: 0.35em; padding: 0.1em 0 0.15em 0.35em; font-family: var(--font-display, Georgia, 'Times New Roman', serif); font-size: var(--svm-fs); font-style: italic; letter-spacing: -0.04em; line-height: 1.05; white-space: nowrap; }
+.svm__track:where([data-rk-6a922c]) i:where([data-rk-6a922c]) { font-style: normal; font-size: 0.4em; color: var(--shop-accent, var(--c-primary-light, #d4a017)); }
+@keyframes shop-values-marquee-svm-run { to { transform: translateX(-50%); } }
+
+.svm__values:where([data-rk-6a922c]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2.5rem);
+  list-style: none;
+  gap: 0;
+}
+.svm__values:where([data-rk-6a922c]) li:where([data-rk-6a922c]) { padding: 0 var(--sp-6, 1.5rem) var(--sp-4, 1rem); border-left: 1px solid var(--c-border, rgba(255, 255, 255, 0.12)); }
+.svm--inverted:where([data-rk-6a922c]) .svm__values:where([data-rk-6a922c]) li:where([data-rk-6a922c]) { border-left-color: rgb(var(--paper-rgb, 5 5 5) / 0.2); }
+.svm__num:where([data-rk-6a922c]) { font-size: 0.75rem; font-variant-numeric: tabular-nums; color: var(--shop-accent, var(--c-primary-light, #d4a017)); }
+.svm__values:where([data-rk-6a922c]) h3:where([data-rk-6a922c]) { margin: var(--sp-3, 0.75rem) 0 var(--sp-2, 0.5rem); font-family: var(--font-display, Georgia, serif); font-size: 1.5rem; font-weight: 400; letter-spacing: -0.02em; }
+.svm__values:where([data-rk-6a922c]) p:where([data-rk-6a922c]) { margin: 0; max-width: 22rem; font-size: 0.92rem; line-height: 1.65; opacity: 0.75; }
+
+@container (max-width: 640px) {
+  .svm__values:where([data-rk-6a922c]) li:where([data-rk-6a922c]) { padding: var(--sp-4, 1rem) 0; border-left: 0; border-top: 1px solid var(--c-border, rgba(255, 255, 255, 0.12)); }
+}
+@media (prefers-reduced-motion: reduce) { .svm__track:where([data-rk-6a922c]) { animation: none; } }

@@ -1,0 +1,225 @@
+/* StatsMetricShowcase — ported from astro-component-kit (sections/StatsMetricShowcase.astro) */
+
+.cq-stats-metric-showcase-cq:where([data-rk-edcafc]) { container-type: inline-size; }
+.stats-section:where([data-rk-edcafc]) {
+  position: relative;
+  padding: var(--sp-20, 5rem) var(--sp-6, 1.5rem);
+  background: var(--c-bg-primary, #030712);
+  overflow: hidden;
+}
+
+.stats-bg:where([data-rk-edcafc]) {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stats-glow:where([data-rk-edcafc]) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08), transparent 70%);
+  filter: blur(120px);
+}
+
+.container:where([data-rk-edcafc]) {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header:where([data-rk-edcafc]) {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-badge:where([data-rk-edcafc]) {
+  display: inline-flex;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  margin-bottom: var(--sp-4, 1rem);
+}
+
+.section-title:where([data-rk-edcafc]) {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--sp-4, 1rem);
+}
+
+.section-subtitle:where([data-rk-edcafc]) {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.stats-grid:where([data-rk-edcafc]) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card:where([data-rk-edcafc]) {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: var(--r-xl, 20px);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover:where([data-rk-edcafc]) {
+  transform: translateY(-4px);
+  border-color: rgb(var(--ink-rgb, 255 255 255) / 0.2);
+}
+
+.stat-top:where([data-rk-edcafc]) {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.stat-num:where([data-rk-edcafc]) {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-badge:where([data-rk-edcafc]) {
+  padding: 0.2rem 0.55rem;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.stat-label:where([data-rk-edcafc]) {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 0.5rem;
+}
+
+.stat-desc:where([data-rk-edcafc]) {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0 0 1.25rem;
+}
+
+.stat-chart-bar:where([data-rk-edcafc]) {
+  height: 4px;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.chart-progress:where([data-rk-edcafc]) {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  border-radius: 9999px;
+}
+
+/* Live Telemetry Banner */
+.telemetry-banner:where([data-rk-edcafc]) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 2rem;
+  background: rgba(10, 15, 30, 0.8);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: 16px;
+  flex-wrap: wrap;
+}
+
+.telemetry-live:where([data-rk-edcafc]) {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.live-dot:where([data-rk-edcafc]) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 12px #10b981;
+  animation: stats-metric-showcase-livePulse 2s infinite ease-in-out;
+}
+
+@keyframes stats-metric-showcase-livePulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.live-label:where([data-rk-edcafc]) {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #10b981;
+}
+
+.telemetry-items:where([data-rk-edcafc]) {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.telemetry-item:where([data-rk-edcafc]) {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.tel-name:where([data-rk-edcafc]) {
+  color: #64748b;
+}
+
+.tel-val:where([data-rk-edcafc]) {
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+@container (max-width: 1024px) {
+  .stats-grid:where([data-rk-edcafc]) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container (max-width: 640px) {
+  .stats-grid:where([data-rk-edcafc]) {
+    grid-template-columns: 1fr;
+  }
+  .telemetry-banner:where([data-rk-edcafc]) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

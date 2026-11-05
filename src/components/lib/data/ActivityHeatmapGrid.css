@@ -1,0 +1,87 @@
+/* ActivityHeatmapGrid — ported from astro-component-kit (data/ActivityHeatmapGrid.astro) */
+
+.heatmap-card:where([data-rk-f489b5]) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: var(--sp-6, 1.5rem);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-xl, 20px);
+  width: 100%;
+  max-width: 480px;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.heatmap-card__head:where([data-rk-f489b5]) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.heatmap-card__title:where([data-rk-f489b5]) {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--c-text-1, #ffffff);
+  margin: 0 0 2px 0;
+}
+
+.heatmap-card__total:where([data-rk-f489b5]) {
+  font-size: 0.75rem;
+  color: var(--c-text-3, #737373);
+}
+
+.heatmap-card__legend:where([data-rk-f489b5]) {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: var(--c-text-3, #737373);
+}
+
+.heatmap-card__matrix:where([data-rk-f489b5]) {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.heatmap-card__months:where([data-rk-f489b5]) {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+  font-size: 0.68rem;
+  color: var(--c-text-3, #737373);
+  font-weight: 600;
+}
+
+.heatmap-card__grid:where([data-rk-f489b5]) {
+  display: flex;
+  gap: 4px;
+}
+
+.heatmap-col:where([data-rk-f489b5]) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cell:where([data-rk-f489b5]) {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  transition: transform 0.15s ease;
+}
+
+.heatmap-card__grid:where([data-rk-f489b5]) .cell:hover:where([data-rk-f489b5]) {
+  transform: scale(1.3);
+}
+
+.cell--0:where([data-rk-f489b5]) { background: rgba(255, 255, 255, 0.05); }
+.cell--1:where([data-rk-f489b5]) { background: rgba(184, 134, 11, 0.25); }
+.cell--2:where([data-rk-f489b5]) { background: rgba(184, 134, 11, 0.55); }
+.cell--3:where([data-rk-f489b5]) { background: rgba(212, 160, 23, 0.85); }
+.cell--4:where([data-rk-f489b5]) { background: #fef3c7; box-shadow: 0 0 6px rgba(254, 243, 199, 0.6); }

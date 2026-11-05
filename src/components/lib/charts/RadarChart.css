@@ -1,0 +1,3 @@
+/* RadarChart — ported from astro-component-kit (charts/RadarChart.astro) */
+
+.rd:where([data-rk-b100db]) { max-width: 400px; margin: 0 auto; }

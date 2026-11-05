@@ -1,0 +1,17 @@
+/* CenteredContainer — ported from astro-component-kit (layout/CenteredContainer.astro) */
+
+.cq-centered-container-cq:where([data-rk-7481a0]) { container-type: inline-size; }
+.centered-container:where([data-rk-7481a0]) {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+@container (max-width: 640px) {
+  .centered-container:where([data-rk-7481a0]) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

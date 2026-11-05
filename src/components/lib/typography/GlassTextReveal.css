@@ -1,0 +1,4 @@
+/* GlassTextReveal — ported from astro-component-kit (typography/GlassTextReveal.astro) */
+
+.shimmer-txt:where([data-rk-ca8ede]) { font-size: 2rem; color: rgba(255,255,255,0.2); background: linear-gradient(90deg, transparent, #fff, transparent); background-size: 200% 100%; -webkit-background-clip: text; animation: glass-text-reveal-shimmer-anim 3s infinite linear; margin: 0; font-weight: 800; }
+@keyframes glass-text-reveal-shimmer-anim { 0% { background-position: -100% 0; } 100% { background-position: 100% 0; } }

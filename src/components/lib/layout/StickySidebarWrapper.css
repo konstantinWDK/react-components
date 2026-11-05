@@ -1,0 +1,29 @@
+/* StickySidebarWrapper — ported from astro-component-kit (layout/StickySidebarWrapper.astro) */
+
+.cq-sticky-sidebar-wrapper-cq:where([data-rk-0549ef]) { container-type: inline-size; }
+.sticky-sidebar:where([data-rk-0549ef]) {
+  display: grid;
+  grid-template-columns: 1fr var(--sidebar-w, 280px);
+  gap: var(--col-gap, 2rem);
+  align-items: start;
+}
+.sticky-sidebar__main:where([data-rk-0549ef]) {
+  min-width: 0;
+}
+.sticky-sidebar__aside:where([data-rk-0549ef]) {
+  min-width: 0;
+}
+.sticky-sidebar__inner:where([data-rk-0549ef]) {
+  position: sticky;
+  top: var(--sticky-top, 100px);
+}
+
+@container (max-width: 768px) {
+  .sticky-sidebar:where([data-rk-0549ef]) {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+  .sticky-sidebar__inner:where([data-rk-0549ef]) {
+    position: static;
+  }
+}

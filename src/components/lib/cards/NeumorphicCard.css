@@ -1,0 +1,19 @@
+/* NeumorphicCard — ported from astro-component-kit (cards/NeumorphicCard.astro) */
+
+.neu-card:where([data-rk-6601f7]) {
+  background: var(--c-bg-elev, #e0e0e0);
+  border-radius: var(--r-xl, 30px);
+  box-shadow: 15px 15px 30px rgba(0,0,0,0.1), -15px -15px 30px rgba(255,255,255,0.7);
+  color: var(--c-text-1, #444);
+  transition: all 0.3s ease;
+}
+
+.neu-card--psm:where([data-rk-6601f7]) { padding: var(--sp-4, 1rem); }
+.neu-card--pmd:where([data-rk-6601f7]) { padding: var(--sp-8, 2rem); }
+.neu-card--plg:where([data-rk-6601f7]) { padding: var(--sp-12, 3rem); }
+
+@media (prefers-color-scheme: dark) {
+  .neu-card:where([data-rk-6601f7]) {
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.4), -15px -15px 30px rgba(255,255,255,0.05);
+  }
+}

@@ -1,0 +1,20 @@
+/* MinimalLinkCard — ported from astro-component-kit (cards/MinimalLinkCard.astro) */
+
+.link-card:where([data-rk-a901cf]) { 
+  display: flex; justify-content: space-between; align-items: center; 
+  padding: var(--sp-6, 1.5rem); 
+  background: var(--c-bg-elev, rgba(255,255,255,0.03)); 
+  border: 1px solid var(--c-border, rgba(255,255,255,0.1)); 
+  border-radius: var(--r-md, 12px); 
+  text-decoration: none; 
+  color: var(--c-text-1, #fff); 
+  font-weight: 600; 
+  transition: 0.2s; 
+}
+.link-card:hover:where([data-rk-a901cf]) { 
+  background: rgba(255,255,255,0.06); 
+  border-color: var(--c-primary, #6366f1); 
+  color: var(--c-primary-light, #818cf8); 
+}
+.link-card__icon:where([data-rk-a901cf]) { transition: transform 0.2s; }
+.link-card:hover:where([data-rk-a901cf]) .link-card__icon:where([data-rk-a901cf]) { transform: translateX(5px); }

@@ -1,0 +1,60 @@
+/* GradientTextMarquee — ported from astro-component-kit (typography/GradientTextMarquee.astro) */
+
+.grad-marquee:where([data-rk-48dfb7]) {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: var(--sp-4, 1rem) 0;
+  user-select: none;
+  mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.grad-marquee__track:where([data-rk-48dfb7]) {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;
+  animation: gradient-text-marquee-marquee-roll var(--marquee-speed) linear infinite;
+}
+
+.grad-marquee__track:hover:where([data-rk-48dfb7]) {
+  animation-play-state: paused;
+}
+
+.grad-marquee__track.is-reverse:where([data-rk-48dfb7]) {
+  animation-direction: reverse;
+}
+
+.grad-marquee__item:where([data-rk-48dfb7]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.grad-marquee__item:where([data-rk-48dfb7]) .text:where([data-rk-48dfb7]) {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 40%, #d4a017 80%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
+.grad-marquee__item:where([data-rk-48dfb7]) .dot:where([data-rk-48dfb7]) {
+  color: var(--c-primary-light, #d4a017);
+  font-size: 1.2rem;
+}
+
+@keyframes gradient-text-marquee-marquee-roll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grad-marquee__track:where([data-rk-48dfb7]) { animation: none; overflow-x: auto; }
+}

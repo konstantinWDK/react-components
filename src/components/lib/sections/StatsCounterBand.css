@@ -1,0 +1,36 @@
+/* StatsCounterBand — ported from astro-component-kit (sections/StatsCounterBand.astro) */
+
+.cq-stats-counter-band-cq:where([data-rk-72cbca]) { container-type: inline-size; }
+.scb:where([data-rk-72cbca]) {
+  --scb-py: 4.5rem;
+  padding: var(--scb-py) var(--sp-6, 1.5rem);
+  background: linear-gradient(180deg, transparent, rgb(var(--ink-rgb, 255 255 255) / 0.02) 50%, transparent), var(--c-bg, #050505);
+}
+.scb--sm:where([data-rk-72cbca]) { --scb-py: 3rem; }
+.scb--lg:where([data-rk-72cbca]) { --scb-py: 6.5rem; }
+.scb__inner:where([data-rk-72cbca]) { max-width: 1180px; margin: 0 auto; }
+.scb__title:where([data-rk-72cbca]) { margin: 0 0 2.5rem; text-align: center; font-size: 0.875rem; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-text-2, #a3a3a3); }
+.scb__sr:where([data-rk-72cbca]) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; }
+.scb__grid:where([data-rk-72cbca]) { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.scb__item:where([data-rk-72cbca]) { display: flex; flex-direction: column-reverse; align-items: center; gap: 0.5rem; padding: 1.5rem 1rem; text-align: center; }
+.scb--divided:where([data-rk-72cbca]) .scb__item:where([data-rk-72cbca]) + .scb__item:where([data-rk-72cbca]) { border-left: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08); }
+.scb--cards:where([data-rk-72cbca]) .scb__grid:where([data-rk-72cbca]) { gap: 1rem; }
+.scb--cards:where([data-rk-72cbca]) .scb__item:where([data-rk-72cbca]) { border-radius: var(--r-lg, 20px); background: rgb(var(--ink-rgb, 255 255 255) / 0.03); border: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.07)); }
+.scb__value:where([data-rk-72cbca]) {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, var(--c-text-1, #fff), rgb(var(--ink-rgb, 255 255 255) / 0.65));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.scb__label:where([data-rk-72cbca]) { font-size: 0.9375rem; color: var(--c-text-2, #a3a3a3); max-width: 220px; }
+@container (max-width: 640px) {
+  .scb__grid:where([data-rk-72cbca]) { grid-template-columns: 1fr 1fr; }
+  .scb--divided:where([data-rk-72cbca]) .scb__item:where([data-rk-72cbca]) + .scb__item:where([data-rk-72cbca]) { border-left: 0; }
+  .scb--divided:where([data-rk-72cbca]) .scb__item:nth-child(even):where([data-rk-72cbca]) { border-left: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08); }
+}

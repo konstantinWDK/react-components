@@ -1,42 +1,46 @@
 import type { Locale } from '../config/site';
 import { templates } from '../data/registry';
-import { getLocalizedPath, useTranslations } from '../i18n/translations';
+import { getLocalizedPath } from '../i18n/translations';
+import { TemplateFrame } from '../docs/TemplateFrame';
 import '../styles/templates-promo.css';
 
 /** Home block announcing the multi-page templates (port of TemplatesPromo.astro). */
 const COPY = {
   en: {
-    eyebrow: 'Coming soon · Complete templates',
+    eyebrow: 'New · Complete templates',
     title: 'Not just components.',
     highlight: 'Whole sites, ready to ship.',
-    text: 'Templates assemble library components into complete, multi-page sites. The three Astro templates are being ported to React: E-commerce Store, Editorial Boutique and SaaS Hotel.',
+    text: 'Templates assemble library components into complete, multi-page sites. Preview every page live, then import the whole thing with one line — or take only the pieces you need.',
     pagesLabel: 'pages', componentsLabel: 'components', themesLabel: 'Light & dark',
     pages: ['Store home', 'Category', 'Product page', 'Checkout'],
     included: (n: number) => `${n} templates · E-commerce Store, E-commerce 2 Editorial, SaaS Hotel`,
     cta: 'Explore templates',
+    demo: 'Open live demo',
     soon: 'Coming next: SaaS landing · Dashboard · Blog',
   },
   es: {
-    eyebrow: 'Próximamente · Plantillas completas',
+    eyebrow: 'Nuevo · Plantillas completas',
     title: 'No solo componentes.',
     highlight: 'Sitios enteros, listos para publicar.',
-    text: 'Las plantillas combinan componentes de la librería en sitios completos de varias páginas. Las tres plantillas de Astro se están portando a React: tienda e-commerce, boutique editorial y hotel SaaS.',
+    text: 'Las plantillas combinan componentes de la librería en sitios completos de varias páginas. Mira cada página en vivo e impórtala entera con una línea, o quédate solo con las piezas que necesites.',
     pagesLabel: 'páginas', componentsLabel: 'componentes', themesLabel: 'Claro y oscuro',
     pages: ['Home de tienda', 'Categoría', 'Ficha de producto', 'Checkout'],
     included: (n: number) => `${n} plantillas · Tienda e-commerce, E-commerce 2 Editorial, Hotel SaaS`,
     cta: 'Ver plantillas',
-    soon: 'Después: landing SaaS · Dashboard · Blog',
+    demo: 'Abrir demo en vivo',
+    soon: 'Próximamente: landing SaaS · Dashboard · Blog',
   },
   ru: {
-    eyebrow: 'Скоро · Готовые шаблоны',
+    eyebrow: 'Новое · Готовые шаблоны',
     title: 'Не только компоненты.',
     highlight: 'Целые сайты, готовые к запуску.',
-    text: 'Шаблоны собирают компоненты библиотеки в полноценные многостраничные сайты. Три шаблона Astro переносятся на React: интернет-магазин, редакционный бутик и SaaS для отеля.',
+    text: 'Шаблоны собирают компоненты библиотеки в полноценные многостраничные сайты. Посмотрите каждую страницу вживую и подключите весь шаблон одной строкой — или возьмите только нужные части.',
     pagesLabel: 'страниц', componentsLabel: 'компонентов', themesLabel: 'Светлая и тёмная',
     pages: ['Главная магазина', 'Категория', 'Карточка товара', 'Оформление заказа'],
     included: (n: number) => `Шаблонов: ${n} · интернет-магазин, E-commerce 2 Editorial, SaaS-отель`,
     cta: 'Смотреть шаблоны',
-    soon: 'Далее: SaaS-лендинг · Дашборд · Блог',
+    demo: 'Открыть демо',
+    soon: 'Скоро: SaaS-лендинг · Дашборд · Блог',
   },
 };
 
@@ -49,17 +53,8 @@ const PAGE_ICONS = [
 
 export function TemplatesPromo({ lang }: { lang: Locale }) {
   const copy = COPY[lang];
-  const t = useTranslations(lang);
   const tpl = templates[0];
   const componentCount = tpl.newComponents.length + tpl.reusedComponents.length;
-  const Win = ({ name }: { name: string }) => (
-    <div className="tpl-promo__placeholder">
-      <span className="tpl-promo__placeholder-bar"><i /><i /><i /></span>
-      <span className="tpl-promo__placeholder-name">{name}</span>
-      <span className="tpl-promo__placeholder-badge">{t('common.comingSoon')}</span>
-    </div>
-  );
-
   return (
     <section className="section tpl-promo" id="templates" aria-labelledby="tpl-promo-title">
       <div className="container">
@@ -73,7 +68,7 @@ export function TemplatesPromo({ lang }: { lang: Locale }) {
             <ul className="tpl-promo__pages">
               {copy.pages.map((p, i) => (
                 <li key={p}>
-                  <a href={getLocalizedPath('/templates', lang)}>
+                  <a href={`${tpl.previewBase}${(tpl.pages[i] as { path?: string })?.path ?? ''}`} target="_blank" rel="noopener">
                     <span className="tpl-promo__page-icon" aria-hidden="true">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" dangerouslySetInnerHTML={{ __html: PAGE_ICONS[i] }} />
                     </span>
@@ -92,14 +87,18 @@ export function TemplatesPromo({ lang }: { lang: Locale }) {
                 {copy.cta}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </a>
+              <a className="tpl-promo__btn" href={tpl.previewBase} target="_blank" rel="noopener">
+                {copy.demo}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+              </a>
             </div>
             <p className="tpl-promo__soon">{copy.soon}</p>
           </div>
 
           <div className="tpl-promo__stage" aria-hidden="true">
-            <div className="tpl-promo__win tpl-promo__win--main"><Win name={copy.pages[0]} /></div>
-            <div className="tpl-promo__win tpl-promo__win--product"><Win name={copy.pages[2]} /></div>
-            <div className="tpl-promo__win tpl-promo__win--checkout"><Win name={copy.pages[3]} /></div>
+            <div className="tpl-promo__win tpl-promo__win--main"><TemplateFrame src={tpl.previewBase} title="Store home" height={1000} /></div>
+            <div className="tpl-promo__win tpl-promo__win--product"><TemplateFrame src={`${tpl.previewBase}product/aurora-headphones/`} title="Product page" width={1280} height={1000} /></div>
+            <div className="tpl-promo__win tpl-promo__win--checkout"><TemplateFrame src={`${tpl.previewBase}checkout/`} title="Checkout" width={1280} height={1100} /></div>
             <span className="tpl-promo__chip tpl-promo__chip--cart">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
               Added to cart

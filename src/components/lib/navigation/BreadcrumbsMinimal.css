@@ -1,0 +1,7 @@
+/* BreadcrumbsMinimal — ported from astro-component-kit (navigation/BreadcrumbsMinimal.astro) */
+
+.crumbs:where([data-rk-a2645c]) { display: flex; gap: 0.6rem; font-size: 0.8rem; font-weight: 500; }
+.crumbs:where([data-rk-a2645c]) a:where([data-rk-a2645c]) { color: #64748b; text-decoration: none; }
+.crumbs:where([data-rk-a2645c]) a:hover:where([data-rk-a2645c]) { color: #fff; }
+.sep:where([data-rk-a2645c]) { color: #334155; }
+.curr:where([data-rk-a2645c]) { color: #818cf8; font-weight: 700; }

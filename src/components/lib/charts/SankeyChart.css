@@ -1,0 +1,4 @@
+/* SankeyChart — ported from astro-component-kit (charts/SankeyChart.astro) */
+
+.sk__link:where([data-rk-efc23b]) { transition: stroke-opacity 0.2s ease; }
+.sk__link:hover:where([data-rk-efc23b]), .sk__link:focus-visible:where([data-rk-efc23b]) { stroke-opacity: 0.7; }

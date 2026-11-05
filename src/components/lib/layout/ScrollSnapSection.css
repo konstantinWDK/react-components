@@ -1,0 +1,21 @@
+/* ScrollSnapSection — ported from astro-component-kit (layout/ScrollSnapSection.astro) */
+
+.snap-wrap:where([data-rk-109259]) {
+  height: var(--snap-height, 300px);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  width: 100%;
+  border-radius: var(--r-lg, 12px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.1);
+}
+.snap-wrap:where([data-rk-109259]) section, .snap-panel:where([data-rk-109259]) {
+  height: var(--snap-height, 300px);
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.panel-1:where([data-rk-109259]) { background: rgba(99, 102, 241, 0.15); }
+.panel-2:where([data-rk-109259]) { background: rgba(192, 132, 252, 0.15); }
+.panel-3:where([data-rk-109259]) { background: rgba(251, 191, 36, 0.15); }

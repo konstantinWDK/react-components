@@ -1,0 +1,9 @@
+/* VerticalTimeline — ported from astro-component-kit (data/VerticalTimeline.astro) */
+
+.timeline-v:where([data-rk-2babd2]) { position: relative; padding-left: 2rem; }
+.timeline-v:where([data-rk-2babd2])::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: rgba(99,102,241,0.2); }
+.t-item:where([data-rk-2babd2]) { position: relative; margin-bottom: 2.5rem; }
+.t-item:where([data-rk-2babd2])::after { content: ""; position: absolute; left: -2.35rem; top: 5px; width: 12px; height: 12px; background: #6366f1; border: 3px solid #080b14; border-radius: 50%; }
+.t-date:where([data-rk-2babd2]) { font-size: 0.75rem; font-weight: 700; color: #6366f1; margin-bottom: 0.25rem; }
+h4:where([data-rk-2babd2]) { color: #fff; margin: 0; }
+p:where([data-rk-2babd2]) { font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem; }

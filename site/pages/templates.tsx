@@ -3,6 +3,7 @@ import { templates } from '../data/registry';
 import { useTranslations, getLocalizedPath } from '../i18n/translations';
 import { buildMetadata } from '../lib/seo';
 import { DocsLayout } from '../layout/DocsLayout';
+import { TemplateFrame } from '../docs/TemplateFrame';
 import '../styles/templates-catalog.css';
 
 type L = Record<Locale, string>;
@@ -19,7 +20,7 @@ export const templatesMetadata = (lang: Locale) => {
   return buildMetadata({ path: '/templates', lang, title: t('templates.seoTitle'), description: t('templates.desc') });
 };
 
-/** Same layout as TemplatesCatalogPage.astro; templates show "Coming soon" until they are ported. */
+/** Port of TemplatesCatalogPage.astro. */
 export function TemplatesCatalogPage({ lang }: { lang: Locale }) {
   const t = useTranslations(lang);
   return (
@@ -43,26 +44,29 @@ export function TemplatesCatalogPage({ lang }: { lang: Locale }) {
         <div className="tpl-list">
           {templates.map((tpl) => {
             const components = tpl.newComponents.length + tpl.reusedComponents.length;
+            const href = getLocalizedPath(`/templates/${tpl.slug}`, lang);
+            const name = (tpl.name as unknown as L)[lang];
             return (
-              <article key={tpl.slug} className="tpl-card tpl-card--soon">
+              <article key={tpl.slug} className="tpl-card">
                 <div className="tpl-card__frame">
-                  <div className="tpl-soon-frame" aria-hidden="true">
-                    <span className="tpl-soon-frame__name">{(tpl.name as unknown as L)[lang]}</span>
-                    <span className="tpl-soon-frame__badge">{t('common.comingSoon')}</span>
-                  </div>
+                  <TemplateFrame src={tpl.previewBase} title={`${name} — ${t('templates.livePreview')}`} eager />
                 </div>
                 <div className="tpl-card__body">
                   <div className="tpl-card__chips">
                     <span>{tpl.pages.length} {t('templates.pagesCount')}</span>
                     <span>{components} {t('templates.componentsCount')}</span>
                   </div>
-                  <h2 className="tpl-card__title">{(tpl.name as unknown as L)[lang]}</h2>
+                  <h2 className="tpl-card__title"><a href={href}>{name}</a></h2>
                   <p className="tpl-card__tagline">{(tpl.tagline as unknown as L)[lang]}</p>
                   <ul className="tpl-card__list">
                     {(tpl.highlights as unknown as LA)[lang].slice(0, 4).map((h) => <li key={h}>{h}</li>)}
                   </ul>
                   <div className="tpl-card__actions">
-                    <span className="tpl-btn" aria-disabled="true">{t('common.comingSoonDesc')}</span>
+                    <a className="tpl-btn tpl-btn--primary" href={href}>{t('templates.view')}</a>
+                    <a className="tpl-btn" href={tpl.previewBase} target="_blank" rel="noopener">
+                      {t('templates.openPreview')}
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                    </a>
                   </div>
                 </div>
               </article>

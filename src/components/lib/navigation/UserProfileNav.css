@@ -1,0 +1,10 @@
+/* UserProfileNav — ported from astro-component-kit (navigation/UserProfileNav.astro) */
+
+.u-nav:where([data-rk-50205e]) { position: relative; cursor: pointer; }
+.u-avatar:where([data-rk-50205e]) { width: 34px; height: 34px; background: linear-gradient(135deg, #6366f1, #c084fc); border-radius: 50%; color: #fff; display: grid; place-items: center; font-size: 0.75rem; font-weight: 800; border: 2px solid #080b14; }
+.u-menu:where([data-rk-50205e]) { position: absolute; top: 120%; right: 0; background: #0f172a; border: 1px solid #334155; border-radius: 12px; width: 180px; display: none; flex-direction: column; overflow: hidden; z-index: 10; }
+.u-nav:hover:where([data-rk-50205e]) .u-menu:where([data-rk-50205e]) { display: flex; }
+.u-menu:where([data-rk-50205e]) a:where([data-rk-50205e]) { padding: 0.75rem 1rem; font-size: 0.85rem; color: #94a3b8; text-decoration: none; }
+.u-menu:where([data-rk-50205e]) a:hover:where([data-rk-50205e]) { background: rgba(255,255,255,0.05); color: #fff; }
+.logout:where([data-rk-50205e]) { color: #f87171 !important; }
+hr:where([data-rk-50205e]) { border: none; border-top: 1px solid #334155; margin: 0; }

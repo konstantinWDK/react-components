@@ -1,0 +1,38 @@
+/* GlassSectionHeader — ported from astro-component-kit (layout/GlassSectionHeader.astro) */
+
+.glass-section-header:where([data-rk-7395fc]) {
+  margin-bottom: var(--sp-8);
+}
+.glass-section-header.is-centered:where([data-rk-7395fc]) {
+  text-align: center;
+}
+.glass-section-header__title:where([data-rk-7395fc]) {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--c-text-1);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.glass-section-header__subtitle:where([data-rk-7395fc]) {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: var(--c-text-3);
+  margin: var(--sp-2) 0 0;
+  max-width: 600px;
+  line-height: 1.6;
+}
+.is-centered:where([data-rk-7395fc]) .glass-section-header__subtitle:where([data-rk-7395fc]) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.glass-section-header__line:where([data-rk-7395fc]) {
+  height: 4px;
+  width: 60px;
+  background: var(--c-primary-light);
+  border-radius: 2px;
+  margin-top: var(--sp-4);
+}
+.is-centered:where([data-rk-7395fc]) .glass-section-header__line:where([data-rk-7395fc]) {
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,13 +1,13 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig, SUPPORTED_LOCALES } from '../site/config/site';
-import { docsComponents } from '../site/data/registry';
+import { docsComponents, sectionComponents, templates } from '../site/data/registry';
 import { getLocalizedPath } from '../site/i18n/translations';
 
 export const dynamic = 'force-static';
 
 /** Every page in every locale, with hreflang alternates. */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ['/', '/install', '/sections', '/templates', ...docsComponents.map((c) => `/docs/${c.slug}`)];
+  const paths = ['/', '/install', '/sections', '/templates', ...docsComponents.map((c) => `/docs/${c.slug}`), ...sectionComponents.map((c) => `/sections/${c.slug}`), ...templates.map((t) => `/templates/${t.slug}`)];
   return paths.flatMap((p) =>
     SUPPORTED_LOCALES.map((lang) => ({
       url: `${siteConfig.url}${getLocalizedPath(p, lang)}`,

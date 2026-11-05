@@ -1,0 +1,31 @@
+/* FooterCenteredMinimal — ported from astro-component-kit (layout/FooterCenteredMinimal.astro) */
+
+.cq-footer-centered-minimal-cq:where([data-rk-2106dc]) { container-type: inline-size; }
+.footer-centered:where([data-rk-2106dc]) {
+  border-top: 1px solid var(--c-border);
+  padding: var(--sp-10) var(--sp-6);
+  text-align: center;
+}
+.footer-centered__inner:where([data-rk-2106dc]) {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.footer-centered__logo:where([data-rk-2106dc]) {
+  display: flex;
+  justify-content: center;
+}
+.footer-centered__copy:where([data-rk-2106dc]) {
+  font-size: 0.8rem;
+  color: var(--c-text-3);
+  margin: 0;
+}
+
+@container (max-width: 640px) {
+  .footer-centered:where([data-rk-2106dc]) {
+    padding: var(--sp-8) var(--sp-4);
+  }
+}

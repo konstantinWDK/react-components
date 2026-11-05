@@ -1,0 +1,10 @@
+/* SimpleFooterGlass — ported from astro-component-kit (navigation/SimpleFooterGlass.astro) */
+
+.glass-foot:where([data-rk-d147a1]) { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 4rem 1.5rem; }
+.foot-grid:where([data-rk-d147a1]) { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; }
+.foot-brand:where([data-rk-d147a1]) { font-weight: 800; color: #fff; }
+.foot-brand:where([data-rk-d147a1]) p:where([data-rk-d147a1]) { font-size: 0.9rem; color: #64748b; font-weight: 400; margin-top: 0.5rem; max-width: 250px; }
+.foot-links:where([data-rk-d147a1]) { display: flex; gap: 4rem; }
+h5:where([data-rk-d147a1]) { color: #fff; font-size: 0.85rem; margin-bottom: 1.25rem; }
+a:where([data-rk-d147a1]) { display: block; text-decoration: none; color: #64748b; margin-bottom: 0.6rem; font-size: 0.85rem; }
+a:hover:where([data-rk-d147a1]) { color: #818cf8; }

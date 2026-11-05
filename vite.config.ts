@@ -7,6 +7,7 @@ import { readdirSync, existsSync } from 'node:fs';
 // One entry per category so consumers can import `react-component-kit-ui/buttons`.
 const libDir = resolve(__dirname, 'src/components/lib');
 const categories = readdirSync(libDir).filter((d) => existsSync(resolve(libDir, d, 'index.ts')));
+const templates = readdirSync(resolve(libDir, 'templates')).filter((d) => existsSync(resolve(libDir, 'templates', d, 'index.ts')));
 
 export default defineConfig({
   plugins: [react()],
@@ -18,12 +19,13 @@ export default defineConfig({
       entry: {
         index: resolve(__dirname, 'src/components/index.ts'),
         ...Object.fromEntries(categories.map((c) => [c, resolve(libDir, c, 'index.ts')])),
+        ...Object.fromEntries(templates.map((t) => [`templates/${t}`, resolve(libDir, 'templates', t, 'index.ts')])),
       },
       formats: ['es'],
       cssFileName: 'styles',
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', 'apexcharts', 'three', /^three\//],
       output: { banner: "'use client';", chunkFileNames: 'chunks/[name]-[hash].js' },
       // Library sources carry 'use client' themselves; the banner re-adds it per output file.
       onwarn(warning, warn) {

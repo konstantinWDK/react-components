@@ -11,13 +11,69 @@
       "types": "./dist/types/components/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./app": {
+      "types": "./dist/types/components/lib/app/index.d.ts",
+      "import": "./dist/app.js"
+    },
     "./buttons": {
       "types": "./dist/types/components/lib/buttons/index.d.ts",
       "import": "./dist/buttons.js"
     },
+    "./cards": {
+      "types": "./dist/types/components/lib/cards/index.d.ts",
+      "import": "./dist/cards.js"
+    },
+    "./charts": {
+      "types": "./dist/types/components/lib/charts/index.d.ts",
+      "import": "./dist/charts.js"
+    },
+    "./data": {
+      "types": "./dist/types/components/lib/data/index.d.ts",
+      "import": "./dist/data.js"
+    },
+    "./ecommerce": {
+      "types": "./dist/types/components/lib/ecommerce/index.d.ts",
+      "import": "./dist/ecommerce.js"
+    },
     "./feedback": {
       "types": "./dist/types/components/lib/feedback/index.d.ts",
       "import": "./dist/feedback.js"
+    },
+    "./forms": {
+      "types": "./dist/types/components/lib/forms/index.d.ts",
+      "import": "./dist/forms.js"
+    },
+    "./layout": {
+      "types": "./dist/types/components/lib/layout/index.d.ts",
+      "import": "./dist/layout.js"
+    },
+    "./navigation": {
+      "types": "./dist/types/components/lib/navigation/index.d.ts",
+      "import": "./dist/navigation.js"
+    },
+    "./overlays": {
+      "types": "./dist/types/components/lib/overlays/index.d.ts",
+      "import": "./dist/overlays.js"
+    },
+    "./sections": {
+      "types": "./dist/types/components/lib/sections/index.d.ts",
+      "import": "./dist/sections.js"
+    },
+    "./typography": {
+      "types": "./dist/types/components/lib/typography/index.d.ts",
+      "import": "./dist/typography.js"
+    },
+    "./templates/ecommerce": {
+      "types": "./dist/types/components/lib/templates/ecommerce/index.d.ts",
+      "import": "./dist/templates/ecommerce.js"
+    },
+    "./templates/ecommerce-editorial": {
+      "types": "./dist/types/components/lib/templates/ecommerce-editorial/index.d.ts",
+      "import": "./dist/templates/ecommerce-editorial.js"
+    },
+    "./templates/saas-hotel": {
+      "types": "./dist/types/components/lib/templates/saas-hotel/index.d.ts",
+      "import": "./dist/templates/saas-hotel.js"
     },
     "./styles.css": "./dist/styles.css",
     "./global.css": "./dist/global.css"
@@ -47,19 +103,25 @@
     "release:major": "npm version major -m \"release: v%s\" && npm publish"
   },
   "keywords": [
-    "react",
-    "react-components",
-    "react-component-library",
-    "ui",
-    "ui-kit",
-    "components",
-    "accessible",
     "a11y",
-    "glassmorphism",
+    "accessible",
+    "charts",
+    "components",
     "dark-mode",
+    "dashboard",
     "design-system",
+    "ecommerce",
+    "glassmorphism",
+    "landing-page",
     "nextjs",
-    "typescript"
+    "react",
+    "react-component-library",
+    "react-components",
+    "sections",
+    "templates",
+    "typescript",
+    "ui",
+    "ui-kit"
   ],
   "author": "konstantinwdk <entiplay@gmail.com>",
   "license": "MIT",
@@ -72,8 +134,10 @@
   },
   "homepage": "https://reactcomponents.dev",
   "peerDependencies": {
+    "apexcharts": ">=3.0.0",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "three": ">=0.160.0"
   },
   "publishConfig": {
     "access": "public"
@@ -87,12 +151,23 @@
     "@types/react-dom": "^19.3.0",
     "@types/three": "^0.184.1",
     "@vitejs/plugin-react": "^4.7.0",
+    "apexcharts": "^3.54.1",
     "next": "^15.5.29",
+    "postcss": "^8.5.32",
+    "postcss-selector-parser": "^7.1.7",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "shiki": "^3.23.0",
     "three": "^0.184.0",
     "typescript": "^5.9.3",
     "vite": "^6.4.5"
+  },
+  "peerDependenciesMeta": {
+    "apexcharts": {
+      "optional": true
+    },
+    "three": {
+      "optional": true
+    }
   }
 }

@@ -1,0 +1,12 @@
+/* SettingsPage — ported from astro-component-kit (templates/saas-hotel/SettingsPage.astro) */
+
+.settings:where([data-rk-882bc7]) { display: grid; max-width: 1040px; }
+.settings:where([data-rk-882bc7]) > div:where([data-rk-882bc7]) { scroll-margin-top: 84px; }
+.settings__row:where([data-rk-882bc7]) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3); }
+.settings__block:where([data-rk-882bc7]) { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr); gap: var(--sp-6); padding-block: var(--sp-6); border-bottom: 1px solid var(--c-border); }
+.settings__intro:where([data-rk-882bc7]) h2:where([data-rk-882bc7]) { margin: 0; font-size: 1rem; font-weight: 700; color: var(--c-text-1); }
+.settings__intro:where([data-rk-882bc7]) p:where([data-rk-882bc7]) { margin: 4px 0 0; font-size: 0.85rem; line-height: 1.55; }
+@media (max-width: 900px) {
+  .settings__block:where([data-rk-882bc7]) { grid-template-columns: 1fr; }
+  .settings__row:where([data-rk-882bc7]) { grid-template-columns: 1fr; }
+}

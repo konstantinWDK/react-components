@@ -1,0 +1,14 @@
+/* KpiTrendGrid — ported from astro-component-kit (charts/KpiTrendGrid.astro) */
+
+.kg:where([data-rk-1cf6fc]) { width: 100%; }
+.kg__title:where([data-rk-1cf6fc]) {
+  margin: 0 0 var(--sp-4, 1rem);
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--c-text-1, #fff);
+}
+.kg__grid:where([data-rk-1cf6fc]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-4, 1rem);
+}

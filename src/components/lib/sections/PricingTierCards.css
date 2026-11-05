@@ -1,0 +1,175 @@
+/* PricingTierCards — ported from astro-component-kit (sections/PricingTierCards.astro) */
+
+.cq-pricing-tier-cards-cq:where([data-rk-9c5b50]) { container-type: inline-size; }
+.tier-pricing-section:where([data-rk-9c5b50]) {
+  padding: var(--sp-20, 5rem) var(--sp-6, 1.5rem);
+  background: var(--c-bg-primary, #030712);
+}
+
+.container:where([data-rk-9c5b50]) {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header:where([data-rk-9c5b50]) {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-badge:where([data-rk-9c5b50]) {
+  display: inline-flex;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--c-primary, #b8860b) 12%, transparent);
+  color: #eab308;
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  margin-bottom: var(--sp-4, 1rem);
+}
+
+.section-title:where([data-rk-9c5b50]) {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--sp-4, 1rem);
+}
+
+.section-subtitle:where([data-rk-9c5b50]) {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tier-grid:where([data-rk-9c5b50]) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.tier-card:where([data-rk-9c5b50]) {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.tier-card:hover:where([data-rk-9c5b50]) {
+  transform: translateY(-4px);
+  border-color: rgb(var(--ink-rgb, 255 255 255) / 0.2);
+}
+
+.tier-card--highlight:where([data-rk-9c5b50]) {
+  background: rgba(20, 25, 50, 0.8);
+  border-color: rgba(234, 179, 8, 0.4);
+  box-shadow: 0 0 35px -10px rgba(234, 179, 8, 0.2);
+  padding: 3rem 2rem;
+}
+
+.tier-badge:where([data-rk-9c5b50]) {
+  align-self: flex-start;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.tier-badge--gold:where([data-rk-9c5b50]) {
+  background: rgba(234, 179, 8, 0.2);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.tier-name:where([data-rk-9c5b50]) {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.3rem;
+}
+
+.tier-desc:where([data-rk-9c5b50]) {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0 0 1.5rem;
+  min-height: 42px;
+}
+
+.tier-price:where([data-rk-9c5b50]) {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1.75rem;
+  line-height: 1;
+}
+
+.tier-price:where([data-rk-9c5b50]) span:where([data-rk-9c5b50]) {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.tier-btn:where([data-rk-9c5b50]) {
+  display: block;
+  text-align: center;
+  padding: 0.85rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  margin-bottom: 2rem;
+}
+
+.tier-btn--primary:where([data-rk-9c5b50]) {
+  background: linear-gradient(135deg, #eab308, #d97706);
+  color: #000;
+  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3);
+}
+
+.tier-btn--primary:hover:where([data-rk-9c5b50]) {
+  filter: brightness(1.1);
+}
+
+.tier-btn--ghost:where([data-rk-9c5b50]) {
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.05);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.12);
+  color: #fff;
+}
+
+.tier-btn--ghost:hover:where([data-rk-9c5b50]) {
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.12);
+}
+
+.tier-list:where([data-rk-9c5b50]) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tier-list:where([data-rk-9c5b50]) li:where([data-rk-9c5b50]) {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+}
+
+@container (max-width: 960px) {
+  .tier-grid:where([data-rk-9c5b50]) {
+    grid-template-columns: 1fr;
+  }
+}

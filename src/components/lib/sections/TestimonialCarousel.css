@@ -1,0 +1,69 @@
+/* TestimonialCarousel — ported from astro-component-kit (sections/TestimonialCarousel.astro) */
+
+.cq-testimonial-carousel-cq:where([data-rk-a626d8]) { container-type: inline-size; }
+.tc:where([data-rk-a626d8]) {
+  --tc-py: 5.5rem;
+  padding: var(--tc-py) var(--sp-6, 1.5rem);
+  background: var(--c-bg, #050505);
+  overflow: hidden;
+}
+.tc--sm:where([data-rk-a626d8]) { --tc-py: 3.5rem; }
+.tc--lg:where([data-rk-a626d8]) { --tc-py: 7.5rem; }
+.tc__inner:where([data-rk-a626d8]) { max-width: 1180px; margin: 0 auto; }
+.tc__head:where([data-rk-a626d8]) { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; margin-bottom: 2rem; }
+.tc__title:where([data-rk-a626d8]) { margin: 0; font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -0.03em; color: var(--c-text-1, #fff); max-width: 560px; }
+.tc__controls:where([data-rk-a626d8]) { display: flex; gap: 0.5rem; flex-shrink: 0; }
+.tc__btn:where([data-rk-a626d8]) {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.14);
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.03);
+  color: var(--c-text-1, #fff);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+.tc__btn:hover:not(:disabled):where([data-rk-a626d8]) { background: rgb(var(--ink-rgb, 255 255 255) / 0.08); border-color: rgb(var(--ink-rgb, 255 255 255) / 0.3); }
+.tc__btn:disabled:where([data-rk-a626d8]) { opacity: 0.35; cursor: not-allowed; }
+.tc__btn:focus-visible:where([data-rk-a626d8]) { outline: 2px solid var(--c-primary-light, #d4a017); outline-offset: 2px; }
+.tc__track:where([data-rk-a626d8]) {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(380px, 85%);
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.tc__track:where([data-rk-a626d8])::-webkit-scrollbar { display: none; }
+.tc__track:focus-visible:where([data-rk-a626d8]) { outline: 2px solid var(--c-primary-light, #d4a017); outline-offset: 4px; border-radius: 12px; }
+.tc__slide:where([data-rk-a626d8]) { scroll-snap-align: start; }
+.tc__card:where([data-rk-a626d8]) {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  border-radius: var(--r-lg, 20px);
+  box-sizing: border-box;
+}
+.tc--glass:where([data-rk-a626d8]) .tc__card:where([data-rk-a626d8]) { background: linear-gradient(160deg, rgb(var(--ink-rgb, 255 255 255) / 0.05), rgb(var(--ink-rgb, 255 255 255) / 0.015)); border: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.07)); }
+.tc--solid:where([data-rk-a626d8]) .tc__card:where([data-rk-a626d8]) { background: var(--c-bg-2, #111); border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.05); }
+.tc--quote:where([data-rk-a626d8]) .tc__card:where([data-rk-a626d8]) { border-left: 2px solid var(--c-primary-light, #d4a017); border-radius: 0; padding-left: 1.5rem; }
+.tc__stars:where([data-rk-a626d8]) { display: flex; gap: 2px; color: rgb(var(--ink-rgb, 255 255 255) / 0.15); }
+.tc__stars:where([data-rk-a626d8]) .is-on:where([data-rk-a626d8]) { color: var(--c-primary-light, #d4a017); }
+.tc__quote:where([data-rk-a626d8]) { margin: 0; flex: 1; }
+.tc__quote:where([data-rk-a626d8]) p:where([data-rk-a626d8]) { margin: 0; font-size: 1.0625rem; line-height: 1.6; color: var(--c-text-1, #fff); }
+.tc__author:where([data-rk-a626d8]) { display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; }
+.tc__author:where([data-rk-a626d8]) strong:where([data-rk-a626d8]) { display: block; color: var(--c-text-1, #fff); font-weight: 650; }
+.tc__role:where([data-rk-a626d8]) { display: block; color: var(--c-text-2, #a3a3a3); font-size: 0.8125rem; }
+.tc__avatar:where([data-rk-a626d8]) { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: #fff; font-weight: 700; font-size: 0.8125rem; flex-shrink: 0; }
+@container (max-width: 560px) {
+  .tc__head:where([data-rk-a626d8]) { flex-direction: column; align-items: flex-start; }
+}

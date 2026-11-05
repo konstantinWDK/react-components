@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import '../styles/galaxy-3d.css';
 
 type Mount = (canvas: HTMLCanvasElement, THREE: typeof import('three')) => () => void;
 
@@ -33,15 +32,7 @@ export function ParticleBackground() {
   );
 }
 
-/** Interactive 3D galaxy (hero background). */
-export function Galaxy3D() {
-  const ref = useThreeScene(() => import('./galaxy.js').then((m) => ({ mount: m.mountGalaxy as Mount })));
-  return (
-    <div className="galaxy-3d-container" aria-hidden="true">
-      <canvas id="galaxy-3d-canvas" ref={ref} />
-    </div>
-  );
-}
+export { Galaxy3D } from '../../src/components/lib/Galaxy3D';
 
 /**
  * Page-level effects that the Astro page ran as inline scripts:

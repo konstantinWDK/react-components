@@ -1,0 +1,34 @@
+/* CenterFixedBox — ported from astro-component-kit (layout/CenterFixedBox.astro) */
+
+.abs-center-container:where([data-rk-bc4cce]) {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--r-lg, 12px);
+  overflow: hidden;
+  border: 1px dashed rgb(var(--ink-rgb, 255 255 255) / 0.15);
+}
+.abs-center:where([data-rk-bc4cce]) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+}
+.abs-card:where([data-rk-bc4cce]) {
+  padding: 1.25rem 2rem;
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+.abs-card:where([data-rk-bc4cce]) h4:where([data-rk-bc4cce]) {
+  margin: 0 0 0.25rem;
+  color: #fff;
+}
+.abs-card:where([data-rk-bc4cce]) p:where([data-rk-bc4cce]) {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}

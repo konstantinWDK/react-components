@@ -1,0 +1,12 @@
+/* ErrorInput — ported from astro-component-kit (forms/ErrorInput.astro) */
+
+.error-wrap:where([data-rk-3b29fa]) { display: flex; flex-direction: column; gap: 0.4rem; width: 100%; box-sizing: border-box; }
+.input-error:where([data-rk-3b29fa]) { 
+  border: 1px solid var(--c-error, #ef4444) !important; 
+  background: rgba(239, 68, 68, 0.05) !important; 
+  padding: var(--sp-3, 0.8rem); 
+  color: var(--c-text-1, #fff); 
+  border-radius: var(--r-sm, 10px); outline: none; 
+  font-family: inherit; font-size: 0.95rem; box-sizing: border-box;
+}
+.error-msg:where([data-rk-3b29fa]) { font-size: 0.75rem; color: #f87171; font-weight: 500; }

@@ -1,0 +1,112 @@
+/* TestimonialGridSection — ported from astro-component-kit (sections/TestimonialGridSection.astro) */
+
+.testi-section:where([data-rk-6335bb]) {
+  padding: var(--sp-12, 3rem) var(--sp-6, 1.5rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.testi-section__header:where([data-rk-6335bb]) {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3rem auto;
+}
+
+.testi-section__eyebrow:where([data-rk-6335bb]) {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--c-primary-light, #d4a017);
+  padding: 0.35rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--c-primary, #b8860b) 30%, transparent);
+  border-radius: var(--r-sm, 8px);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.testi-section__title:where([data-rk-6335bb]) {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: var(--c-text-1, #ffffff);
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem 0;
+}
+
+.testi-section__subtitle:where([data-rk-6335bb]) {
+  font-size: 0.95rem;
+  color: var(--c-text-2, #a3a3a3);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.testi-section__grid:where([data-rk-6335bb]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.testi-card:where([data-rk-6335bb]) {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-8, 2rem);
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.02);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: var(--r-xl, 24px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testi-card:hover:where([data-rk-6335bb]) {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 30%, transparent);
+}
+
+.testi-card--highlight:where([data-rk-6335bb]) {
+  background: radial-gradient(circle at top left, color-mix(in srgb, var(--c-primary, #b8860b) 10%, transparent), rgb(var(--ink-rgb, 255 255 255) / 0.02) 70%);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 40%, transparent);
+}
+
+.testi-card__stars:where([data-rk-6335bb]) {
+  color: #fbbf24;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.testi-card__quote:where([data-rk-6335bb]) {
+  font-size: 0.95rem;
+  color: var(--c-text-1, #ffffff);
+  line-height: 1.65;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+  font-style: italic;
+}
+
+.testi-card__author:where([data-rk-6335bb]) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.testi-card__avatar:where([data-rk-6335bb]) {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid color-mix(in srgb, var(--c-primary, #b8860b) 40%, transparent);
+}
+
+.testi-card__name:where([data-rk-6335bb]) {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--c-text-1, #ffffff);
+  margin: 0 0 2px 0;
+}
+
+.testi-card__role:where([data-rk-6335bb]) {
+  font-size: 0.75rem;
+  color: var(--c-text-3, #737373);
+}

@@ -1,0 +1,3 @@
+/* EditorialBagPage — ported from astro-component-kit (templates/ecommerce-editorial/EditorialBagPage.astro) */
+
+.bag-page:where([data-rk-566985]) { padding-top: clamp(2rem, 5vw, 3.5rem); }

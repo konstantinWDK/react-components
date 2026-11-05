@@ -1,0 +1,79 @@
+'use client';
+
+import ChartFrame from './ChartFrame';
+import { arcPath, polar, formatValue } from './chart-utils';
+import './PolarAreaChart.css';
+
+/**
+ * PolarAreaChart — Equal-angle wedges whose radius encodes value (area-correct
+ * via square-root scaling). Good for cyclical categories like months or hours.
+ *
+ * @param {Array<{label: string, value: number}>} items - Wedges (max 12).
+ * @param {string} color - Wedge hue (single series).
+ * @param {string} suffix - Value suffix.
+ * @param {string} variant - Card style (glass|solid|ghost).
+ * @param {string} size - Density (sm|md|lg).
+ */
+export interface PolarAreaChartProps {
+  title?: string;
+  subtitle?: string;
+  items?: Array<{ label: string; value: number }>;
+  color?: string;
+  prefix?: string;
+  suffix?: string;
+  variant?: 'glass' | 'solid' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+export function PolarAreaChart({
+  title = 'Orders by month',
+  subtitle = 'Seasonality at a glance',
+  items = [
+    { label: 'Jan', value: 320 }, { label: 'Feb', value: 280 }, { label: 'Mar', value: 360 },
+    { label: 'Apr', value: 410 }, { label: 'May', value: 470 }, { label: 'Jun', value: 520 },
+    { label: 'Jul', value: 490 }, { label: 'Aug', value: 450 }, { label: 'Sep', value: 430 },
+    { label: 'Oct', value: 510 }, { label: 'Nov', value: 690 }, { label: 'Dec', value: 820 },
+  ],
+  color = 'var(--chart-7, #9085e9)',
+  prefix = '',
+  suffix = '',
+  variant = 'glass',
+  size = 'md',
+  className = '',
+}: PolarAreaChartProps) {
+  const S = 320;
+  const c = S / 2;
+  const R = S / 2 - 26;
+  const max = Math.max(...items.map((i) => i.value)) || 1;
+  const n = Math.min(items.length, 12);
+  const sweep = (Math.PI * 2) / n;
+  const rings = [0.25, 0.5, 0.75, 1];
+  const fmt = (v: number) => formatValue(v, prefix, suffix);
+  return (
+    <>
+      <ChartFrame title={title} subtitle={subtitle} variant={variant} size={size} className={className} table={{ headers: ['Item', 'Value'], rows: items.map((i) => [i.label, fmt(i.value)]) }}>
+        <div className="pa" data-rk-5b5eb9="">
+          <svg viewBox={`0 0 ${S} ${S}`} role="img" aria-label={`${title}: polar area chart of ${n} categories`} data-rk-5b5eb9="">
+            {rings.map((f, __i: number) => <circle key={__i} className="cf-grid" cx={c} cy={c} r={R * Math.sqrt(f)} fill="none" data-rk-5b5eb9="" />)}
+            {items.slice(0, n).map((it, i) => {
+              const r = R * Math.sqrt(it.value / max);
+              const a0 = i * sweep + 0.012;
+              const a1 = (i + 1) * sweep - 0.012;
+              const [lx, ly] = polar(c, c, R + 14, i * sweep + sweep / 2);
+              const isMax = it.value === max;
+              return (
+                <g data-rk-5b5eb9="">
+                  <path className="cf-mark cf-dim" d={arcPath(c, c, r, 0, a0, a1)} fill={color} fillOpacity={0.35 + 0.6 * (it.value / max)} tabIndex={0} role="img" aria-label={`${it.label}: ${fmt(it.value)}`} data-tip-title={it.label} data-tip={`${color}::${fmt(it.value)}`} data-rk-5b5eb9="" />
+                  <text className={isMax ? 'cf-label cf-label--strong' : 'cf-label'} x={lx} y={ly + 4} textAnchor="middle" data-rk-5b5eb9="">{it.label}</text>
+                </g>
+              );
+            })}
+          </svg>
+        </div>
+      </ChartFrame>
+    </>
+  );
+}
+
+export default PolarAreaChart;

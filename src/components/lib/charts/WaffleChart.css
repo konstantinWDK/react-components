@@ -1,0 +1,38 @@
+/* WaffleChart — ported from astro-component-kit (charts/WaffleChart.astro) */
+
+.wf:where([data-rk-87979e]) {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.wf__grid:where([data-rk-87979e]) {
+  display: grid;
+  grid-template-columns: repeat(var(--wf-cols), 1fr);
+  gap: 3px;
+}
+.wf__cell:where([data-rk-87979e]) {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  animation: waffle-chart-wf-in 0.4s ease both;
+  animation-delay: calc(var(--wf-i) * 6ms);
+}
+.wf__cell:hover:where([data-rk-87979e]) { filter: brightness(1.25); }
+@keyframes waffle-chart-wf-in { from { opacity: 0; transform: scale(0.4); } }
+.wf__legend:where([data-rk-87979e]) { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.wf__legend:where([data-rk-87979e]) li:where([data-rk-87979e]) { display: flex; flex-direction: column; }
+.wf__big:where([data-rk-87979e]) {
+  font-size: 1.75rem;
+  font-weight: 750;
+  color: var(--c-text-1, #fff);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.wf__big:where([data-rk-87979e]) small:where([data-rk-87979e]) { font-size: 0.9rem; color: var(--c-text-2, #a3a3a3); margin-left: 2px; }
+.wf__name:where([data-rk-87979e]) { display: flex; align-items: center; gap: 0.45rem; font-size: 0.8125rem; color: var(--c-text-2, #a3a3a3); }
+.wf__name:where([data-rk-87979e]) i:where([data-rk-87979e]) { width: 10px; height: 10px; border-radius: 3px; }
+@media (max-width: 560px) {
+  .wf:where([data-rk-87979e]) { grid-template-columns: 1fr; }
+  .wf__legend:where([data-rk-87979e]) { grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) { .wf__cell:where([data-rk-87979e]) { animation: none; } }

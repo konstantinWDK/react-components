@@ -1,0 +1,4 @@
+/* ShadowRevealText — ported from astro-component-kit (typography/ShadowRevealText.astro) */
+
+.rev-text:where([data-rk-9adbdb]) { font-size: 3.5rem; font-weight: 900; color: #fff; text-shadow: 4px 4px 0px rgba(99,102,241,0.3), 8px 8px 0px rgba(0,0,0,0.5); margin: 0; line-height: 1.1; }
+@media (max-width: 768px) { .rev-text:where([data-rk-9adbdb]) { font-size: 2rem; } }

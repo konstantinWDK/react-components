@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added — complete catalogue
+- All remaining categories ported from the Astro kit: forms, cards, navigation, layout, overlays, data, typography, charts, e-commerce and app (290 components in total).
+- 51 full-page sections (`react-component-kit-ui/sections`) with their own pages on reactcomponents.dev (`/sections/<slug>`), real miniatures in the catalog and the home spotlight.
+- 3 multi-page templates (`react-component-kit-ui/templates/ecommerce`, `/ecommerce-editorial`, `/saas-hotel`) with live previews (`/preview/…`) and detail pages showing the Next.js files to create.
+- Root components `Galaxy3D`, `AnimatedGalaxy`, `LogoWithGalaxy`.
+- Astro-style scoped CSS (`data-rk-*` + `:where()`), so component styles never collide.
+
+### Fixed (also present in the Astro kit)
+- `AreaChart` / `BarChart` / `DonutChart` never rendered: ApexCharts cannot parse CSS variables (colours are now resolved first) and the donut total used a non-existent `seriesGlobals` field.
+- `GlassModal` centring; `StickySidebarWrapper` `class:list` typo.
+
+
 ### Added — reactcomponents.dev website
 - New Next.js (static export) website replicating astrocomponents.dev: same header menu, sidebar with search, docs page per component (live preview, usage, TSX + CSS source, quick info), installation guide, sections and templates catalogs, and the full home page (3D galaxy, particle background, carousels, interaction lab).
 - Three languages with the same URLs as the Astro site: English at `/`, Spanish at `/es/`, Russian at `/ru/`, with hreflang alternates and a multilingual sitemap.

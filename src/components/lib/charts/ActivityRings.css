@@ -1,0 +1,24 @@
+/* ActivityRings — ported from astro-component-kit (charts/ActivityRings.astro) */
+
+.ar:where([data-rk-2006ec]) {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.ar__arc:where([data-rk-2006ec]) {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: activity-rings-ar-draw 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes activity-rings-ar-draw { to { stroke-dashoffset: 0; } }
+.ar__list:where([data-rk-2006ec]) { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.ar__list:where([data-rk-2006ec]) li:where([data-rk-2006ec]) { display: grid; grid-template-columns: 1fr auto; gap: 0.15rem 1rem; }
+.ar__label:where([data-rk-2006ec]) { display: flex; align-items: center; gap: 0.45rem; font-size: 0.8125rem; color: var(--c-text-2, #a3a3a3); grid-column: 1 / -1; }
+.ar__label:where([data-rk-2006ec]) i:where([data-rk-2006ec]) { width: 10px; height: 10px; border-radius: 50%; }
+.ar__value:where([data-rk-2006ec]) { font-size: 1.25rem; font-weight: 700; color: var(--c-text-1, #fff); font-variant-numeric: tabular-nums; }
+.ar__value:where([data-rk-2006ec]) small:where([data-rk-2006ec]) { font-size: 0.8rem; color: var(--c-text-3, #8a8a8a); font-weight: 500; }
+.ar__pct:where([data-rk-2006ec]) { display: inline-flex; align-items: center; gap: 0.3rem; align-self: end; font-size: 0.8125rem; color: var(--c-text-2, #a3a3a3); font-variant-numeric: tabular-nums; }
+.ar__pct:where([data-rk-2006ec]) svg:where([data-rk-2006ec]) { color: var(--chart-pos, #34c38f); }
+@media (max-width: 520px) { .ar:where([data-rk-2006ec]) { grid-template-columns: 1fr; justify-items: center; } .ar__list:where([data-rk-2006ec]) { width: 100%; } .ar:where([data-rk-2006ec]) svg:where([data-rk-2006ec]) { max-width: 200px; } }
+@media (prefers-reduced-motion: reduce) { .ar__arc:where([data-rk-2006ec]) { animation: none; stroke-dashoffset: 0; } }

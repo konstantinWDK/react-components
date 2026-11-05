@@ -1,0 +1,41 @@
+/* StockIndicator — ported from astro-component-kit (ecommerce/StockIndicator.astro) */
+
+.stock:where([data-rk-83468c]) {
+  --stock-tone: var(--c-success, #34d399);
+  display: grid;
+  gap: var(--sp-2, 0.5rem);
+}
+.stock--low:where([data-rk-83468c]) { --stock-tone: var(--c-warning, #fbbf24); }
+.stock--out:where([data-rk-83468c]) { --stock-tone: var(--c-danger, #f87171); }
+.stock--card:where([data-rk-83468c]) {
+  padding: var(--sp-4, 1rem);
+  border-radius: var(--r-md, 12px);
+  border: 1px solid color-mix(in srgb, var(--stock-tone) 30%, transparent);
+  background: color-mix(in srgb, var(--stock-tone) 7%, transparent);
+}
+.stock--sm.stock--card:where([data-rk-83468c]) { padding: var(--sp-3, 0.75rem); }
+
+.stock__msg:where([data-rk-83468c]) { display: flex; align-items: center; gap: var(--sp-2, 0.5rem); margin: 0; font-size: 0.9rem; color: var(--c-text-1, #fff); }
+.stock__icon:where([data-rk-83468c]) {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: var(--stock-tone);
+  background: color-mix(in srgb, var(--stock-tone) 16%, transparent);
+}
+.stock--low:where([data-rk-83468c]) .stock__icon:where([data-rk-83468c]) { animation: stock-indicator-stock-pulse 1.8s ease-in-out infinite; }
+.stock__bar:where([data-rk-83468c]) { height: 6px; border-radius: 999px; background: rgb(var(--ink-rgb, 255 255 255) / 0.08); overflow: hidden; }
+.stock__bar:where([data-rk-83468c]) span:where([data-rk-83468c]) { display: block; height: 100%; border-radius: inherit; background: var(--stock-tone); }
+.stock__viewers:where([data-rk-83468c]) { display: flex; align-items: center; gap: var(--sp-2, 0.5rem); margin: 0; font-size: 0.8rem; color: var(--c-text-2, #a3a3a3); }
+.stock__viewers:where([data-rk-83468c]) strong:where([data-rk-83468c]) { color: var(--c-text-1, #fff); display: inline-block; min-width: 1.2em; }
+.stock__viewers:where([data-rk-83468c]) strong.is-bump:where([data-rk-83468c]) { animation: stock-indicator-stock-bump 0.4s ease-out; }
+.stock__eye:where([data-rk-83468c]) { display: grid; place-items: center; color: var(--c-text-2, #a3a3a3); }
+
+@keyframes stock-indicator-stock-pulse { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--stock-tone) 12%, transparent); } }
+@keyframes stock-indicator-stock-bump { from { transform: translateY(-3px); opacity: 0.4; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .stock--low:where([data-rk-83468c]) .stock__icon:where([data-rk-83468c]) { animation: none; }
+}

@@ -1,0 +1,62 @@
+/* BulletChart — ported from astro-component-kit (charts/BulletChart.astro) */
+
+.bc:where([data-rk-d2b72d]) { display: grid; gap: 1rem; }
+.bc__row:where([data-rk-d2b72d]) {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.35rem;
+  border-radius: 8px;
+}
+.bc__row:focus-visible:where([data-rk-d2b72d]) { outline: 2px solid var(--c-primary-light, #d4a017); }
+.bc__meta:where([data-rk-d2b72d]) { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.bc__label:where([data-rk-d2b72d]) { font-size: 0.8125rem; color: var(--c-text-2, #a3a3a3); }
+.bc__value:where([data-rk-d2b72d]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 650;
+  color: var(--c-text-1, #fff);
+  font-variant-numeric: tabular-nums;
+}
+.bc__status:where([data-rk-d2b72d]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--c-text-2, #a3a3a3);
+  white-space: nowrap;
+}
+.bc__status--ok:where([data-rk-d2b72d]) svg:where([data-rk-d2b72d]) { color: var(--chart-pos, #34c38f); }
+.bc__status--bad:where([data-rk-d2b72d]) svg:where([data-rk-d2b72d]) { color: var(--chart-neg, #f06a6a); }
+.bc__track:where([data-rk-d2b72d]) {
+  position: relative;
+  height: 22px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bc__band:where([data-rk-d2b72d]) {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: #fff;
+}
+.bc__measure:where([data-rk-d2b72d]) {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  height: 8px;
+  border-radius: 0 3px 3px 0;
+  transform-origin: left;
+  animation: bullet-chart-bc-grow 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.bc__target:where([data-rk-d2b72d]) {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  width: 3px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background: var(--chart-4, #c98500);
+}
+@keyframes bullet-chart-bc-grow { from { transform: scaleX(0); } }
+@media (prefers-reduced-motion: reduce) { .bc__measure:where([data-rk-d2b72d]) { animation: none; } }

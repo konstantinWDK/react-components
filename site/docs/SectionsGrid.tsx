@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { SectionMini } from './SectionRenderer';
 
 export interface SectionCardData {
   slug: string;
@@ -41,10 +42,14 @@ export function SectionsGrid({
         {cards.map((s) => (
           <article key={s.slug} className={`section-card ${s.href ? '' : 'section-card--soon'}`} style={{ display: visible(s) ? 'flex' : 'none' }}>
             <div className="section-card__preview">
-              <div className="section-card__fallback" aria-hidden="true">
-                {s.name}
-                {!s.href && <span className="section-card__soon">{labels.soon}</span>}
-              </div>
+              {s.href ? (
+                <SectionMini slug={s.slug} />
+              ) : (
+                <div className="section-card__fallback" aria-hidden="true">
+                  {s.name}
+                  <span className="section-card__soon">{labels.soon}</span>
+                </div>
+              )}
             </div>
             <div className="section-card__content">
               <div className="section-card__meta">

@@ -1,0 +1,29 @@
+/* InteractiveTiltCard — ported from astro-component-kit (cards/InteractiveTiltCard.astro) */
+
+.tilt-card-wrap:where([data-rk-c53bbe]) { 
+  perspective: 1000px; 
+  width: 100%; 
+  max-width: 300px; 
+}
+.tilt-card-inner:where([data-rk-c53bbe]) { 
+  background: var(--c-bg-elev, #1e293b); 
+  padding: var(--sp-12, 3rem); 
+  border-radius: var(--r-xl, 24px); 
+  color: var(--c-text-1, #fff); 
+  text-align: center; 
+  border: 1px solid var(--c-border, rgba(255,255,255,0.1)); 
+  transform-style: preserve-3d; 
+  transition: transform 0.1s; 
+}
+.tilt-card__title:where([data-rk-c53bbe]) { 
+  transform: translateZ(50px); 
+  font-size: 1.5rem; 
+  color: var(--c-primary, #818cf8); 
+  margin: 0;
+}
+.tilt-card__desc:where([data-rk-c53bbe]) { 
+  transform: translateZ(30px); 
+  color: var(--c-text-2, #94a3b8); 
+  font-size: 0.9rem; 
+  margin-top: 1rem; 
+}

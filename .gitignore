@@ -7,3 +7,4 @@ dist-playground
 out
 next-env.d.ts
 *.tsbuildinfo
+scripts/smoke/audit-results.json

@@ -1,0 +1,28 @@
+/* FormGroupVertical — ported from astro-component-kit (forms/FormGroupVertical.astro) */
+
+.form-group:where([data-rk-ec85ff]) { display: flex; flex-direction: column; gap: var(--sp-2, 0.5rem); width: 100%; margin-bottom: var(--sp-4, 1rem); }
+
+.form-group__label:where([data-rk-ec85ff]) { 
+  font-size: 0.8rem; font-weight: 700; 
+  color: var(--c-text-1, #e2e8f0); 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.form-group__req:where([data-rk-ec85ff]) { color: var(--c-error, #f87171); margin-left: 2px; }
+
+.form-group__content:where([data-rk-ec85ff]) { width: 100%; }
+
+.form-group__help:where([data-rk-ec85ff]) { font-size: 0.75rem; color: var(--c-text-2, #64748b); margin: 0 0 0 0.5rem; }
+
+.form-group__error:where([data-rk-ec85ff]) { font-size: 0.75rem; color: var(--c-error, #f87171); font-weight: 600; margin: 0 0 0 0.5rem; }
+
+/* Deep selector to style any input nested inside the group content if it's in an error state */
+.form-group--error:where([data-rk-ec85ff]) input, 
+.form-group--error:where([data-rk-ec85ff]) textarea, 
+.form-group--error:where([data-rk-ec85ff]) select { 
+  border-color: var(--c-error, #ef4444) !important; 
+  background-color: rgba(239, 68, 68, 0.03) !important;
+}

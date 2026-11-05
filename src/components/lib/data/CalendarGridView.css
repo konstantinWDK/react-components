@@ -1,0 +1,9 @@
+/* CalendarGridView — ported from astro-component-kit (data/CalendarGridView.astro) */
+
+.cal-card:where([data-rk-b15626]) { background: #111; border: 1px solid #333; border-radius: 16px; padding: 1.25rem; width: fit-content; }
+.cal-head:where([data-rk-b15626]) { text-align: center; margin-bottom: 1rem; color: #fff; }
+.cal-grid:where([data-rk-b15626]) { display: grid; grid-template-columns: repeat(7, 35px); text-align: center; font-size: 0.75rem; color: #64748b; }
+.cal-grid:where([data-rk-b15626]) span:where([data-rk-b15626]) { font-weight: 800; padding: 5px 0; color: #818cf8; }
+.cal-grid:where([data-rk-b15626]) div:where([data-rk-b15626]) { padding: 8px 0; cursor: pointer; transition: 0.2s; }
+.cal-grid:where([data-rk-b15626]) div:hover:where([data-rk-b15626]) { color: #fff; background: rgba(255,255,255,0.05); border-radius: 5px; }
+.today:where([data-rk-b15626]) { background: #6366f1; color: #fff !important; border-radius: 5px; box-shadow: 0 0 10px rgba(99,102,241,0.4); }

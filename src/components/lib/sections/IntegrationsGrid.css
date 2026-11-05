@@ -1,0 +1,68 @@
+/* IntegrationsGrid — ported from astro-component-kit (sections/IntegrationsGrid.astro) */
+
+.ig:where([data-rk-32bfaf]) {
+  --ig-py: 5.5rem;
+  padding: var(--ig-py) var(--sp-6, 1.5rem);
+  background: var(--c-bg, #050505);
+}
+.ig--sm:where([data-rk-32bfaf]) { --ig-py: 3.5rem; }
+.ig--lg:where([data-rk-32bfaf]) { --ig-py: 7.5rem; }
+.ig__inner:where([data-rk-32bfaf]) { max-width: 1180px; margin: 0 auto; }
+.ig__head:where([data-rk-32bfaf]) { text-align: center; max-width: 620px; margin: 0 auto 2rem; }
+.ig__title:where([data-rk-32bfaf]) { margin: 0 0 0.75rem; font-size: clamp(1.9rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; color: var(--c-text-1, #fff); }
+.ig__subtitle:where([data-rk-32bfaf]) { margin: 0; font-size: 1.0625rem; color: var(--c-text-2, #a3a3a3); }
+.ig__filters:where([data-rk-32bfaf]) { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.ig__chip:where([data-rk-32bfaf]) {
+  min-height: 40px;
+  padding: 0 1rem;
+  border-radius: var(--r-full, 999px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.1);
+  background: transparent;
+  color: var(--c-text-2, #a3a3a3);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 550;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.ig__chip:hover:where([data-rk-32bfaf]) { color: var(--c-text-1, #fff); border-color: rgb(var(--ink-rgb, 255 255 255) / 0.25); }
+.ig__chip[aria-pressed='true']:where([data-rk-32bfaf]) { background: var(--c-text-1, #fff); color: var(--c-on-primary, #0a0a0a); border-color: transparent; }
+.ig__chip:focus-visible:where([data-rk-32bfaf]) { outline: 2px solid var(--c-primary-light, #d4a017); outline-offset: 2px; }
+.ig__count:where([data-rk-32bfaf]) { margin: 1rem 0 1.5rem; text-align: center; font-size: 0.8125rem; color: var(--c-text-3, #8a8a8a); }
+.ig__grid:where([data-rk-32bfaf]) { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.ig__tile:where([data-rk-32bfaf]) {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--r-lg, 18px);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.ig__tile[hidden]:where([data-rk-32bfaf]) { display: none; }
+.ig--card:where([data-rk-32bfaf]) .ig__tile:where([data-rk-32bfaf]) { background: rgb(var(--ink-rgb, 255 255 255) / 0.025); border: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.07)); }
+.ig--outline:where([data-rk-32bfaf]) .ig__tile:where([data-rk-32bfaf]) { border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.12); }
+.ig--compact:where([data-rk-32bfaf]) .ig__tile:where([data-rk-32bfaf]) { padding: 0.75rem; }
+.ig--compact:where([data-rk-32bfaf]) .ig__desc:where([data-rk-32bfaf]) { display: none; }
+.ig__tile:hover:where([data-rk-32bfaf]) { border-color: rgb(var(--ink-rgb, 255 255 255) / 0.2); transform: translateY(-2px); }
+.ig__logo:where([data-rk-32bfaf]) {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--c) 22%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
+  color: var(--c-text-1, #fff);
+  font-weight: 750;
+  font-size: 0.9rem;
+}
+.ig__body:where([data-rk-32bfaf]) { min-width: 0; flex: 1; }
+.ig__row:where([data-rk-32bfaf]) { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.ig__name:where([data-rk-32bfaf]) { margin: 0; font-size: 1rem; font-weight: 650; color: var(--c-text-1, #fff); }
+.ig__status:where([data-rk-32bfaf]) { font-size: 0.6875rem; font-weight: 650; padding: 0.15rem 0.5rem; border-radius: var(--r-full, 999px); white-space: nowrap; }
+.ig__status--available:where([data-rk-32bfaf]) { background: rgba(52, 195, 143, 0.14); color: #7ee2b8; }
+.ig__status--beta:where([data-rk-32bfaf]) { background: rgba(201, 133, 0, 0.16); color: #f2c66a; }
+.ig__status--soon:where([data-rk-32bfaf]) { background: rgb(var(--ink-rgb, 255 255 255) / 0.06); color: var(--c-text-2, #a3a3a3); }
+.ig__desc:where([data-rk-32bfaf]) { margin: 0.35rem 0 0.6rem; font-size: 0.875rem; line-height: 1.5; color: var(--c-text-2, #a3a3a3); }
+.ig__cat:where([data-rk-32bfaf]) { font-size: 0.75rem; color: var(--c-text-3, #8a8a8a); }
+@media (prefers-reduced-motion: reduce) { .ig__tile:where([data-rk-32bfaf]), .ig__chip:where([data-rk-32bfaf]) { transition: none; } }

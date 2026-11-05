@@ -1,0 +1,253 @@
+/* ChartFrame — ported from astro-component-kit (charts/ChartFrame.astro) */
+
+.cf:where([data-rk-0ca607]) {
+  --cf-pad: var(--sp-6, 1.5rem);
+  --cf-title: 1.0625rem;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: var(--cf-pad);
+  border-radius: var(--r-lg, 20px);
+  color: var(--c-text-2, #a3a3a3);
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+.cf--glass:where([data-rk-0ca607]) {
+  background: linear-gradient(160deg, rgb(var(--ink-rgb, 255 255 255) / 0.045), rgb(var(--ink-rgb, 255 255 255) / 0.015));
+  border: 1px solid var(--c-border, rgb(var(--ink-rgb, 255 255 255) / 0.07));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.cf--solid:where([data-rk-0ca607]) {
+  background: var(--chart-surface, #0d0d0f);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+}
+.cf--ghost:where([data-rk-0ca607]) {
+  background: transparent;
+  border: 1px solid transparent;
+  padding-inline: 0;
+}
+.cf--sm:where([data-rk-0ca607]) { --cf-pad: var(--sp-4, 1rem); --cf-title: 0.9375rem; }
+.cf--lg:where([data-rk-0ca607]) { --cf-pad: var(--sp-8, 2rem); --cf-title: 1.25rem; }
+
+.cf__header:where([data-rk-0ca607]) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-4, 1rem);
+  margin-bottom: var(--sp-4, 1rem);
+}
+.cf__title:where([data-rk-0ca607]) {
+  margin: 0;
+  font-size: var(--cf-title);
+  font-weight: 650;
+  color: var(--c-text-1, #fff);
+  letter-spacing: -0.01em;
+}
+.cf__subtitle:where([data-rk-0ca607]) {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--c-text-2, #a3a3a3);
+  line-height: 1.45;
+}
+.cf__headline:where([data-rk-0ca607]) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+.cf__value:where([data-rk-0ca607]) {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--c-text-1, #fff);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.cf__delta:where([data-rk-0ca607]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-text-1, #fff);
+}
+.cf__delta--pos:where([data-rk-0ca607]) svg:where([data-rk-0ca607]) { color: var(--chart-pos, #34c38f); }
+.cf__delta--neg:where([data-rk-0ca607]) svg:where([data-rk-0ca607]) { color: var(--chart-neg, #f06a6a); }
+.cf__delta--neutral:where([data-rk-0ca607]) { color: var(--c-text-3, #8a8a8a); font-weight: 500; }
+
+.cf__legend:where([data-rk-0ca607]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  list-style: none;
+  margin: 0 0 var(--sp-3, 0.75rem);
+  padding: 0;
+}
+.cf__legend-item:where([data-rk-0ca607]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  color: var(--c-text-2, #a3a3a3);
+}
+.cf__swatch:where([data-rk-0ca607]) {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.cf__plot:where([data-rk-0ca607]) {
+  position: relative;
+  width: 100%;
+}
+/* Plot SVGs scale fluidly; small inline icons keep their explicit width/height. */
+.cf__plot:where([data-rk-0ca607]) svg:not([width]) {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* ── Shared mark vocabulary for every chart ───────────── */
+.cf:where([data-rk-0ca607]) .cf-grid {
+  stroke: var(--chart-grid, rgb(var(--ink-rgb, 255 255 255) / 0.07));
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+.cf:where([data-rk-0ca607]) .cf-axis {
+  stroke: var(--chart-axis, rgb(var(--ink-rgb, 255 255 255) / 0.18));
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+.cf:where([data-rk-0ca607]) .cf-label {
+  fill: var(--c-text-3, #8a8a8a);
+  font-size: 11px;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-variant-numeric: tabular-nums;
+}
+.cf:where([data-rk-0ca607]) .cf-label--strong {
+  fill: var(--c-text-1, #fff);
+  font-weight: 600;
+}
+.cf:where([data-rk-0ca607]) .cf-mark {
+  transition: opacity 0.2s ease, filter 0.2s ease;
+  outline: none;
+}
+.cf:where([data-rk-0ca607]) .cf-mark:focus-visible {
+  stroke: var(--c-text-1, #fff);
+  stroke-width: 2px;
+}
+.cf:where([data-rk-0ca607]) svg:hover .cf-dim,
+.cf:where([data-rk-0ca607]) svg:focus-within .cf-dim {
+  opacity: 0.45;
+}
+.cf:where([data-rk-0ca607]) svg .cf-dim:hover,
+.cf:where([data-rk-0ca607]) svg .cf-dim:focus-visible {
+  opacity: 1;
+}
+.cf:where([data-rk-0ca607]) .cf-hit {
+  fill: transparent;
+  cursor: crosshair;
+  outline: none;
+}
+.cf:where([data-rk-0ca607]) .cf-cross {
+  stroke: rgb(var(--ink-rgb, 255 255 255) / 0.35);
+  stroke-width: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+.cf:where([data-rk-0ca607]) .cf-hit-group:hover .cf-cross,
+.cf:where([data-rk-0ca607]) .cf-hit-group:focus-within .cf-cross {
+  opacity: 1;
+}
+.cf:where([data-rk-0ca607]) .cf-hit:focus-visible {
+  fill: rgb(var(--ink-rgb, 255 255 255) / 0.04);
+}
+
+/* ── Tooltip ─────────────────────────────────────────── */
+.cf__tip:where([data-rk-0ca607]) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 7rem;
+  max-width: 16rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: var(--r-sm, 8px);
+  background: rgb(var(--paper-rgb, 12 12 14) / 0.96);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  font-size: 0.75rem;
+  color: var(--c-text-1, #fff);
+  transition: opacity 0.15s ease;
+}
+.cf__tip:where([data-rk-0ca607]) strong {
+  font-size: 0.75rem;
+  font-weight: 650;
+  margin-bottom: 0.15rem;
+}
+.cf__tip:where([data-rk-0ca607]) span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--c-text-2, #c4c4c4);
+  font-variant-numeric: tabular-nums;
+}
+.cf__tip:where([data-rk-0ca607]) i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Data table fallback ─────────────────────────────── */
+.cf__data:where([data-rk-0ca607]) {
+  margin-top: var(--sp-3, 0.75rem);
+  font-size: 0.8125rem;
+}
+.cf__data:where([data-rk-0ca607]) summary:where([data-rk-0ca607]) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  cursor: pointer;
+  color: var(--c-text-3, #8a8a8a);
+  border-radius: 6px;
+  list-style-position: inside;
+}
+.cf__data:where([data-rk-0ca607]) summary:hover:where([data-rk-0ca607]) { color: var(--c-text-1, #fff); }
+.cf__data:where([data-rk-0ca607]) summary:focus-visible:where([data-rk-0ca607]) {
+  outline: 2px solid var(--c-primary-light, #d4a017);
+  outline-offset: 2px;
+}
+.cf__table-wrap:where([data-rk-0ca607]) {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+.cf__data:where([data-rk-0ca607]) table:where([data-rk-0ca607]) {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.cf__data:where([data-rk-0ca607]) th:where([data-rk-0ca607]),
+.cf__data:where([data-rk-0ca607]) td:where([data-rk-0ca607]) {
+  padding: 0.4rem 0.6rem;
+  text-align: right;
+  border-bottom: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.06);
+  white-space: nowrap;
+}
+.cf__data:where([data-rk-0ca607]) th:first-child:where([data-rk-0ca607]) { text-align: left; }
+.cf__data:where([data-rk-0ca607]) thead:where([data-rk-0ca607]) th:where([data-rk-0ca607]) { color: var(--c-text-3, #8a8a8a); font-weight: 600; }
+.cf__data:where([data-rk-0ca607]) tbody:where([data-rk-0ca607]) th:where([data-rk-0ca607]) { color: var(--c-text-1, #fff); font-weight: 500; }
+.cf__data:where([data-rk-0ca607]) td:where([data-rk-0ca607]) { color: var(--c-text-2, #a3a3a3); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cf:where([data-rk-0ca607]) * { transition: none !important; animation: none !important; }
+}

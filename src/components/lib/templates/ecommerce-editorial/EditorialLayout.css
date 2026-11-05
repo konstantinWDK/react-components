@@ -1,0 +1,78 @@
+/* EditorialLayout — ported from astro-component-kit (templates/ecommerce-editorial/EditorialLayout.astro) */
+
+.theme-forma {
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --r-sm: 2px;
+  --r-md: 3px;
+  --r-lg: 4px;
+  --r-xl: 6px;
+  --shop-header-h: 106px;
+}
+.theme-forma[data-theme='light'] {
+  --c-bg: #f3efe8;
+  --c-bg-1: #fbf9f5;
+  --c-bg-2: #e7e1d6;
+  --c-surface: rgba(23, 21, 18, 0.03);
+  --c-border: rgba(23, 21, 18, 0.14);
+  --c-text-1: #171512;
+  --c-text-2: #514b44;
+  --c-text-3: #6d665e;
+  --c-primary: #9c3d1c;
+  --c-primary-light: #9c3d1c;
+  --c-primary-glow: rgba(156, 61, 28, 0.14);
+  --c-accent: #7a2e14;
+  --shop-accent: #9c3d1c;
+  --c-on-primary: #ffffff;
+  --ink-rgb: 23 21 18;
+  --paper-rgb: 251 249 245;
+  --c-success: #2f6b3a;
+  --c-warning: #8a4b06;
+  --c-danger: #a8261b;
+  --pm-ink-s: 45%;
+  --pm-ink-l: 32%;
+  --pm-soft-s: 30%;
+  --pm-soft-l: 80%;
+  --pm-soft-a: 0.95;
+  color-scheme: light;
+}
+.theme-forma[data-theme='dark'] {
+  --c-bg: #12110f;
+  --c-bg-1: #1a1815;
+  --c-bg-2: #24211c;
+  --c-surface: rgba(242, 237, 229, 0.03);
+  --c-border: rgba(242, 237, 229, 0.14);
+  --c-text-1: #f2ede5;
+  --c-text-2: #bcb4a8;
+  --c-text-3: #948b7f;
+  --c-primary: #e2835a;
+  --c-primary-light: #e2835a;
+  --c-primary-glow: rgba(226, 131, 90, 0.16);
+  --c-accent: #f0b796;
+  --shop-accent: #e2835a;
+  --c-on-primary: #1a0d07;
+  --ink-rgb: 242 237 229;
+  --paper-rgb: 18 17 15;
+  --c-success: #7fc48c;
+  --c-warning: #e7b46a;
+  --c-danger: #f08a7a;
+  --pm-ink-s: 45%;
+  --pm-ink-l: 76%;
+  --pm-soft-s: 25%;
+  --pm-soft-l: 24%;
+  --pm-soft-a: 0.8;
+  color-scheme: dark;
+}
+body.forma { background: var(--c-bg); color: var(--c-text-2); overflow-x: clip; }
+body.forma::before { display: none; }
+.forma ::selection { background: var(--shop-accent); color: var(--c-on-primary); }
+.forma__main { outline: none; }
+.forma-wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 clamp(1rem, 3vw, 2.5rem); }
+.forma__skip { position: fixed; top: -60px; left: 12px; z-index: 2000; padding: 0.6rem 1rem; background: var(--c-text-1); color: var(--c-bg); font-weight: 700; transition: top 0.2s ease; }
+.forma__skip:focus { top: 12px; color: var(--c-bg); }
+.forma .section-space { padding-block: clamp(3rem, 7vw, 6rem); }
+
+/* Reused library pieces, tuned to the editorial look */
+.forma .badge { border-radius: var(--r-sm); }
+.forma .cart-toast { border-radius: var(--r-sm); }
+.forma .anim-input, .forma .custom-select, .forma .stepper { border-radius: var(--r-sm); background: var(--c-bg-1); border-color: var(--c-border); }
+.theme-forma[data-theme='light'] .anim-input, .theme-forma[data-theme='light'] .custom-select { background: #fff; }

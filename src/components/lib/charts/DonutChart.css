@@ -1,0 +1,45 @@
+/* DonutChart — ported from astro-component-kit (charts/DonutChart.astro) */
+
+.premium-chart-card:where([data-rk-ab60a1]) {
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  border-radius: var(--r-xl, 24px);
+  padding: var(--sp-6, 24px);
+  width: 100%;
+  min-width: 300px;
+}
+
+.premium-chart-card__header:where([data-rk-ab60a1]) {
+  margin-bottom: var(--sp-6, 24px);
+}
+
+.premium-chart-card__title:where([data-rk-ab60a1]) {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--c-text-1, #ffffff);
+  margin: 0;
+}
+
+.premium-chart-card__body:where([data-rk-ab60a1]) {
+  width: 100%;
+  position: relative;
+  min-height: 200px;
+}
+
+.chart-container:where([data-rk-ab60a1]) {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.chart-fallback:where([data-rk-ab60a1]) {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--c-text-3, #64748b);
+  z-index: 1;
+}

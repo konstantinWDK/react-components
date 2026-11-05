@@ -83,33 +83,41 @@ Every component is self-contained. Copy `GlassButton.tsx` + `GlassButton.css` fr
 
 ## 📚 Components
 
-| Category | Import | Components |
-|----------|--------|:----------:|
-| **Buttons** | `react-component-kit-ui/buttons` | 22 |
-| **Feedback** | `react-component-kit-ui/feedback` | 22 |
-| Forms, Cards, Layout, Navigation, Overlays, Typography, Data, Charts, E-commerce, App, Sections, Templates | | 🚧 in progress |
+**290 components, 51 full-page sections and 3 multi-page templates**, the complete Astro Components Kit catalogue ported to React.
 
-<details>
-<summary><strong>Buttons</strong> (22)</summary>
+| Category | Import | Items |
+|----------|--------|:-----:|
+| Buttons | `react-component-kit-ui/buttons` | 22 |
+| Forms | `react-component-kit-ui/forms` | 24 |
+| Cards | `react-component-kit-ui/cards` | 22 |
+| Feedback | `react-component-kit-ui/feedback` | 22 |
+| Navigation | `react-component-kit-ui/navigation` | 23 |
+| Layout | `react-component-kit-ui/layout` | 22 |
+| Overlays | `react-component-kit-ui/overlays` | 23 |
+| Data display | `react-component-kit-ui/data` | 23 |
+| Typography | `react-component-kit-ui/typography` | 24 |
+| Charts (SVG + ApexCharts) | `react-component-kit-ui/charts` | 47 |
+| E-commerce | `react-component-kit-ui/ecommerce` | 25 |
+| App & dashboard | `react-component-kit-ui/app` | 13 |
+| Sections | `react-component-kit-ui/sections` | 51 |
+| Templates | `react-component-kit-ui/templates/ecommerce` · `/templates/ecommerce-editorial` · `/templates/saas-hotel` | 3 |
 
-`AnimatedIconButton` · `BorderDrawButton` · `CyberpunkButton` · `DoubleBorderButton` · `GhostOutlineButton` · `GlassButton` · `GlowButton` · `LiquidButton` · `LoadingButton` · `MagneticButton` · `MinimalPillButton` · `NeonBorderButton` · `NeumorphicButton` · `PulseButton` · `RetroArcadeButton` · `RetroShadowButton` · `RippleButton` · `ShimmerButton` · `ShinyButton` · `SlideRevealButton` · `ThreeDPushButton` · `TiltGlowButton`
+Browse every component with a live preview, usage and full source at [reactcomponents.dev](https://reactcomponents.dev).
 
-All buttons render a `<button>` by default, or an `<a>` when `href` is set (with `aria-disabled` instead of an invalid `disabled`).
-Common props: `variant`, `size` (`'sm' | 'md' | 'lg'`), `disabled`, `href`, `type`, plus any native attribute.
-</details>
+```tsx
+import { StoreHomePage, demoStore } from 'react-component-kit-ui/templates/ecommerce';
 
-<details>
-<summary><strong>Feedback</strong> (22)</summary>
+// app/page.tsx (Next.js)
+export default function Page() {
+  return <StoreHomePage store={{ ...demoStore, name: 'My Shop' }} />;
+}
+```
 
-`AnimatedCheckmark` · `Badge` · `CircleProgress` · `ConfettiFeedback` · `CyberGlitchAlert` · `EmptyStateCard` · `GlassAlert` · `GlassModal` · `GlassProgress` · `IndicatorBadgeMinimal` · `NeonSpinner` · `ProgressRingCounter` · `PulseDot` · `RatingPill` · `ShakeErrorGroup` · `SimpleTooltip` · `SkeletonList` · `Spotlight` · `StepProgress` · `ToastNotif` · `ToastNotificationGroup` · `TypingIndicator`
+Optional peer dependencies: `apexcharts` (AreaChart, BarChart, DonutChart) and `three` (Galaxy3D). Everything else has zero dependencies.
 
-Interactive components are controlled through props:
-- `GlassModal`: `open`, `onClose`, `onConfirm`. Built on native `<dialog>` (Esc, focus trap, backdrop click).
-- `ToastNotif`: `show` toggles the enter/leave animation.
-- `ToastNotificationGroup`: `onAction`, `onDismiss`; unmounts itself after dismissing.
-- `ShakeErrorGroup`: change its `key` to replay the shake.
-- `StepProgress`: `steps`, `activeIndex`.
-</details>
+### How styles stay isolated
+
+Like Astro's scoped styles, every component's CSS is scoped to its own markup with a `data-rk-<hash>` attribute and `:where()` selectors, so it never leaks into your app (and keeps the original specificity). Global design tokens live in `global.css`.
 
 ---
 
@@ -179,36 +187,20 @@ scripts/
 └── check-css.mjs                # class / keyframe collision guard
 ```
 
-### Porting a component from the Astro kit
+### Porting from the Astro kit
+
+The library is generated from [astro-component-kit](https://github.com/konstantinWDK/astro-components) by a source-to-source converter, then type-checked and visually audited:
 
 ```bash
-node scripts/extract-css.mjs forms --src ../astro-components
+node scripts/astro2react.mjs forms                       # .astro → .tsx + scoped .css
+python3 scripts/port-fixes.py                            # hand fixes re-applied after a --force regeneration
+node scripts/gen-site-meta.mjs                           # website metadata, usage snippets, previews
+node scripts/gen-hardcoded-previews.mjs                  # hand-written demos from PreviewRenderer.astro
+npx tsx --tsconfig scripts/smoke/tsconfig.json --import ./scripts/smoke/register.mjs scripts/smoke/ssr-smoke.tsx  # SSR smoke test
+node scripts/smoke/audit-pages.mjs http://localhost:5200  # browser audit of every docs page (needs a served build)
 ```
 
-Then write each `Name.tsx` following these rules:
-
-| Astro | React |
-|-------|-------|
-| `interface Props` + `Astro.props` | `export interface NameProps extends HTMLAttributes<…>`, defaults in destructuring, `...rest` forwarded |
-| `<slot />` / `<slot name="x">` | `children` / a `ReactNode` prop with the Astro default as fallback |
-| `class:list` | `[…].filter(Boolean).join(' ')`, user `className` appended |
-| `style={\`--x: ${v}\`}` | `style={{ '--x': v, ...style } as CSSProperties}` |
-| scoped `<style>` | `Name.css` imported by the component, same class names |
-| `:global(.x)` | `.x` |
-| `@keyframes spin` | `@keyframes <component-slug>-spin` (done by the script) |
-| `<script>` + `querySelectorAll` | React handlers / refs / state; pointer-tracking writes to `el.style` (no re-render per move) |
-| `Math.random()` ids | `useId()` |
-| `<div>` inside `<button>` | `<span>` (valid HTML) |
-
-Finally: add the category barrel, export it from `src/components/index.ts`, add the `./<category>` entry to `package.json#exports`, then register the docs page:
-
-1. `site/demos/meta.ts` → `slug: { file, category, usage }` (the slug must match the Astro registry).
-2. `site/demos/<category>.tsx` → the live preview (same examples as `PreviewRenderer.astro`).
-3. `site/demos/DemoRenderer.tsx` → add the category loader.
-
-The page, sidebar entry, SEO metadata and sitemap entry are generated automatically in EN/ES/RU.
-
----
+What the converter does: frontmatter → typed props with defaults, `class:list` → `className`, SVG/HTML attribute names, `style` strings → objects, `set:html`, `<slot>` → `children` / named props, keys for `.map()`, Astro-style scoped CSS, and client `<script>` blocks → a mount effect. `buttons/` and `feedback/` are hand-written ports.
 
 ## 🚢 Deployment & releases
 

@@ -1,0 +1,75 @@
+/* HolyGrailGrid — ported from astro-component-kit (layout/HolyGrailGrid.astro) */
+
+.cq-holy-grail-grid-cq:where([data-rk-7590db]) { container-type: inline-size; }
+.holy-grail:where([data-rk-7590db]) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  color: var(--c-text-1, #ffffff);
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.holy-grail__header:where([data-rk-7590db]) {
+  width: 100%;
+  padding: var(--sp-4, 1rem) var(--sp-6, 1.5rem);
+  background: rgba(10, 10, 14, 0.8);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+}
+
+.holy-grail__middle:where([data-rk-7590db]) {
+  display: grid;
+  grid-template-columns: var(--hg-left) 1fr var(--hg-right);
+  gap: var(--hg-gap);
+  flex: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--sp-6, 1.5rem);
+}
+
+.holy-grail__left:where([data-rk-7590db]),
+.holy-grail__right:where([data-rk-7590db]) {
+  padding: var(--sp-4, 1rem);
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.02);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.06);
+  border-radius: var(--r-lg, 16px);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.holy-grail__main:where([data-rk-7590db]) {
+  padding: var(--sp-6, 1.5rem);
+  background: rgb(var(--ink-rgb, 255 255 255) / 0.015);
+  border: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.06);
+  border-radius: var(--r-lg, 16px);
+  min-height: 400px;
+}
+
+.holy-grail__footer:where([data-rk-7590db]) {
+  width: 100%;
+  padding: var(--sp-6, 1.5rem);
+  background: rgba(10, 10, 14, 0.9);
+  border-top: 1px solid rgb(var(--ink-rgb, 255 255 255) / 0.08);
+  margin-top: auto;
+}
+
+@container (max-width: 1024px) {
+  .holy-grail__middle:where([data-rk-7590db]) {
+    grid-template-columns: var(--hg-left) 1fr;
+  }
+  .holy-grail__right:where([data-rk-7590db]) {
+    display: none;
+  }
+}
+
+@container (max-width: 768px) {
+  .holy-grail__middle:where([data-rk-7590db]) {
+    grid-template-columns: 1fr;
+  }
+  .holy-grail__left:where([data-rk-7590db]) {
+    position: static;
+  }
+}
