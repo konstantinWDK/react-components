@@ -1,5 +1,3 @@
-/* SegmentedBarChart — ported from astro-component-kit (charts/SegmentedBarChart.astro) */
-
 .sb__bar:where([data-rk-740040]) {
   display: flex;
   gap: 2px;

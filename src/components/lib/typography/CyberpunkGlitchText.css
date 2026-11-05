@@ -1,5 +1,3 @@
-/* CyberpunkGlitchText — ported from astro-component-kit (typography/CyberpunkGlitchText.astro) */
-
 .glitch-text:where([data-rk-2349bb]) { position: relative; font-size: 3rem; font-weight: 900; color: #fff; text-transform: uppercase; }
 .glitch-text:where([data-rk-2349bb])::before, .glitch-text:where([data-rk-2349bb])::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .glitch-text:where([data-rk-2349bb])::before { left: 2px; text-shadow: -2px 0 #ff003c; clip: rect(44px, 450px, 56px, 0); animation: cyberpunk-glitch-text-glitch-anim 5s infinite linear alternate-reverse; }

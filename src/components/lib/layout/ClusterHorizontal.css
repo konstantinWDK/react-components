@@ -1,5 +1,3 @@
-/* ClusterHorizontal — ported from astro-component-kit (layout/ClusterHorizontal.astro) */
-
 .cluster:where([data-rk-fff909]) {
   display: flex;
   flex-wrap: wrap;

@@ -2,7 +2,7 @@
 
 import './CyberpunkGlitchText.css';
 
-/** CyberpunkGlitchText — ported from astro-component-kit. */
+/** CyberpunkGlitchText */
 export interface CyberpunkGlitchTextProps {
   text: string;
 }

@@ -2,9 +2,9 @@
 
 import './DataShowcase.css';
 
-// DataShowcase.astro — Premium data display section with live preview
+// DataShowcase — Premium data display section with live preview
 
-/** DataShowcase — ported from astro-component-kit. */
+/** DataShowcase */
 export interface DataShowcaseProps {
   title?: string;
   subtitle?: string;

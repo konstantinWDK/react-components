@@ -2,7 +2,7 @@
 
 import './SearchOverlayFullscreen.css';
 
-/** SearchOverlayFullscreen — ported from astro-component-kit. */
+/** SearchOverlayFullscreen */
 export interface SearchOverlayFullscreenProps {
 }
 

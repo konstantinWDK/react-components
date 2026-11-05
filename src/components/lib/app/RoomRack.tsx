@@ -86,7 +86,7 @@ export function RoomRack({
   const groups = Array.from(new Set(rooms.map((r) => r.type ?? ''))).map((type) => ({ type, rooms: rooms.filter((r) => (r.type ?? '') === type) }));
   const occupied = days.map((_, d) => bookings.filter((b) => b.status !== 'blocked' && d >= b.start && d < b.start + b.nights).length);
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

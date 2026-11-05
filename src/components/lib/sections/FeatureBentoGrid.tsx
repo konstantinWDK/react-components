@@ -19,7 +19,7 @@ export interface FeatureBentoGridProps {
 export function FeatureBentoGrid({
   badge = "Core Capabilities",
   title = "Engineered for Extreme Performance",
-  subtitle = "Everything you need to build next-generation Astro applications with zero runtime overhead.",
+  subtitle = "Everything you need to build next-generation React applications with zero runtime overhead.",
   className = ""
 }: FeatureBentoGridProps) {
   return (

@@ -1,5 +1,3 @@
-/* SwitchRow — ported from astro-component-kit (app/SwitchRow.astro) */
-
 .sw-row:where([data-rk-22e298]) { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4, 1rem); min-height: 44px; }
 .sw-row:where([data-rk-22e298]) + .sw-row { padding-top: var(--sp-4, 1rem); border-top: 1px solid var(--c-border, rgba(255, 255, 255, 0.06)); }
 .sw-row__label:where([data-rk-22e298]) { font-size: 0.9rem; font-weight: 600; color: var(--c-text-1, #fff); cursor: pointer; }

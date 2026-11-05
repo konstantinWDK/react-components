@@ -1,5 +1,3 @@
-/* PricingToggleCards — ported from astro-component-kit (sections/PricingToggleCards.astro) */
-
 .ptc:where([data-rk-101321]) {
   --ptc-py: 5.5rem;
   padding: var(--ptc-py) var(--sp-6, 1.5rem);

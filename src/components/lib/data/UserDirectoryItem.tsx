@@ -2,7 +2,7 @@
 
 import './UserDirectoryItem.css';
 
-/** UserDirectoryItem — ported from astro-component-kit. */
+/** UserDirectoryItem */
 export interface UserDirectoryItemProps {
 }
 

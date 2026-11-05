@@ -46,7 +46,7 @@ export interface CtaSplitImageProps {
 
 export function CtaSplitImage({
   title = 'Ready to ship your best page yet?',
-  text = 'Join thousands of teams building fast, accessible Astro sites. Free forever for personal projects.',
+  text = 'Join thousands of teams building fast, accessible React sites. Free forever for personal projects.',
   primary = { label: 'Get started free', href: '#' },
   secondary = { label: 'Talk to sales', href: '#' },
   image,

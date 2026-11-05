@@ -1,5 +1,3 @@
-/* FullBleedSection — ported from astro-component-kit (layout/FullBleedSection.astro) */
-
 .full-bleed:where([data-rk-4e57ad]) {
   width: 100vw;
   position: relative;

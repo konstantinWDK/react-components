@@ -2,7 +2,7 @@
 
 import './UserProfileNav.css';
 
-/** UserProfileNav — ported from astro-component-kit. */
+/** UserProfileNav */
 export interface UserProfileNavProps {
 }
 

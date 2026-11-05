@@ -40,8 +40,8 @@ export function FeatureTimelineFlow({
       number: "01",
       tag: "Install & Setup",
       title: "One Command Installation",
-      desc: "Add astro-component-kit to your React project with npm. Zero complex configuration files or build tool plugins required.",
-      code: "npm install astro-component-kit",
+      desc: "Add react-component-kit-ui to your React project with npm. Zero complex configuration files or build tool plugins required.",
+      code: "npm install react-component-kit-ui",
       color: "#6366f1"
     },
     {
@@ -49,7 +49,7 @@ export function FeatureTimelineFlow({
       tag: "Compose & Theme",
       title: "Import Modular Components",
       desc: "Import accessible cards, navigation bars, interactive inputs, and 3D scenes directly into your React frontmatter with strict TypeScript typings.",
-      code: "import { GlassCard, StatCard } from 'astro-component-kit';",
+      code: "import { GlassCard, StatCard } from 'react-component-kit-ui';",
       color: "#eab308"
     },
     {

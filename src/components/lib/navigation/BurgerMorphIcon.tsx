@@ -3,7 +3,7 @@
 import './BurgerMorphIcon.css';
 // TODO(port): inline handler onClick="this.classList.toggle('active')"
 
-/** BurgerMorphIcon — ported from astro-component-kit. */
+/** BurgerMorphIcon */
 export interface BurgerMorphIconProps {
 }
 

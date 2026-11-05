@@ -1,5 +1,3 @@
-/* PageHeader — ported from astro-component-kit (app/PageHeader.astro) */
-
 .app-ph:where([data-rk-7bc64d]) { container-type: inline-size; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-4, 1rem); }
 .app-ph__crumbs:where([data-rk-7bc64d]) ol:where([data-rk-7bc64d]) { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; font-size: 0.78rem; color: var(--c-text-3, #737373); }
 .app-ph__crumbs:where([data-rk-7bc64d]) li:where([data-rk-7bc64d]) + li:where([data-rk-7bc64d])::before { content: '/'; margin-right: 6px; opacity: 0.6; }

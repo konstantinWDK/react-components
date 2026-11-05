@@ -2,7 +2,7 @@
 
 import './TimelineHorizSteps.css';
 
-/** TimelineHorizSteps — ported from astro-component-kit. */
+/** TimelineHorizSteps */
 export interface TimelineHorizStepsProps {
 }
 

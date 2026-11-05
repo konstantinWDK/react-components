@@ -1,5 +1,3 @@
-/* CyberpunkCheckbox — ported from astro-component-kit (forms/CyberpunkCheckbox.astro) */
-
 .cyber-check:where([data-rk-43f10f]) { 
   display: flex; align-items: center; gap: var(--sp-4, 1rem); 
   cursor: pointer; 

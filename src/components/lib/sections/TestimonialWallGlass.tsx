@@ -19,7 +19,7 @@ export interface TestimonialWallGlassProps {
 export function TestimonialWallGlass({
   badge = "Customer Love",
   title = "Trusted by 10,000+ Developers Worldwide",
-  subtitle = "See how engineering teams ship faster and build beautiful Astro products with our component kit.",
+  subtitle = "See how engineering teams ship faster and build beautiful React products with our component kit.",
   className = ""
 }: TestimonialWallGlassProps) {
   return (

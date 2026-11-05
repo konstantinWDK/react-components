@@ -1,5 +1,3 @@
-/* BorderDrawButton — ported from astro-component-kit (buttons/BorderDrawButton.astro) */
-
 .draw-btn {
   position: relative;
   display: inline-flex;

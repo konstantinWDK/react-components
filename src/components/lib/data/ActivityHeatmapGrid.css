@@ -1,5 +1,3 @@
-/* ActivityHeatmapGrid — ported from astro-component-kit (data/ActivityHeatmapGrid.astro) */
-
 .heatmap-card:where([data-rk-f489b5]) {
   display: flex;
   flex-direction: column;
@@ -81,7 +79,7 @@
 }
 
 .cell--0:where([data-rk-f489b5]) { background: rgba(255, 255, 255, 0.05); }
-.cell--1:where([data-rk-f489b5]) { background: rgba(184, 134, 11, 0.25); }
-.cell--2:where([data-rk-f489b5]) { background: rgba(184, 134, 11, 0.55); }
-.cell--3:where([data-rk-f489b5]) { background: rgba(212, 160, 23, 0.85); }
+.cell--1:where([data-rk-f489b5]) { background: color-mix(in srgb, var(--c-primary, #b8860b) 25%, transparent); }
+.cell--2:where([data-rk-f489b5]) { background: color-mix(in srgb, var(--c-primary, #b8860b) 55%, transparent); }
+.cell--3:where([data-rk-f489b5]) { background: color-mix(in srgb, var(--c-primary-light, #d4a017) 85%, transparent); }
 .cell--4:where([data-rk-f489b5]) { background: #fef3c7; box-shadow: 0 0 6px rgba(254, 243, 199, 0.6); }

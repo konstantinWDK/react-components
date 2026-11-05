@@ -1,5 +1,3 @@
-/* StoreHero — ported from astro-component-kit (ecommerce/StoreHero.astro) */
-
 .store-hero:where([data-rk-92f260]) {
   container-type: inline-size;
   --hero-pad: clamp(3rem, 7vw, 6rem);
@@ -15,7 +13,7 @@
   position: absolute;
   inset: -20% -10% auto 30%;
   height: 120%;
-  background: radial-gradient(closest-side, rgba(212, 160, 23, 0.16), transparent 70%);
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--c-primary-light, #d4a017) 16%, transparent), transparent 70%);
   z-index: -1;
   pointer-events: none;
 }
@@ -39,8 +37,8 @@
   margin: 0 0 var(--sp-4, 1rem);
   padding: 0.35rem 0.85rem;
   border-radius: var(--r-full, 9999px);
-  border: 1px solid rgba(212, 160, 23, 0.3);
-  background: rgba(212, 160, 23, 0.08);
+  border: 1px solid color-mix(in srgb, var(--c-primary-light, #d4a017) 30%, transparent);
+  background: color-mix(in srgb, var(--c-primary-light, #d4a017) 8%, transparent);
   color: var(--c-accent, #fef3c7);
   font-size: 0.75rem;
   font-weight: 700;
@@ -97,7 +95,7 @@
   position: absolute;
   inset: 8% -6%;
   border-radius: 50%;
-  border: 1px dashed rgba(212, 160, 23, 0.25);
+  border: 1px dashed color-mix(in srgb, var(--c-primary-light, #d4a017) 25%, transparent);
   animation: store-hero-sh-spin 40s linear infinite;
 }
 .store-hero__product:where([data-rk-92f260]) {

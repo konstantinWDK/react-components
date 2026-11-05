@@ -20,14 +20,14 @@ export interface FaqAccordionSectionProps {
 export function FaqAccordionSection({
   badge = "Frequently Asked Questions",
   title = "Got Questions? We Have Answers",
-  subtitle = "Everything you need to know about the Astro Components Kit, licensing, updates, and custom integrations.",
+  subtitle = "Everything you need to know about the React Components Kit, licensing, updates, and custom integrations.",
   className = ""
 }: FaqAccordionSectionProps) {
   const faqs = [
     {
       category: "general",
-      q: "Is this library compatible with React 5.x?",
-      a: "Yes! All components are built specifically for React 5.x and leverage Astro Content Collections, scoped styles, and zero-runtime architecture."
+      q: "Is this library compatible with React 18 & 19?",
+      a: "Yes! All components are built specifically for React 18 & 19 and leverage React Server Components, scoped styles, and zero-runtime architecture."
     },
     {
       category: "general",
@@ -52,11 +52,11 @@ export function FaqAccordionSection({
     {
       category: "licensing",
       q: "How do I install the package in my project?",
-      a: "Simply run `npm install astro-component-kit` and import any component: `import { GlassCard } from 'astro-component-kit';`."
+      a: "Simply run `npm install react-component-kit-ui` and import any component: `import { GlassCard } from 'react-component-kit-ui';`."
     }
   ];
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

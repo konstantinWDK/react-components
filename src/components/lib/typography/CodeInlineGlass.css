@@ -1,3 +1,1 @@
-/* CodeInlineGlass — ported from astro-component-kit (typography/CodeInlineGlass.astro) */
-
 .glass-code:where([data-rk-8ec09e]) { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); padding: 0.2rem 0.4rem; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; color: #e2e8f0; font-size: 0.9em; }

@@ -1,4 +1,2 @@
-/* GradientUnderlineLink — ported from astro-component-kit (typography/GradientUnderlineLink.astro) */
-
 .grad-link:where([data-rk-66205f]) { text-decoration: none; color: #fff; border-bottom: 3px solid transparent; border-image: linear-gradient(135deg, #6366f1, #c084fc); border-image-slice: 1; padding-bottom: 2px; font-weight: 700; transition: 0.3s; }
 .grad-link:hover:where([data-rk-66205f]) { opacity: 0.8; padding-bottom: 5px; }

@@ -2,9 +2,9 @@
 
 import './HeroGlass.css';
 
-// HeroGlass.astro — Centered hero with glassmorphism card overlay
+// HeroGlass — Centered hero with glassmorphism card overlay
 
-/** HeroGlass — ported from astro-component-kit. */
+/** HeroGlass */
 export interface HeroGlassProps {
   title?: string;
   subtitle?: string;

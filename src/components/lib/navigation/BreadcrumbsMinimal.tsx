@@ -2,7 +2,7 @@
 
 import './BreadcrumbsMinimal.css';
 
-/** BreadcrumbsMinimal — ported from astro-component-kit. */
+/** BreadcrumbsMinimal */
 export interface BreadcrumbsMinimalProps {
 }
 

@@ -1,5 +1,3 @@
-/* KanbanItemCard — ported from astro-component-kit (cards/KanbanItemCard.astro) */
-
 .k-item:where([data-rk-445dff]) { 
   background: var(--c-bg-elev, #111); 
   border: 1px solid var(--c-border, #333); 

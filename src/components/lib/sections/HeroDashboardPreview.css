@@ -1,5 +1,3 @@
-/* HeroDashboardPreview — ported from astro-component-kit (sections/HeroDashboardPreview.astro) */
-
 .cq-hero-dashboard-preview-cq:where([data-rk-d7155c]) { container-type: inline-size; }
 .hdp:where([data-rk-d7155c]) {
   --hdp-py: 5.5rem;

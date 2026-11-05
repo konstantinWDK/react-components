@@ -1,5 +1,3 @@
-/* RetentionCohortTable — ported from astro-component-kit (charts/RetentionCohortTable.astro) */
-
 .rc:where([data-rk-14b914]) { overflow-x: auto; }
 .rc__table:where([data-rk-14b914]) {
   width: 100%;

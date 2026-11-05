@@ -2,7 +2,7 @@
 
 import './FloatingTabBar.css';
 
-/** FloatingTabBar — ported from astro-component-kit. */
+/** FloatingTabBar */
 export interface FloatingTabBarProps {
 }
 

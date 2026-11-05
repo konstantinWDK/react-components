@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './BackgroundClipMask.css';
 
-/** BackgroundClipMask — ported from astro-component-kit. */
+/** BackgroundClipMask */
 export interface BackgroundClipMaskProps {
   children?: ReactNode;
 }

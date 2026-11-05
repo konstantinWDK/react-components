@@ -22,11 +22,11 @@ function cx(...args: unknown[]): string {
  * Displays a simple, clean footer with a logo slot and copyright text.
  * Suitable for landing pages, documentation sites, and minimal layouts.
  *
- * @param {string} copyright - Copyright text. Default: '© 2026 Built with Astro Components Kit.'.
+ * @param {string} copyright - Copyright text. Default: '© 2026 Built with React Components Kit.'.
  * @param {string} className - Additional CSS class to apply.
  *
  * @example
- * ```astro
+ * ```react
  * <FooterCenteredMinimal copyright="© 2026 MyCompany. All rights reserved." />
  * ```
  */
@@ -36,7 +36,7 @@ export interface FooterCenteredMinimalProps {
   logo?: ReactNode;
 }
 
-export function FooterCenteredMinimal({ copyright = '© 2026 Built with Astro Components Kit.', className = '',
+export function FooterCenteredMinimal({ copyright = '© 2026 Built with React Components Kit.', className = '',
   logo
 }: FooterCenteredMinimalProps) {
   return (

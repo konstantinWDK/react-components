@@ -1,5 +1,3 @@
-/* RatingStars — ported from astro-component-kit (forms/RatingStars.astro) */
-
 .rating-stars:where([data-rk-fddc65]) { display: flex; flex-direction: row-reverse; gap: 4px; width: fit-content; }
 
 .rating-stars__input:where([data-rk-fddc65]) { display: none; }

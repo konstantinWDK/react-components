@@ -1,5 +1,3 @@
-/* AnimatedCheckmark — ported from astro-component-kit (feedback/AnimatedCheckmark.astro) */
-
 .checkmark-container {
   width: var(--check-size);
   height: var(--check-size);

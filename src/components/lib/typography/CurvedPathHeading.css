@@ -1,5 +1,3 @@
-/* CurvedPathHeading — ported from astro-component-kit (typography/CurvedPathHeading.astro) */
-
 .curved-heading:where([data-rk-03862f]) {
   position: relative;
   width: var(--curved-size);
@@ -28,8 +26,8 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(184, 134, 11, 0.12);
-  border: 1px solid rgba(184, 134, 11, 0.3);
+  background: color-mix(in srgb, var(--c-primary, #b8860b) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c-primary, #b8860b) 30%, transparent);
   color: var(--c-accent, #fef3c7);
   display: grid;
   place-items: center;

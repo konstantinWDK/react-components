@@ -1,5 +1,3 @@
-/* DragDropUpload — ported from astro-component-kit (forms/DragDropUpload.astro) */
-
 .upload-zone:where([data-rk-e188c4]) { 
   border: 2px dashed var(--c-border, rgba(255,255,255,0.1)); 
   border-radius: var(--r-xl, 20px); 

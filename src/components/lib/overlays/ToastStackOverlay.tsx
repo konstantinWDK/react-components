@@ -2,7 +2,7 @@
 
 import './ToastStackOverlay.css';
 
-/** ToastStackOverlay — ported from astro-component-kit. */
+/** ToastStackOverlay */
 export interface ToastStackOverlayProps {
 }
 

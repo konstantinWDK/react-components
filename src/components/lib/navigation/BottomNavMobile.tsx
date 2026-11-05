@@ -2,7 +2,7 @@
 
 import './BottomNavMobile.css';
 
-/** BottomNavMobile — ported from astro-component-kit. */
+/** BottomNavMobile */
 export interface BottomNavMobileProps {
 }
 

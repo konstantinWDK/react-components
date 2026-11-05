@@ -2,9 +2,9 @@
 
 import './LayoutShowcase.css';
 
-// LayoutShowcase.astro — Premium layout section with live preview
+// LayoutShowcase — Premium layout section with live preview
 
-/** LayoutShowcase — ported from astro-component-kit. */
+/** LayoutShowcase */
 export interface LayoutShowcaseProps {
   title?: string;
   subtitle?: string;

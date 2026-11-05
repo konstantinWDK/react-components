@@ -1,5 +1,3 @@
-/* FormGroupVertical — ported from astro-component-kit (forms/FormGroupVertical.astro) */
-
 .form-group:where([data-rk-ec85ff]) { display: flex; flex-direction: column; gap: var(--sp-2, 0.5rem); width: 100%; margin-bottom: var(--sp-4, 1rem); }
 
 .form-group__label:where([data-rk-ec85ff]) { 

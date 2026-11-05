@@ -1,4 +1,2 @@
-/* SunburstChart — ported from astro-component-kit (charts/SunburstChart.astro) */
-
 .sbt:where([data-rk-355acb]) { max-width: 340px; margin: 0 auto; }
 .sbt__total:where([data-rk-355acb]) { fill: var(--c-text-1, #fff); font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }

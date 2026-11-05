@@ -1,5 +1,3 @@
-/* MetricComparisonRow — ported from astro-component-kit (data/MetricComparisonRow.astro) */
-
 .metric-row:where([data-rk-4ef0f8]) {
   display: flex;
   flex-direction: column;
@@ -42,8 +40,8 @@
   font-size: 0.82rem;
   font-weight: 800;
   color: var(--metric-accent);
-  background: rgba(184, 134, 11, 0.12);
-  border: 1px solid rgba(184, 134, 11, 0.3);
+  background: color-mix(in srgb, var(--c-primary, #b8860b) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c-primary, #b8860b) 30%, transparent);
   padding: 2px 8px;
   border-radius: var(--r-full, 9999px);
 }
@@ -59,6 +57,6 @@
   height: 100%;
   background: linear-gradient(90deg, #b8860b, var(--metric-accent));
   border-radius: inherit;
-  box-shadow: 0 0 10px rgba(212, 160, 23, 0.4);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--c-primary-light, #d4a017) 40%, transparent);
   transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }

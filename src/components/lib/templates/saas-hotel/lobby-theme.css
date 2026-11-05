@@ -6,7 +6,7 @@
     --r-xl: 18px;
   }
   .theme-lobby[data-theme='light'] {
-    --c-bg: #f4f6fa;
+    --c-bg: #f4f8fc;
     --c-bg-1: #ffffff;
     --c-bg-2: #eef1f6;
     --c-surface: rgba(15, 23, 42, 0.025);
@@ -14,11 +14,14 @@
     --c-text-1: #0f172a;
     --c-text-2: #475569;
     --c-text-3: #64748b;
-    --c-primary: #2557d6;
-    --c-primary-light: #2557d6;
-    --c-primary-glow: rgba(37, 87, 214, 0.14);
-    --c-accent: #1e40af;
-    --app-accent: #2557d6;
+    --c-primary: #0369a1;
+    --c-primary-light: #0369a1;
+    --c-primary-glow: rgba(3, 105, 161, 0.14);
+    --c-accent: #0c4a6e;
+    --app-accent: #0369a1;
+    /* corporate chart palette: blues, teal and indigo instead of orange/yellow */
+    --chart-1: #1d4ed8; --chart-2: #0284c7; --chart-3: #0d9488; --chart-4: #4f46e5;
+    --chart-5: #0369a1; --chart-6: #15803d; --chart-7: #7c3aed; --chart-8: #475569;
     --c-on-primary: #ffffff;
     --ink-rgb: 15 23 42;
     --paper-rgb: 255 255 255;
@@ -31,26 +34,29 @@
     color-scheme: light;
   }
   .theme-lobby[data-theme='dark'] {
-    --c-bg: #0b0f17;
-    --c-bg-1: #111827;
-    --c-bg-2: #1a2232;
+    --c-bg: #03060b;
+    --c-bg-1: #070b12;
+    --c-bg-2: #0c1220;
     --c-surface: rgba(148, 163, 184, 0.04);
     --c-border: rgba(148, 163, 184, 0.16);
     --c-text-1: #f1f5f9;
     --c-text-2: #a9b3c4;
     --c-text-3: #8a96aa;
-    --c-primary: #7aa2ff;
-    --c-primary-light: #7aa2ff;
-    --c-primary-glow: rgba(122, 162, 255, 0.16);
-    --c-accent: #c7d7ff;
-    --app-accent: #7aa2ff;
-    --c-on-primary: #0b1020;
+    --c-primary: #38bdf8;
+    --c-primary-light: #38bdf8;
+    --c-primary-glow: rgba(56, 189, 248, 0.16);
+    --c-accent: #e0f2fe;
+    --app-accent: #38bdf8;
+    /* corporate chart palette: blues, teal and indigo instead of orange/yellow */
+    --chart-1: #2563eb; --chart-2: #38bdf8; --chart-3: #14b8a6; --chart-4: #6366f1;
+    --chart-5: #0ea5e9; --chart-6: #22c55e; --chart-7: #8b5cf6; --chart-8: #64748b;
+    --c-on-primary: #04121c;
     --ink-rgb: 241 245 249;
-    --paper-rgb: 11 15 23;
+    --paper-rgb: 3 6 11;
     --c-success: #4ade80;
     --c-warning: #fbbf24;
     --c-danger: #f87171;
-    --chart-surface: #111827;
+    --chart-surface: #070b12;
     --chart-grid: rgba(148, 163, 184, 0.12);
     --chart-axis: rgba(148, 163, 184, 0.3);
     color-scheme: dark;

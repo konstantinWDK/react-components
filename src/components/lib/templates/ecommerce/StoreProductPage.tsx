@@ -25,10 +25,10 @@ function st(css: string | undefined): CSSProperties {
  * StoreProductPage — E-commerce template product detail: breadcrumb, ProductGallery,
  * ProductBuyBox, reviews summary and related products.
  *
- * Usage (src/pages/product/[slug].astro):
- *   import { StoreProductPage, demoStore } from 'astro-component-kit/templates/ecommerce';
- *   export const getStaticPaths = () => demoStore.products.map((p) => ({ params: { slug: p.slug } }));
- *   <StoreProductPage slug={Astro.params.slug} />
+ * Usage (app/product/[slug]/page.tsx, Next.js):
+ *   import { StoreProductPage, demoStore } from 'react-component-kit-ui/templates/ecommerce';
+ *   export const generateStaticParams = () => demoStore.products.map((p) => ({ slug: p.slug }));
+ *   <StoreProductPage slug={(await params).slug} />
  *
  * @param {string} slug - Product slug to show. Default: first product.
  * @param {StoreConfig} store - Catalogue and settings. Default: demo store.

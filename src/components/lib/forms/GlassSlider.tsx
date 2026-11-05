@@ -26,7 +26,7 @@ export interface GlassSliderProps {
 
 export function GlassSlider({ label, id, name, min = 0, max = 100, value = 50, step = 1 }: GlassSliderProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

@@ -15,8 +15,8 @@ import './EditorialHomePage.css';
  * EditorialHomePage — Editorial store home: magazine hero with ticker, collection mosaic,
  * new-in product rail, shoppable lookbook, values marquee, reviews and newsletter.
  *
- * Usage (src/pages/index.astro):
- *   import { EditorialHomePage } from 'astro-component-kit/templates/ecommerce-editorial';
+ * Usage (app/page.tsx, Next.js):
+ *   import { EditorialHomePage } from 'react-component-kit-ui/templates/ecommerce-editorial';
  *   <EditorialHomePage />
  *
  * @param {EditorialStore} store - Catalogue and settings. Default: Forma demo store.
@@ -52,7 +52,7 @@ export function EditorialHomePage({ store = formaStore, routes = editorialRoutes
   return (
     <>
       <EditorialLayout title={`${store.name} Studio — ${store.tagline.split(',')[0]}`} description={store.tagline} store={store} routes={routes} currentHref={routes.home} theme={theme} seedCart={seedCart} noindex={noindex}>
-        <ShopHeroEditorial kicker="Autumn / Winter 26" issue="N° 04" title="Quiet *objects* for everyday rituals" text={store.tagline} primary={{ label: 'Shop the collection', href: routes.shop }} secondary={{ label: 'New in', href: `${routes.shop}?sort=featured` }} media={{ icon: coat.icon, hue: coat.hue, caption: `${coat.name}, in ${coat.colors?.[0]?.name ?? 'Rust'} — ${fmt(coat.price)}`, href: editorialProductHref(routes, coat.slug) }} />
+        <ShopHeroEditorial kicker="Autumn / Winter 26" issue="N° 04" title="Quiet *objects* for everyday rituals" text={store.tagline} primary={{ label: 'Shop the collection', href: routes.shop }} secondary={{ label: 'New in', href: `${routes.shop}?sort=featured` }} media={{ icon: coat.icon, hue: coat.hue, caption: `${coat.name}, in ${coat.colors?.[0]?.name ?? 'Ocean'} — ${fmt(coat.price)}`, href: editorialProductHref(routes, coat.slug) }} />
       
         <div className="forma-wrap section-space" data-rk-682d94="">
           <ShopCollectionMosaic eyebrow={`${store.categories.length} categories`} title="Shop by *intention*" items={mosaic} />
@@ -63,7 +63,7 @@ export function EditorialHomePage({ store = formaStore, routes = editorialRoutes
         </div>
       
         <div className="forma-wrap section-space" data-rk-682d94="">
-          <ShopLookbook eyebrow="Lookbook · N° 04" title="A Sunday *uniform*" text="Linen, canvas and stoneware: three pieces that make a slow morning feel deliberate." media={{ icon: 'jacket', hue: 26 }} spots={look} {...money} />
+          <ShopLookbook eyebrow="Lookbook · N° 04" title="A Sunday *uniform*" text="Linen, canvas and stoneware: three pieces that make a slow morning feel deliberate." media={{ icon: 'jacket', hue: 191 }} spots={look} {...money} />
         </div>
       
         <ShopValuesMarquee values={store.values} />

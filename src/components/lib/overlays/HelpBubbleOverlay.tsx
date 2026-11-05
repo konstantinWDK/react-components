@@ -2,7 +2,7 @@
 
 import './HelpBubbleOverlay.css';
 
-/** HelpBubbleOverlay — ported from astro-component-kit. */
+/** HelpBubbleOverlay */
 export interface HelpBubbleOverlayProps {
 }
 

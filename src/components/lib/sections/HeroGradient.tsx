@@ -2,9 +2,9 @@
 
 import './HeroGradient.css';
 
-// HeroGradient.astro — Full-screen hero with animated gradient background
+// HeroGradient — Full-screen hero with animated gradient background
 
-/** HeroGradient — ported from astro-component-kit. */
+/** HeroGradient */
 export interface HeroGradientProps {
   title?: string;
   subtitle?: string;
@@ -12,7 +12,7 @@ export interface HeroGradientProps {
 
 export function HeroGradient({
   title = "Build Beautiful Interfaces",
-  subtitle = "Premium open-source UI components for Astro. Copy, paste, and ship faster.",
+  subtitle = "Premium open-source UI components for React. Copy, paste, and ship faster.",
 }: HeroGradientProps) {
   return (
     <>

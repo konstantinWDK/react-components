@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './ShadowRevealText.css';
 
-/** ShadowRevealText — ported from astro-component-kit. */
+/** ShadowRevealText */
 export interface ShadowRevealTextProps {
   children?: ReactNode;
 }

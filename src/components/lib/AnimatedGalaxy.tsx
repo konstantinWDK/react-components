@@ -2,7 +2,7 @@
 
 import type { CSSProperties } from 'react';
 
-/** AnimatedGalaxy — ported from astro-component-kit. */
+/** AnimatedGalaxy */
 export interface AnimatedGalaxyProps {
   className?: string;
   style?: CSSProperties;

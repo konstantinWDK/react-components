@@ -1,5 +1,3 @@
-/* FilterSidebar — ported from astro-component-kit (ecommerce/FilterSidebar.astro) */
-
 .filters:where([data-rk-a56ca5]) { container-type: inline-size; position: relative; }
 .filters__form:where([data-rk-a56ca5]) {
   display: grid;

@@ -1,5 +1,3 @@
-/* ShopLookbook — ported from astro-component-kit (sections/ShopLookbook.astro) */
-
 .slb-cq:where([data-rk-e29b78]) { container-type: inline-size; }
 .slb:where([data-rk-e29b78]) {
   display: grid;

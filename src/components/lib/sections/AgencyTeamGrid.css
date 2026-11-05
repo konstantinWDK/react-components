@@ -1,5 +1,3 @@
-/* AgencyTeamGrid — ported from astro-component-kit (sections/AgencyTeamGrid.astro) */
-
 .cq-agency-team:where([data-rk-28a916]) { container-type: inline-size; }
 .atg:where([data-rk-28a916]) { color: var(--c-text-1, #fff); }
 .atg__head:where([data-rk-28a916]) { display: grid; gap: var(--sp-2, 0.5rem); max-width: 46rem; margin-bottom: var(--sp-8, 2rem); }

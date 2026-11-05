@@ -2,7 +2,7 @@
 
 import './MegaMenuGlass.css';
 
-/** MegaMenuGlass — ported from astro-component-kit. */
+/** MegaMenuGlass */
 export interface MegaMenuGlassProps {
 }
 

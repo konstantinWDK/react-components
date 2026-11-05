@@ -2,7 +2,7 @@
 
 import './CookieBannerGlass.css';
 
-/** CookieBannerGlass — ported from astro-component-kit. */
+/** CookieBannerGlass */
 export interface CookieBannerGlassProps {
 }
 

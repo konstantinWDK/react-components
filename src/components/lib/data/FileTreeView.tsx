@@ -2,7 +2,7 @@
 
 import './FileTreeView.css';
 
-/** FileTreeView — ported from astro-component-kit. */
+/** FileTreeView */
 export interface FileTreeViewProps {
 }
 
@@ -14,12 +14,12 @@ export function FileTreeView({}: FileTreeViewProps) {
         <div className="indent" data-rk-7f8c09="">
           <div className="folder" data-rk-7f8c09="">📁 components</div>
           <div className="indent" data-rk-7f8c09="">
-            <div className="file" data-rk-7f8c09="">📄 Button.astro</div>
-            <div className="file" data-rk-7f8c09="">📄 Card.astro</div>
+            <div className="file" data-rk-7f8c09="">📄 Button.react</div>
+            <div className="file" data-rk-7f8c09="">📄 Card.react</div>
           </div>
           <div className="file" data-rk-7f8c09="">📄 styles.css</div>
         </div>
-        <div className="file" data-rk-7f8c09="">📄 astro.config.mjs</div>
+        <div className="file" data-rk-7f8c09="">📄 vite.config.ts</div>
       </div>
     </>
   );

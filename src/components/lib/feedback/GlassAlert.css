@@ -1,5 +1,3 @@
-/* GlassAlert — ported from astro-component-kit (feedback/GlassAlert.astro) */
-
 .glass-alert { 
   display: flex; 
   gap: var(--sp-4, 1rem); 

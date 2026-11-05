@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './Text3DLayer.css';
 
-/** Text3DLayer — ported from astro-component-kit. */
+/** Text3DLayer */
 export interface Text3DLayerProps {
   children?: ReactNode;
 }

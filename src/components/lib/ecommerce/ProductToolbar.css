@@ -1,5 +1,3 @@
-/* ProductToolbar — ported from astro-component-kit (ecommerce/ProductToolbar.astro) */
-
 .p-toolbar-cq:where([data-rk-e742d8]) { container-type: inline-size; }
 .p-toolbar:where([data-rk-e742d8]) {
   display: flex;

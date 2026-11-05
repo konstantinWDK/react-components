@@ -1,5 +1,3 @@
-/* MasonryGrid — ported from astro-component-kit (layout/MasonryGrid.astro) */
-
 .masonry:where([data-rk-741442]) {
   columns: var(--cols, 3) 220px;
   column-gap: var(--gap, 1.5rem);

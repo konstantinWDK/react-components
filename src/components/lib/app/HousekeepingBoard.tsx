@@ -68,7 +68,7 @@ export function HousekeepingBoard({
   const floors = Array.from(new Set(rooms.map((r) => r.floor)));
   const counts = Object.fromEntries(order.map((s) => [s, rooms.filter((r) => r.status === s).length]));
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

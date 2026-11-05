@@ -1,5 +1,3 @@
-/* CommandDialog — ported from astro-component-kit (overlays/CommandDialog.astro) */
-
 .cmd-overlay:where([data-rk-1922ac]) { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); display: flex; justify-content: center; padding-top: 15vh; z-index: 3000; }
 .cmd-box:where([data-rk-1922ac]) { width: 100%; max-width: 600px; background: #080b14; border: 1px solid #334155; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 100px rgba(0,0,0,0.8); }
 .cmd-input:where([data-rk-1922ac]) input:where([data-rk-1922ac]) { width: 100%; padding: 1.25rem; background: transparent; border: none; border-bottom: 1px solid #1e293b; color: #fff; outline: none; font-size: 1.1rem; }

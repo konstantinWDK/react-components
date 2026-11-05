@@ -1,5 +1,3 @@
-/* NeonSpinner — ported from astro-component-kit (feedback/NeonSpinner.astro) */
-
 .neon-spinner { 
   width: var(--spinner-size); 
   height: var(--spinner-size); 

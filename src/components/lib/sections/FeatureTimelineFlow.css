@@ -1,5 +1,3 @@
-/* FeatureTimelineFlow — ported from astro-component-kit (sections/FeatureTimelineFlow.astro) */
-
 .cq-feature-timeline-flow-cq:where([data-rk-1e8845]) { container-type: inline-size; }
 .timeline-section:where([data-rk-1e8845]) {
   position: relative;

@@ -32,7 +32,7 @@ export function RadarChart({
   subtitle = 'Scored 0–10 by the team',
   axes = ['Performance', 'DX', 'Ecosystem', 'SEO', 'Learning curve', 'Flexibility'],
   series = [
-    { name: 'Astro', data: [9.5, 8.5, 7, 9.5, 8.5, 8] },
+    { name: 'React', data: [9.5, 8.5, 7, 9.5, 8.5, 8] },
     { name: 'Next', data: [7.5, 8, 9.5, 8, 6.5, 8.5] },
   ],
   max = 10,

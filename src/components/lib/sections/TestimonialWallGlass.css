@@ -1,5 +1,3 @@
-/* TestimonialWallGlass — ported from astro-component-kit (sections/TestimonialWallGlass.astro) */
-
 .cq-testimonial-wall-glass-cq:where([data-rk-3eb70b]) { container-type: inline-size; }
 .testimonials-section:where([data-rk-3eb70b]) {
   position: relative;

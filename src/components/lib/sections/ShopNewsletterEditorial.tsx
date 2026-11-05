@@ -61,7 +61,7 @@ export function ShopNewsletterEditorial({
 }: ShopNewsletterEditorialProps) {
   const parts = title.split(/\*(.+?)\*/g);
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

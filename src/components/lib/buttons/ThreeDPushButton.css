@@ -1,5 +1,3 @@
-/* ThreeDPushButton — ported from astro-component-kit (buttons/ThreeDPushButton.astro) */
-
 .push-btn {
   --depth: 8px;
   position: relative;

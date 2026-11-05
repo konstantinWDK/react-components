@@ -2,7 +2,7 @@
 
 import './ContextMenuOverlay.css';
 
-/** ContextMenuOverlay — ported from astro-component-kit. */
+/** ContextMenuOverlay */
 export interface ContextMenuOverlayProps {
 }
 

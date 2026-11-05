@@ -1,5 +1,3 @@
-/* GaugeChart — ported from astro-component-kit (charts/GaugeChart.astro) */
-
 .gc:where([data-rk-f7ded1]) {
   position: relative;
   max-width: 340px;

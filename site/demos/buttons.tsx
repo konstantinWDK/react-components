@@ -9,7 +9,7 @@ import {
 } from '../../src/components/lib/buttons';
 
 /*
- * Same examples as astrocomponents.dev (PreviewRenderer.astro → buttonPreviewExamples).
+ * Same examples as reactcomponents.dev (PreviewRenderer.react → buttonPreviewExamples).
  * Each entry: [label, props]. Unlisted buttons use Primary / Secondary / Ghost.
  */
 type Example = [string, Record<string, unknown>?];

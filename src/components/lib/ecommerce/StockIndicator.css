@@ -1,5 +1,3 @@
-/* StockIndicator — ported from astro-component-kit (ecommerce/StockIndicator.astro) */
-
 .stock:where([data-rk-83468c]) {
   --stock-tone: var(--c-success, #34d399);
   display: grid;

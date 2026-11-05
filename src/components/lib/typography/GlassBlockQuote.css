@@ -1,5 +1,3 @@
-/* GlassBlockQuote — ported from astro-component-kit (typography/GlassBlockQuote.astro) */
-
 .glass-quote:where([data-rk-b9e615]) { position: relative; padding: 2.5rem; background: rgba(255,255,255,0.03); border-left: 4px solid #6366f1; border-radius: 0 20px 20px 0; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
 .q-ico:where([data-rk-b9e615]) { position: absolute; top: 0px; left: 1rem; font-size: 5rem; color: rgba(99,102,241,0.1); font-family: serif; line-height: 1; }
 p:where([data-rk-b9e615]) { font-size: 1.2rem; color: #e2e8f0; font-style: italic; line-height: 1.6; margin: 0 0 1rem; position: relative; z-index: 1; }

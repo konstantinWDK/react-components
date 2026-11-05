@@ -1,5 +1,3 @@
-/* CtaNewsletterSection — ported from astro-component-kit (sections/CtaNewsletterSection.astro) */
-
 .cq-cta-newsletter-section-cq:where([data-rk-95ed6a]) { container-type: inline-size; }
 .cns:where([data-rk-95ed6a]) {
   --cns-py: 5rem;

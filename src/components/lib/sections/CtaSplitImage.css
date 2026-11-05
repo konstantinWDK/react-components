@@ -1,5 +1,3 @@
-/* CtaSplitImage — ported from astro-component-kit (sections/CtaSplitImage.astro) */
-
 .cq-cta-split-image-cq:where([data-rk-56220c]) { container-type: inline-size; }
 .csi:where([data-rk-56220c]) {
   --csi-py: 5rem;

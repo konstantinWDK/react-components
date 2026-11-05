@@ -2,7 +2,7 @@
 
 import './AnchorSideNav.css';
 
-/** AnchorSideNav — ported from astro-component-kit. */
+/** AnchorSideNav */
 export interface AnchorSideNavProps {
 }
 

@@ -1,5 +1,3 @@
-/* SparklineChart — ported from astro-component-kit (charts/SparklineChart.astro) */
-
 .spark:where([data-rk-cd2e33]) {
   display: inline-block;
   vertical-align: middle;

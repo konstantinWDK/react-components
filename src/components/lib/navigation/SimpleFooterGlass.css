@@ -1,5 +1,3 @@
-/* SimpleFooterGlass — ported from astro-component-kit (navigation/SimpleFooterGlass.astro) */
-
 .glass-foot:where([data-rk-d147a1]) { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 4rem 1.5rem; }
 .foot-grid:where([data-rk-d147a1]) { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; }
 .foot-brand:where([data-rk-d147a1]) { font-weight: 800; color: #fff; }

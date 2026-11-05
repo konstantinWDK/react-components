@@ -35,7 +35,7 @@ export function HeroMinimalCentered({
   announcement = 'New: 50 sections & 45 SVG charts',
   announcementHref = '#',
   title = 'Build landing pages that *feel* expensive',
-  subtitle = 'Accessible, zero-dependency Astro components with a dark, refined aesthetic. Copy, paste, ship.',
+  subtitle = 'Accessible, zero-dependency React components with a dark, refined aesthetic. Copy, paste, ship.',
   primary = { label: 'Browse components', href: '#' },
   secondary = { label: 'Read the docs', href: '#' },
   trust = ['MIT licensed', 'WCAG AA', 'No runtime JS required'],

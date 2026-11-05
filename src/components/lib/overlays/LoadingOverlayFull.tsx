@@ -2,7 +2,7 @@
 
 import './LoadingOverlayFull.css';
 
-/** LoadingOverlayFull — ported from astro-component-kit. */
+/** LoadingOverlayFull */
 export interface LoadingOverlayFullProps {
 }
 

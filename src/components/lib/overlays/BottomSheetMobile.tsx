@@ -2,7 +2,7 @@
 
 import './BottomSheetMobile.css';
 
-/** BottomSheetMobile — ported from astro-component-kit. */
+/** BottomSheetMobile */
 export interface BottomSheetMobileProps {
 }
 

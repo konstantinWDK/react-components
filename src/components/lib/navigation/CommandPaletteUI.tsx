@@ -2,7 +2,7 @@
 
 import './CommandPaletteUI.css';
 
-/** CommandPaletteUI — ported from astro-component-kit. */
+/** CommandPaletteUI */
 export interface CommandPaletteUIProps {
 }
 

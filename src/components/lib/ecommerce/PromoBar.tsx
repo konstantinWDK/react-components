@@ -44,7 +44,7 @@ export interface PromoBarProps {
 }
 
 export function PromoBar({
-  messages = ['Free shipping on orders over $75', 'Use code ASTRO10 for 10% off your first order', '30-day free returns'],
+  messages = ['Free shipping on orders over $75', 'Use code REACT10 for 10% off your first order', '30-day free returns'],
   href,
   interval = 4500,
   dismissible = true,
@@ -55,7 +55,7 @@ export function PromoBar({
 }: PromoBarProps) {
   const Tag: any = href ? 'a' : 'div';
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

@@ -1,5 +1,3 @@
-/* SimpleFileInput — ported from astro-component-kit (forms/SimpleFileInput.astro) */
-
 .file-btn:where([data-rk-908bfa]) { 
   position: relative; 
   overflow: hidden; 

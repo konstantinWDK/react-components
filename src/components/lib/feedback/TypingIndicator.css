@@ -1,5 +1,3 @@
-/* TypingIndicator — ported from astro-component-kit (feedback/TypingIndicator.astro) */
-
 .typing-wrap { 
   display: flex; 
   padding: var(--sp-3, 0.75rem) var(--sp-5, 1.25rem); 

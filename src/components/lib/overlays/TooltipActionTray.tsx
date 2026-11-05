@@ -2,7 +2,7 @@
 
 import './TooltipActionTray.css';
 
-/** TooltipActionTray — ported from astro-component-kit. */
+/** TooltipActionTray */
 export interface TooltipActionTrayProps {
 }
 

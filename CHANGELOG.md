@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed — React branding and corporate blue templates
+- Removed every Astro reference from the components (sample copy, install commands, URLs, promo codes, port headers and comments); `scripts/de-astro.mjs` keeps future ports clean.
+- Templates use the corporate sky-blue palette: Nova Store, Forma (editorial) and Lobby (SaaS) — tokens, chart palette, product illustration hues and swatches.
+- Hard-coded translucent golds and the PromoBar `gold` variant now follow the theme tokens (`color-mix`), so every component can be re-themed (default look unchanged).
+- Template usage docs show Next.js App Router files.
+
+
 ### Changed — reactcomponents.dev look
 - New three.js hero: hundreds of thin rounded cubes (sky blue glass and black) fly in from the sky and diagonally from both sides to build a voxel React atom; cubes keep detaching and returning, and hovering makes them breathe like water (shader ripples).
 - Sky-blue site theme and a new cube logo / favicon. Component previews keep the library's default tokens, so demos look exactly like the installed components.

@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './NeonTextHighlight.css';
 
-/** NeonTextHighlight — ported from astro-component-kit. */
+/** NeonTextHighlight */
 export interface NeonTextHighlightProps {
   children?: ReactNode;
 }

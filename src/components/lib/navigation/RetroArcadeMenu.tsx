@@ -2,7 +2,7 @@
 
 import './RetroArcadeMenu.css';
 
-/** RetroArcadeMenu — ported from astro-component-kit. */
+/** RetroArcadeMenu */
 export interface RetroArcadeMenuProps {
 }
 

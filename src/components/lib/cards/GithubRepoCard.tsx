@@ -18,7 +18,7 @@ function st(css: string | undefined): CSSProperties {
 /**
  * GithubRepoCard — Dark glass card highlighting repository statistics, language dot, license, and stars.
  * 
- * @param {string} repoName - Repository name (e.g. 'astro-components').
+ * @param {string} repoName - Repository name (e.g. 'react-components').
  * @param {string} owner - Repo owner or organization (e.g. 'konstantinWDK').
  * @param {string} description - Brief summary of the repo.
  * @param {string} language - Primary programming language. Default is 'TypeScript'.
@@ -39,9 +39,9 @@ export interface GithubRepoCardProps {
 }
 
 export function GithubRepoCard({
-  repoName = 'astro-components',
+  repoName = 'react-components',
   owner = 'konstantinWDK',
-  description = 'Premium open-source UI component library for Astro with glassmorphism and accessibility.',
+  description = 'Premium open-source UI component library for React with glassmorphism and accessibility.',
   language = 'TypeScript',
   languageColor = '#3178c6',
   stars = 248,

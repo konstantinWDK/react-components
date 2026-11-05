@@ -15,7 +15,7 @@ export interface LandingSectionSplitProps {
 }
 
 export function LandingSectionSplit({ 
-  title = 'Build Faster with Astro', 
+  title = 'Build Faster with React', 
   subtitle = 'Scale with pre-built accessible components and modular designs.', 
   className = '',
   actions,

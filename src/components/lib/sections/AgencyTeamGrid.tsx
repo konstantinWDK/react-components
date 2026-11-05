@@ -67,7 +67,7 @@ export function AgencyTeamGrid({
     { name: 'Aisha Bello', role: 'Growth lead', location: 'Lisbon', fact: 'Ran a marathon and a product launch the same week.', links: [{ label: 'LinkedIn', href: '#' }] },
     { name: 'Leo Martins', role: 'Lead developer', location: 'Remote', fact: 'Ships to production from a sailboat.', links: [{ label: 'GitHub', href: '#' }] },
   ],
-  hiring = { title: 'We are hiring', text: 'Senior designers and Astro developers — remote in Europe.', href: '#', label: 'See open roles' },
+  hiring = { title: 'We are hiring', text: 'Senior designers and React developers — remote in Europe.', href: '#', label: 'See open roles' },
   columns = 4,
   variant = 'portrait',
   className = '',

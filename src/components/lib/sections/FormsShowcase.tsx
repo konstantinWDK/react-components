@@ -2,9 +2,9 @@
 
 import './FormsShowcase.css';
 
-// FormsShowcase.astro — Premium forms section with live preview
+// FormsShowcase — Premium forms section with live preview
 
-/** FormsShowcase — ported from astro-component-kit. */
+/** FormsShowcase */
 export interface FormsShowcaseProps {
   title?: string;
   subtitle?: string;

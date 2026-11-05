@@ -1,5 +1,3 @@
-/* RadialBarChart — ported from astro-component-kit (charts/RadialBarChart.astro) */
-
 .rb:where([data-rk-fa001b]) {
   display: grid;
   grid-template-columns: minmax(0, 300px) 1fr;

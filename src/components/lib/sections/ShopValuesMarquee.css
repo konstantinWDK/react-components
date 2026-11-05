@@ -1,5 +1,3 @@
-/* ShopValuesMarquee — ported from astro-component-kit (sections/ShopValuesMarquee.astro) */
-
 .svm:where([data-rk-6a922c]) { container-type: inline-size; --svm-fs: clamp(3rem, 9vw, 7.5rem); color: var(--c-text-1, #fff); overflow: hidden; }
 .svm--sm:where([data-rk-6a922c]) { --svm-fs: clamp(2rem, 6vw, 4.5rem); }
 .svm--lg:where([data-rk-6a922c]) { --svm-fs: clamp(4rem, 12vw, 10rem); }

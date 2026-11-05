@@ -1,5 +1,3 @@
-/* RadialIconMenu — ported from astro-component-kit (navigation/RadialIconMenu.astro) */
-
 .radial-wrap:where([data-rk-e0eadf]) { position: relative; width: 60px; height: 60px; background: #6366f1; border-radius: 50%; display: grid; place-items: center; color: #fff; cursor: pointer; }
 .icons:where([data-rk-e0eadf]) div:where([data-rk-e0eadf]) { position: absolute; left: 0; transform-origin: 30px; transition: 0.5s; transition-delay: calc(0.1s * var(--i)); transform: rotate(0deg) translateX(0px); opacity: 0; pointer-events: none; }
 .radial-wrap:hover:where([data-rk-e0eadf]) .icons:where([data-rk-e0eadf]) div:where([data-rk-e0eadf]) { transform: rotate(calc(360deg / 8 * var(--i))) translateX(80px); opacity: 1; pointer-events: auto; }

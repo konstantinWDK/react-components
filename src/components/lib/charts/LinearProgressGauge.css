@@ -1,5 +1,3 @@
-/* LinearProgressGauge — ported from astro-component-kit (charts/LinearProgressGauge.astro) */
-
 .linear-gauge:where([data-rk-4f95ee]) {
   display: flex;
   flex-direction: column;

@@ -15,8 +15,8 @@ import './SettingsPage.css';
  * SettingsPage — Account & workspace settings: profile, property details, notification switches,
  * team management with roles and invites, and plan usage / billing.
  *
- * Usage (src/pages/app/settings.astro):
- *   import { SettingsPage } from 'astro-component-kit/templates/saas-hotel';
+ * Usage (app/app/settings/page.tsx, Next.js):
+ *   import { SettingsPage } from 'react-component-kit-ui/templates/saas-hotel';
  *   <SettingsPage />
  *
  * @param {LobbyData} data - Workspace data.

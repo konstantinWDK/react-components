@@ -2,7 +2,7 @@
 
 import './StatsGridDashboard.css';
 
-/** StatsGridDashboard — ported from astro-component-kit. */
+/** StatsGridDashboard */
 export interface StatsGridDashboardProps {
 }
 

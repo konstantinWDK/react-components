@@ -1,4 +1,4 @@
-// @ts-nocheck — ported from astro-components/src/components/lib/Galaxy3D.astro (GPU particle shader)
+// @ts-nocheck — Galaxy3D scene (GPU particle shader)
 /**
  * Mounts the interactive 3D galaxy on a canvas. Returns a cleanup function.
  * GPU particle shader, cursor-reactive, pauses off-screen / hidden tab, honours reduced motion.

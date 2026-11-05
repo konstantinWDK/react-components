@@ -13,8 +13,8 @@ import './StoreCategoryPage.css';
  * StoreCategoryPage — E-commerce template catalogue: breadcrumb, category chips, toolbar
  * with live count + sort, FilterSidebar and ProductGrid (instant client-side filtering).
  *
- * Usage (src/pages/shop.astro):
- *   import { StoreCategoryPage } from 'astro-component-kit/templates/ecommerce';
+ * Usage (app/shop/page.tsx, Next.js):
+ *   import { StoreCategoryPage } from 'react-component-kit-ui/templates/ecommerce';
  *   <StoreCategoryPage />
  * Category links use `?category=<id>`; pass `category` to build one static page per category.
  *
@@ -43,7 +43,7 @@ export function StoreCategoryPage({ store = demoStore, routes = defaultRoutes, c
   const title = active ? active.name : 'All products';
   const description = active?.description ?? 'Everything we make, in one place. Filter by category, price, colour and rating.';
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

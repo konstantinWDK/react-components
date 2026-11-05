@@ -1,5 +1,3 @@
-/* DonutChart — ported from astro-component-kit (charts/DonutChart.astro) */
-
 .premium-chart-card:where([data-rk-ab60a1]) {
   background: rgb(var(--ink-rgb, 255 255 255) / 0.03);
   backdrop-filter: blur(12px);

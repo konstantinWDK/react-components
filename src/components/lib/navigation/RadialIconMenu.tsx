@@ -3,7 +3,7 @@
 import type { CSSProperties } from 'react';
 import './RadialIconMenu.css';
 
-/** RadialIconMenu — ported from astro-component-kit. */
+/** RadialIconMenu */
 export interface RadialIconMenuProps {
 }
 

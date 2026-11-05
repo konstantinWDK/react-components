@@ -46,7 +46,7 @@ export function GradientTextMarquee({
     'PERFORMANCE FIRST',
     'ZERO DEPENDENCIES',
     'ACCESSIBLE WCAG AA',
-    'ASTRO 5 READY',
+    'REACT 5 READY',
     'DARK GLASS MORPHISM',
   ],
   speed = '20s',

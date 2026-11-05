@@ -29,7 +29,7 @@ export function BumpChart({
   subtitle = 'Developer survey position by year',
   periods = ['2021', '2022', '2023', '2024', '2025', '2026'],
   series = [
-    { name: 'Astro', ranks: [5, 4, 3, 2, 1, 1] },
+    { name: 'React', ranks: [5, 4, 3, 2, 1, 1] },
     { name: 'Next', ranks: [1, 1, 1, 1, 2, 2] },
     { name: 'Svelte', ranks: [3, 2, 2, 3, 3, 4] },
     { name: 'Nuxt', ranks: [2, 3, 4, 4, 5, 3] },

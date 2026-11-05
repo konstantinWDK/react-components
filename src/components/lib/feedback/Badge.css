@@ -1,5 +1,3 @@
-/* Badge — ported from astro-component-kit (feedback/Badge.astro) */
-
 .badge { 
   display: inline-flex; 
   align-items: center; 

@@ -1,5 +1,3 @@
-/* FeatureIconGrid — ported from astro-component-kit (sections/FeatureIconGrid.astro) */
-
 .fig:where([data-rk-d09f2e]) {
   --fig-py: 5.5rem;
   padding: var(--fig-py) var(--sp-6, 1.5rem);

@@ -66,15 +66,15 @@ export function EditorialLayout({
         { title: 'More', links: store.categories.slice(half).map((c) => ({ label: c.name, href: editorialCategoryHref(routes, c.id) })) },
         { title: 'Edits', links: [{ label: 'New in', href: `${routes.shop}?sort=featured` }, { label: 'Under €100', href: `${routes.shop}?sort=price-asc` }, { label: 'Gifts', href: routes.shop }] },
       ],
-      feature: { title: 'The Autumn edit', text: 'Warm, quiet pieces for the colder months.', href: `${routes.product}wool-overcoat/`, icon: 'jacket', hue: 18 },
+      feature: { title: 'The Autumn edit', text: 'Warm, quiet pieces for the colder months.', href: `${routes.product}wool-overcoat/`, icon: 'jacket', hue: 190 },
     },
     { label: 'New in', href: `${routes.shop}?sort=featured` },
     { label: 'Objects', href: editorialCategoryHref(routes, 'objects') },
   ];
   const seed = seedCart
     ? [
-        { id: 'linen-overshirt::Oat / M', name: 'Linen Overshirt', price: 145, qty: 1, variant: 'Oat / M', icon: 'shirt' as const, hue: 30 },
-        { id: 'kiln-mug::Clay', name: 'Kiln Mug', price: 32, qty: 2, variant: 'Clay', icon: 'mug' as const, hue: 14 },
+        { id: 'linen-overshirt::Mist / M', name: 'Linen Overshirt', price: 145, qty: 1, variant: 'Mist / M', icon: 'shirt' as const, hue: 192 },
+        { id: 'kiln-mug::Slate', name: 'Kiln Mug', price: 32, qty: 2, variant: 'Slate', icon: 'mug' as const, hue: 190 },
       ]
     : [];
   const footerColumns = [
@@ -83,12 +83,12 @@ export function EditorialLayout({
     { title: 'Studio', links: [{ label: 'About', href: '#' }, { label: 'Journal', href: '#' }, { label: 'Stockists', href: '#' }] },
   ];
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;
     mounted.current = true;
-    // <html>/<body> attributes of the Astro layout
+    // <html>/<body> attributes of the React layout
     if (!document.documentElement.hasAttribute("lang")) document.documentElement.setAttribute("lang", String((lang)));
     document.documentElement.classList.add(...String("theme-forma").split(/\s+/).filter(Boolean));
     if (!document.documentElement.hasAttribute("data-theme")) document.documentElement.setAttribute("data-theme", String((theme === 'auto' ? 'light' : theme)));

@@ -1,5 +1,3 @@
-/* LogoCloudSection — ported from astro-component-kit (sections/LogoCloudSection.astro) */
-
 .logo-cloud:where([data-rk-b88031]) {
   padding: var(--sp-8, 2rem) var(--sp-6, 1.5rem);
   width: 100%;

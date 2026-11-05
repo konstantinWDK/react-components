@@ -12,8 +12,8 @@ import './EditorialShopPage.css';
  * EditorialShopPage — Editorial catalogue: ShopCategoryHero, sticky FilterBar (chips, refine
  * panel, sort, live count) and a grid of ProductCardMinimal with quick add.
  *
- * Usage (src/pages/shop.astro):
- *   import { EditorialShopPage } from 'astro-component-kit/templates/ecommerce-editorial';
+ * Usage (app/shop/page.tsx, Next.js):
+ *   import { EditorialShopPage } from 'react-component-kit-ui/templates/ecommerce-editorial';
  *   <EditorialShopPage />
  * Category links use `?category=<id>`; pass `category` to build one static page per category.
  *

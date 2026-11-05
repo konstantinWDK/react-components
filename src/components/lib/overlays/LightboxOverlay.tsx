@@ -2,7 +2,7 @@
 
 import './LightboxOverlay.css';
 
-/** LightboxOverlay — ported from astro-component-kit. */
+/** LightboxOverlay */
 export interface LightboxOverlayProps {
 }
 

@@ -1,5 +1,3 @@
-/* MinimalLinkCard — ported from astro-component-kit (cards/MinimalLinkCard.astro) */
-
 .link-card:where([data-rk-a901cf]) { 
   display: flex; justify-content: space-between; align-items: center; 
   padding: var(--sp-6, 1.5rem); 

@@ -1,5 +1,3 @@
-/* FaqTwoColumn — ported from astro-component-kit (sections/FaqTwoColumn.astro) */
-
 .cq-faq-two-column-cq:where([data-rk-73cab5]) { container-type: inline-size; }
 .ftc:where([data-rk-73cab5]) {
   --ftc-py: 5.5rem;

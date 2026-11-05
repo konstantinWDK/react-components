@@ -2,7 +2,7 @@
 
 import './FloatingTrayActions.css';
 
-/** FloatingTrayActions — ported from astro-component-kit. */
+/** FloatingTrayActions */
 export interface FloatingTrayActionsProps {
 }
 

@@ -1,5 +1,3 @@
-/* InteractiveTiltCard — ported from astro-component-kit (cards/InteractiveTiltCard.astro) */
-
 .tilt-card-wrap:where([data-rk-c53bbe]) { 
   perspective: 1000px; 
   width: 100%; 

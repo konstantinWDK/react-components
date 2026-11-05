@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { transformMarkup, addMapKeys, newCtx } from './astro2react.mjs';
+import { deAstro } from './de-astro.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const registry = JSON.parse(fs.readFileSync(path.join(root, 'site/data/registry.json'), 'utf8'));
@@ -46,8 +47,7 @@ function convertUsage(src, file) {
   if (!markup) return `<${file.name} />`;
   const ctx = newCtx();
   let jsx = addMapKeys(transformMarkup(markup, ctx));
-  jsx = jsx.replace(/\bAstro(?![.\w])/g, 'React').replace(/astro-component-kit/g, PKG);
-  return jsx;
+  return deAstro(jsx);
 }
 
 const out = {};
@@ -64,10 +64,10 @@ import type { DemoMeta } from './meta-types';
 
 export const generatedMeta: Record<string, DemoMeta> = ${JSON.stringify(out, null, 2)};
 
-/** Preview props used by astrocomponents.dev for e-commerce / app components. */
+/** Preview props for e-commerce / app components. */
 export const previewProps: Record<string, { props?: Record<string, unknown>; maxWidth?: string }> = ${JSON.stringify(astro.ecommercePreview, null, 2)};
 
-/** Props used by astrocomponents.dev for section miniatures inside template pages. */
+/** Props for section miniatures inside template pages. */
 export const sectionPreviewProps: Record<string, Record<string, unknown>> = ${JSON.stringify(astro.sectionPreviewProps ?? {}, null, 2)};
 `;
 fs.writeFileSync(path.join(root, 'site/demos/generated-meta.ts'), ts);

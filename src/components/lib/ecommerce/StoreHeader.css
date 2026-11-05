@@ -1,5 +1,3 @@
-/* StoreHeader — ported from astro-component-kit (ecommerce/StoreHeader.astro) */
-
 .store-header:where([data-rk-bf78a5]) {
   container-type: inline-size;
   --sh-h: 68px;

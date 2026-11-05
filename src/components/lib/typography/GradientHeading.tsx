@@ -15,7 +15,7 @@ function st(css: string | undefined): CSSProperties {
   return o as CSSProperties;
 }
 
-/** GradientHeading — ported from astro-component-kit. */
+/** GradientHeading */
 export interface GradientHeadingProps {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   from?: string;

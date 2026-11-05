@@ -1,5 +1,3 @@
-/* KpiStatTile — ported from astro-component-kit (charts/KpiStatTile.astro) */
-
 .kpi:where([data-rk-727d83]) {
   --kpi-pad: var(--sp-6, 1.5rem);
   --kpi-val: 2rem;

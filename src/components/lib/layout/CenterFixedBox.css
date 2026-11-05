@@ -1,5 +1,3 @@
-/* CenterFixedBox — ported from astro-component-kit (layout/CenterFixedBox.astro) */
-
 .abs-center-container:where([data-rk-bc4cce]) {
   position: relative;
   width: 100%;

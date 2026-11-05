@@ -1,5 +1,3 @@
-/* PieChart — ported from astro-component-kit (charts/PieChart.astro) */
-
 .pc:where([data-rk-991c0e]) {
   display: grid;
   grid-template-columns: minmax(0, 240px) 1fr;

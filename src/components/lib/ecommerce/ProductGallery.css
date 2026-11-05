@@ -1,5 +1,3 @@
-/* ProductGallery — ported from astro-component-kit (ecommerce/ProductGallery.astro) */
-
 .p-gallery-cq:where([data-rk-60f127]) { container-type: inline-size; }
 .p-gallery:where([data-rk-60f127]) { display: grid; gap: var(--sp-3, 0.75rem); }
 .p-gallery--side:where([data-rk-60f127]) { grid-template-columns: 84px minmax(0, 1fr); }

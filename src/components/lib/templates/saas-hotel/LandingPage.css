@@ -1,5 +1,3 @@
-/* LandingPage — ported from astro-component-kit (templates/saas-hotel/LandingPage.astro) */
-
 .lobby--site main { position: relative; overflow-x: clip; outline: none; }
 .lobby--site main > * , .lobby--site main > div > * { --c-primary: var(--app-accent); --c-primary-light: var(--app-accent); }
 .site-nav { position: sticky; top: 0; z-index: 50; background: rgb(var(--paper-rgb) / 0.82); backdrop-filter: blur(14px) saturate(1.3); border-bottom: 1px solid var(--c-border); }

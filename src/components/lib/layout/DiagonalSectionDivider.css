@@ -1,5 +1,3 @@
-/* DiagonalSectionDivider — ported from astro-component-kit (layout/DiagonalSectionDivider.astro) */
-
 .diagonal-divider:where([data-rk-9b90ea]) {
   position: relative;
   width: 100%;

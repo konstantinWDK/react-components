@@ -2,9 +2,9 @@
 
 import './CardsShowcase.css';
 
-// CardsShowcase.astro — Premium cards category showcase section with live preview
+// CardsShowcase — Premium cards category showcase section with live preview
 
-/** CardsShowcase — ported from astro-component-kit. */
+/** CardsShowcase */
 export interface CardsShowcaseProps {
   title?: string;
   subtitle?: string;

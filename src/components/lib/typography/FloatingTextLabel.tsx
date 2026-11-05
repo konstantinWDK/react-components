@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './FloatingTextLabel.css';
 
-/** FloatingTextLabel — ported from astro-component-kit. */
+/** FloatingTextLabel */
 export interface FloatingTextLabelProps {
   children?: ReactNode;
 }

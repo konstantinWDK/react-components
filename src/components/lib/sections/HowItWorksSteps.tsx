@@ -45,7 +45,7 @@ export function HowItWorksSteps({
   title = 'Ship a polished page in four steps',
   steps = [
     { title: 'Pick sections', text: 'Browse heroes, features, pricing and more in the catalog.', time: '2 min' },
-    { title: 'Copy the code', text: 'Paste components into your Astro project. No install needed.', time: '1 min' },
+    { title: 'Copy the code', text: 'Paste components into your React project. No install needed.', time: '1 min' },
     { title: 'Customize props', text: 'Change copy, colors and data through typed props and tokens.', time: '10 min' },
     { title: 'Deploy', text: 'Build static HTML and ship to any CDN or edge host.', time: '30 s' },
   ],

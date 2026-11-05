@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './FadedVerticalText.css';
 
-/** FadedVerticalText — ported from astro-component-kit. */
+/** FadedVerticalText */
 export interface FadedVerticalTextProps {
   children?: ReactNode;
 }

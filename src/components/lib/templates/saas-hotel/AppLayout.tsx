@@ -50,12 +50,12 @@ export function AppLayout({ title, description, current = 'dashboard', data = lo
   ];
   const currentHref = routes[current];
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;
     mounted.current = true;
-    // <html>/<body> attributes of the Astro layout
+    // <html>/<body> attributes of the React layout
     if (!document.documentElement.hasAttribute("lang")) document.documentElement.setAttribute("lang", String((lang)));
     document.documentElement.classList.add(...String("theme-lobby").split(/\s+/).filter(Boolean));
     if (!document.documentElement.hasAttribute("data-theme")) document.documentElement.setAttribute("data-theme", String((theme === 'auto' ? 'light' : theme)));

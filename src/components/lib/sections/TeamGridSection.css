@@ -1,5 +1,3 @@
-/* TeamGridSection — ported from astro-component-kit (sections/TeamGridSection.astro) */
-
 .cq-team-grid-section-cq:where([data-rk-e56c49]) { container-type: inline-size; }
 .team-section:where([data-rk-e56c49]) {
   position: relative;

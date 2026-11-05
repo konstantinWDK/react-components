@@ -6,7 +6,7 @@ import './HeroShowcaseSplit.css';
 /**
  * HeroShowcaseSplit — Two-column modern landing hero section with install command, action CTAs, and interactive preview widget.
  * 
- * @param {string} badge - Header lead badge. Default is 'NEW: ASTRO 5 SUITE'.
+ * @param {string} badge - Header lead badge. Default is 'NEW: REACT 19 SUITE'.
  * @param {string} title - Primary headline string.
  * @param {string} subtitle - Subtitle paragraph text.
  * @param {string} primaryCtaText - Primary CTA button text.
@@ -26,13 +26,13 @@ export interface HeroShowcaseSplitProps {
 }
 
 export function HeroShowcaseSplit({
-  badge = 'NEW: ASTRO 5 PRODUCTION SUITE',
+  badge = 'NEW: REACT 19 PRODUCTION SUITE',
   title = 'Craft stunning web apps at lightspeed',
-  subtitle = 'A cohesive collection of 150+ dark-mode first, accessible Astro components. Zero dependencies, pure vanilla CSS, full TypeScript support.',
+  subtitle = 'A cohesive collection of 150+ dark-mode first, accessible React components. Zero dependencies, pure vanilla CSS, full TypeScript support.',
   primaryCtaText = 'Explore Components',
   primaryCtaHref = '/docs/glass-button',
   secondaryCtaText = 'View on GitHub',
-  secondaryCtaHref = 'https://github.com/konstantinWDK/astro-components',
+  secondaryCtaHref = 'https://github.com/konstantinWDK/react-components',
   children
 }: HeroShowcaseSplitProps) {
   return (
@@ -61,7 +61,7 @@ export function HeroShowcaseSplit({
       
             <div className="split-hero__install" data-rk-723e29="">
               <span className="prompt" data-rk-723e29="">$</span>
-              <code data-rk-723e29="">npm install astro-component-kit</code>
+              <code data-rk-723e29="">npm install react-component-kit-ui</code>
             </div>
           </div>
       
@@ -71,7 +71,7 @@ export function HeroShowcaseSplit({
                 <span className="d-dot d-dot--red" data-rk-723e29=""></span>
                 <span className="d-dot d-dot--yellow" data-rk-723e29=""></span>
                 <span className="d-dot d-dot--green" data-rk-723e29=""></span>
-                <span className="glass-device__url" data-rk-723e29="">astrocomponents.dev/preview</span>
+                <span className="glass-device__url" data-rk-723e29="">reactcomponents.dev/preview</span>
               </div>
               <div className="glass-device__body" data-rk-723e29="">
                 {children ?? (<>

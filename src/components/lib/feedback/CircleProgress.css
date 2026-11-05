@@ -1,5 +1,3 @@
-/* CircleProgress — ported from astro-component-kit (feedback/CircleProgress.astro) */
-
 .circle-box { 
   position: relative; 
   width: var(--gauge-size); 

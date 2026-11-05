@@ -1,5 +1,3 @@
-/* LandingSectionSplit — ported from astro-component-kit (layout/LandingSectionSplit.astro) */
-
 .cq-landing-section-split-cq:where([data-rk-4cb82a]) { container-type: inline-size; }
 .split-sec:where([data-rk-4cb82a]) {
   display: grid;

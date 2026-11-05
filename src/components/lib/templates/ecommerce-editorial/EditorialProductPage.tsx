@@ -43,10 +43,10 @@ function st(css: string | undefined): CSSProperties {
  * info column (VariantPicker colour + size, add to bag, StockIndicator, size guide and care notes),
  * then "Complete the look" (ShopProductRail) and reviews (ShopReviewsEditorial).
  *
- * Usage (src/pages/product/[slug].astro):
- *   import { EditorialProductPage, formaStore } from 'astro-component-kit/templates/ecommerce-editorial';
- *   export const getStaticPaths = () => formaStore.products.map((p) => ({ params: { slug: p.slug } }));
- *   <EditorialProductPage slug={Astro.params.slug} />
+ * Usage (app/product/[slug]/page.tsx, Next.js):
+ *   import { EditorialProductPage, formaStore } from 'react-component-kit-ui/templates/ecommerce-editorial';
+ *   export const generateStaticParams = () => formaStore.products.map((p) => ({ slug: p.slug }));
+ *   <EditorialProductPage slug={(await params).slug} />
  *
  * @param {string} slug - Product slug. Default: first product.
  * @param {EditorialStore} store - Catalogue and settings.
@@ -71,7 +71,7 @@ export function EditorialProductPage({ slug, store = formaStore, routes = editor
   const category: StoreCategory | undefined = catalog.categories.find((c: StoreCategory) => c.id === product.category);
   const money = { currency: store.currency, locale: store.locale };
   const inStock = product.inStock !== false;
-  const views = [0, 1, 2, 3].map((i) => ({ hue: (product.hue ?? 30) + i * 14, turn: [0, -12, 10, 0][i], zoom: [1, 1.25, 0.9, 1.5][i], variant: (i % 2 ? 'glow' : 'soft') as 'glow' | 'soft' }));
+  const views = [0, 1, 2, 3].map((i) => ({ hue: (product.hue ?? 205) + i * 14, turn: [0, -12, 10, 0][i], zoom: [1, 1.25, 0.9, 1.5][i], variant: (i % 2 ? 'glow' : 'soft') as 'glow' | 'soft' }));
   const related: Product[] = catalog.products.filter((p: Product) => p.slug !== product.slug && p.category !== product.category).slice(0, 6);
   const payload = JSON.stringify({ id: product.slug, name: product.name, price: product.price, icon: product.icon, hue: product.hue, image: product.image });
   const productReviews = catalog.reviews.filter((r: EditorialStore['reviews'][number]) => r.product === product.name);

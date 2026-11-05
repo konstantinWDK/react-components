@@ -1,5 +1,3 @@
-/* RatingPill — ported from astro-component-kit (feedback/RatingPill.astro) */
-
 .rate-pill { 
   display: inline-flex;
   align-items: center;

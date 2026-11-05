@@ -1,5 +1,3 @@
-/* HeroGradient — ported from astro-component-kit (sections/HeroGradient.astro) */
-
 .cq-hero-gradient-cq:where([data-rk-c25c97]) { container-type: inline-size; }
 .hero-gradient:where([data-rk-c25c97]) {
   position: relative;

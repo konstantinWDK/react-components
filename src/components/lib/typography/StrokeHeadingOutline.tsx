@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './StrokeHeadingOutline.css';
 
-/** StrokeHeadingOutline — ported from astro-component-kit. */
+/** StrokeHeadingOutline */
 export interface StrokeHeadingOutlineProps {
   children?: ReactNode;
 }

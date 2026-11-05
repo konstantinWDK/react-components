@@ -9,7 +9,7 @@ export type { DemoMeta };
 const b = (file: string, usage: string): DemoMeta => ({ file, category: 'buttons', usage });
 const f = (file: string, usage: string): DemoMeta => ({ file, category: 'feedback', usage });
 
-/** Buttons whose preview stage needs extra room for glow / tilt / magnet effects (same list as Astro). */
+/** Buttons whose preview stage needs extra room for glow / tilt / magnet effects (same list as React). */
 export const SPACIOUS_PREVIEW = new Set(['glow-button', 'pulse-button', 'magnetic-button', 'tilt-glow-button', 'double-border-button']);
 
 const manualMeta: Record<string, DemoMeta> = {
@@ -110,5 +110,5 @@ const manualMeta: Record<string, DemoMeta> = {
   'typing-indicator': f('TypingIndicator', `<TypingIndicator label="Ana is typing…" dotColor="#d4a017" />`),
 };
 
-/** Every ported component: generated from the Astro registry, hand-written entries win. */
+/** Every ported component: generated from the React registry, hand-written entries win. */
 export const demoMeta: Record<string, DemoMeta> = { ...generatedMeta, ...manualMeta };

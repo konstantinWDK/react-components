@@ -10,8 +10,8 @@ import { lobbyData, saasRoutes, type LobbyData, type SaasRoutes } from './data';
  * ReservationsPage — Room rack (tape chart) for the next two weeks plus a searchable, sortable
  * reservations table with status filters, bulk actions and pagination.
  *
- * Usage (src/pages/app/reservations.astro):
- *   import { ReservationsPage } from 'astro-component-kit/templates/saas-hotel';
+ * Usage (app/app/reservations/page.tsx, Next.js):
+ *   import { ReservationsPage } from 'react-component-kit-ui/templates/saas-hotel';
  *   <ReservationsPage />
  *
  * @param {LobbyData} data - Workspace data.

@@ -1,5 +1,3 @@
-/* TiltGlowButton — ported from astro-component-kit (buttons/TiltGlowButton.astro) */
-
 .tilt-wrapper {
   perspective: 1000px;
   display: inline-block;

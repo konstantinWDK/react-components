@@ -16,8 +16,8 @@ import './StoreHomePage.css';
  * StoreHomePage — E-commerce template home: hero, guarantees, categories, best sellers,
  * editorial banner, new arrivals, press logos and newsletter.
  *
- * Usage (src/pages/index.astro):
- *   import { StoreHomePage } from 'astro-component-kit/templates/ecommerce';
+ * Usage (app/page.tsx, Next.js):
+ *   import { StoreHomePage } from 'react-component-kit-ui/templates/ecommerce';
  *   <StoreHomePage />
  *
  * @param {StoreConfig} store - Catalogue and settings. Default: demo store.

@@ -10,7 +10,7 @@ export interface MinimalFooterGridProps {
   className?: string;
 }
 
-export function MinimalFooterGrid({ brandName = 'AstroKit', className = '' }: MinimalFooterGridProps) {
+export function MinimalFooterGrid({ brandName = 'ReactKit', className = '' }: MinimalFooterGridProps) {
   return (
     <>
       <footer className={`m-footer ${className}`} data-rk-f90449="">

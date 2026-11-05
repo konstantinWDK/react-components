@@ -1,5 +1,3 @@
-/* StoreLayout — ported from astro-component-kit (templates/ecommerce/StoreLayout.astro) */
-
 body.store { overflow-x: clip; }
 .store__main { position: relative; z-index: 1; outline: none; }
 .store__skip {
@@ -17,3 +15,35 @@ body.store { overflow-x: clip; }
 .store__skip:focus { top: 12px; color: var(--c-on-primary); }
 .store-container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 var(--sp-6); }
 @media (max-width: 640px) { .store-container { padding: 0 var(--sp-4); } }
+
+/* Corporate blue theme (reactcomponents.dev palette) — dark default, light via the header toggle */
+body.store {
+  --c-bg: #03060b;
+  --c-bg-1: #070b12;
+  --c-bg-2: #0c1220;
+  --c-border: rgba(148, 197, 255, 0.08);
+  --c-primary: #0ea5e9;
+  --c-primary-light: #38bdf8;
+  --c-primary-glow: rgba(56, 189, 248, 0.14);
+  --c-accent: #e0f2fe;
+  --c-on-primary: #04121c;
+  --paper-rgb: 3 6 11;
+  /* corporate chart palette: blues, teal and indigo instead of orange/yellow */
+  --chart-1: #2563eb; --chart-2: #38bdf8; --chart-3: #14b8a6; --chart-4: #6366f1;
+  --chart-5: #0ea5e9; --chart-6: #22c55e; --chart-7: #8b5cf6; --chart-8: #64748b;
+}
+:root[data-theme='light'] body.store {
+  --c-bg: #f4f8fc;
+  --c-bg-1: #ffffff;
+  --c-bg-2: #e8f0f8;
+  --c-border: rgba(15, 40, 70, 0.1);
+  --c-primary: #0369a1;
+  --c-primary-light: #0369a1;
+  --c-primary-glow: rgba(3, 105, 161, 0.12);
+  --c-accent: #0c4a6e;
+  --c-on-primary: #ffffff;
+  --paper-rgb: 255 255 255;
+  /* corporate chart palette: blues, teal and indigo instead of orange/yellow */
+  --chart-1: #1d4ed8; --chart-2: #0284c7; --chart-3: #0d9488; --chart-4: #4f46e5;
+  --chart-5: #0369a1; --chart-6: #15803d; --chart-7: #7c3aed; --chart-8: #475569;
+}

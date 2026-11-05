@@ -1,5 +1,3 @@
-/* MetricDeltaTable — ported from astro-component-kit (charts/MetricDeltaTable.astro) */
-
 .md:where([data-rk-df9b34]) { overflow-x: auto; }
 .md__table:where([data-rk-df9b34]) { width: 100%; border-collapse: collapse; font-size: 0.8125rem; font-variant-numeric: tabular-nums; }
 .md__table:where([data-rk-df9b34]) th:where([data-rk-df9b34]), .md__table:where([data-rk-df9b34]) td:where([data-rk-df9b34]) {

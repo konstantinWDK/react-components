@@ -1,5 +1,3 @@
-/* RetroGameCard — ported from astro-component-kit (cards/RetroGameCard.astro) */
-
 .retro-game:where([data-rk-d37617]) { 
   background: #22c55e; border: 4px solid #000; 
   padding: var(--sp-4, 1rem); position: relative; 

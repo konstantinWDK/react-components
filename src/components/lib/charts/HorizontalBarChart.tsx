@@ -51,7 +51,7 @@ export function HorizontalBarChart({
     { label: '/pricing', value: 18420 },
     { label: '/docs/getting-started', value: 15210 },
     { label: '/', value: 12980 },
-    { label: '/blog/astro-5', value: 9340 },
+    { label: '/blog/react-19', value: 9340 },
     { label: '/components', value: 7120 },
     { label: '/changelog', value: 4310 },
   ],

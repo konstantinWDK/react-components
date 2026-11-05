@@ -1,5 +1,3 @@
-/* NeumorphicCard — ported from astro-component-kit (cards/NeumorphicCard.astro) */
-
 .neu-card:where([data-rk-6601f7]) {
   background: var(--c-bg-elev, #e0e0e0);
   border-radius: var(--r-xl, 30px);

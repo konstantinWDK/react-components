@@ -1,5 +1,3 @@
-/* TestimonialFeatured — ported from astro-component-kit (sections/TestimonialFeatured.astro) */
-
 .cq-testimonial-featured-cq:where([data-rk-bd39f1]) { container-type: inline-size; }
 .tf:where([data-rk-bd39f1]) {
   --tf-py: 5.5rem;

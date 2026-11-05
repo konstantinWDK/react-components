@@ -1,5 +1,3 @@
-/* CartToast — ported from astro-component-kit (ecommerce/CartToast.astro) */
-
 .cart-toasts:where([data-rk-da674f]) {
   position: fixed;
   z-index: 1100;

@@ -220,7 +220,7 @@ export const generatedMeta: Record<string, DemoMeta> = {
   "tags-autocomplete-input": {
     "file": "TagsAutocompleteInput",
     "category": "forms",
-    "usage": "<TagsAutocompleteInput id=\"article-tags\" label=\"Article Tags\" initialTags={['astro', 'design']} />"
+    "usage": "<TagsAutocompleteInput id=\"article-tags\" label=\"Article Tags\" initialTags={['react', 'design']} />"
   },
   "glass-inline-toggle-group": {
     "file": "GlassInlineToggleGroup",
@@ -305,7 +305,7 @@ export const generatedMeta: Record<string, DemoMeta> = {
   "retro-game-card": {
     "file": "RetroGameCard",
     "category": "cards",
-    "usage": "<RetroGameCard title=\"SUPER ASTRO\" level=\"LVL 01\" score=\"4820\" />"
+    "usage": "<RetroGameCard title=\"SUPER REACT\" level=\"LVL 01\" score=\"4820\" />"
   },
   "stat-card": {
     "file": "StatCard",
@@ -335,7 +335,7 @@ export const generatedMeta: Record<string, DemoMeta> = {
   "github-repo-card": {
     "file": "GithubRepoCard",
     "category": "cards",
-    "usage": "<GithubRepoCard repoName=\"astro-components\" repoOwner=\"konstantinwdk\" description=\"Accessible glassmorphic React UI component library\" language=\"TypeScript\" languageColor=\"#3178c6\" stars={482} forks={64} />"
+    "usage": "<GithubRepoCard repoName=\"react-components\" repoOwner=\"konstantinwdk\" description=\"Accessible glassmorphic React UI component library\" language=\"TypeScript\" languageColor=\"#3178c6\" stars={482} forks={64} />"
   },
   "stats-trend-card": {
     "file": "StatsTrendCard",
@@ -1015,12 +1015,12 @@ export const generatedMeta: Record<string, DemoMeta> = {
   "gradient-text-marquee": {
     "file": "GradientTextMarquee",
     "category": "typography",
-    "usage": "<GradientTextMarquee text=\"ASTRO COMPONENTS • MODERN UI • ZERO RUNTIME • ACCESSIBLE • \" speed=\"normal\" />"
+    "usage": "<GradientTextMarquee text=\"REACT COMPONENTS • MODERN UI • ZERO RUNTIME • ACCESSIBLE • \" speed=\"normal\" />"
   },
   "curved-path-heading": {
     "file": "CurvedPathHeading",
     "category": "typography",
-    "usage": "<CurvedPathHeading text=\"PREMIUM ASTRO UI LIBRARY • \" radius={120} />"
+    "usage": "<CurvedPathHeading text=\"PREMIUM REACT UI LIBRARY • \" radius={120} />"
   },
   "hacker-decode-text": {
     "file": "HackerDecodeText",
@@ -1290,7 +1290,7 @@ export const generatedMeta: Record<string, DemoMeta> = {
   "promo-bar": {
     "file": "PromoBar",
     "category": "ecommerce",
-    "usage": "<PromoBar messages={['Free shipping over $75', 'Code ASTRO10 = 10% off']} />"
+    "usage": "<PromoBar messages={['Free shipping over $75', 'Code REACT10 = 10% off']} />"
   },
   "store-hero": {
     "file": "StoreHero",
@@ -1335,7 +1335,7 @@ export const generatedMeta: Record<string, DemoMeta> = {
   "order-summary": {
     "file": "OrderSummary",
     "category": "ecommerce",
-    "usage": "<OrderSummary taxRate={0.08} promoCodes={{ ASTRO10: 10 }} />"
+    "usage": "<OrderSummary taxRate={0.08} promoCodes={{ REACT10: 10 }} />"
   },
   "checkout-form": {
     "file": "CheckoutForm",
@@ -1545,7 +1545,7 @@ export const generatedMeta: Record<string, DemoMeta> = {
   "hero-terminal": {
     "file": "HeroTerminal",
     "category": "sections",
-    "usage": "<HeroTerminal title=\"From zero to production in one command\" command=\"npm create astro@latest\" lines={[\n    { type: 'cmd', text: 'npm create astro@latest' },\n    { type: 'ok', text: 'Project ready' },\n  ]} />"
+    "usage": "<HeroTerminal title=\"From zero to production in one command\" command=\"npm create vite@latest\" lines={[\n    { type: 'cmd', text: 'npm create vite@latest' },\n    { type: 'ok', text: 'Project ready' },\n  ]} />"
   },
   "hero-waitlist": {
     "file": "HeroWaitlist",
@@ -1709,7 +1709,7 @@ export const generatedMeta: Record<string, DemoMeta> = {
   }
 };
 
-/** Preview props used by astrocomponents.dev for e-commerce / app components. */
+/** Preview props for e-commerce / app components. */
 export const previewProps: Record<string, { props?: Record<string, unknown>; maxWidth?: string }> = {
   "cart-store": {
     "props": {
@@ -1870,7 +1870,7 @@ export const previewProps: Record<string, { props?: Record<string, unknown>; max
   }
 };
 
-/** Props used by astrocomponents.dev for section miniatures inside template pages. */
+/** Props for section miniatures inside template pages. */
 export const sectionPreviewProps: Record<string, Record<string, unknown>> = {
   "shop-header-editorial": {
     "sticky": false

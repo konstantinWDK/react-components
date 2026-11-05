@@ -2,7 +2,7 @@
 
 import './BackdropBlurMask.css';
 
-/** BackdropBlurMask — ported from astro-component-kit. */
+/** BackdropBlurMask */
 export interface BackdropBlurMaskProps {
 }
 

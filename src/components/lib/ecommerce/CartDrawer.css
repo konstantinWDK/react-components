@@ -1,5 +1,3 @@
-/* CartDrawer — ported from astro-component-kit (ecommerce/CartDrawer.astro) */
-
 .cart-drawer:where([data-rk-571235]) {
   --cd-w: 420px;
   position: fixed;

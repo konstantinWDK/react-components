@@ -1,5 +1,3 @@
-/* SplitScreenLayout — ported from astro-component-kit (layout/SplitScreenLayout.astro) */
-
 .split-layout:where([data-rk-aa2173]) {
   display: flex;
   min-height: 50vh;

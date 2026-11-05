@@ -1,5 +1,3 @@
-/* PricingComparisonMatrix — ported from astro-component-kit (sections/PricingComparisonMatrix.astro) */
-
 .cq-pricing-comparison-matrix-cq:where([data-rk-4ae18a]) { container-type: inline-size; }
 .pricing-section:where([data-rk-4ae18a]) {
   position: relative;

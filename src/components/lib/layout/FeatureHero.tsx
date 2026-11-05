@@ -42,10 +42,10 @@ function st(css: string | undefined): CSSProperties {
  * @param {string} className - Additional CSS class to apply.
  *
  * @example
- * ```astro
+ * ```react
  * <FeatureHero
  *   title="Ship Faster with Premium Components"
- *   subtitle="200+ production-ready UI components for Astro."
+ *   subtitle="200+ production-ready UI components for React."
  * >
  *   <a href="/docs">Browse Components</a>
  * </FeatureHero>

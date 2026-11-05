@@ -2,7 +2,7 @@
 
 import './DataChipsGroup.css';
 
-/** DataChipsGroup — ported from astro-component-kit. */
+/** DataChipsGroup */
 export interface DataChipsGroupProps {
 }
 

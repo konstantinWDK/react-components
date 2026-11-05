@@ -1,5 +1,3 @@
-/* ProductCardMinimal — ported from astro-component-kit (ecommerce/ProductCardMinimal.astro) */
-
 .pcm:where([data-rk-5864b0]) { position: relative; display: flex; flex-direction: column; gap: var(--sp-3, 0.75rem); min-width: 0; }
 .pcm--framed:where([data-rk-5864b0]) { padding: var(--sp-3, 0.75rem); border: 1px solid var(--c-border, rgba(255, 255, 255, 0.08)); }
 .pcm__media:where([data-rk-5864b0]) { position: relative; overflow: hidden; border-radius: var(--r-sm, 2px); background: var(--c-bg-2, #111); }

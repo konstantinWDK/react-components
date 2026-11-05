@@ -1,5 +1,3 @@
-/* OrderSummary — ported from astro-component-kit (ecommerce/OrderSummary.astro) */
-
 .o-summary:where([data-rk-abd13c]) {
   display: grid;
   gap: var(--sp-4, 1rem);

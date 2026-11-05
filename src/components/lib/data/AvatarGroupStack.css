@@ -1,5 +1,3 @@
-/* AvatarGroupStack — ported from astro-component-kit (data/AvatarGroupStack.astro) */
-
 .av-group:where([data-rk-99496b]) { display: flex; align-items: center; }
 .av:where([data-rk-99496b]) { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #080b14; margin-left: -10px; display: grid; place-items: center; font-size: 0.65rem; font-weight: 800; color: #fff; position: relative; transition: 0.2s; cursor: pointer; }
 .av:first-child:where([data-rk-99496b]) { margin-left: 0; }

@@ -1,5 +1,3 @@
-/* EcommerceProductCard — ported from astro-component-kit (cards/EcommerceProductCard.astro) */
-
 .prod-card:where([data-rk-0a44ca]) { 
   background: var(--c-bg-elev, #0f172a); 
   border-radius: var(--r-lg, 16px); 

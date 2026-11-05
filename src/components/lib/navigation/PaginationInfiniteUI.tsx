@@ -2,7 +2,7 @@
 
 import './PaginationInfiniteUI.css';
 
-/** PaginationInfiniteUI — ported from astro-component-kit. */
+/** PaginationInfiniteUI */
 export interface PaginationInfiniteUIProps {
 }
 

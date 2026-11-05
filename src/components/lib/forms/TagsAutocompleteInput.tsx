@@ -8,7 +8,7 @@ import './TagsAutocompleteInput.css';
  * 
  * @param {string} id - HTML ID for the tag input.
  * @param {string} label - Input label. Default is 'Tags'.
- * @param {string[]} initialTags - Pre-populated list of tags. Default is ['Astro', 'TypeScript'].
+ * @param {string[]} initialTags - Pre-populated list of tags. Default is ['React', 'TypeScript'].
  * @param {string[]} suggestions - Autocomplete candidate options.
  * @param {string} placeholder - Input placeholder. Default is 'Add tag & press Enter...'.
  */
@@ -23,12 +23,12 @@ export interface TagsAutocompleteInputProps {
 export function TagsAutocompleteInput({
   id = 'tags-autocomplete',
   label = 'Tags',
-  initialTags = ['Astro', 'TypeScript'],
+  initialTags = ['React', 'TypeScript'],
   suggestions = ['React', 'Tailwind', 'Three.js', 'SSR', 'Vite', 'GraphQL'],
   placeholder = 'Add tag & press Enter...',
 }: TagsAutocompleteInputProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

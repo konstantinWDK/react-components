@@ -1,5 +1,3 @@
-/* SideDrawerRight — ported from astro-component-kit (overlays/SideDrawerRight.astro) */
-
 .drawer-wrap:where([data-rk-e9a0cd]) { position: fixed; inset: 0; z-index: 2000; }
 .drawer-overlay:where([data-rk-e9a0cd]) { position: absolute; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); }
 .drawer-panel:where([data-rk-e9a0cd]) { position: absolute; top: 0; bottom: 0; width: 350px; background: #080b14; border-left: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }

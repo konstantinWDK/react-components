@@ -3,7 +3,7 @@
 import LogoWithGalaxy from '../LogoWithGalaxy';
 import './SplashIntroOverlay.css';
 
-/** SplashIntroOverlay — ported from astro-component-kit. */
+/** SplashIntroOverlay */
 export interface SplashIntroOverlayProps {
 }
 

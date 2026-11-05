@@ -1,5 +1,3 @@
-/* SegmentedControl — ported from astro-component-kit (forms/SegmentedControl.astro) */
-
 .segmented:where([data-rk-260788]) { 
   display: flex; position: relative; 
   background: var(--c-bg-elev, rgba(255,255,255,0.05)); 

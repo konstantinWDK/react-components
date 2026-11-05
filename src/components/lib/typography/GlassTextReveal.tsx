@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './GlassTextReveal.css';
 
-/** GlassTextReveal — ported from astro-component-kit. */
+/** GlassTextReveal */
 export interface GlassTextRevealProps {
   children?: ReactNode;
 }

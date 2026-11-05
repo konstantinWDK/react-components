@@ -1,5 +1,3 @@
-/* KpiTrendGrid — ported from astro-component-kit (charts/KpiTrendGrid.astro) */
-
 .kg:where([data-rk-1cf6fc]) { width: 100%; }
 .kg__title:where([data-rk-1cf6fc]) {
   margin: 0 0 var(--sp-4, 1rem);

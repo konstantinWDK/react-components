@@ -18,7 +18,7 @@ export interface CtaAppDownloadProps {
 
 export function CtaAppDownload({
   badge = "Mobile Experience",
-  title = "Manage Your Astro Deployments On the Go",
+  title = "Manage Your React Deployments On the Go",
   subtitle = "Download our native companion mobile application. Monitor real-time builds, latency metrics, and team notifications directly from your pocket.",
   className = ""
 }: CtaAppDownloadProps) {

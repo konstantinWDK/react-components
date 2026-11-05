@@ -1,5 +1,3 @@
-/* FeatureAlternatingRows — ported from astro-component-kit (sections/FeatureAlternatingRows.astro) */
-
 .cq-feature-alternating-rows-cq:where([data-rk-43b840]) { container-type: inline-size; }
 .far:where([data-rk-43b840]) {
   --far-py: 5.5rem;

@@ -2,7 +2,7 @@
 
 import './AgeVerificationOverlay.css';
 
-/** AgeVerificationOverlay — ported from astro-component-kit. */
+/** AgeVerificationOverlay */
 export interface AgeVerificationOverlayProps {
 }
 

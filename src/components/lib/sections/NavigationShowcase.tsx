@@ -2,9 +2,9 @@
 
 import './NavigationShowcase.css';
 
-// NavigationShowcase.astro — Premium navigation section with live preview
+// NavigationShowcase — Premium navigation section with live preview
 
-/** NavigationShowcase — ported from astro-component-kit. */
+/** NavigationShowcase */
 export interface NavigationShowcaseProps {
   title?: string;
   subtitle?: string;

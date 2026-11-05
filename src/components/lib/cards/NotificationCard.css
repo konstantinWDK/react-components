@@ -1,5 +1,3 @@
-/* NotificationCard — ported from astro-component-kit (cards/NotificationCard.astro) */
-
 .notify-card:where([data-rk-7cf369]) { 
   display: flex; gap: var(--sp-4, 1rem); 
   padding: var(--sp-4, 1rem); 

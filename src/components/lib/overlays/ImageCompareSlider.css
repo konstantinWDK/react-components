@@ -1,5 +1,3 @@
-/* ImageCompareSlider — ported from astro-component-kit (overlays/ImageCompareSlider.astro) */
-
 .img-compare:where([data-rk-886e9f]) {
   position: relative;
   width: 100%;

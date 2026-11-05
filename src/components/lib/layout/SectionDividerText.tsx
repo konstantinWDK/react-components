@@ -25,7 +25,7 @@ function st(css: string | undefined): CSSProperties {
  * @param {string} fontSize - Size of the divider text. Default: '0.75rem'.
  *
  * @example
- * ```astro
+ * ```react
  * <SectionDividerText>Features</SectionDividerText>
  * ```
  */

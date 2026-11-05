@@ -1,5 +1,3 @@
-/* GlowButton — ported from astro-component-kit (buttons/GlowButton.astro) */
-
 .glow-btn {
   --glow-color: var(--btn-color);
   --glow-opacity: 0.4;

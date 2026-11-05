@@ -11,8 +11,8 @@ import { lobbyData, saasRoutes, type LobbyData, type SaasRoutes } from './data';
  * RoomsPage — Housekeeping and room status: status KPI tiles, inventory by room type and the
  * interactive HousekeepingBoard grouped by floor.
  *
- * Usage (src/pages/app/rooms.astro):
- *   import { RoomsPage } from 'astro-component-kit/templates/saas-hotel';
+ * Usage (app/app/rooms/page.tsx, Next.js):
+ *   import { RoomsPage } from 'react-component-kit-ui/templates/saas-hotel';
  *   <RoomsPage />
  *
  * @param {LobbyData} data - Workspace data.

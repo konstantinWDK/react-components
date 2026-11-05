@@ -2,7 +2,7 @@
 
 import './MobileNavOverlay.css';
 
-/** MobileNavOverlay — ported from astro-component-kit. */
+/** MobileNavOverlay */
 export interface MobileNavOverlayProps {
 }
 

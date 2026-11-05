@@ -116,7 +116,7 @@ export function DataTable({
     columns.map((c) => (c.type === 'person' ? `${r[c.key]?.name ?? ''} ${r[c.key]?.sub ?? ''}` : Array.isArray(r[c.key]) ? r[c.key].join(' ') : r[c.key] ?? '')).join(' ').toLowerCase();
   const sortValue = (c: Column, v: any) => (c.type === 'person' ? v?.name ?? '' : v ?? '');
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

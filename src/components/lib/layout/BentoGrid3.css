@@ -1,5 +1,3 @@
-/* BentoGrid3 — ported from astro-component-kit (layout/BentoGrid3.astro) */
-
 .cq-bento-grid3-cq:where([data-rk-356029]) { container-type: inline-size; }
 .bento:where([data-rk-356029]) {
   display: grid;

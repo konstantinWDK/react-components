@@ -1,5 +1,3 @@
-/* StickySidebarWrapper — ported from astro-component-kit (layout/StickySidebarWrapper.astro) */
-
 .cq-sticky-sidebar-wrapper-cq:where([data-rk-0549ef]) { container-type: inline-size; }
 .sticky-sidebar:where([data-rk-0549ef]) {
   display: grid;

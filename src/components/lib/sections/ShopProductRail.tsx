@@ -57,11 +57,11 @@ export function ShopProductRail({
   eyebrow = 'Just in',
   title = 'New this *week*',
   products = [
-    { slug: 'linen-overshirt', name: 'Linen Overshirt', price: 145, category: 'clothing', badge: 'New', sizes: ['S', 'M', 'L'], colors: [{ name: 'Oat', hex: '#d9cbb3' }, { name: 'Ink', hex: '#22252b' }], icon: 'shirt', hue: 30 },
-    { slug: 'merino-crew', name: 'Merino Crew Knit', price: 160, category: 'clothing', sizes: ['S', 'M', 'L'], colors: [{ name: 'Sage', hex: '#8a9a7b' }], icon: 'jacket', hue: 95 },
-    { slug: 'field-tote', name: 'Field Tote', price: 120, category: 'bags', colors: [{ name: 'Rust', hex: '#9c3d1c' }], icon: 'bag', hue: 18 },
-    { slug: 'ash-vase', name: 'Ash Vase', price: 68, category: 'objects', icon: 'bottle', hue: 40 },
-    { slug: 'dune-loafer', name: 'Dune Loafer', price: 210, category: 'shoes', sizes: ['39', '40', '41', '42'], icon: 'sneaker', hue: 28 },
+    { slug: 'linen-overshirt', name: 'Linen Overshirt', price: 145, category: 'clothing', badge: 'New', sizes: ['S', 'M', 'L'], colors: [{ name: 'Mist', hex: '#cbd5e1' }, { name: 'Ink', hex: '#22252b' }], icon: 'shirt', hue: 201 },
+    { slug: 'merino-crew', name: 'Merino Crew Knit', price: 160, category: 'clothing', sizes: ['S', 'M', 'L'], colors: [{ name: 'Steel', hex: '#94a3b8' }], icon: 'jacket', hue: 215 },
+    { slug: 'field-tote', name: 'Field Tote', price: 120, category: 'bags', colors: [{ name: 'Ocean', hex: '#0369a1' }], icon: 'bag', hue: 194 },
+    { slug: 'ash-vase', name: 'Ash Vase', price: 68, category: 'objects', icon: 'bottle', hue: 209 },
+    { slug: 'dune-loafer', name: 'Dune Loafer', price: 210, category: 'shoes', sizes: ['39', '40', '41', '42'], icon: 'sneaker', hue: 198 },
   ],
   productBase = '#',
   link = { label: 'View all', href: '#' },
@@ -77,7 +77,7 @@ export function ShopProductRail({
   const plainTitle = title.replace(/\*/g, '');
   const hrefFor = (slug: string) => (productBase === '#' ? '#' : `${productBase}${slug}/`);
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

@@ -2,9 +2,9 @@
 
 import './ButtonsShowcase.css';
 
-// ButtonsShowcase.astro — Premium buttons section with live preview
+// ButtonsShowcase — Premium buttons section with live preview
 
-/** ButtonsShowcase — ported from astro-component-kit. */
+/** ButtonsShowcase */
 export interface ButtonsShowcaseProps {
   title?: string;
   subtitle?: string;

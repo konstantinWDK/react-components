@@ -4,9 +4,9 @@ import type { ReactNode } from 'react';
 import LogoWithGalaxy from '../LogoWithGalaxy';
 import './GlassNavbar.css';
 
-/** GlassNavbar — ported from astro-component-kit. */
+/** GlassNavbar */
 export interface GlassNavbarProps {
-  /** Accepted for compatibility with the Astro demo (the logo is rendered instead). */
+  /** Accepted for compatibility with the React demo (the logo is rendered instead). */
   brand?: string;
   brandHref?: string;
   links?: ReactNode;

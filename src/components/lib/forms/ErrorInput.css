@@ -1,5 +1,3 @@
-/* ErrorInput — ported from astro-component-kit (forms/ErrorInput.astro) */
-
 .error-wrap:where([data-rk-3b29fa]) { display: flex; flex-direction: column; gap: 0.4rem; width: 100%; box-sizing: border-box; }
 .input-error:where([data-rk-3b29fa]) { 
   border: 1px solid var(--c-error, #ef4444) !important; 

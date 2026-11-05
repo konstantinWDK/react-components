@@ -15,8 +15,8 @@ import { lobbyData, saasRoutes, type LobbyData, type SaasRoutes } from './data';
  * DashboardPage — Hotel SaaS overview: KPI tiles, revenue mix, tonight's occupancy gauge,
  * front-desk arrivals/departures, booking channels, occupancy by room type and live activity.
  *
- * Usage (src/pages/app/index.astro):
- *   import { DashboardPage } from 'astro-component-kit/templates/saas-hotel';
+ * Usage (app/app/page.tsx, Next.js):
+ *   import { DashboardPage } from 'react-component-kit-ui/templates/saas-hotel';
  *   <DashboardPage />
  *
  * @param {LobbyData} data - Workspace data. Default: Hotel Mirador demo.

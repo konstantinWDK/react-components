@@ -38,7 +38,7 @@ function st(css: string | undefined): CSSProperties {
  * @param {string} className - Additional CSS class to apply.
  *
  * @example
- * ```astro
+ * ```react
  * <VerticalStack gap="2rem">
  *   <Card title="First" />
  *   <Card title="Second" />

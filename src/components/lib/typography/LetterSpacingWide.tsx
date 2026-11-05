@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './LetterSpacingWide.css';
 
-/** LetterSpacingWide — ported from astro-component-kit. */
+/** LetterSpacingWide */
 export interface LetterSpacingWideProps {
   children?: ReactNode;
 }

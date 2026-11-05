@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './GradientUnderlineLink.css';
 
-/** GradientUnderlineLink — ported from astro-component-kit. */
+/** GradientUnderlineLink */
 export interface GradientUnderlineLinkProps {
   children?: ReactNode;
 }

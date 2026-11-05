@@ -89,7 +89,7 @@ export function ShopLookbook({
   const parts = title.split(/\*(.+?)\*/g);
   const total = spots.reduce((n, s) => n + s.product.price, 0);
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

@@ -1,10 +1,8 @@
-/* GlassButton — ported from astro-component-kit (buttons/GlassButton.astro) */
-
 .glass-btn {
   --btn-bg: rgba(255, 255, 255, 0.05);
   --btn-border: rgba(255, 255, 255, 0.1);
   --btn-text: var(--c-text-1, #d4d4d4);
-  --btn-glow: rgba(184, 134, 11, 0);
+  --btn-glow: color-mix(in srgb, var(--c-primary, #b8860b) 0%, transparent);
 
   display: inline-flex;
   align-items: center;
@@ -84,9 +82,9 @@
 }
 
 .glass-btn--primary {
-  --btn-bg: linear-gradient(135deg, rgba(184, 134, 11, 0.7), rgba(212, 160, 23, 0.7));
+  --btn-bg: linear-gradient(135deg, color-mix(in srgb, var(--c-primary, #b8860b) 70%, transparent), color-mix(in srgb, var(--c-primary-light, #d4a017) 70%, transparent));
   --btn-text: #0a0a0a;
-  --btn-glow: rgba(184, 134, 11, 0.4);
+  --btn-glow: color-mix(in srgb, var(--c-primary, #b8860b) 40%, transparent);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -98,14 +96,14 @@
 .glass-btn--ghost {
   --btn-bg: transparent;
   --btn-text: var(--c-primary-light, #d4a017);
-  --btn-border: rgba(184, 134, 11, 0.25);
-  --btn-glow: rgba(184, 134, 11, 0.15);
+  --btn-border: color-mix(in srgb, var(--c-primary, #b8860b) 25%, transparent);
+  --btn-glow: color-mix(in srgb, var(--c-primary, #b8860b) 15%, transparent);
   backdrop-filter: none;
 }
 
 .glass-btn--ghost:hover:not(:disabled) {
-  background: rgba(184, 134, 11, 0.08);
-  border-color: rgba(184, 134, 11, 0.4);
+  background: color-mix(in srgb, var(--c-primary, #b8860b) 8%, transparent);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 40%, transparent);
 }
 
 .glass-btn--sm { padding: 0.45rem 1.1rem; font-size: 0.85rem; }

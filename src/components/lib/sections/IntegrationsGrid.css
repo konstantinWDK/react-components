@@ -1,5 +1,3 @@
-/* IntegrationsGrid — ported from astro-component-kit (sections/IntegrationsGrid.astro) */
-
 .ig:where([data-rk-32bfaf]) {
   --ig-py: 5.5rem;
   padding: var(--ig-py) var(--sp-6, 1.5rem);

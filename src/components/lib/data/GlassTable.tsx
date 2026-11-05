@@ -2,7 +2,7 @@
 
 import './GlassTable.css';
 
-/** GlassTable — ported from astro-component-kit. */
+/** GlassTable */
 export interface GlassTableProps {
 }
 

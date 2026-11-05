@@ -4,7 +4,7 @@ import { DEFAULT_LOCALE, type Locale } from '../config/site';
 export const ui = {
   en: {
     'common.comingSoon': 'Coming soon',
-    'common.comingSoonDesc': 'Being ported from the Astro kit',
+    'common.comingSoonDesc': 'In progress',
     // Nav
     'nav.home': 'Home',
     'nav.install': 'Installation',
@@ -114,7 +114,7 @@ export const ui = {
   },
   es: {
     'common.comingSoon': 'Próximamente',
-    'common.comingSoonDesc': 'En proceso de portarse desde el kit de Astro',
+    'common.comingSoonDesc': 'En desarrollo',
     // Nav
     'nav.home': 'Inicio',
     'nav.install': 'Instalación',
@@ -224,7 +224,7 @@ export const ui = {
   },
   ru: {
     'common.comingSoon': 'Скоро',
-    'common.comingSoonDesc': 'Переносится из Astro-версии',
+    'common.comingSoonDesc': 'В разработке',
     // Nav
     'nav.home': 'Главная',
     'nav.install': 'Установка',

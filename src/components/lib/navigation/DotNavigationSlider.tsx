@@ -2,7 +2,7 @@
 
 import './DotNavigationSlider.css';
 
-/** DotNavigationSlider — ported from astro-component-kit. */
+/** DotNavigationSlider */
 export interface DotNavigationSliderProps {
 }
 

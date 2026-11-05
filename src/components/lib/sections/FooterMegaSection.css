@@ -1,5 +1,3 @@
-/* FooterMegaSection — ported from astro-component-kit (sections/FooterMegaSection.astro) */
-
 .cq-footer-mega-section-cq:where([data-rk-6cdbde]) { container-type: inline-size; }
 .fms:where([data-rk-6cdbde]) {
   --fms-py: 4.5rem;

@@ -1,5 +1,3 @@
-/* TagsAutocompleteInput — ported from astro-component-kit (forms/TagsAutocompleteInput.astro) */
-
 .tags-field:where([data-rk-ba8ccd]) {
   display: flex;
   flex-direction: column;
@@ -31,8 +29,8 @@
 }
 
 .tags-field__box:focus-within:where([data-rk-ba8ccd]) {
-  border-color: rgba(184, 134, 11, 0.5);
-  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.15);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 50%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-primary, #b8860b) 15%, transparent);
 }
 
 .tags-field__list:where([data-rk-ba8ccd]) {
@@ -46,8 +44,8 @@
   align-items: center;
   gap: 6px;
   padding: 0.25rem 0.65rem;
-  background: rgba(184, 134, 11, 0.15);
-  border: 1px solid rgba(184, 134, 11, 0.35);
+  background: color-mix(in srgb, var(--c-primary, #b8860b) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c-primary, #b8860b) 35%, transparent);
   border-radius: var(--r-full, 9999px);
   font-size: 0.75rem;
   font-weight: 600;
@@ -117,7 +115,7 @@
 }
 
 .sug-item:hover:where([data-rk-ba8ccd]) {
-  background: rgba(184, 134, 11, 0.2);
-  border-color: rgba(184, 134, 11, 0.4);
+  background: color-mix(in srgb, var(--c-primary, #b8860b) 20%, transparent);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 40%, transparent);
   color: var(--c-text-1, #ffffff);
 }

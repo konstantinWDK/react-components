@@ -60,7 +60,7 @@ export function IntegrationsGrid({
   const hues = ['var(--chart-1, #3987e5)', 'var(--chart-2, #d95926)', 'var(--chart-3, #199e70)', 'var(--chart-4, #c98500)', 'var(--chart-5, #d55181)', 'var(--chart-7, #9085e9)'];
   const statusLabel = { available: 'Available', beta: 'Beta', soon: 'Coming soon' };
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

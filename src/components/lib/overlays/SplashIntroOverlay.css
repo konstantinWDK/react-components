@@ -1,5 +1,3 @@
-/* SplashIntroOverlay — ported from astro-component-kit (overlays/SplashIntroOverlay.astro) */
-
 .splash:where([data-rk-ccfb24]) { position: fixed; inset: 0; background: #080b14; z-index: 9999; display: grid; place-items: center; animation: splash-intro-overlay-fade-out 1s forwards 2s; }
 .logo-anim:where([data-rk-ccfb24]) { animation: splash-intro-overlay-scale-pulse 1.5s infinite linear; }
 @keyframes splash-intro-overlay-fade-out { to { opacity: 0; pointer-events: none; } }

@@ -2,7 +2,7 @@
 
 import './ProgressListSmall.css';
 
-/** ProgressListSmall — ported from astro-component-kit. */
+/** ProgressListSmall */
 export interface ProgressListSmallProps {
 }
 

@@ -1,5 +1,3 @@
-/* HeroWaitlist — ported from astro-component-kit (sections/HeroWaitlist.astro) */
-
 .cq-hero-waitlist-cq:where([data-rk-536aca]) { container-type: inline-size; }
 .hw:where([data-rk-536aca]) {
   --hw-py: 6rem;

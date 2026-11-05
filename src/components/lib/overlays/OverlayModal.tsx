@@ -2,7 +2,7 @@
 
 import './OverlayModal.css';
 
-/** OverlayModal — ported from astro-component-kit. */
+/** OverlayModal */
 export interface OverlayModalProps {
 }
 

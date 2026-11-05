@@ -1,5 +1,3 @@
-/* HolyGrailGrid — ported from astro-component-kit (layout/HolyGrailGrid.astro) */
-
 .cq-holy-grail-grid-cq:where([data-rk-7590db]) { container-type: inline-size; }
 .holy-grail:where([data-rk-7590db]) {
   display: flex;

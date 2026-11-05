@@ -10,8 +10,8 @@ import './EditorialBagPage.css';
  * EditorialBagPage — Full shopping-bag page (CartPageList) with gift note and summary,
  * followed by a "You may also like" ShopProductRail.
  *
- * Usage (src/pages/bag.astro):
- *   import { EditorialBagPage } from 'astro-component-kit/templates/ecommerce-editorial';
+ * Usage (app/bag/page.tsx, Next.js):
+ *   import { EditorialBagPage } from 'react-component-kit-ui/templates/ecommerce-editorial';
  *   <EditorialBagPage />
  *
  * @param {EditorialStore} store - Catalogue and settings.

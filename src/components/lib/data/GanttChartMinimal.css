@@ -1,5 +1,3 @@
-/* GanttChartMinimal — ported from astro-component-kit (data/GanttChartMinimal.astro) */
-
 .gantt:where([data-rk-fd4a22]) { width: 100%; max-width: 500px; display: flex; flex-direction: column; gap: 8px; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); }
 .g-row:where([data-rk-fd4a22]) { height: 20px; position: relative; width: 100%; background: rgba(255,255,255,0.02); border-radius: 4px; }
 .g-bar:where([data-rk-fd4a22]) { height: 100%; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }

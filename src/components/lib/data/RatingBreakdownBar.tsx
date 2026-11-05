@@ -2,7 +2,7 @@
 
 import './RatingBreakdownBar.css';
 
-/** RatingBreakdownBar — ported from astro-component-kit. */
+/** RatingBreakdownBar */
 export interface RatingBreakdownBarProps {
 }
 

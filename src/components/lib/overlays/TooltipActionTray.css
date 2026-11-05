@@ -1,5 +1,3 @@
-/* TooltipActionTray — ported from astro-component-kit (overlays/TooltipActionTray.astro) */
-
 .act-tip:where([data-rk-b6e742]) { position: relative; background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: fit-content; }
 .tip-body:where([data-rk-b6e742]) { color: #fff; font-weight: 700; font-size: 0.8rem; margin-bottom: 8px; }
 .tip-btns:where([data-rk-b6e742]) { display: flex; gap: 8px; }

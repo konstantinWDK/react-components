@@ -1,5 +1,3 @@
-/* ScrollSnapSection — ported from astro-component-kit (layout/ScrollSnapSection.astro) */
-
 .snap-wrap:where([data-rk-109259]) {
   height: var(--snap-height, 300px);
   overflow-y: scroll;

@@ -1,5 +1,3 @@
-/* GradientTextMarquee — ported from astro-component-kit (typography/GradientTextMarquee.astro) */
-
 .grad-marquee:where([data-rk-48dfb7]) {
   position: relative;
   width: 100%;

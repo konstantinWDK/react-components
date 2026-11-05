@@ -1,5 +1,3 @@
-/* StatCard — ported from astro-component-kit (cards/StatCard.astro) */
-
 .stat-card:where([data-rk-913005]) { 
   display: flex; align-items: center; gap: var(--sp-5, 1.25rem); 
   padding: var(--sp-6, 1.5rem); 

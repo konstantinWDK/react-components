@@ -1,5 +1,3 @@
-/* IndicatorBadgeMinimal — ported from astro-component-kit (feedback/IndicatorBadgeMinimal.astro) */
-
 .indicator-wrap { position: relative; width: fit-content; display: inline-flex; }
 .dot-indicator { 
   position: absolute; 

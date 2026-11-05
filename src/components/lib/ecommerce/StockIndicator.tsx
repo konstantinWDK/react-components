@@ -71,7 +71,7 @@ export function StockIndicator({
   const pct = Math.max(4, Math.min(100, (stock / capacity) * 100));
   const message = state === 'out' ? 'Sold out — join the waitlist' : low ? `Only ${stock} left — order soon` : 'In stock and ready to ship';
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

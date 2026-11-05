@@ -2,7 +2,7 @@
 
 import './VerticalTimeline.css';
 
-/** VerticalTimeline — ported from astro-component-kit. */
+/** VerticalTimeline */
 export interface VerticalTimelineProps {
 }
 

@@ -1,5 +1,3 @@
-/* FeatureHero — ported from astro-component-kit (layout/FeatureHero.astro) */
-
 .cq-feature-hero-cq:where([data-rk-4c81ec]) { container-type: inline-size; }
 .feature-hero:where([data-rk-4c81ec]) {
   position: relative;

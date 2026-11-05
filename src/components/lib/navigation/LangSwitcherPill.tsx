@@ -2,7 +2,7 @@
 
 import './LangSwitcherPill.css';
 
-/** LangSwitcherPill — ported from astro-component-kit. */
+/** LangSwitcherPill */
 export interface LangSwitcherPillProps {
 }
 

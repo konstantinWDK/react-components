@@ -2,7 +2,7 @@
 
 import './KeyValuePillGroup.css';
 
-/** KeyValuePillGroup — ported from astro-component-kit. */
+/** KeyValuePillGroup */
 export interface KeyValuePillGroupProps {
 }
 

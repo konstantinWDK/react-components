@@ -39,7 +39,7 @@ function st(css: string | undefined): CSSProperties {
  * @param {string} className - Additional CSS class to apply.
  *
  * @example
- * ```astro
+ * ```react
  * <CenteredContainer maxWidth="900px">
  *   <p>Centered content</p>
  * </CenteredContainer>

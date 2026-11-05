@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './CodeInlineGlass.css';
 
-/** CodeInlineGlass — ported from astro-component-kit. */
+/** CodeInlineGlass */
 export interface CodeInlineGlassProps {
   children?: ReactNode;
 }

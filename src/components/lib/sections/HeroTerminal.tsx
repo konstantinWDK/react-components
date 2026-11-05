@@ -47,10 +47,10 @@ export interface HeroTerminalProps {
 export function HeroTerminal({
   eyebrow = 'For developers',
   title = 'From zero to production in one command',
-  subtitle = 'Scaffold a fully accessible Astro site with sections, charts and design tokens already wired up.',
-  command = 'npm create astro@latest -- --template kit',
+  subtitle = 'Scaffold a fully accessible React site with sections, charts and design tokens already wired up.',
+  command = 'npm create vite@latest my-app -- --template react-ts',
   lines = [
-    { type: 'cmd', text: 'npm create astro@latest -- --template kit' },
+    { type: 'cmd', text: 'npm create vite@latest my-app -- --template react-ts' },
     { type: 'out', text: 'Scaffolding project in ./my-site …' },
     { type: 'ok', text: '50 sections installed' },
     { type: 'ok', text: '45 SVG charts installed' },
@@ -65,7 +65,7 @@ export function HeroTerminal({
 }: HeroTerminalProps) {
   const id = `ht-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

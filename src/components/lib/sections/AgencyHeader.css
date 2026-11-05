@@ -1,5 +1,3 @@
-/* AgencyHeader — ported from astro-component-kit (sections/AgencyHeader.astro) */
-
 .ah:where([data-rk-72bba8]) { position: relative; z-index: 60; padding: 14px clamp(0.75rem, 2vw, 1.5rem); color: var(--c-text-1, #fff); }
 .ah--sticky:where([data-rk-72bba8]) { position: sticky; top: 0; }
 .ah__bar:where([data-rk-72bba8]) {

@@ -26,7 +26,7 @@ export interface StepperInputProps {
 
 export function StepperInput({ label, id, name, value = 1, min, max, step = 1 }: StepperInputProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

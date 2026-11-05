@@ -1,5 +1,3 @@
-/* GlassTable — ported from astro-component-kit (data/GlassTable.astro) */
-
 .table-wrap:where([data-rk-8d3010]) { width: 100%; overflow-x: auto; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; backdrop-filter: blur(10px); }
 table:where([data-rk-8d3010]) { width: 100%; border-collapse: collapse; text-align: left; }
 th:where([data-rk-8d3010]) { padding: 1rem 1.5rem; background: rgba(255,255,255,0.03); color: #818cf8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px solid rgba(255,255,255,0.06); }

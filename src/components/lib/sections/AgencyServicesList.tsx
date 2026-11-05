@@ -48,7 +48,7 @@ export function AgencyServicesList({
   title = 'Services that move the needle',
   services = [
     { name: 'Brand identity', pitch: 'Positioning, naming, logo systems and guidelines that make you unmistakable.', deliverables: ['Strategy workshop', 'Visual identity', 'Brand book', 'Launch kit'], timeline: '6–8 weeks', from: '€18k' },
-    { name: 'Websites', pitch: 'Fast, accessible Astro sites with a CMS your team will actually enjoy.', deliverables: ['UX & content', 'Design system', 'Astro build', 'CMS & analytics'], timeline: '8–12 weeks', from: '€24k' },
+    { name: 'Websites', pitch: 'Fast, accessible React sites with a CMS your team will actually enjoy.', deliverables: ['UX & content', 'Design system', 'React build', 'CMS & analytics'], timeline: '8–12 weeks', from: '€24k' },
     { name: 'Growth marketing', pitch: 'Performance campaigns, SEO and CRO run by people who read the numbers.', deliverables: ['Paid social', 'SEO', 'A/B testing', 'Monthly reporting'], timeline: 'Monthly', from: '€6k / mo' },
     { name: 'Content & social', pitch: 'Always-on content engines: shoots, short video, copy and community.', deliverables: ['Editorial calendar', 'Production', 'Community'], timeline: 'Monthly', from: '€4k / mo' },
   ],
@@ -58,7 +58,7 @@ export function AgencyServicesList({
   className = '',
 }: AgencyServicesListProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

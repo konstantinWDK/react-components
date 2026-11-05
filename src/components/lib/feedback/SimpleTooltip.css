@@ -1,5 +1,3 @@
-/* SimpleTooltip — ported from astro-component-kit (feedback/SimpleTooltip.astro) */
-
 .tooltip-wrap { 
   position: relative; 
   display: inline-flex; 

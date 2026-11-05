@@ -1,5 +1,3 @@
-/* ChartFrame — ported from astro-component-kit (charts/ChartFrame.astro) */
-
 .cf:where([data-rk-0ca607]) {
   --cf-pad: var(--sp-6, 1.5rem);
   --cf-title: 1.0625rem;

@@ -40,7 +40,7 @@ function st(css: string | undefined): CSSProperties {
  * @param {string} className - Additional CSS class to apply.
  *
  * @example
- * ```astro
+ * ```react
  * <StickySidebarWrapper sidebarWidth="260px" stickyTop="120px">
  *   <div slot="main">
  *     <p>Long scrolling content...</p>

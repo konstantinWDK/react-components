@@ -3,7 +3,7 @@
 import LogoWithGalaxy from '../LogoWithGalaxy';
 import './SimpleFooterGlass.css';
 
-/** SimpleFooterGlass — ported from astro-component-kit. */
+/** SimpleFooterGlass */
 export interface SimpleFooterGlassProps {
 }
 

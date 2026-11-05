@@ -34,8 +34,8 @@ export interface FooterMegaSectionProps {
 }
 
 export function FooterMegaSection({
-  brand = 'Astro Kit',
-  tagline = 'Accessible, zero-dependency components for building beautiful Astro sites.',
+  brand = 'React Kit',
+  tagline = 'Accessible, zero-dependency components for building beautiful React sites.',
   columns = [
     { title: 'Product', links: [{ label: 'Components', href: '#' }, { label: 'Sections', href: '#' }, { label: 'Charts', href: '#' }, { label: 'Changelog', href: '#' }] },
     { title: 'Resources', links: [{ label: 'Documentation', href: '#' }, { label: 'Installation', href: '#' }, { label: 'Notes', href: '#' }, { label: 'Showcase', href: '#' }] },
@@ -49,7 +49,7 @@ export function FooterMegaSection({
     { label: 'YouTube', href: '#', icon: 'youtube' },
   ],
   status = 'All systems operational',
-  copyright = `© ${new Date().getFullYear()} Astro Kit. All rights reserved.`,
+  copyright = `© ${new Date().getFullYear()} React Kit. All rights reserved.`,
   variant = 'default',
   size = 'md',
   className = '',

@@ -1,5 +1,3 @@
-/* LogoWallGrid — ported from astro-component-kit (sections/LogoWallGrid.astro) */
-
 .cq-logo-wall-grid-cq:where([data-rk-c72122]) { container-type: inline-size; }
 .lwg:where([data-rk-c72122]) {
   --lwg-py: 4.5rem;

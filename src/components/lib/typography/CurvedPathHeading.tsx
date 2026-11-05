@@ -32,7 +32,7 @@ function st(css: string | undefined): CSSProperties {
 /**
  * CurvedPathHeading — Typographic heading flowing along an SVG circular or arched trajectory.
  * 
- * @param {string} text - Headline text content. Default is 'ASTRO COMPONENTS KIT • ZERO RUNTIME DEPENDENCIES •'.
+ * @param {string} text - Headline text content. Default is 'REACT COMPONENTS KIT • ZERO RUNTIME DEPENDENCIES •'.
  * @param {number} size - Pixel container diameter. Default is 260.
  * @param {boolean} animate - Whether the badge rotates continuously. Default is true.
  */
@@ -43,7 +43,7 @@ export interface CurvedPathHeadingProps {
 }
 
 export function CurvedPathHeading({
-  text = 'ASTRO COMPONENTS KIT • ZERO RUNTIME • PURE CSS •',
+  text = 'REACT COMPONENTS KIT • ZERO RUNTIME • PURE CSS •',
   size = 260,
   animate = true,
 }: CurvedPathHeadingProps) {

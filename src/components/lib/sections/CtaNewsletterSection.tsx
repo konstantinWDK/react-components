@@ -31,7 +31,7 @@ export interface CtaNewsletterSectionProps {
 
 export function CtaNewsletterSection({
   title = 'Get new components every week',
-  subtitle = 'One short email with fresh sections, charts and Astro tips. Join 12,000+ developers.',
+  subtitle = 'One short email with fresh sections, charts and React tips. Join 12,000+ developers.',
   perks = ['Weekly, never spam', 'Early access to new blocks', 'Unsubscribe in one click'],
   action = '#',
   buttonLabel = 'Subscribe',
@@ -42,7 +42,7 @@ export function CtaNewsletterSection({
 }: CtaNewsletterSectionProps) {
   const id = `cns-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

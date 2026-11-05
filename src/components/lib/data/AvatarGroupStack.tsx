@@ -2,7 +2,7 @@
 
 import './AvatarGroupStack.css';
 
-/** AvatarGroupStack — ported from astro-component-kit. */
+/** AvatarGroupStack */
 export interface AvatarGroupStackProps {
 }
 

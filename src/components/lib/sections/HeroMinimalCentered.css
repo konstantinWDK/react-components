@@ -1,5 +1,3 @@
-/* HeroMinimalCentered — ported from astro-component-kit (sections/HeroMinimalCentered.astro) */
-
 .hmc:where([data-rk-9ae33e]) {
   --hmc-py: 6rem;
   position: relative;

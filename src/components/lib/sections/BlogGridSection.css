@@ -1,5 +1,3 @@
-/* BlogGridSection — ported from astro-component-kit (sections/BlogGridSection.astro) */
-
 .cq-blog-grid-section-cq:where([data-rk-1eb7bb]) { container-type: inline-size; }
 .bgs:where([data-rk-1eb7bb]) {
   --bgs-py: 5.5rem;

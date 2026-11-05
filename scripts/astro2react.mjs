@@ -19,6 +19,7 @@ import crypto from 'node:crypto';
 import postcss from 'postcss';
 import selectorParser from 'postcss-selector-parser';
 import { pathToFileURL } from 'node:url';
+import { deAstro } from './de-astro.mjs';
 
 const args = process.argv.slice(2);
 const flag = (n) => args.includes(n);
@@ -668,9 +669,9 @@ function main() {
     const tsxPath = path.join(outDir, `${base}.tsx`);
     if (fs.existsSync(tsxPath) && !force) continue;
     const { code, todo } = convertFile(file, category);
-    fs.writeFileSync(tsxPath, code);
+    fs.writeFileSync(tsxPath, deAstro(code));
     const css = extractCss(file, category);
-    if (css) fs.writeFileSync(path.join(outDir, `${base}.css`), css);
+    if (css) fs.writeFileSync(path.join(outDir, `${base}.css`), deAstro(css));
     report.push(`${category}/${base}${todo.length ? `  [${todo.length} TODO]` : ''}`);
   }
   console.log(`astro2react: ${report.length} component(s) written`);

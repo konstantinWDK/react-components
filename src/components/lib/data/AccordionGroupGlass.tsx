@@ -2,7 +2,7 @@
 
 import './AccordionGroupGlass.css';
 
-/** AccordionGroupGlass — ported from astro-component-kit. */
+/** AccordionGroupGlass */
 export interface AccordionGroupGlassProps {
 }
 

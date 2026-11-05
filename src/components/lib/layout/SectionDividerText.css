@@ -1,5 +1,3 @@
-/* SectionDividerText — ported from astro-component-kit (layout/SectionDividerText.astro) */
-
 .section-divider:where([data-rk-48ae98]) {
   display: flex;
   align-items: center;

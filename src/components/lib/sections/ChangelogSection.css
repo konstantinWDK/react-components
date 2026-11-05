@@ -1,5 +1,3 @@
-/* ChangelogSection — ported from astro-component-kit (sections/ChangelogSection.astro) */
-
 .cq-changelog-section-cq:where([data-rk-01cab4]) { container-type: inline-size; }
 .cls:where([data-rk-01cab4]) {
   --cls-py: 5.5rem;

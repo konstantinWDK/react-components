@@ -1,5 +1,3 @@
-/* AnimatedInput — ported from astro-component-kit (forms/AnimatedInput.astro) */
-
 .anim-input-wrap:where([data-rk-75a992]) { position: relative; width: 100%; }
 .anim-input:where([data-rk-75a992]) { 
   width: 100%; 

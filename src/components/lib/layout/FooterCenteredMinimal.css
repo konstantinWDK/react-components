@@ -1,5 +1,3 @@
-/* FooterCenteredMinimal — ported from astro-component-kit (layout/FooterCenteredMinimal.astro) */
-
 .cq-footer-centered-minimal-cq:where([data-rk-2106dc]) { container-type: inline-size; }
 .footer-centered:where([data-rk-2106dc]) {
   border-top: 1px solid var(--c-border);

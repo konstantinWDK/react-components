@@ -34,7 +34,7 @@ export function TreemapChart({
   subtitle = 'Gzipped KB',
   items = [
     { label: 'react-dom', value: 42, group: 0 },
-    { label: 'astro runtime', value: 18, group: 1 },
+    { label: 'react runtime', value: 18, group: 1 },
     { label: 'charts', value: 24, group: 2 },
     { label: 'date-fns', value: 12, group: 0 },
     { label: 'router', value: 9, group: 1 },

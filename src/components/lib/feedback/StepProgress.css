@@ -1,5 +1,3 @@
-/* StepProgress — ported from astro-component-kit (feedback/StepProgress.astro) */
-
 .steps-container { position: relative; margin-bottom: var(--sp-8, 2rem); width: 100%; padding: 0 var(--sp-4, 1rem); box-sizing: border-box; }
 
 .steps-line { 

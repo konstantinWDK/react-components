@@ -2,9 +2,9 @@
 
 import './OverlaysShowcase.css';
 
-// OverlaysShowcase.astro — Premium overlays section with live preview
+// OverlaysShowcase — Premium overlays section with live preview
 
-/** OverlaysShowcase — ported from astro-component-kit. */
+/** OverlaysShowcase */
 export interface OverlaysShowcaseProps {
   title?: string;
   subtitle?: string;

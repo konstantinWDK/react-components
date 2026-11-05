@@ -30,8 +30,8 @@ export interface TestimonialGridSectionProps {
 
 export function TestimonialGridSection({
   eyebrow = 'WALL OF LOVE',
-  title = 'Trusted by thousands of Astro builders',
-  subtitle = 'Discover why developers, indie hackers, and creative agencies rely on Astro Components Kit for production websites.',
+  title = 'Trusted by thousands of React builders',
+  subtitle = 'Discover why developers, indie hackers, and creative agencies rely on React Components Kit for production websites.',
 }: TestimonialGridSectionProps) {
   const testimonials = [
     {

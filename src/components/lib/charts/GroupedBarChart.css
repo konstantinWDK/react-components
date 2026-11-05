@@ -1,5 +1,3 @@
-/* GroupedBarChart — ported from astro-component-kit (charts/GroupedBarChart.astro) */
-
 .gb__bar:where([data-rk-1a0e25]) {
   transform-origin: bottom;
   transform-box: fill-box;

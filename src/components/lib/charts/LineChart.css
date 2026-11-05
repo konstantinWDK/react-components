@@ -1,5 +1,3 @@
-/* LineChart — ported from astro-component-kit (charts/LineChart.astro) */
-
 .lc__line:where([data-rk-34cbfe]) {
   stroke-dasharray: 2400;
   stroke-dashoffset: 2400;

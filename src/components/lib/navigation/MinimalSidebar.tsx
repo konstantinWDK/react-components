@@ -3,7 +3,7 @@
 import LogoWithGalaxy from '../LogoWithGalaxy';
 import './MinimalSidebar.css';
 
-/** MinimalSidebar — ported from astro-component-kit. */
+/** MinimalSidebar */
 export interface MinimalSidebarProps {
 }
 

@@ -28,7 +28,7 @@ export function CubesHero() {
 }
 
 /**
- * Page-level effects that the Astro page ran as inline scripts:
+ * Page-level effects:
  * hero depth parallax and the interaction-lab pointer spotlight.
  */
 export function HomeEffects() {

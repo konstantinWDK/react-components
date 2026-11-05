@@ -1,5 +1,3 @@
-/* ShopCategoryHero — ported from astro-component-kit (sections/ShopCategoryHero.astro) */
-
 .sch:where([data-rk-979dea]) { container-type: inline-size; --py: clamp(1.5rem, 4vw, 3rem); padding-block: var(--py); color: var(--c-text-1, #fff); }
 .sch--sm:where([data-rk-979dea]) { --py: 1rem; }
 .sch--lg:where([data-rk-979dea]) { --py: clamp(2.5rem, 6vw, 5rem); }

@@ -78,7 +78,7 @@ export function ProductGallery({
     : generated.map((g, i) => ({ ...g, label: `View ${i + 1}` }));
   const ratio = size === 'sm' ? '1 / 1' : size === 'lg' ? '4 / 5' : '5 / 5.4';
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

@@ -1,5 +1,3 @@
-/* ShopCollectionMosaic — ported from astro-component-kit (sections/ShopCollectionMosaic.astro) */
-
 .scm:where([data-rk-ba6398]) { container-type: inline-size; --scm-h: 300px; color: var(--c-text-1, #fff); }
 .scm--sm:where([data-rk-ba6398]) { --scm-h: 230px; }
 .scm--lg:where([data-rk-ba6398]) { --scm-h: 380px; }

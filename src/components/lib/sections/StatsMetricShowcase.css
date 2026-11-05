@@ -1,5 +1,3 @@
-/* StatsMetricShowcase — ported from astro-component-kit (sections/StatsMetricShowcase.astro) */
-
 .cq-stats-metric-showcase-cq:where([data-rk-edcafc]) { container-type: inline-size; }
 .stats-section:where([data-rk-edcafc]) {
   position: relative;

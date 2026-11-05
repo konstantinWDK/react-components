@@ -1,5 +1,3 @@
-/* DoubleBorderButton — ported from astro-component-kit (buttons/DoubleBorderButton.astro) */
-
 .double-border-btn {
   --offset: 5px;
   --border-color: rgba(255, 255, 255, 0.4);

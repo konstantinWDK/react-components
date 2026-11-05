@@ -88,7 +88,7 @@ const UI = {
   ru: { copyInstall: 'Скопировать команду установки', copy: 'Скопировать команду', prev: 'Предыдущая секция', next: 'Следующая секция', marquee: 'Главное', explore: 'Все компоненты', license: 'Лицензия MIT' },
 };
 
-/** Section spotlight slides (same as Astro). */
+/** Section spotlight slides. */
 const SECTION_SLIDES: { slug: string; name: string; cat: Tri; summary: Tri }[] = [
   { slug: 'stats-dashboard-section', name: 'Stats Dashboard Section', cat: { en: 'Stats & Metrics', es: 'Métricas', ru: 'Метрики' }, summary: { en: 'KPI tiles, stacked area and ranked bar charts in one analytics block.', es: 'Tarjetas KPI, áreas apiladas y ranking en barras en un solo bloque.', ru: 'KPI-плитки, накопительные области и рейтинг в одном блоке.' } },
   { slug: 'pricing-toggle-cards', name: 'Pricing Toggle Cards', cat: { en: 'Pricing & Plans', es: 'Precios', ru: 'Тарифы' }, summary: { en: 'Three tiers with an accessible monthly/yearly switch and featured plan.', es: 'Tres planes con interruptor mensual/anual accesible y plan destacado.', ru: 'Три тарифа с переключателем месяц/год и выделенным планом.' } },

@@ -32,7 +32,7 @@ export interface TeamGridSectionProps {
 export function TeamGridSection({
   badge = "Our Team",
   title = "Built by Engineers, Designers & Open Source Believers",
-  subtitle = "Meet the passionate team behind the Astro Components Kit, crafting tools to elevate modern web interfaces.",
+  subtitle = "Meet the passionate team behind the React Components Kit, crafting tools to elevate modern web interfaces.",
   className = ""
 }: TeamGridSectionProps) {
   const members = [

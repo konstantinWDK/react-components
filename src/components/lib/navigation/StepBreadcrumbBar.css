@@ -1,5 +1,3 @@
-/* StepBreadcrumbBar — ported from astro-component-kit (navigation/StepBreadcrumbBar.astro) */
-
 .step-nav:where([data-rk-71122f]) {
   width: 100%;
   max-width: 680px;
@@ -72,7 +70,7 @@
   background: linear-gradient(135deg, #d4a017, #b8860b);
   border-color: #d4a017;
   color: #050505;
-  box-shadow: 0 0 12px rgba(212, 160, 23, 0.4);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--c-primary-light, #d4a017) 40%, transparent);
 }
 
 .step-nav__item--active:where([data-rk-71122f]) .step-nav__label:where([data-rk-71122f]) {

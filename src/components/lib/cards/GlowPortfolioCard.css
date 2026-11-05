@@ -1,5 +1,3 @@
-/* GlowPortfolioCard — ported from astro-component-kit (cards/GlowPortfolioCard.astro) */
-
 .glow-wrap:where([data-rk-a93656]) { 
   position: relative; 
   padding: 2px; 

@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './MinimalListMarkers.css';
 
-/** MinimalListMarkers — ported from astro-component-kit. */
+/** MinimalListMarkers */
 export interface MinimalListMarkersProps {
   children?: ReactNode;
 }

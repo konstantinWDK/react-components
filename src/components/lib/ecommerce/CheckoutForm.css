@@ -1,5 +1,3 @@
-/* CheckoutForm — ported from astro-component-kit (ecommerce/CheckoutForm.astro) */
-
 .checkout:where([data-rk-e0a849]) { container-type: inline-size; min-width: 0; }
 .checkout__form:where([data-rk-e0a849]) { display: grid; gap: var(--sp-5, 1.25rem); }
 .checkout__form[hidden]:where([data-rk-e0a849]), .checkout__done[hidden]:where([data-rk-e0a849]) { display: none; }
@@ -36,7 +34,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: rgba(212, 160, 23, 0.14);
+  background: color-mix(in srgb, var(--c-primary-light, #d4a017) 14%, transparent);
   color: var(--c-primary-light, #d4a017);
   font-size: 0.82rem;
 }
@@ -46,14 +44,14 @@
 
 /* Reused form components, tuned to the store palette */
 .checkout:where([data-rk-e0a849]) .anim-input:focus,
-.checkout:where([data-rk-e0a849]) .custom-select:focus { border-color: var(--c-primary-light, #d4a017); box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.14); background: rgba(212, 160, 23, 0.04); }
+.checkout:where([data-rk-e0a849]) .custom-select:focus { border-color: var(--c-primary-light, #d4a017); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-primary-light, #d4a017) 14%, transparent); background: color-mix(in srgb, var(--c-primary-light, #d4a017) 4%, transparent); }
 .checkout:where([data-rk-e0a849]) .anim-input:focus ~ .anim-input-label,
 .checkout:where([data-rk-e0a849]) .anim-input:not(:placeholder-shown) ~ .anim-input-label { color: var(--c-primary-light, #d4a017); }
 .checkout:where([data-rk-e0a849]) .anim-input-label,
 .checkout:where([data-rk-e0a849]) .select-label { color: var(--c-text-2, #a3a3a3); }
 .checkout:where([data-rk-e0a849]) [aria-invalid='true'] { border-color: var(--c-danger, #f87171) !important; box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.14) !important; }
 .checkout:where([data-rk-e0a849]) .radio-circle::after { background: var(--c-primary-light, #d4a017); }
-.checkout:where([data-rk-e0a849]) .radio-item input:checked + .radio-circle { border-color: var(--c-primary-light, #d4a017); box-shadow: 0 0 10px rgba(212, 160, 23, 0.25); }
+.checkout:where([data-rk-e0a849]) .radio-item input:checked + .radio-circle { border-color: var(--c-primary-light, #d4a017); box-shadow: 0 0 10px color-mix(in srgb, var(--c-primary-light, #d4a017) 25%, transparent); }
 .checkout:where([data-rk-e0a849]) .radio-group-legend { display: none; }
 
 .checkout__check:where([data-rk-e0a849]) { position: relative; display: flex; align-items: center; gap: var(--sp-3, 0.75rem); min-height: 40px; font-size: 0.88rem; cursor: pointer; }
@@ -76,7 +74,7 @@
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 .checkout__rate:hover:where([data-rk-e0a849]) { border-color: rgb(var(--ink-rgb, 255 255 255) / 0.22); }
-.checkout__rate:has(input:checked):where([data-rk-e0a849]) { border-color: var(--c-primary-light, #d4a017); background: rgba(212, 160, 23, 0.06); }
+.checkout__rate:has(input:checked):where([data-rk-e0a849]) { border-color: var(--c-primary-light, #d4a017); background: color-mix(in srgb, var(--c-primary-light, #d4a017) 6%, transparent); }
 .checkout__rate:where([data-rk-e0a849]) input:where([data-rk-e0a849]) { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .checkout__rate-dot:where([data-rk-e0a849]) { width: 20px; height: 20px; border-radius: 50%; border: 2px solid rgb(var(--ink-rgb, 255 255 255) / 0.25); flex-shrink: 0; }
 .checkout__rate:where([data-rk-e0a849]) input:checked:where([data-rk-e0a849]) + .checkout__rate-dot:where([data-rk-e0a849]) { border-color: var(--c-primary-light, #d4a017); box-shadow: inset 0 0 0 4px var(--c-bg-1, #0a0a0a); background: var(--c-primary-light, #d4a017); }
@@ -104,7 +102,7 @@
   letter-spacing: 0.02em;
 }
 .checkout__field:where([data-rk-e0a849]) input:where([data-rk-e0a849])::placeholder { color: var(--c-text-3, #737373); }
-.checkout__field:where([data-rk-e0a849]) input:focus:where([data-rk-e0a849]) { outline: none; border-color: var(--c-primary-light, #d4a017); box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.14); }
+.checkout__field:where([data-rk-e0a849]) input:focus:where([data-rk-e0a849]) { outline: none; border-color: var(--c-primary-light, #d4a017); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-primary-light, #d4a017) 14%, transparent); }
 .checkout__alt:where([data-rk-e0a849]) { margin: 0; padding: var(--sp-4, 1rem); border-radius: var(--r-md, 12px); background: rgb(var(--ink-rgb, 255 255 255) / 0.03); font-size: 0.88rem; }
 
 .checkout__error:where([data-rk-e0a849]) { margin: 0; padding: var(--sp-3, 0.75rem) var(--sp-4, 1rem); border-radius: var(--r-md, 12px); background: rgba(248, 113, 113, 0.1); border: 1px solid rgba(248, 113, 113, 0.3); color: var(--c-danger, #fca5a5); font-size: 0.88rem; }

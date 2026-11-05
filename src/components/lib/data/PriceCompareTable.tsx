@@ -2,7 +2,7 @@
 
 import './PriceCompareTable.css';
 
-/** PriceCompareTable — ported from astro-component-kit. */
+/** PriceCompareTable */
 export interface PriceCompareTableProps {
 }
 

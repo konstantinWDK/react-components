@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './KbdIndicator.css';
 
-/** KbdIndicator — ported from astro-component-kit. */
+/** KbdIndicator */
 export interface KbdIndicatorProps {
   children?: ReactNode;
 }

@@ -1,5 +1,3 @@
-/* StoreCheckoutPage — ported from astro-component-kit (templates/ecommerce/StoreCheckoutPage.astro) */
-
 .co:where([data-rk-2b1a8c]) { padding-block: var(--sp-8) clamp(3rem, 7vw, 5rem); }
 .co__steps:where([data-rk-2b1a8c]) { max-width: 720px; margin: 0 auto var(--sp-8); }
 .co__head:where([data-rk-2b1a8c]) { display: flex; align-items: baseline; justify-content: space-between; gap: var(--sp-4); margin-bottom: var(--sp-6); }

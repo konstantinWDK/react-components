@@ -2,7 +2,7 @@
 
 import './StepperDataVertical.css';
 
-/** StepperDataVertical — ported from astro-component-kit. */
+/** StepperDataVertical */
 export interface StepperDataVerticalProps {
 }
 

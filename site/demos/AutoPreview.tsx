@@ -6,7 +6,7 @@ import { previewProps } from './generated-meta';
 import { previewOverrides } from './preview-overrides';
 
 /**
- * Generic live preview — same behaviour as astro PreviewRenderer.astro:
+ * Generic live preview — same behaviour as react PreviewRenderer.react:
  * e-commerce / app components get their demo props, everything else renders with
  * its default props and the component name as children.
  */

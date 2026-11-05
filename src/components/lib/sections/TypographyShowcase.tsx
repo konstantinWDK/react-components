@@ -2,9 +2,9 @@
 
 import './TypographyShowcase.css';
 
-// TypographyShowcase.astro — Premium typography section with live preview
+// TypographyShowcase — Premium typography section with live preview
 
-/** TypographyShowcase — ported from astro-component-kit. */
+/** TypographyShowcase */
 export interface TypographyShowcaseProps {
   title?: string;
   subtitle?: string;

@@ -1,5 +1,3 @@
-/* HowItWorksSteps — ported from astro-component-kit (sections/HowItWorksSteps.astro) */
-
 .cq-how-it-works-steps-cq:where([data-rk-1a3d09]) { container-type: inline-size; }
 .hiw:where([data-rk-1a3d09]) {
   --hiw-py: 5.5rem;

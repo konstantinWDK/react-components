@@ -2,7 +2,7 @@
 
 import './SpotlightIndicator.css';
 
-/** SpotlightIndicator — ported from astro-component-kit. */
+/** SpotlightIndicator */
 export interface SpotlightIndicatorProps {
 }
 

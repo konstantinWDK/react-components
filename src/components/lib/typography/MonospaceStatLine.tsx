@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './MonospaceStatLine.css';
 
-/** MonospaceStatLine — ported from astro-component-kit. */
+/** MonospaceStatLine */
 export interface MonospaceStatLineProps {
   children?: ReactNode;
 }

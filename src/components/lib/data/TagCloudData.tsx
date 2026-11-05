@@ -2,7 +2,7 @@
 
 import './TagCloudData.css';
 
-/** TagCloudData — ported from astro-component-kit. */
+/** TagCloudData */
 export interface TagCloudDataProps {
 }
 

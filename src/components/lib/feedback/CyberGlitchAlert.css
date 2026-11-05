@@ -1,5 +1,3 @@
-/* CyberGlitchAlert — ported from astro-component-kit (feedback/CyberGlitchAlert.astro) */
-
 .glitch-alert { 
   background: var(--c-primary, #ff003c); 
   padding: var(--sp-6, 1.5rem); 

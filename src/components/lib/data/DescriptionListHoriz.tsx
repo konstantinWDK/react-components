@@ -2,7 +2,7 @@
 
 import './DescriptionListHoriz.css';
 
-/** DescriptionListHoriz — ported from astro-component-kit. */
+/** DescriptionListHoriz */
 export interface DescriptionListHorizProps {
 }
 

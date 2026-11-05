@@ -1,5 +1,3 @@
-/* TestimonialCarousel — ported from astro-component-kit (sections/TestimonialCarousel.astro) */
-
 .cq-testimonial-carousel-cq:where([data-rk-a626d8]) { container-type: inline-size; }
 .tc:where([data-rk-a626d8]) {
   --tc-py: 5.5rem;

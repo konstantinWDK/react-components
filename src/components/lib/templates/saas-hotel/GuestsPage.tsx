@@ -10,8 +10,8 @@ import { lobbyData, saasRoutes, type LobbyData, type SaasRoutes } from './data';
  * GuestsPage — Guest CRM: searchable guest table (tier, stays, lifetime spend, tags) next to a
  * guest profile with contact, stats, preferences, upcoming stay and staff notes.
  *
- * Usage (src/pages/app/guests.astro):
- *   import { GuestsPage } from 'astro-component-kit/templates/saas-hotel';
+ * Usage (app/app/guests/page.tsx, Next.js):
+ *   import { GuestsPage } from 'react-component-kit-ui/templates/saas-hotel';
  *   <GuestsPage />
  *
  * @param {LobbyData} data - Workspace data.

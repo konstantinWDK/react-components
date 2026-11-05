@@ -1,5 +1,3 @@
-/* LiveActivityToast — ported from astro-component-kit (ecommerce/LiveActivityToast.astro) */
-
 .live-activity:where([data-rk-3695c2]) {
   position: fixed;
   bottom: 1rem;

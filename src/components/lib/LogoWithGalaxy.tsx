@@ -16,7 +16,7 @@ function st(css: string | undefined): CSSProperties {
   return o as CSSProperties;
 }
 
-/** LogoWithGalaxy — ported from astro-component-kit. */
+/** LogoWithGalaxy */
 export interface LogoWithGalaxyProps {
   size?: 'small' | 'medium' | 'large';
   className?: string;

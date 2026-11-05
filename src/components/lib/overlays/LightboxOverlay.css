@@ -1,5 +1,3 @@
-/* LightboxOverlay — ported from astro-component-kit (overlays/LightboxOverlay.astro) */
-
 .lightbox:where([data-rk-746ba1]) { position: fixed; inset: 0; background: #000; z-index: 5000; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .close:where([data-rk-746ba1]) { position: absolute; top: 2rem; right: 2rem; color: #fff; font-size: 2.2rem; cursor: pointer; }
 .img-preview:where([data-rk-746ba1]) { width: 80%; height: 70%; background: #1e293b; border-radius: 12px; }

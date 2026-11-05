@@ -1,3 +1,1 @@
-/* BackdropBlurMask — ported from astro-component-kit (overlays/BackdropBlurMask.astro) */
-
 .mask:where([data-rk-88f2da]) { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); z-index: 500; pointer-events: none; }

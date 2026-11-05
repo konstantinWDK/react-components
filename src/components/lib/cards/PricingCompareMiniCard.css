@@ -1,5 +1,3 @@
-/* PricingCompareMiniCard — ported from astro-component-kit (cards/PricingCompareMiniCard.astro) */
-
 .mini-price-card:where([data-rk-d6e120]) {
   position: relative;
   display: flex;
@@ -17,14 +15,14 @@
 
 .mini-price-card:hover:where([data-rk-d6e120]) {
   transform: translateY(-4px);
-  border-color: rgba(184, 134, 11, 0.3);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 30%, transparent);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 .mini-price-card--featured:where([data-rk-d6e120]) {
-  border-color: rgba(184, 134, 11, 0.5);
-  background: radial-gradient(circle at top, rgba(184, 134, 11, 0.12), rgba(255, 255, 255, 0.02) 60%);
-  box-shadow: 0 12px 36px rgba(184, 134, 11, 0.15);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 50%, transparent);
+  background: radial-gradient(circle at top, color-mix(in srgb, var(--c-primary, #b8860b) 12%, transparent), rgba(255, 255, 255, 0.02) 60%);
+  box-shadow: 0 12px 36px color-mix(in srgb, var(--c-primary, #b8860b) 15%, transparent);
 }
 
 .mini-price-card__badge:where([data-rk-d6e120]) {
@@ -39,7 +37,7 @@
   letter-spacing: 0.06em;
   padding: 0.25rem 0.75rem;
   border-radius: var(--r-full, 9999px);
-  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.4);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--c-primary, #b8860b) 40%, transparent);
 }
 
 .mini-price-card__plan:where([data-rk-d6e120]) {
@@ -122,5 +120,5 @@
   background: linear-gradient(135deg, #d4a017, #b8860b);
   color: #050505;
   border-color: transparent;
-  box-shadow: 0 6px 20px rgba(184, 134, 11, 0.35);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--c-primary, #b8860b) 35%, transparent);
 }

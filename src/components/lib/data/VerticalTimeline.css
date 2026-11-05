@@ -1,5 +1,3 @@
-/* VerticalTimeline — ported from astro-component-kit (data/VerticalTimeline.astro) */
-
 .timeline-v:where([data-rk-2babd2]) { position: relative; padding-left: 2rem; }
 .timeline-v:where([data-rk-2babd2])::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: rgba(99,102,241,0.2); }
 .t-item:where([data-rk-2babd2]) { position: relative; margin-bottom: 2.5rem; }

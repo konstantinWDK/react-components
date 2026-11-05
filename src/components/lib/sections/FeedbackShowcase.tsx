@@ -2,9 +2,9 @@
 
 import './FeedbackShowcase.css';
 
-// FeedbackShowcase.astro — Premium feedback category showcase with live preview
+// FeedbackShowcase — Premium feedback category showcase with live preview
 
-/** FeedbackShowcase — ported from astro-component-kit. */
+/** FeedbackShowcase */
 export interface FeedbackShowcaseProps {
   title?: string;
   subtitle?: string;

@@ -1,5 +1,3 @@
-/* TestimonialGridSection — ported from astro-component-kit (sections/TestimonialGridSection.astro) */
-
 .testi-section:where([data-rk-6335bb]) {
   padding: var(--sp-12, 3rem) var(--sp-6, 1.5rem);
   max-width: 1200px;

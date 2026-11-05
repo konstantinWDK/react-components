@@ -2,9 +2,9 @@
 
 import './HeroSplit.css';
 
-// HeroSplit.astro — Split-screen hero with image/media side
+// HeroSplit — Split-screen hero with image/media side
 
-/** HeroSplit — ported from astro-component-kit. */
+/** HeroSplit */
 export interface HeroSplitProps {
   title?: string;
   subtitle?: string;

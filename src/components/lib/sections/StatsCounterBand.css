@@ -1,5 +1,3 @@
-/* StatsCounterBand — ported from astro-component-kit (sections/StatsCounterBand.astro) */
-
 .cq-stats-counter-band-cq:where([data-rk-72cbca]) { container-type: inline-size; }
 .scb:where([data-rk-72cbca]) {
   --scb-py: 4.5rem;

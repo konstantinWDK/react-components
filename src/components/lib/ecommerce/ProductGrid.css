@@ -1,5 +1,3 @@
-/* ProductGrid — ported from astro-component-kit (ecommerce/ProductGrid.astro) */
-
 .p-grid-wrap:where([data-rk-b3bd9c]) { container-type: inline-size; }
 .p-grid:where([data-rk-b3bd9c]) {
   display: grid;

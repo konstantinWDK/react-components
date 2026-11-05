@@ -15,7 +15,7 @@ function st(css: string | undefined): CSSProperties {
   return o as CSSProperties;
 }
 
-/** TypewriterText — ported from astro-component-kit. */
+/** TypewriterText */
 export interface TypewriterTextProps {
   text: string;
   speed?: string;

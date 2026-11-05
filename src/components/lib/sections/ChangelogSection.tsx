@@ -34,8 +34,8 @@ export function ChangelogSection({
   subtitle = 'New components, improvements and fixes, shipped every week.',
   releases = [
     { version: 'v0.5.1', date: '2026-11-04', title: 'Official MCP Server & 1-Click AI Integrations', changes: [
-      { type: 'new', text: 'Official remote SSE MCP server (mcp.astrocomponents.dev) and local stdio mode.' },
-      { type: 'new', text: '1-click CLI installer (`npx astro-component-kit mcp install <client>`) for Cursor, Claude, Codex, Lovable and universal MCP.' },
+      { type: 'new', text: 'Official remote SSE MCP server (mcp.reactcomponents.dev) and local stdio mode.' },
+      { type: 'new', text: '1-click CLI installer (`npx react-component-kit-ui mcp install <client>`) for Cursor, Claude, Codex, Lovable and universal MCP.' },
       { type: 'new', text: 'Dedicated /mcp interactive landing page with client tabs and tools catalog.' },
       { type: 'new', text: '8 built-in AI tools with real-time discovery of 340+ components, templates, and design tokens.' },
     ] },

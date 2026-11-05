@@ -1,5 +1,3 @@
-/* AnimatedIconButton — ported from astro-component-kit (buttons/AnimatedIconButton.astro) */
-
 .icon-anim-btn {
   --btn-bg: var(--c-primary, #6366f1);
   --btn-color: #fff;

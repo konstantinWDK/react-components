@@ -2,7 +2,7 @@
 
 import './PaginationGlass.css';
 
-/** PaginationGlass — ported from astro-component-kit. */
+/** PaginationGlass */
 export interface PaginationGlassProps {
 }
 

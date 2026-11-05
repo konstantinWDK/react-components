@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './DropCapParagraph.css';
 
-/** DropCapParagraph — ported from astro-component-kit. */
+/** DropCapParagraph */
 export interface DropCapParagraphProps {
   children?: ReactNode;
 }

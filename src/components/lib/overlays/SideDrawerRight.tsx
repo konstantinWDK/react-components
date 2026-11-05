@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './SideDrawerRight.css';
 
-/** SideDrawerRight — ported from astro-component-kit. */
+/** SideDrawerRight */
 export interface SideDrawerRightProps {
   children?: ReactNode;
 }

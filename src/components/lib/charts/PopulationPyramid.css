@@ -1,5 +1,3 @@
-/* PopulationPyramid — ported from astro-component-kit (charts/PopulationPyramid.astro) */
-
 .pp:where([data-rk-b22a54]) { display: grid; gap: 4px; }
 .pp__row:where([data-rk-b22a54]) {
   display: grid;

@@ -1,5 +1,3 @@
-/* GithubRepoCard — ported from astro-component-kit (cards/GithubRepoCard.astro) */
-
 .gh-repo-card:where([data-rk-02caec]) {
   display: flex;
   flex-direction: column;
@@ -17,7 +15,7 @@
 
 .gh-repo-card:hover:where([data-rk-02caec]) {
   transform: translateY(-3px);
-  border-color: rgba(184, 134, 11, 0.4);
+  border-color: color-mix(in srgb, var(--c-primary, #b8860b) 40%, transparent);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 

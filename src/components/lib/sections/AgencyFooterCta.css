@@ -1,5 +1,3 @@
-/* AgencyFooterCta — ported from astro-component-kit (sections/AgencyFooterCta.astro) */
-
 .cq-agency-footer:where([data-rk-43a7ea]) { container-type: inline-size; }
 .afc:where([data-rk-43a7ea]) { padding: clamp(3rem, 8cqi, 6rem) clamp(1rem, 4cqi, 2.5rem) var(--sp-6, 1.5rem); color: var(--c-text-1, #fff); }
 .afc--accent:where([data-rk-43a7ea]) { background: var(--agency-accent, var(--c-primary-light, #d4a017)); color: var(--c-on-primary, #050505); --c-text-1: var(--c-on-primary, #050505); --c-text-2: color-mix(in srgb, var(--c-on-primary, #050505) 72%, transparent); --c-border: color-mix(in srgb, var(--c-on-primary, #050505) 25%, transparent); border-radius: 40px 40px 0 0; }

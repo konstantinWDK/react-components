@@ -1,5 +1,3 @@
-/* EditorialLayout — ported from astro-component-kit (templates/ecommerce-editorial/EditorialLayout.astro) */
-
 .theme-forma {
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --r-sm: 2px;
@@ -9,22 +7,25 @@
   --shop-header-h: 106px;
 }
 .theme-forma[data-theme='light'] {
-  --c-bg: #f3efe8;
-  --c-bg-1: #fbf9f5;
-  --c-bg-2: #e7e1d6;
-  --c-surface: rgba(23, 21, 18, 0.03);
-  --c-border: rgba(23, 21, 18, 0.14);
-  --c-text-1: #171512;
-  --c-text-2: #514b44;
-  --c-text-3: #6d665e;
-  --c-primary: #9c3d1c;
-  --c-primary-light: #9c3d1c;
-  --c-primary-glow: rgba(156, 61, 28, 0.14);
-  --c-accent: #7a2e14;
-  --shop-accent: #9c3d1c;
+  --c-bg: #f4f8fc;
+  --c-bg-1: #ffffff;
+  --c-bg-2: #e6eef7;
+  --c-surface: rgba(11, 18, 32, 0.03);
+  --c-border: rgba(15, 40, 70, 0.14);
+  --c-text-1: #0b1220;
+  --c-text-2: #475569;
+  --c-text-3: #64748b;
+  --c-primary: #0369a1;
+  --c-primary-light: #0369a1;
+  --c-primary-glow: rgba(3, 105, 161, 0.14);
+  --c-accent: #0c4a6e;
+  --shop-accent: #0369a1;
   --c-on-primary: #ffffff;
-  --ink-rgb: 23 21 18;
-  --paper-rgb: 251 249 245;
+  --ink-rgb: 11 18 32;
+  --paper-rgb: 255 255 255;
+  /* corporate chart palette: blues, teal and indigo instead of orange/yellow */
+  --chart-1: #1d4ed8; --chart-2: #0284c7; --chart-3: #0d9488; --chart-4: #4f46e5;
+  --chart-5: #0369a1; --chart-6: #15803d; --chart-7: #7c3aed; --chart-8: #475569;
   --c-success: #2f6b3a;
   --c-warning: #8a4b06;
   --c-danger: #a8261b;
@@ -36,22 +37,25 @@
   color-scheme: light;
 }
 .theme-forma[data-theme='dark'] {
-  --c-bg: #12110f;
-  --c-bg-1: #1a1815;
-  --c-bg-2: #24211c;
-  --c-surface: rgba(242, 237, 229, 0.03);
-  --c-border: rgba(242, 237, 229, 0.14);
-  --c-text-1: #f2ede5;
-  --c-text-2: #bcb4a8;
-  --c-text-3: #948b7f;
-  --c-primary: #e2835a;
-  --c-primary-light: #e2835a;
-  --c-primary-glow: rgba(226, 131, 90, 0.16);
-  --c-accent: #f0b796;
-  --shop-accent: #e2835a;
-  --c-on-primary: #1a0d07;
-  --ink-rgb: 242 237 229;
-  --paper-rgb: 18 17 15;
+  --c-bg: #03060b;
+  --c-bg-1: #070b12;
+  --c-bg-2: #0c1220;
+  --c-surface: rgba(148, 197, 255, 0.03);
+  --c-border: rgba(148, 197, 255, 0.14);
+  --c-text-1: #e6f0fa;
+  --c-text-2: #a9b8c9;
+  --c-text-3: #8494a8;
+  --c-primary: #38bdf8;
+  --c-primary-light: #38bdf8;
+  --c-primary-glow: rgba(56, 189, 248, 0.16);
+  --c-accent: #bae6fd;
+  --shop-accent: #38bdf8;
+  --c-on-primary: #04121c;
+  --ink-rgb: 230 240 250;
+  --paper-rgb: 3 6 11;
+  /* corporate chart palette: blues, teal and indigo instead of orange/yellow */
+  --chart-1: #2563eb; --chart-2: #38bdf8; --chart-3: #14b8a6; --chart-4: #6366f1;
+  --chart-5: #0ea5e9; --chart-6: #22c55e; --chart-7: #8b5cf6; --chart-8: #64748b;
   --c-success: #7fc48c;
   --c-warning: #e7b46a;
   --c-danger: #f08a7a;

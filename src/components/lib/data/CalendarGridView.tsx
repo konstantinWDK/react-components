@@ -15,7 +15,7 @@ function cx(...args: unknown[]): string {
   return out.join(' ');
 }
 
-/** CalendarGridView — ported from astro-component-kit. */
+/** CalendarGridView */
 export interface CalendarGridViewProps {
 }
 

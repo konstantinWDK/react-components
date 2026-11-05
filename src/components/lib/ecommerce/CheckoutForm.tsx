@@ -86,7 +86,7 @@ export function CheckoutForm({
 }: CheckoutFormProps) {
   const money = { currency, locale };
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;
@@ -266,7 +266,7 @@ export function CheckoutForm({
             <span className="checkout__spinner" aria-hidden="true" data-rk-e0a849=""></span>
             <span data-pay-label data-rk-e0a849="">Pay now</span>
           </button>
-          {demo && <p className="checkout__demo" data-rk-e0a849="">Demo checkout — no data leaves your browser. Try code <strong data-rk-e0a849="">ASTRO10</strong>.</p>}
+          {demo && <p className="checkout__demo" data-rk-e0a849="">Demo checkout — no data leaves your browser. Try code <strong data-rk-e0a849="">REACT10</strong>.</p>}
         </form>
       
         <section className="checkout__done" data-done hidden aria-labelledby={`${id}-done-title`} data-rk-e0a849="">

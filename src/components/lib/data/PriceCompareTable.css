@@ -1,5 +1,3 @@
-/* PriceCompareTable — ported from astro-component-kit (data/PriceCompareTable.astro) */
-
 .c-wrap:where([data-rk-7759ac]) { background: #0f172a; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); overflow: hidden; }
 table:where([data-rk-7759ac]) { width: 100%; font-size: 0.85rem; color: #e2e8f0; border-collapse: collapse; }
 th:where([data-rk-7759ac]) { padding: 1rem; background: rgba(255, 255, 255, 0.05); color: #fff; text-align: center; font-weight: 800; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }

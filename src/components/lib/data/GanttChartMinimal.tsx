@@ -2,7 +2,7 @@
 
 import './GanttChartMinimal.css';
 
-/** GanttChartMinimal — ported from astro-component-kit. */
+/** GanttChartMinimal */
 export interface GanttChartMinimalProps {
 }
 

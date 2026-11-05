@@ -3,13 +3,13 @@
 import { useEffect, useRef } from 'react';
 import './ScrollProgressTop.css';
 
-/** ScrollProgressTop — ported from astro-component-kit. */
+/** ScrollProgressTop */
 export interface ScrollProgressTopProps {
 }
 
 export function ScrollProgressTop({}: ScrollProgressTopProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

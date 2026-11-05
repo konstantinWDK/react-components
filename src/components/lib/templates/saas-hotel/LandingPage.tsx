@@ -20,8 +20,8 @@ import './LandingPage.css';
  * features, how it works, stats, pricing with monthly/yearly toggle, testimonials, FAQ and footer.
  * Built entirely from existing library sections, themed with the Lobby tokens.
  *
- * Usage (src/pages/index.astro):
- *   import { LandingPage } from 'astro-component-kit/templates/saas-hotel';
+ * Usage (app/page.tsx, Next.js):
+ *   import { LandingPage } from 'react-component-kit-ui/templates/saas-hotel';
  *   <LandingPage />
  *
  * @param {SaasRoutes} routes - Page URLs.
@@ -36,12 +36,12 @@ export interface LandingPageProps {
 
 export function LandingPage({ routes = saasRoutes, theme = 'light', noindex = false }: LandingPageProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;
     mounted.current = true;
-    // <html>/<body> attributes of the Astro layout
+    // <html>/<body> attributes of the React layout
     if (!document.documentElement.hasAttribute("lang")) document.documentElement.setAttribute("lang", String("en"));
     document.documentElement.classList.add(...String("theme-lobby").split(/\s+/).filter(Boolean));
     if (!document.documentElement.hasAttribute("data-theme")) document.documentElement.setAttribute("data-theme", String((theme === 'auto' ? 'light' : theme)));

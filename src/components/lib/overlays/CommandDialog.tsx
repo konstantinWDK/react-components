@@ -2,7 +2,7 @@
 
 import './CommandDialog.css';
 
-/** CommandDialog — ported from astro-component-kit. */
+/** CommandDialog */
 export interface CommandDialogProps {
 }
 

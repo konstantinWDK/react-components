@@ -31,7 +31,7 @@ export function FaqTwoColumn({
   title = 'Frequently asked questions',
   subtitle = 'Everything you need to know about the kit. Can’t find an answer? Our team replies within a day.',
   items = [
-    { q: 'Do I need to install a package?', a: 'No. Every component is a standalone .astro file. Copy it into your project, or install the package if you prefer imports.' },
+    { q: 'Do I need to install a package?', a: 'No. Every component is a standalone .tsx file. Copy it into your project, or install the package if you prefer imports.' },
     { q: 'Do the charts need a JavaScript library?', a: 'No. The SVG charts render at build time. A tiny shared script only powers hover tooltips, and every chart includes a data table fallback.' },
     { q: 'Is it accessible?', a: 'Components target WCAG 2.2 AA: semantic HTML, visible focus states, keyboard support and contrast of at least 4.5:1 for text.' },
     { q: 'Can I use it in commercial projects?', a: 'Yes. The kit is MIT licensed. Use it for client work, SaaS products and anything else.' },

@@ -9,8 +9,8 @@ import { saasRoutes, type SaasRoutes } from './data';
 /**
  * SignInPage — Split-screen sign-in (or sign-up) for the hotel SaaS using AuthCard.
  *
- * Usage (src/pages/sign-in.astro):
- *   import { SignInPage } from 'astro-component-kit/templates/saas-hotel';
+ * Usage (app/sign-in/page.tsx, Next.js):
+ *   import { SignInPage } from 'react-component-kit-ui/templates/saas-hotel';
  *   <SignInPage />
  *
  * @param {string} mode - 'signin' or 'signup'. Default 'signin'.
@@ -27,12 +27,12 @@ export interface SignInPageProps {
 
 export function SignInPage({ mode = 'signin', routes = saasRoutes, theme = 'light', noindex = true }: SignInPageProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;
     mounted.current = true;
-    // <html>/<body> attributes of the Astro layout
+    // <html>/<body> attributes of the React layout
     if (!document.documentElement.hasAttribute("lang")) document.documentElement.setAttribute("lang", String("en"));
     document.documentElement.classList.add(...String("theme-lobby").split(/\s+/).filter(Boolean));
     if (!document.documentElement.hasAttribute("data-theme")) document.documentElement.setAttribute("data-theme", String((theme === 'auto' ? 'light' : theme)));

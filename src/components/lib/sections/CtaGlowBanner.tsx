@@ -24,7 +24,7 @@ export interface CtaGlowBannerProps {
 export function CtaGlowBanner({
   badge = "Get Started Today",
   title = "Ready to Build Something Extraordinary?",
-  subtitle = "Join over 10,000 developers building modern, accessible, and blindingly fast Astro web applications.",
+  subtitle = "Join over 10,000 developers building modern, accessible, and blindingly fast React web applications.",
   primaryCtaText = "Start Building Free",
   secondaryCtaText = "View Components",
   className = ""

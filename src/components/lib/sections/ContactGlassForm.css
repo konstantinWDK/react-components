@@ -1,5 +1,3 @@
-/* ContactGlassForm — ported from astro-component-kit (sections/ContactGlassForm.astro) */
-
 .cq-contact-glass-form-cq:where([data-rk-6b0fee]) { container-type: inline-size; }
 .contact-section:where([data-rk-6b0fee]) {
   position: relative;

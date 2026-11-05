@@ -1,5 +1,3 @@
-/* GlassSectionHeader — ported from astro-component-kit (layout/GlassSectionHeader.astro) */
-
 .glass-section-header:where([data-rk-7395fc]) {
   margin-bottom: var(--sp-8);
 }

@@ -1,5 +1,3 @@
-/* GalleryGrid4 — ported from astro-component-kit (layout/GalleryGrid4.astro) */
-
 .gal-grid:where([data-rk-fb6612]) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));

@@ -1,3 +1,1 @@
-/* FadedVerticalText — ported from astro-component-kit (typography/FadedVerticalText.astro) */
-
 .v-txt:where([data-rk-79dd68]) { writing-mode: vertical-rl; transform: rotate(180deg); color: #334155; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; white-space: nowrap; }

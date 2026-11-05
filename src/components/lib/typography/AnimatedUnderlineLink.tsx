@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './AnimatedUnderlineLink.css';
 
-/** AnimatedUnderlineLink — ported from astro-component-kit. */
+/** AnimatedUnderlineLink */
 export interface AnimatedUnderlineLinkProps {
   href: string;
   children?: ReactNode;

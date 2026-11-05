@@ -1,5 +1,3 @@
-/* RatingBreakdownBar — ported from astro-component-kit (data/RatingBreakdownBar.astro) */
-
 .rating-box:where([data-rk-5d3b8d]) { display: flex; flex-direction: column; gap: 8px; width: 220px; }
 .r-row:where([data-rk-5d3b8d]) { display: flex; align-items: center; gap: 10px; color: #94a3b8; font-size: 0.75rem; font-weight: 700; }
 .bar-bg:where([data-rk-5d3b8d]) { flex: 1; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; border: 1px solid rgba(255, 255, 255, 0.03); }

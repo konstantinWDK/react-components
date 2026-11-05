@@ -1,5 +1,3 @@
-/* ShimmerButton — ported from astro-component-kit (buttons/ShimmerButton.astro) */
-
 .shimmer-btn {
   --shimmer-speed: 3s;
   --shimmer-color: rgba(255, 255, 255, 0.3);

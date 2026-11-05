@@ -1,5 +1,3 @@
-/* LogoWithGalaxy — ported from astro-component-kit (./LogoWithGalaxy.astro) */
-
 .logo-container:where([data-rk-7f5ef8]) {
   position: relative;
   display: inline-block;

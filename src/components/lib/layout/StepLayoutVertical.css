@@ -1,5 +1,3 @@
-/* StepLayoutVertical — ported from astro-component-kit (layout/StepLayoutVertical.astro) */
-
 .step-lay:where([data-rk-3280db]) {
   display: flex;
   gap: 2rem;

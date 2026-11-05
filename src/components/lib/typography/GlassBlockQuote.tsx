@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import './GlassBlockQuote.css';
 
-/** GlassBlockQuote — ported from astro-component-kit. */
+/** GlassBlockQuote */
 export interface GlassBlockQuoteProps {
   children?: ReactNode;
 }

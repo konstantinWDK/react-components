@@ -1,5 +1,3 @@
-/* TaskKanbanCard — ported from astro-component-kit (cards/TaskKanbanCard.astro) */
-
 .task-card:where([data-rk-11d45c]) { 
   background: var(--c-bg-elev, #1e293b); 
   padding: var(--sp-4, 1rem); 

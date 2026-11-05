@@ -2,7 +2,7 @@
 
 import './TabUnderline.css';
 
-/** TabUnderline — ported from astro-component-kit. */
+/** TabUnderline */
 export interface TabUnderlineProps {
 }
 

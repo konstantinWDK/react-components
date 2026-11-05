@@ -12,8 +12,8 @@ import './StoreCheckoutPage.css';
  * StoreCheckoutPage — E-commerce template checkout in focus mode: StepBreadcrumbBar,
  * CheckoutForm (contact, delivery, shipping, payment) and a live OrderSummary.
  *
- * Usage (src/pages/checkout.astro):
- *   import { StoreCheckoutPage } from 'astro-component-kit/templates/ecommerce';
+ * Usage (app/checkout/page.tsx, Next.js):
+ *   import { StoreCheckoutPage } from 'react-component-kit-ui/templates/ecommerce';
  *   <StoreCheckoutPage />
  *
  * @param {StoreConfig} store - Catalogue and settings. Default: demo store.
@@ -32,7 +32,7 @@ export interface StoreCheckoutPageProps {
 
 export function StoreCheckoutPage({ store = demoStore, routes = defaultRoutes, seedCart = false, noindex = true, theme = 'dark' }: StoreCheckoutPageProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

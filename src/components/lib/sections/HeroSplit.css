@@ -1,5 +1,3 @@
-/* HeroSplit — ported from astro-component-kit (sections/HeroSplit.astro) */
-
 .cq-hero-split-cq:where([data-rk-cb5680]) { container-type: inline-size; }
 .hero-split:where([data-rk-cb5680]) {
   display: grid;

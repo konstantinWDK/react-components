@@ -1,5 +1,3 @@
-/* HeroShowcaseSplit — ported from astro-component-kit (sections/HeroShowcaseSplit.astro) */
-
 .cq-hero-showcase-split-cq:where([data-rk-723e29]) { container-type: inline-size; }
 .split-hero:where([data-rk-723e29]) {
   position: relative;

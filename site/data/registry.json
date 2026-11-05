@@ -4465,9 +4465,9 @@
     "ru": "Полноценный доступный интернет-магазин: главная, каталог, карточка товара, корзина и оформление заказа."
    },
    "description": {
-    "en": "Nova Store is a production-ready e-commerce template for Astro. Five pages share one cart that persists in the browser, the catalogue filters instantly without a backend, and the checkout validates, totals shipping, tax and promo codes and confirms the order. Every block is a library component, so you can use the whole store or just the pieces you need.",
-    "es": "Nova Store es una plantilla e-commerce lista para producción en Astro. Cinco páginas comparten un carrito que se guarda en el navegador, el catálogo filtra al instante sin backend y el checkout valida, calcula envío, impuestos y códigos promocionales y confirma el pedido. Cada bloque es un componente de la librería: puedes usar la tienda entera o solo las piezas que necesites.",
-    "ru": "Nova Store — готовый к продакшену шаблон интернет-магазина на Astro. Пять страниц используют общую корзину, которая сохраняется в браузере, каталог фильтруется мгновенно без бэкенда, а оформление заказа проверяет данные, считает доставку, налог и промокоды и подтверждает заказ. Каждый блок — компонент библиотеки: используйте весь магазин или только нужные части."
+    "en": "Nova Store is a production-ready e-commerce template for React. Five pages share one cart that persists in the browser, the catalogue filters instantly without a backend, and the checkout validates, totals shipping, tax and promo codes and confirms the order. Every block is a library component, so you can use the whole store or just the pieces you need.",
+    "es": "Nova Store es una plantilla e-commerce lista para producción en React. Cinco páginas comparten un carrito que se guarda en el navegador, el catálogo filtra al instante sin backend y el checkout valida, calcula envío, impuestos y códigos promocionales y confirma el pedido. Cada bloque es un componente de la librería: puedes usar la tienda entera o solo las piezas que necesites.",
+    "ru": "Nova Store — готовый к продакшену шаблон интернет-магазина на React. Пять страниц используют общую корзину, которая сохраняется в браузере, каталог фильтруется мгновенно без бэкенда, а оформление заказа проверяет данные, считает доставку, налог и промокоды и подтверждает заказ. Каждый блок — компонент библиотеки: используйте весь магазин или только нужные части."
    },
    "highlights": {
     "en": [
@@ -4507,7 +4507,7 @@
     "catalog"
    ],
    "previewBase": "/preview/ecommerce/",
-   "importPath": "astro-component-kit/templates/ecommerce",
+   "importPath": "react-component-kit-ui/templates/ecommerce",
    "pages": [
     {
      "id": "home",
@@ -4522,8 +4522,8 @@
       "es": "Hero con producto destacado, garantías, categorías, más vendidos, banner editorial, novedades y newsletter.",
       "ru": "Hero с избранным товаром, гарантии, категории, хиты продаж, баннер, новинки и рассылка."
      },
-     "file": "src/pages/index.astro",
-     "code": "---\nimport { StoreHomePage } from 'astro-component-kit/templates/ecommerce';\n---\n\n<StoreHomePage />"
+     "file": "src/pages/index.react",
+     "code": "---\nimport { StoreHomePage } from 'react-component-kit-ui/templates/ecommerce';\n---\n\n<StoreHomePage />"
     },
     {
      "id": "category",
@@ -4538,8 +4538,8 @@
       "es": "Catálogo con migas de pan, chips de categoría, filtros fijos, contador de resultados y ordenación.",
       "ru": "Каталог с хлебными крошками, чипами категорий, фильтрами, счётчиком результатов и сортировкой."
      },
-     "file": "src/pages/shop.astro",
-     "code": "---\nimport { StoreCategoryPage } from 'astro-component-kit/templates/ecommerce';\n---\n\n<!-- Category links use /shop/?category=audio -->\n<StoreCategoryPage />"
+     "file": "src/pages/shop.react",
+     "code": "---\nimport { StoreCategoryPage } from 'react-component-kit-ui/templates/ecommerce';\n---\n\n<!-- Category links use /shop/?category=audio -->\n<StoreCategoryPage />"
     },
     {
      "id": "product",
@@ -4554,8 +4554,8 @@
       "es": "Galería, bloque de compra con color, talla y cantidad, resumen de reseñas y productos relacionados.",
       "ru": "Галерея, блок покупки с выбором цвета, размера и количества, отзывы и похожие товары."
      },
-     "file": "src/pages/product/[slug].astro",
-     "code": "---\nimport { StoreProductPage, demoStore } from 'astro-component-kit/templates/ecommerce';\n\nexport function getStaticPaths() {\n  return demoStore.products.map((p) => ({ params: { slug: p.slug } }));\n}\n---\n\n<StoreProductPage slug={Astro.params.slug} />"
+     "file": "src/pages/product/[slug].react",
+     "code": "---\nimport { StoreProductPage, demoStore } from 'react-component-kit-ui/templates/ecommerce';\n\nexport function getStaticPaths() {\n  return demoStore.products.map((p) => ({ params: { slug: p.slug } }));\n}\n---\n\n<StoreProductPage slug={Astro.params.slug} />"
     },
     {
      "id": "checkout",
@@ -4570,8 +4570,8 @@
       "es": "Checkout en modo foco con pasos, contacto, entrega, envío, pago y resumen del pedido en vivo.",
       "ru": "Оформление заказа в режиме фокуса: шаги, контакты, доставка, оплата и итог заказа."
      },
-     "file": "src/pages/checkout.astro",
-     "code": "---\nimport { StoreCheckoutPage } from 'astro-component-kit/templates/ecommerce';\n---\n\n<StoreCheckoutPage />"
+     "file": "src/pages/checkout.react",
+     "code": "---\nimport { StoreCheckoutPage } from 'react-component-kit-ui/templates/ecommerce';\n---\n\n<StoreCheckoutPage />"
     }
    ],
    "newComponents": [
@@ -4610,7 +4610,7 @@
     "logo-cloud-section",
     "cta-newsletter-section"
    ],
-   "storeConfigExample": "---\n// src/pages/index.astro — same store + routes on every page\nimport { StoreHomePage, demoStore, type StoreConfig } from 'astro-component-kit/templates/ecommerce';\n\nconst store: StoreConfig = {\n  ...demoStore,\n  name: 'My Shop',\n  currency: 'EUR',\n  locale: 'es-ES',\n  cartKey: 'my-shop-cart',\n  products: [\n    {\n      slug: 'linen-shirt',\n      name: 'Linen Shirt',\n      price: 59,\n      category: 'apparel',\n      image: '/products/linen-shirt.webp', // or icon: 'shirt'\n      sizes: ['S', 'M', 'L'],\n      rating: 4.7,\n      reviews: 40,\n    },\n  ],\n};\n---\n\n<StoreHomePage store={store} routes={{ home: '/', shop: '/shop/', product: '/product/', checkout: '/checkout/' }} />"
+   "storeConfigExample": "---\n// src/pages/index.react — same store + routes on every page\nimport { StoreHomePage, demoStore, type StoreConfig } from 'react-component-kit-ui/templates/ecommerce';\n\nconst store: StoreConfig = {\n  ...demoStore,\n  name: 'My Shop',\n  currency: 'EUR',\n  locale: 'es-ES',\n  cartKey: 'my-shop-cart',\n  products: [\n    {\n      slug: 'linen-shirt',\n      name: 'Linen Shirt',\n      price: 59,\n      category: 'apparel',\n      image: '/products/linen-shirt.webp', // or icon: 'shirt'\n      sizes: ['S', 'M', 'L'],\n      rating: 4.7,\n      reviews: 40,\n    },\n  ],\n};\n---\n\n<StoreHomePage store={store} routes={{ home: '/', shop: '/shop/', product: '/product/', checkout: '/checkout/' }} />"
   },
   {
    "slug": "ecommerce-editorial",
@@ -4664,7 +4664,7 @@
     "lookbook"
    ],
    "previewBase": "/preview/ecommerce-editorial/",
-   "importPath": "astro-component-kit/templates/ecommerce-editorial",
+   "importPath": "react-component-kit-ui/templates/ecommerce-editorial",
    "pages": [
     {
      "id": "home",
@@ -4679,8 +4679,8 @@
       "es": "Hero de revista, mosaico de colecciones, novedades, lookbook comprable, valores, reseñas y newsletter.",
       "ru": "Журнальный hero, мозаика коллекций, новинки, лукбук, ценности, отзывы и подписка."
      },
-     "file": "src/pages/index.astro",
-     "code": "---\nimport { EditorialHomePage } from 'astro-component-kit/templates/ecommerce-editorial';\n---\n\n<EditorialHomePage theme=\"light\" />"
+     "file": "src/pages/index.react",
+     "code": "---\nimport { EditorialHomePage } from 'react-component-kit-ui/templates/ecommerce-editorial';\n---\n\n<EditorialHomePage theme=\"light\" />"
     },
     {
      "id": "shop",
@@ -4695,8 +4695,8 @@
       "es": "Hero de categoría, barra de filtros fija con panel de refinado y cuadrícula editorial con añadido rápido.",
       "ru": "Hero категории, липкая панель фильтров и редакционная сетка с быстрым добавлением."
      },
-     "file": "src/pages/shop.astro",
-     "code": "---\nimport { EditorialShopPage } from 'astro-component-kit/templates/ecommerce-editorial';\n---\n\n<EditorialShopPage />"
+     "file": "src/pages/shop.react",
+     "code": "---\nimport { EditorialShopPage } from 'react-component-kit-ui/templates/ecommerce-editorial';\n---\n\n<EditorialShopPage />"
     },
     {
      "id": "product",
@@ -4711,8 +4711,8 @@
       "es": "Imágenes apiladas, info fija con color y talla, aviso de stock, cuidados y «Completa el look».",
       "ru": "Фото столбцом, закреплённая информация с цветом и размером, остаток, уход и «Дополните образ»."
      },
-     "file": "src/pages/product/[slug].astro",
-     "code": "---\nimport { EditorialProductPage, formaStore } from 'astro-component-kit/templates/ecommerce-editorial';\n\nexport function getStaticPaths() {\n  return formaStore.products.map((p) => ({ params: { slug: p.slug } }));\n}\n---\n\n<EditorialProductPage slug={Astro.params.slug} />"
+     "file": "src/pages/product/[slug].react",
+     "code": "---\nimport { EditorialProductPage, formaStore } from 'react-component-kit-ui/templates/ecommerce-editorial';\n\nexport function getStaticPaths() {\n  return formaStore.products.map((p) => ({ params: { slug: p.slug } }));\n}\n---\n\n<EditorialProductPage slug={Astro.params.slug} />"
     },
     {
      "id": "bag",
@@ -4727,8 +4727,8 @@
       "es": "Página de bolsa con cantidades, nota de regalo, progreso a envío gratis y resumen.",
       "ru": "Страница корзины с количеством, запиской, прогрессом доставки и итогом."
      },
-     "file": "src/pages/bag.astro",
-     "code": "---\nimport { EditorialBagPage } from 'astro-component-kit/templates/ecommerce-editorial';\n---\n\n<EditorialBagPage />"
+     "file": "src/pages/bag.react",
+     "code": "---\nimport { EditorialBagPage } from 'react-component-kit-ui/templates/ecommerce-editorial';\n---\n\n<EditorialBagPage />"
     },
     {
      "id": "checkout",
@@ -4743,8 +4743,8 @@
       "es": "Checkout a pantalla partida con el formulario y un panel tintado con el resumen.",
       "ru": "Оформление на разделённом экране: форма и тонированная панель итога."
      },
-     "file": "src/pages/checkout.astro",
-     "code": "---\nimport { EditorialCheckoutPage } from 'astro-component-kit/templates/ecommerce-editorial';\n---\n\n<EditorialCheckoutPage />"
+     "file": "src/pages/checkout.react",
+     "code": "---\nimport { EditorialCheckoutPage } from 'react-component-kit-ui/templates/ecommerce-editorial';\n---\n\n<EditorialCheckoutPage />"
     }
    ],
    "newComponents": [
@@ -4777,7 +4777,7 @@
     "animated-checkmark",
     "badge"
    ],
-   "storeConfigExample": "---\n// src/pages/index.astro — same store + routes on every page\nimport { EditorialHomePage, formaStore, type EditorialStore } from 'astro-component-kit/templates/ecommerce-editorial';\n\nconst store: EditorialStore = {\n  ...formaStore,\n  name: 'Atelier',\n  currency: 'USD',\n  locale: 'en-US',\n  cartKey: 'atelier-bag',\n};\n---\n\n<EditorialHomePage\n  store={store}\n  theme=\"auto\"\n  routes={{ home: '/', shop: '/shop/', product: '/product/', bag: '/bag/', checkout: '/checkout/' }}\n/>"
+   "storeConfigExample": "---\n// src/pages/index.react — same store + routes on every page\nimport { EditorialHomePage, formaStore, type EditorialStore } from 'react-component-kit-ui/templates/ecommerce-editorial';\n\nconst store: EditorialStore = {\n  ...formaStore,\n  name: 'Atelier',\n  currency: 'USD',\n  locale: 'en-US',\n  cartKey: 'atelier-bag',\n};\n---\n\n<EditorialHomePage\n  store={store}\n  theme=\"auto\"\n  routes={{ home: '/', shop: '/shop/', product: '/product/', bag: '/bag/', checkout: '/checkout/' }}\n/>"
   },
   {
    "slug": "saas-hotel",
@@ -4831,7 +4831,7 @@
     "crm"
    ],
    "previewBase": "/preview/saas-hotel/",
-   "importPath": "astro-component-kit/templates/saas-hotel",
+   "importPath": "react-component-kit-ui/templates/saas-hotel",
    "pages": [
     {
      "id": "landing",
@@ -4846,8 +4846,8 @@
       "es": "Web de marketing: hero, logos, funciones, cómo funciona, cifras, precios con selector, testimonios y FAQ.",
       "ru": "Маркетинговый сайт: hero, логотипы, функции, как это работает, цифры, тарифы, отзывы и FAQ."
      },
-     "file": "src/pages/index.astro",
-     "code": "---\nimport { LandingPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<LandingPage />"
+     "file": "src/pages/index.react",
+     "code": "---\nimport { LandingPage } from 'react-component-kit-ui/templates/saas-hotel';\n---\n\n<LandingPage />"
     },
     {
      "id": "signin",
@@ -4862,8 +4862,8 @@
       "es": "Inicio de sesión a pantalla partida con SSO, mostrar contraseña y validación.",
       "ru": "Вход на разделённом экране с SSO, показом пароля и проверкой."
      },
-     "file": "src/pages/sign-in.astro",
-     "code": "---\nimport { SignInPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<SignInPage />"
+     "file": "src/pages/sign-in.react",
+     "code": "---\nimport { SignInPage } from 'react-component-kit-ui/templates/saas-hotel';\n---\n\n<SignInPage />"
     },
     {
      "id": "dashboard",
@@ -4878,8 +4878,8 @@
       "es": "KPIs, ingresos, ocupación de esta noche, recepción, canales, ocupación por tipo y actividad en vivo.",
       "ru": "KPI, выручка, загрузка на сегодня, ресепшен, каналы, загрузка по типам номеров и активность."
      },
-     "file": "src/pages/app/index.astro",
-     "code": "---\nimport { DashboardPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<DashboardPage />"
+     "file": "src/pages/app/index.react",
+     "code": "---\nimport { DashboardPage } from 'react-component-kit-ui/templates/saas-hotel';\n---\n\n<DashboardPage />"
     },
     {
      "id": "reservations",
@@ -4894,8 +4894,8 @@
       "es": "Rack de habitaciones de 14 días y tabla de reservas con búsqueda, orden y acciones masivas.",
       "ru": "Шахматка на 14 дней и таблица бронирований с поиском, сортировкой и массовыми действиями."
      },
-     "file": "src/pages/app/reservations.astro",
-     "code": "---\nimport { ReservationsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<ReservationsPage />"
+     "file": "src/pages/app/reservations.react",
+     "code": "---\nimport { ReservationsPage } from 'react-component-kit-ui/templates/saas-hotel';\n---\n\n<ReservationsPage />"
     },
     {
      "id": "rooms",
@@ -4910,8 +4910,8 @@
       "es": "KPIs de estado, inventario por tipo y tablero de limpieza interactivo por planta.",
       "ru": "KPI статусов, фонд по типам и интерактивная доска уборки по этажам."
      },
-     "file": "src/pages/app/rooms.astro",
-     "code": "---\nimport { RoomsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<RoomsPage />"
+     "file": "src/pages/app/rooms.react",
+     "code": "---\nimport { RoomsPage } from 'react-component-kit-ui/templates/saas-hotel';\n---\n\n<RoomsPage />"
     },
     {
      "id": "guests",
@@ -4926,8 +4926,8 @@
       "es": "Directorio de huéspedes con niveles, estancias y gasto junto a una ficha CRM.",
       "ru": "Справочник гостей с уровнями, визитами и тратами рядом с CRM-карточкой."
      },
-     "file": "src/pages/app/guests.astro",
-     "code": "---\nimport { GuestsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<GuestsPage />"
+     "file": "src/pages/app/guests.react",
+     "code": "---\nimport { GuestsPage } from 'react-component-kit-ui/templates/saas-hotel';\n---\n\n<GuestsPage />"
     },
     {
      "id": "reports",
@@ -4942,8 +4942,8 @@
       "es": "Previsión, mapa de ritmo de reservas, embudo, segmentos, ADR por canal y comparativa mensual.",
       "ru": "Прогноз, тепловая карта темпа бронирований, воронка, сегменты, ADR по каналам и сравнение месяцев."
      },
-     "file": "src/pages/app/reports.astro",
-     "code": "---\nimport { ReportsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<ReportsPage />"
+     "file": "src/pages/app/reports.react",
+     "code": "---\nimport { ReportsPage } from 'react-component-kit-ui/templates/saas-hotel';\n---\n\n<ReportsPage />"
     },
     {
      "id": "settings",
@@ -4958,8 +4958,8 @@
       "es": "Perfil, propiedad, notificaciones, equipo con roles e invitaciones, plan y facturación.",
       "ru": "Профиль, отель, уведомления, команда с ролями и приглашениями, тариф и оплата."
      },
-     "file": "src/pages/app/settings.astro",
-     "code": "---\nimport { SettingsPage } from 'astro-component-kit/templates/saas-hotel';\n---\n\n<SettingsPage />"
+     "file": "src/pages/app/settings.react",
+     "code": "---\nimport { SettingsPage } from 'react-component-kit-ui/templates/saas-hotel';\n---\n\n<SettingsPage />"
     }
    ],
    "newComponents": [
@@ -5002,7 +5002,7 @@
     "faq-two-column",
     "footer-mega-section"
    ],
-   "storeConfigExample": "---\n// src/pages/app/index.astro — pass your own data (e.g. fetched from your API at build time)\nimport { DashboardPage, lobbyData, type LobbyData } from 'astro-component-kit/templates/saas-hotel';\n\nconst data: LobbyData = {\n  ...lobbyData,\n  workspace: { name: 'Casa Alba', plan: 'Starter', initials: 'CA' },\n  user: { name: 'Marta Gil', role: 'Owner', email: 'marta@casaalba.com' },\n};\n---\n\n<DashboardPage data={data} theme=\"auto\" />"
+   "storeConfigExample": "---\n// src/pages/app/index.react — pass your own data (e.g. fetched from your API at build time)\nimport { DashboardPage, lobbyData, type LobbyData } from 'react-component-kit-ui/templates/saas-hotel';\n\nconst data: LobbyData = {\n  ...lobbyData,\n  workspace: { name: 'Casa Alba', plan: 'Starter', initials: 'CA' },\n  user: { name: 'Marta Gil', role: 'Owner', email: 'marta@casaalba.com' },\n};\n---\n\n<DashboardPage data={data} theme=\"auto\" />"
   }
  ]
 }

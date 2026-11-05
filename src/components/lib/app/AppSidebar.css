@@ -1,5 +1,3 @@
-/* AppSidebar — ported from astro-component-kit (app/AppSidebar.astro) */
-
 .app-sb:where([data-rk-ad73bd]) {
   --sb-w: 252px;
   position: sticky;

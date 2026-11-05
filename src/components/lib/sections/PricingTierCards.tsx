@@ -19,7 +19,7 @@ export interface PricingTierCardsProps {
 export function PricingTierCards({
   badge = "Plans & Pricing",
   title = "Simple, Predictable Pricing for Everyone",
-  subtitle = "Start for free and upgrade as your Astro traffic scales. No surprise overage charges.",
+  subtitle = "Start for free and upgrade as your React traffic scales. No surprise overage charges.",
   className = ""
 }: PricingTierCardsProps) {
   return (

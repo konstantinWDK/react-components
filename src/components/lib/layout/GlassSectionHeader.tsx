@@ -28,9 +28,9 @@ function cx(...args: unknown[]): string {
  * @param {string} className - Additional CSS class to apply.
  *
  * @example
- * ```astro
+ * ```react
  * <GlassSectionHeader
- *   title="Why Astro Components Kit"
+ *   title="Why React Components Kit"
  *   subtitle="Build faster with premium components"
  *   align="center"
  * />

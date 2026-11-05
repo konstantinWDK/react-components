@@ -55,7 +55,7 @@ export function StatsCounterBand({
   const id = `scb-${useId().replace(/[^a-zA-Z0-9]/g, '')}`;
   const fmt = (s: Stat) => `${s.prefix ?? ''}${s.value.toLocaleString('en-US', { minimumFractionDigits: s.decimals ?? 0, maximumFractionDigits: s.decimals ?? 0 })}${s.suffix ?? ''}`;
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

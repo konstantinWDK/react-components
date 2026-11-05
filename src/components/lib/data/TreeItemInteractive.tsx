@@ -2,7 +2,7 @@
 
 import './TreeItemInteractive.css';
 
-/** TreeItemInteractive — ported from astro-component-kit. */
+/** TreeItemInteractive */
 export interface TreeItemInteractiveProps {
 }
 

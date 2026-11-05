@@ -14,8 +14,8 @@ import { lobbyData, saasRoutes, type LobbyData, type SaasRoutes } from './data';
  * ReportsPage — Revenue management reports: occupancy forecast with confidence band, booking
  * pace heatmap, direct-booking funnel, guest segments, ADR by channel and month-over-month deltas.
  *
- * Usage (src/pages/app/reports.astro):
- *   import { ReportsPage } from 'astro-component-kit/templates/saas-hotel';
+ * Usage (app/app/reports/page.tsx, Next.js):
+ *   import { ReportsPage } from 'react-component-kit-ui/templates/saas-hotel';
  *   <ReportsPage />
  *
  * @param {LobbyData} data - Workspace data.

@@ -1,5 +1,3 @@
-/* ProductRating — ported from astro-component-kit (ecommerce/ProductRating.astro) */
-
 .p-rating:where([data-rk-0ac791]) {
   --p-rating-star: var(--c-primary-light, #d4a017);
   display: inline-flex;

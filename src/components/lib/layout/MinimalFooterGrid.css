@@ -1,5 +1,3 @@
-/* MinimalFooterGrid — ported from astro-component-kit (layout/MinimalFooterGrid.astro) */
-
 .m-footer:where([data-rk-f90449]) {
   width: 100%;
   padding: 3rem 1.5rem;

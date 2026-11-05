@@ -11,8 +11,8 @@ import './EditorialCheckoutPage.css';
  * EditorialCheckoutPage — Split-screen checkout in focus mode: CheckoutForm on the paper side,
  * a full-height tinted panel with OrderSummary (promo codes, shipping, total) on the other.
  *
- * Usage (src/pages/checkout.astro):
- *   import { EditorialCheckoutPage } from 'astro-component-kit/templates/ecommerce-editorial';
+ * Usage (app/checkout/page.tsx, Next.js):
+ *   import { EditorialCheckoutPage } from 'react-component-kit-ui/templates/ecommerce-editorial';
  *   <EditorialCheckoutPage />
  *
  * @param {EditorialStore} store - Catalogue and settings.
@@ -31,7 +31,7 @@ export interface EditorialCheckoutPageProps {
 
 export function EditorialCheckoutPage({ store = formaStore, routes = editorialRoutes, theme = 'light', seedCart = false, noindex = true }: EditorialCheckoutPageProps) {
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;

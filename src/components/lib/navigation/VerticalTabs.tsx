@@ -2,7 +2,7 @@
 
 import './VerticalTabs.css';
 
-/** VerticalTabs — ported from astro-component-kit. */
+/** VerticalTabs */
 export interface VerticalTabsProps {
 }
 

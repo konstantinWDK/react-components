@@ -1,5 +1,3 @@
-/* ShopReviewsEditorial — ported from astro-component-kit (sections/ShopReviewsEditorial.astro) */
-
 .sre-cq:where([data-rk-45af0e]) { container-type: inline-size; }
 .sre:where([data-rk-45af0e]) {
   display: grid;

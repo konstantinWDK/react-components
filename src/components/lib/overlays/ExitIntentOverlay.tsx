@@ -2,7 +2,7 @@
 
 import './ExitIntentOverlay.css';
 
-/** ExitIntentOverlay — ported from astro-component-kit. */
+/** ExitIntentOverlay */
 export interface ExitIntentOverlayProps {
 }
 

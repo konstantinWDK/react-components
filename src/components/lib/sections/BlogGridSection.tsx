@@ -55,7 +55,7 @@ export function BlogGridSection({
   title = 'From the blog',
   viewAll = { label: 'View all posts', href: '#' },
   posts = [
-    { title: 'Building zero-JS charts with SVG and Astro', excerpt: 'How we replaced a 200 kB charting library with build-time SVG, without losing tooltips or accessibility.', category: 'Engineering', date: '2026-10-28', readTime: '8 min', author: 'Marcus Lee', href: '#' },
+    { title: 'Building zero-JS charts with SVG and React', excerpt: 'How we replaced a 200 kB charting library with build-time SVG, without losing tooltips or accessibility.', category: 'Engineering', date: '2026-10-28', readTime: '8 min', author: 'Marcus Lee', href: '#' },
     { title: 'Designing for dark mode first', excerpt: 'Contrast, elevation and color tokens that hold up at night.', category: 'Design', date: '2026-10-21', readTime: '5 min', author: 'Sofía Ruiz', href: '#' },
     { title: 'The accessibility checklist we run on every component', excerpt: 'Focus, keyboard, contrast and screen readers — our exact process.', category: 'Accessibility', date: '2026-10-14', readTime: '6 min', author: 'Priya Natarajan', href: '#' },
     { title: 'Landing page anatomy: 7 sections that convert', excerpt: 'A data-backed look at hero, proof, pricing and FAQ placement.', category: 'Growth', date: '2026-10-07', readTime: '7 min', author: 'Alicia Gómez', href: '#' },

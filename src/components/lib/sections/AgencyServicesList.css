@@ -1,5 +1,3 @@
-/* AgencyServicesList — ported from astro-component-kit (sections/AgencyServicesList.astro) */
-
 .cq-agency-services:where([data-rk-773b38]) { container-type: inline-size; }
 .asl:where([data-rk-773b38]) { color: var(--c-text-1, #fff); }
 .asl__head:where([data-rk-773b38]) { display: grid; gap: var(--sp-2, 0.5rem); margin-bottom: var(--sp-6, 1.5rem); }

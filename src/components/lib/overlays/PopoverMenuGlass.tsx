@@ -2,7 +2,7 @@
 
 import './PopoverMenuGlass.css';
 
-/** PopoverMenuGlass — ported from astro-component-kit. */
+/** PopoverMenuGlass */
 export interface PopoverMenuGlassProps {
 }
 

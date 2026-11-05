@@ -1,5 +1,3 @@
-/* HeroTerminal — ported from astro-component-kit (sections/HeroTerminal.astro) */
-
 .cq-hero-terminal-cq:where([data-rk-ac30d5]) { container-type: inline-size; }
 .ht:where([data-rk-ac30d5]) {
   --ht-py: 5.5rem;

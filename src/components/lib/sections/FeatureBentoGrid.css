@@ -1,5 +1,3 @@
-/* FeatureBentoGrid — ported from astro-component-kit (sections/FeatureBentoGrid.astro) */
-
 .cq-feature-bento-grid-cq:where([data-rk-c1d0ee]) { container-type: inline-size; }
 .bento-section:where([data-rk-c1d0ee]) {
   position: relative;

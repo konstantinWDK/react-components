@@ -21,7 +21,7 @@ export function StepLayoutVertical({ className = '' }: StepLayoutVerticalProps) 
         <div className="step-content" data-rk-3280db="">
           <div className="step-block" data-rk-3280db="">
             <h4 data-rk-3280db="">1. Installation</h4>
-            <p data-rk-3280db="">Install astro-component-kit via npm in seconds.</p>
+            <p data-rk-3280db="">Install react-component-kit-ui via npm in seconds.</p>
           </div>
           <div className="step-block" data-rk-3280db="">
             <h4 data-rk-3280db="">2. Configuration</h4>

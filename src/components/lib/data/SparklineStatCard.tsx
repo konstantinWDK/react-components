@@ -2,7 +2,7 @@
 
 import './SparklineStatCard.css';
 
-/** SparklineStatCard — ported from astro-component-kit. */
+/** SparklineStatCard */
 export interface SparklineStatCardProps {
 }
 

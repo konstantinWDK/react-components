@@ -53,7 +53,7 @@ export function ContactGlassForm({
                   </div>
                   <div className="channel-details" data-rk-6b0fee="">
                     <span className="channel-label" data-rk-6b0fee="">Direct Email</span>
-                    <a href="mailto:support@astrocomponents.dev" className="channel-link" data-rk-6b0fee="">support@astrocomponents.dev</a>
+                    <a href="mailto:support@reactcomponents.dev" className="channel-link" data-rk-6b0fee="">support@reactcomponents.dev</a>
                   </div>
                 </div>
       
@@ -63,7 +63,7 @@ export function ContactGlassForm({
                   </div>
                   <div className="channel-details" data-rk-6b0fee="">
                     <span className="channel-label" data-rk-6b0fee="">Open Source GitHub</span>
-                    <a href="https://github.com" target="_blank" rel="noopener" className="channel-link" data-rk-6b0fee="">github.com/astro-components</a>
+                    <a href="https://github.com" target="_blank" rel="noopener" className="channel-link" data-rk-6b0fee="">github.com/react-components</a>
                   </div>
                 </div>
       
@@ -73,7 +73,7 @@ export function ContactGlassForm({
                   </div>
                   <div className="channel-details" data-rk-6b0fee="">
                     <span className="channel-label" data-rk-6b0fee="">Community Discord</span>
-                    <a href="https://discord.com" target="_blank" rel="noopener" className="channel-link" data-rk-6b0fee="">discord.gg/astro-components</a>
+                    <a href="https://discord.com" target="_blank" rel="noopener" className="channel-link" data-rk-6b0fee="">discord.gg/react-components</a>
                   </div>
                 </div>
               </div>

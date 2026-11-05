@@ -1,5 +1,3 @@
-/* PricingTierCards — ported from astro-component-kit (sections/PricingTierCards.astro) */
-
 .cq-pricing-tier-cards-cq:where([data-rk-9c5b50]) { container-type: inline-size; }
 .tier-pricing-section:where([data-rk-9c5b50]) {
   padding: var(--sp-20, 5rem) var(--sp-6, 1.5rem);

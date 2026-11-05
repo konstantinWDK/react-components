@@ -1,5 +1,3 @@
-/* ShopNewsletterEditorial — ported from astro-component-kit (sections/ShopNewsletterEditorial.astro) */
-
 .sne-cq:where([data-rk-b34b0e]) { container-type: inline-size; }
 .sne:where([data-rk-b34b0e]) {
   display: grid;

@@ -1,3 +1,1 @@
-/* GradientHeading — ported from astro-component-kit (typography/GradientHeading.astro) */
-
 .grad-txt:where([data-rk-3ff594]) { display: inline-block; font-weight: 900; background: linear-gradient(135deg, var(--from), var(--to)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.2; margin: 0; }

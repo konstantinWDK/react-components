@@ -1,5 +1,3 @@
-/* ContactSplitMap — ported from astro-component-kit (sections/ContactSplitMap.astro) */
-
 .cq-contact-split-map-cq:where([data-rk-06aea3]) { container-type: inline-size; }
 .csm:where([data-rk-06aea3]) {
   --csm-py: 5.5rem;

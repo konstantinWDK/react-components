@@ -28,7 +28,7 @@ function cx(...args: unknown[]): string {
  * @param {ShippingRate[]} shippingRates - Rates matching CheckoutForm's `shipping` radios.
  * @param {number} freeShippingThreshold - Subtotal that makes the first rate free (0 disables). Default 75.
  * @param {number} taxRate - Tax as a fraction (0.08 = 8%). Default 0.08.
- * @param {Record<string, number>} promoCodes - Code → percent discount. Default { ASTRO10: 10 }.
+ * @param {Record<string, number>} promoCodes - Code → percent discount. Default { REACT10: 10 }.
  * @param {string} editHref - "Edit cart" link (optional).
  * @param {string} currency - ISO currency. Default 'USD'.
  * @param {string} locale - Number format locale. Default 'en-US'.
@@ -64,7 +64,7 @@ export function OrderSummary({
   ],
   freeShippingThreshold = 75,
   taxRate = 0.08,
-  promoCodes = { ASTRO10: 10 },
+  promoCodes = { REACT10: 10 },
   editHref,
   currency = 'USD',
   locale = 'en-US',
@@ -74,7 +74,7 @@ export function OrderSummary({
 }: OrderSummaryProps) {
   const config = JSON.stringify({ shippingRates, freeShippingThreshold, taxRate, promoCodes, currency, locale });
 
-  // Ported from the Astro <script>: runs once after mount (DOM logic kept as in the Astro kit).
+  // Client-side behaviour: runs once after mount.
   const mounted = useRef(false);
   useEffect(() => {
     if (mounted.current) return;
