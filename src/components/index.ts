@@ -16,5 +16,9 @@ export * from './lib/typography';
 
 // Root-level components (no category folder)
 export { AnimatedGalaxy } from './lib/AnimatedGalaxy';
-export { Galaxy3D } from './lib/Galaxy3D';
 export { LogoWithGalaxy } from './lib/LogoWithGalaxy';
+
+// Components with optional peer dependencies live in their own entry points so that
+// bundlers never try to resolve a peer you did not install:
+//   react-component-kit-ui/apexcharts → AreaChart, BarChart, DonutChart (needs `apexcharts`)
+//   react-component-kit-ui/three      → Galaxy3D (needs `three`)

@@ -1,9 +1,6 @@
 // src/components/lib/charts/index.ts
 // Barrel export for chart components
 
-export { default as AreaChart } from './AreaChart';
-export { default as BarChart } from './BarChart';
-export { default as DonutChart } from './DonutChart';
 export { default as RadarMetricChart } from './RadarMetricChart';
 export { default as LinearProgressGauge } from './LinearProgressGauge';
 
@@ -50,3 +47,6 @@ export { default as SunburstChart } from './SunburstChart';
 export { default as TreemapChart } from './TreemapChart';
 export { default as WaffleChart } from './WaffleChart';
 export { default as WaterfallChart } from './WaterfallChart';
+
+// AreaChart, BarChart and DonutChart need the optional `apexcharts` peer:
+// import them from 'react-component-kit-ui/apexcharts'.

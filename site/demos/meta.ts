@@ -6,6 +6,14 @@ import { generatedMeta } from './generated-meta';
 
 export type { DemoMeta };
 
+/** Components shipped in their own entry point because of an optional peer dependency. */
+export const ENTRY_OVERRIDES: Record<string, { entry: string; peer: string }> = {
+  AreaChart: { entry: 'apexcharts', peer: 'apexcharts' },
+  BarChart: { entry: 'apexcharts', peer: 'apexcharts' },
+  DonutChart: { entry: 'apexcharts', peer: 'apexcharts' },
+  Galaxy3D: { entry: 'three', peer: 'three' },
+};
+
 const b = (file: string, usage: string): DemoMeta => ({ file, category: 'buttons', usage });
 const f = (file: string, usage: string): DemoMeta => ({ file, category: 'feedback', usage });
 

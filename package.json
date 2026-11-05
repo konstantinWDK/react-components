@@ -6,6 +6,64 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/types/components/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "app": [
+        "./dist/types/components/lib/app/index.d.ts"
+      ],
+      "buttons": [
+        "./dist/types/components/lib/buttons/index.d.ts"
+      ],
+      "cards": [
+        "./dist/types/components/lib/cards/index.d.ts"
+      ],
+      "charts": [
+        "./dist/types/components/lib/charts/index.d.ts"
+      ],
+      "apexcharts": [
+        "./dist/types/components/apexcharts.d.ts"
+      ],
+      "three": [
+        "./dist/types/components/three.d.ts"
+      ],
+      "data": [
+        "./dist/types/components/lib/data/index.d.ts"
+      ],
+      "ecommerce": [
+        "./dist/types/components/lib/ecommerce/index.d.ts"
+      ],
+      "feedback": [
+        "./dist/types/components/lib/feedback/index.d.ts"
+      ],
+      "forms": [
+        "./dist/types/components/lib/forms/index.d.ts"
+      ],
+      "layout": [
+        "./dist/types/components/lib/layout/index.d.ts"
+      ],
+      "navigation": [
+        "./dist/types/components/lib/navigation/index.d.ts"
+      ],
+      "overlays": [
+        "./dist/types/components/lib/overlays/index.d.ts"
+      ],
+      "sections": [
+        "./dist/types/components/lib/sections/index.d.ts"
+      ],
+      "typography": [
+        "./dist/types/components/lib/typography/index.d.ts"
+      ],
+      "templates/ecommerce": [
+        "./dist/types/components/lib/templates/ecommerce/index.d.ts"
+      ],
+      "templates/ecommerce-editorial": [
+        "./dist/types/components/lib/templates/ecommerce-editorial/index.d.ts"
+      ],
+      "templates/saas-hotel": [
+        "./dist/types/components/lib/templates/saas-hotel/index.d.ts"
+      ]
+    }
+  },
   "exports": {
     ".": {
       "types": "./dist/types/components/index.d.ts",
@@ -26,6 +84,14 @@
     "./charts": {
       "types": "./dist/types/components/lib/charts/index.d.ts",
       "import": "./dist/charts.js"
+    },
+    "./apexcharts": {
+      "types": "./dist/types/components/apexcharts.d.ts",
+      "import": "./dist/apexcharts.js"
+    },
+    "./three": {
+      "types": "./dist/types/components/three.d.ts",
+      "import": "./dist/three.js"
     },
     "./data": {
       "types": "./dist/types/components/lib/data/index.d.ts",

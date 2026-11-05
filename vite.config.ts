@@ -18,6 +18,8 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(__dirname, 'src/components/index.ts'),
+        apexcharts: resolve(__dirname, 'src/components/apexcharts.ts'),
+        three: resolve(__dirname, 'src/components/three.ts'),
         ...Object.fromEntries(categories.map((c) => [c, resolve(libDir, c, 'index.ts')])),
         ...Object.fromEntries(templates.map((t) => [`templates/${t}`, resolve(libDir, 'templates', t, 'index.ts')])),
       },

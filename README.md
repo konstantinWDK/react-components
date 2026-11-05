@@ -96,7 +96,8 @@ Every component is self-contained. Copy `GlassButton.tsx` + `GlassButton.css` fr
 | Overlays | `react-component-kit-ui/overlays` | 23 |
 | Data display | `react-component-kit-ui/data` | 23 |
 | Typography | `react-component-kit-ui/typography` | 24 |
-| Charts (SVG + ApexCharts) | `react-component-kit-ui/charts` | 47 |
+| Charts (pure SVG) | `react-component-kit-ui/charts` | 44 |
+| Charts (ApexCharts) | `react-component-kit-ui/apexcharts` | 3 |
 | E-commerce | `react-component-kit-ui/ecommerce` | 25 |
 | App & dashboard | `react-component-kit-ui/app` | 13 |
 | Sections | `react-component-kit-ui/sections` | 51 |
@@ -113,7 +114,14 @@ export default function Page() {
 }
 ```
 
-Optional peer dependencies: `apexcharts` (AreaChart, BarChart, DonutChart) and `three` (Galaxy3D). Everything else has zero dependencies.
+Everything has zero runtime dependencies except two optional peers, which live in their own entry points so your bundler never looks for a package you did not install:
+
+| Entry point | Components | Install |
+|-------------|------------|---------|
+| `react-component-kit-ui/apexcharts` | `AreaChart`, `BarChart`, `DonutChart` | `npm install apexcharts` |
+| `react-component-kit-ui/three` | `Galaxy3D` | `npm install three` |
+
+The other 44 charts in `react-component-kit-ui/charts` are pure SVG.
 
 ### How styles stay isolated
 

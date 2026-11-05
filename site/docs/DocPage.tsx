@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Locale } from '../config/site';
 import { siteConfig } from '../config/site';
 import { docsComponents, getComponentBySlug, categories } from '../data/registry';
-import { demoMeta, SPACIOUS_PREVIEW } from '../demos/meta';
+import { demoMeta, SPACIOUS_PREVIEW, ENTRY_OVERRIDES } from '../demos/meta';
 import { DemoRenderer } from '../demos/DemoRenderer';
 import HardcodedPreview from '../demos/HardcodedPreview';
 import { HARDCODED_SLUGS } from '../demos/hardcoded-slugs';
@@ -34,7 +34,9 @@ export function DocPage({ slug, lang }: { slug: string; lang: Locale }) {
   const prev = idx > 0 ? docsComponents[idx - 1] : null;
   const next = idx < docsComponents.length - 1 ? docsComponents[idx + 1] : null;
 
-  const usage = `import { ${meta.file} } from '${siteConfig.packageName}/${meta.category}';\n\n${meta.usage}`;
+  const special = ENTRY_OVERRIDES[meta.file];
+  const entry = special?.entry ?? meta.category;
+  const usage = `${special ? `// npm install ${special.peer}\n` : ''}import { ${meta.file} } from '${siteConfig.packageName}/${entry}';\n\n${meta.usage}`;
   const src = readComponentSource(meta.category, meta.file);
   const path = `/docs/${slug}`;
 
@@ -116,7 +118,7 @@ export function DocPage({ slug, lang }: { slug: string; lang: Locale }) {
           <dl className="props-list">
             <div className="props-row"><dt>{t('doc.category')}</dt><dd>{category?.name}</dd></div>
             <div className="props-row"><dt>{t('doc.filename')}</dt><dd><code>{meta.file}.tsx</code></dd></div>
-            <div className="props-row"><dt>{t('doc.dependencies')}</dt><dd>{t('doc.depsNone')}</dd></div>
+            <div className="props-row"><dt>{t('doc.dependencies')}</dt><dd>{special ? `${special.peer} (peer)` : t('doc.depsNone')}</dd></div>
             <div className="props-row"><dt>{t('doc.tags')}</dt><dd className="tags-row">{comp.tags.map((tag) => <span key={tag} className="doc-tag">{tag}</span>)}</dd></div>
           </dl>
         </section>
