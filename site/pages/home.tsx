@@ -11,9 +11,10 @@ import { TemplatesPromo } from '../home/TemplatesPromo';
 import { SectionRenderer } from '../docs/SectionRenderer';
 import { CopyCommand, CubesHero, HomeEffects, SectionsCarouselNav } from '../home/HomeClient';
 import { CyberpunkButton, GlowButton, LiquidButton, MagneticButton, NeonBorderButton, RetroArcadeButton, RippleButton, ShimmerButton } from '../../src/components/lib/buttons';
-import { SparklineChart, RadialBarChart, KpiStatTile, GaugeChart, ActivityRings, MeterGauge, WaffleChart, BulletChart, PieChart, FunnelChart } from '../../src/components/lib/charts';
-import { NotificationCard, MusicPlayerMini, InteractiveTiltCard } from '../../src/components/lib/cards';
-import { SegmentedControl, GlassSlider, SearchReveal, StepperInput, PasswordStrengthInput, GlassInlineToggleGroup } from '../../src/components/lib/forms';
+import { KpiStatTile, GaugeChart, ActivityRings, MeterGauge, WaffleChart, BulletChart, PieChart, FunnelChart } from '../../src/components/lib/charts';
+import { InteractiveTiltCard } from '../../src/components/lib/cards';
+import { OTPInput, NeumorphicSwitch, SearchReveal, StepperInput, PasswordStrengthInput, GlassInlineToggleGroup } from '../../src/components/lib/forms';
+import { AvatarGroupStack, ProgressListSmall } from '../../src/components/lib/data';
 import { FloatingTabBar } from '../../src/components/lib/navigation';
 import { HackerDecodeText } from '../../src/components/lib/typography';
 import pkg from '../../package.json';
@@ -108,21 +109,12 @@ export function HomePage({ lang }: { lang: Locale }) {
   const href = (p: string) => getLocalizedPath(p, lang);
 
   const heroCards: { slug: string; depth: 'near' | 'mid' | 'far'; inner?: string; node: ReactNode }[] = [
-    {
-      slug: 'sparkline-chart', depth: 'near', inner: 'kpi',
-      node: (
-        <>
-          <span className="hero-kpi__label">{t({ en: 'Monthly revenue', es: 'Ingresos mensuales', ru: 'Выручка за месяц' })}</span>
-          <span className="hero-kpi__row"><strong className="hero-kpi__value">$48.2k</strong><span className="hero-kpi__delta">+24%</span></span>
-          <SparklineChart data={[18, 22, 19, 26, 24, 31, 28, 35, 33, 41, 39, 48]} size="lg" variant="area" label="Monthly revenue" />
-        </>
-      ),
-    },
-    { slug: 'notification-card', depth: 'far', inner: 'flush', node: <NotificationCard type="success" title={t({ en: 'Deploy succeeded', es: 'Despliegue completado', ru: 'Деплой завершён' })} message={t({ en: '1,029 pages built in 18s', es: '1.029 páginas generadas en 18s', ru: '1029 страниц собрано за 18 с' })} /> },
-    { slug: 'segmented-control', depth: 'mid', node: <SegmentedControl name="hero-range" idPrefix="hero-seg" options={[{ label: '7D', value: '7d' }, { label: '30D', value: '30d', checked: true }, { label: '90D', value: '90d' }, { label: '1Y', value: '1y' }]} /> },
-    { slug: 'radial-bar-chart', depth: 'mid', inner: 'chart', node: <RadialBarChart size="sm" variant="ghost" title={t({ en: 'Adoption', es: 'Adopción', ru: 'Внедрение' })} subtitle="" items={[{ label: 'Charts', value: 82 }, { label: 'Sections', value: 64 }, { label: 'Forms', value: 47 }]} /> },
-    { slug: 'music-player-mini', depth: 'far', inner: 'flush', node: <MusicPlayerMini title="Midnight Build" artist="React Kit · Lo-fi" progress={62} /> },
-    { slug: 'glass-slider', depth: 'near', inner: 'slider', node: <GlassSlider id="hero-slider" label={t({ en: 'Blur intensity', es: 'Desenfoque', ru: 'Размытие' })} value={68} /> },
+    { slug: 'kpi-stat-tile', depth: 'near', inner: 'flush', node: <KpiStatTile label={t({ en: 'Active users', es: 'Usuarios activos', ru: 'Активные пользователи' })} value="12.4k" change={8.2} period={t({ en: 'vs last week', es: 'vs semana pasada', ru: 'к прошлой неделе' })} trend={[6, 7, 6.5, 8, 7.8, 9.2, 10.1, 9.8, 11.4, 12.4]} variant="ghost" size="sm" /> },
+    { slug: 'avatar-group-stack', depth: 'far', node: <AvatarGroupStack /> },
+    { slug: 'otp-input', depth: 'mid', node: <OTPInput id="hero-otp" length={4} label={t({ en: 'Verification code', es: 'Código de verificación', ru: 'Код подтверждения' })} /> },
+    { slug: 'gauge-chart', depth: 'mid', inner: 'chart', node: <GaugeChart variant="ghost" size="sm" title={t({ en: 'Uptime', es: 'Disponibilidad', ru: 'Аптайм' })} subtitle="" value={99.9} max={100} prefix="" suffix="%" label={t({ en: 'of SLA target', es: 'del objetivo SLA', ru: 'от цели SLA' })} color="#38bdf8" /> },
+    { slug: 'progress-list-small', depth: 'far', inner: 'flush', node: <ProgressListSmall /> },
+    { slug: 'neumorphic-switch', depth: 'near', node: <NeumorphicSwitch id="hero-switch" label={t({ en: 'Live preview', es: 'Vista en vivo', ru: 'Живой просмотр' })} checked /> },
   ];
 
   const track1: { slug: string; label: string; node: ReactNode; minWidth?: number }[] = [

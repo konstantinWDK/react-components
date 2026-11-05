@@ -110,26 +110,26 @@ function atomTargets(): { p: Vec3; size: number }[] {
   for (const angle of [0, Math.PI / 3, (2 * Math.PI) / 3]) {
     const ca = Math.cos(angle);
     const sa = Math.sin(angle);
-    const steps = 118;
+    const steps = 96;
     for (let i = 0; i < steps; i++) {
       const t = (i / steps) * Math.PI * 2;
       const ex = rx * Math.cos(t);
       const ey = ry * Math.sin(t);
       const big = Math.random() < 0.28;
-      const size = big ? rand(0.5, 0.66) : rand(0.24, 0.4);
+      const size = big ? rand(0.68, 0.9) : rand(0.34, 0.54);
       out.push({ p: { x: ex * ca - ey * sa, y: ex * sa + ey * ca, z: rand(-0.35, 0.35) + Math.sin(t) * 0.6 }, size });
       if (Math.random() < 0.22) {
         // a few doubled voxels make the rings feel built, not drawn
-        out.push({ p: { x: ex * ca - ey * sa + rand(-0.35, 0.35), y: ex * sa + ey * ca + rand(-0.35, 0.35), z: rand(-0.7, 0.7) }, size: rand(0.18, 0.3) });
+        out.push({ p: { x: ex * ca - ey * sa + rand(-0.35, 0.35), y: ex * sa + ey * ca + rand(-0.35, 0.35), z: rand(-0.7, 0.7) }, size: rand(0.26, 0.42) });
       }
     }
   }
-  const step = 0.52;
+  const step = 0.66;
   for (let x = -2; x <= 2; x++)
     for (let y = -2; y <= 2; y++)
       for (let z = -2; z <= 2; z++) {
         if (x * x + y * y + z * z > 4.6) continue;
-        out.push({ p: { x: x * step, y: y * step, z: z * step }, size: rand(0.36, 0.48) });
+        out.push({ p: { x: x * step, y: y * step, z: z * step }, size: rand(0.48, 0.62) });
       }
   return out;
 }
@@ -193,7 +193,7 @@ export function mountCubes(canvas: HTMLCanvasElement, THREE: THREE, RoundedBoxGe
     const mesh: 0 | 1 = Math.random() < 0.55 ? 0 : 1;
     const big = Math.random() < 0.18;
     loose.push({
-      mesh, index: take(mesh), size: big ? rand(0.9, 1.7) : rand(0.16, 0.5),
+      mesh, index: take(mesh), size: big ? rand(1.1, 2.1) : rand(0.24, 0.66),
       pos: { x: rand(-30, 30), y: rand(-16, 16), z: rand(-22, 4) },
       vel: { x: 0, y: 0, z: 0 }, rot: randRot(), spin: { x: rand(-0.5, 0.5), y: rand(-0.5, 0.5), z: rand(-0.3, 0.3) },
     });
