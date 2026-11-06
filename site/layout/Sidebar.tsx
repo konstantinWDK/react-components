@@ -25,8 +25,13 @@ export function Sidebar({ lang, path, data }: { lang: Locale; path: string; data
   const L = data.labels;
   const current = path.replace(/\/$/, '') || '/';
   const allGroups = useMemo(() => [...data.componentGroups, ...data.sectionGroups], [data]);
+  // On the installation page (entry point of "Components") the first group starts open,
+  // elsewhere only the group that contains the current page.
   const initiallyOpen = useMemo(
-    () => Object.fromEntries(allGroups.map((g) => [g.id, g.items.some((i) => i.raw === current)])),
+    () =>
+      Object.fromEntries(
+        allGroups.map((g, i) => [g.id, g.items.some((it) => it.raw === current) || (current.startsWith('/install') && i === 0)]),
+      ),
     [allGroups, current],
   );
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>(initiallyOpen);
