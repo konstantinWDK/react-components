@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Marketing agency template `templates/agency` ("Volta")**: 8 pages (home, services, service detail, case studies, case study, pricing, about, contact), dark by default; live preview at `/preview/agency/`.
+- **Developer portfolio template `templates/portfolio` ("Keycap")**: 6 pages (home, projects, case study, blog, article, contact) with 3D sections; live preview at `/preview/portfolio/`.
+- **34 sections** in `sections`: 19 `Agency*` (12 new, 7 that existed but were never exported) and 15 `Dev*`.
+- 3D sections (`DevHero`, `DevProjectsShowcase`, `DevKeyboard`, `DevContributions`, `DevMonitor`) load `three` with a dynamic `import()`, so the `sections` entry still works without the optional peer dependency; scenes are scoped to their component and disposed on unmount.
+- Template pages show optional peer dependencies (`peerDeps`) instead of "0 deps".
+
+### Fixed
+- `gen-template-snippets`: page file paths (`app/index.react/page.tsx` → `app/page.tsx`) after the de-astro rename.
+
 ## [0.1.0] - 2026-11-05
 
 First public release of **React Components Kit**: the complete Astro Components Kit catalogue for React 18 & 19, with the docs site at [reactcomponents.dev](https://reactcomponents.dev).

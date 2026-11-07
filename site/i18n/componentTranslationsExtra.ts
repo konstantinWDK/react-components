@@ -464,4 +464,142 @@ export const componentTranslationsExtra: Record<string, ComponentTranslation> = 
     es: 'Pie de página completo con marca, newsletter, columnas de enlaces, estado del sistema y redes.',
     ru: 'Полный футер сайта: бренд, подписка, колонки ссылок, статус системы и соцсети.',
   },
+  // ── Agency & Marketing ──────────────────────────────────────
+  'agency-header': {
+    es: "Navegación flotante tipo píldora para agencias: logo, enlaces, cambio de tema, CTA y menú móvil a pantalla completa animado.",
+    ru: "Плавающая навигация-«таблетка» для агентств: логотип, ссылки, смена темы, CTA и анимированное мобильное меню на весь экран.",
+  },
+  'agency-hero-kinetic': {
+    es: "Hero de agencia con titular gigante cuya última palabra rota resaltada como con rotulador, CTAs, prueba social y pegatinas flotantes.",
+    ru: "Hero агентства с огромным заголовком, последнее слово которого меняется с маркерной подсветкой, CTA, соцдоказательство и стикеры.",
+  },
+  'agency-page-hero': {
+    es: "Hero de página interior: migas de pan, antetítulo, titular gigante con palabra resaltada, intro, CTA y cifras clave.",
+    ru: "Hero внутренней страницы: хлебные крошки, надзаголовок, крупный заголовок с выделенным словом, вступление, CTA и ключевые цифры.",
+  },
+  'agency-service-pillars': {
+    es: "Tarjetas de servicios para agencia de marketing (Ads, SEO, Web): icono, propuesta, KPI destacado, entregables, precio y enlace.",
+    ru: "Карточки услуг маркетингового агентства (реклама, SEO, сайты): иконка, описание, ключевой KPI, состав работ, цена и ссылка.",
+  },
+  'agency-services-list': {
+    es: "Filas de servicios numeradas y desplegables: nombres grandes, propuesta, entregables, plazos y precio «desde».",
+    ru: "Нумерованные раскрывающиеся строки услуг: крупные названия, описание, состав работ, сроки и цена «от».",
+  },
+  'agency-results-band': {
+    es: "Franja de resultados grandes (€42M, 4.8×, +212%) que cuentan al hacer scroll, con etiquetas y letra pequeña.",
+    ru: "Полоса крупных результатов (€42M, 4.8×, +212%) со счётчиками при прокрутке, подписями и пояснениями.",
+  },
+  'agency-platforms-marquee': {
+    es: "Dos filas en movimiento opuesto con plataformas y herramientas (Google Ads, Meta, Search Console…) e insignias de partner.",
+    ru: "Две встречные бегущие строки платформ и инструментов (Google Ads, Meta, Search Console…) с партнёрскими бейджами.",
+  },
+  'agency-process-steps': {
+    es: "Línea de tiempo «Cómo trabajamos» con fases numeradas y duración, unidas por una línea que se rellena al hacer scroll.",
+    ru: "Таймлайн «Как мы работаем»: нумерованные этапы со сроками, соединённые линией, заполняющейся при прокрутке.",
+  },
+  'agency-audit-cta': {
+    es: "Gancho de captación «auditoría gratis»: formulario web + email con validación, escaneo animado y medidor de puntuación con hallazgos.",
+    ru: "Лид-магнит «бесплатный аудит»: форма сайта и email с проверкой, анимированное сканирование и шкала оценки с выводами.",
+  },
+  'agency-roi-calculator': {
+    es: "Calculadora de ROI para anuncios: deslizadores de inversión, CPC, conversión y ticket medio con ingresos, ROAS y proyección en vivo.",
+    ru: "Калькулятор ROI рекламы: ползунки бюджета, CPC, конверсии и среднего чека с выручкой, ROAS и прогнозом после оптимизации.",
+  },
+  'agency-pricing-packages': {
+    es: "Precios de agencia con una pestaña por servicio, tres paquetes cada una y selector mensual / 6 meses para las cuotas.",
+    ru: "Цены агентства: вкладка на каждую услугу, по три пакета и переключатель оплаты помесячно / 6 месяцев.",
+  },
+  'agency-service-overview': {
+    es: "Detalle de servicio: columna fija con propuesta, cifras de resultado, herramientas y CTA junto a una lista numerada de lo incluido.",
+    ru: "Описание услуги: закреплённая колонка с предложением, результатами, инструментами и CTA рядом с нумерованным списком «Что входит».",
+  },
+  'agency-work-grid': {
+    es: "Cuadrícula de casos de éxito con filtros por categoría, imágenes grandes, cliente, título, servicios y resultado destacado.",
+    ru: "Сетка кейсов с фильтрами по категориям, крупными обложками, клиентом, заголовком, услугами и главным результатом.",
+  },
+  'agency-case-study-hero': {
+    es: "Cabecera de caso de éxito: enlace atrás, cliente y categoría, titular, resumen, datos del proyecto y gran resultado sobre ilustración.",
+    ru: "Шапка кейса: ссылка назад, клиент и категория, заголовок, краткое описание, факты проекта и крупный результат на иллюстрации.",
+  },
+  'agency-case-results': {
+    es: "Cuerpo del caso: reto, enfoque numerado, tabla de métricas antes/después, gráfico SVG de 12 meses y cita del cliente.",
+    ru: "Тело кейса: задача, шаги решения, таблица «до/после», SVG-график за 12 месяцев и цитата клиента.",
+  },
+  'agency-quotes': {
+    es: "Testimonios de clientes con una cita principal grande, el resultado medible de cada uno, avatares y valoración media.",
+    ru: "Отзывы клиентов: крупная главная цитата, измеримый результат каждого, аватары и общий рейтинг.",
+  },
+  'agency-team-grid': {
+    es: "Retratos del equipo con cargo, ciudad, dato curioso al pasar el ratón o enfocar, redes y tarjeta «estamos contratando».",
+    ru: "Портреты команды с должностью, городом, интересным фактом при наведении или фокусе, соцсетями и карточкой вакансий.",
+  },
+  'agency-contact-brief': {
+    es: "Formulario «Empezar un proyecto»: servicios, presupuesto, plazos, datos y mensaje con validación, más contactos directos.",
+    ru: "Бриф «Начать проект»: услуги, бюджет, сроки, контакты и сообщение с проверкой, плюс прямые каналы связи.",
+  },
+  'agency-footer-cta': {
+    es: "Pie de agencia encabezado por un gigantesco «Hablemos», con columnas de enlaces, oficinas, redes y línea legal.",
+    ru: "Футер агентства с огромной ссылкой «Давайте поговорим», колонками ссылок, офисами, соцсетями и юридической строкой.",
+  },
+  // ── Developer Portfolio ("Keycap") ───────────────────────────
+  'dev-header': {
+    es: "Navegación flotante con un logo partido que se contrae al hacer scroll (N·OALINDQVIST·.DEV → N.DEV), enlaces en píldora, cambio de tema claro/oscuro y menú móvil a pantalla completa.",
+    ru: "Плавающая навигация с разделённым логотипом, который сворачивается при прокрутке (N·OALINDQVIST·.DEV → N.DEV), ссылки-«таблетки», переключатель темы и мобильное меню на весь экран.",
+  },
+  'dev-hero': {
+    es: "Hero de desarrollador: un título enorme que se reescribe solo, el nombre cayendo con bloques flotantes, un indicador de estado y una cinta infinita de habilidades con tooltips, sobre una matriz de puntos 3D que se aparta del cursor.",
+    ru: "Hero разработчика: огромный заголовок, который перепечатывается сам, имя с падающими блоками, статус и бесконечная лента навыков с подсказками на фоне 3D-матрицы точек, расступающейся вокруг курсора.",
+  },
+  'dev-projects-showcase': {
+    es: "Slider 3D de proyectos: tarjetas de papel con contornos de tinta en perspectiva, cada una con un visual animado elegido por datos (código, terminal, ecualizador, monitor, endpoints, pintura, átomo). Arrastra, usa las teclas o las flechas; haz clic para abrir la ficha.",
+    ru: "3D-слайдер проектов: бумажные карточки с чернильным контуром в перспективе, у каждой анимированный визуал по данным (код, терминал, эквалайзер, монитор, эндпоинты, рисунок, атом). Перетаскивайте, используйте клавиши или стрелки; клик открывает карточку проекта.",
+  },
+  'dev-keyboard': {
+    es: "Teclado mecánico 3D a todo el ancho que escribe tu stack solo y lo repite como una palabra gigante de fondo; el contenido del slot (p. ej. una lista de repos) flota sobre las filas inferiores.",
+    ru: "3D-механическая клавиатура во всю ширину, которая сама печатает ваш стек и повторяет каждое слово огромными буквами на фоне; содержимое слота (например, список репозиториев) лежит поверх нижних рядов.",
+  },
+  'dev-repo-list': {
+    es: "Lista esmerilada de repositorios open source con lenguaje, estrellas, descripción, enlace al código y un ojo para la web en vivo; muestra el resto con «Ver todos».",
+    ru: "Матовый список open-source репозиториев: язык, звёзды, описание, ссылка на код и «глаз» живого сайта; остальные раскрываются кнопкой «Показать все».",
+  },
+  'dev-contributions': {
+    es: "Matriz de contribuciones estilo GitHub en 3D: cubos apenas redondeados que llegan volando y se montan, se siguen reconstruyendo y ondulan como agua alrededor del cursor; tooltips con fecha y número. Acepta semanas, una URL o datos demo.",
+    ru: "3D-матрица вкладов в стиле GitHub: слегка скруглённые кубики прилетают и собираются, продолжают перестраиваться и расходятся волнами вокруг курсора; подсказки с датой и числом. Данные — недели, URL или демо.",
+  },
+  'dev-monitor': {
+    es: "Monitor CRT 3D con contornos de tinta que cae en su sitio, se mece con el cursor y escribe líneas de terminal en una pantalla invertida.",
+    ru: "3D-монитор CRT с чернильными контурами: опускается на место, покачивается за курсором и печатает строки терминала на инвертированном экране.",
+  },
+  'dev-contact': {
+    es: "Bloque de contacto con una cápsula de tarjetas (email, GitHub, LinkedIn…) y un CTA opcional a la página de contacto.",
+    ru: "Блок контактов с капсулой карточек (email, GitHub, LinkedIn…) и необязательной кнопкой на страницу контактов.",
+  },
+  'dev-footer': {
+    es: "Pie de página mínimo con una fila de enlaces monoespaciados, copyright y una nota de «hecho con».",
+    ru: "Минималистичный футер: строка моноширинных ссылок, копирайт и короткая заметка «сделано на».",
+  },
+  'dev-page-hero': {
+    es: "Hero de página interior con migas de pan, etiqueta HUD, título en dos líneas que se desliza, intro y un slot opcional a la derecha (p. ej. un monitor 3D).",
+    ru: "Hero внутренней страницы: хлебные крошки, HUD-метка, двухстрочный выезжающий заголовок, вступление и необязательный слот справа (например, 3D-монитор).",
+  },
+  'dev-project-grid': {
+    es: "Tarjetas de proyecto estilo tecla (contorno de tinta y sombra dura que se «pulsa» al pasar el ratón) con número, categoría, stack, estado y estrellas, más filtros por categoría.",
+    ru: "Карточки проектов в виде клавиш (чернильный контур и жёсткая тень, которая «нажимается» при наведении): номер, категория, стек, статус и звёзды, плюс фильтры по категориям.",
+  },
+  'dev-project-detail': {
+    es: "Caso de proyecto: resumen, reto, solución y puntos clave junto a una ficha técnica fija (rol, año, estado, stack, métricas, enlaces), con teclas anterior / siguiente.",
+    ru: "Кейс проекта: обзор, задача, решение и ключевые пункты рядом с закреплённым техпаспортом (роль, год, статус, стек, метрики, ссылки) и клавиши «назад / вперёд».",
+  },
+  'dev-post-list': {
+    es: "Índice del blog con el último artículo destacado y una lista fina (fecha, categoría, tiempo de lectura, extracto) filtrable por categoría.",
+    ru: "Список статей блога: последняя статья выделена, остальные — тонкий список (дата, категория, время чтения, анонс) с фильтром по категориям.",
+  },
+  'dev-article': {
+    es: "Plantilla de artículo: línea de metadatos, título, entradilla, etiquetas, barra de progreso de lectura, prosa monocroma con bloques de código y teclas anterior / siguiente.",
+    ru: "Шаблон статьи: метаданные, заголовок, лид, теги, индикатор прогресса чтения, монохромная типографика с блоками кода и клавиши «назад / вперёд».",
+  },
+  'dev-contact-form': {
+    es: "Formulario de solicitud de proyecto con teclas de tipo de proyecto, presupuesto y mensaje, validación en línea, estado de éxito y un lateral con disponibilidad y contactos directos.",
+    ru: "Форма заявки на проект: клавиши типа проекта, бюджет и сообщение, встроенная проверка, состояние успеха и колонка с доступностью и прямыми контактами.",
+  },
 };

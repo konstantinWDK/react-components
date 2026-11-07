@@ -65,3 +65,42 @@ export { default as ShopReviewsEditorial } from './ShopReviewsEditorial';
 export { default as ShopNewsletterEditorial } from './ShopNewsletterEditorial';
 export { default as ShopFooterWordmark } from './ShopFooterWordmark';
 export { default as ShopCategoryHero } from './ShopCategoryHero';
+
+
+// Agency & Marketing
+export { default as AgencyHeader } from './AgencyHeader';
+export { default as AgencyHeroKinetic } from './AgencyHeroKinetic';
+export { default as AgencyPageHero } from './AgencyPageHero';
+export { default as AgencyServicePillars } from './AgencyServicePillars';
+export { default as AgencyServicesList } from './AgencyServicesList';
+export { default as AgencyResultsBand } from './AgencyResultsBand';
+export { default as AgencyPlatformsMarquee } from './AgencyPlatformsMarquee';
+export { default as AgencyProcessSteps } from './AgencyProcessSteps';
+export { default as AgencyAuditCta } from './AgencyAuditCta';
+export { default as AgencyRoiCalculator } from './AgencyRoiCalculator';
+export { default as AgencyPricingPackages } from './AgencyPricingPackages';
+export { default as AgencyServiceOverview } from './AgencyServiceOverview';
+export { default as AgencyWorkGrid } from './AgencyWorkGrid';
+export { default as AgencyCaseStudyHero } from './AgencyCaseStudyHero';
+export { default as AgencyCaseResults } from './AgencyCaseResults';
+export { default as AgencyQuotes } from './AgencyQuotes';
+export { default as AgencyTeamGrid } from './AgencyTeamGrid';
+export { default as AgencyContactBrief } from './AgencyContactBrief';
+export { default as AgencyFooterCta } from './AgencyFooterCta';
+
+// Developer Portfolio ("Keycap") — 3D sections need the optional `three` peer dependency
+export { default as DevHeader } from './DevHeader';
+export { default as DevHero } from './DevHero';
+export { default as DevProjectsShowcase } from './DevProjectsShowcase';
+export { default as DevKeyboard } from './DevKeyboard';
+export { default as DevRepoList } from './DevRepoList';
+export { default as DevContributions } from './DevContributions';
+export { default as DevMonitor } from './DevMonitor';
+export { default as DevContact } from './DevContact';
+export { default as DevFooter } from './DevFooter';
+export { default as DevPageHero } from './DevPageHero';
+export { default as DevProjectGrid } from './DevProjectGrid';
+export { default as DevProjectDetail } from './DevProjectDetail';
+export { default as DevPostList } from './DevPostList';
+export { default as DevArticle } from './DevArticle';
+export { default as DevContactForm } from './DevContactForm';

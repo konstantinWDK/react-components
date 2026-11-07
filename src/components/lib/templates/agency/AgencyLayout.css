@@ -1,0 +1,67 @@
+.theme-volta {
+  --font-sans: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --agency-accent: #c8f23d;
+  --agency-header-h: 88px;
+}
+.theme-volta[data-theme='dark'] {
+  --c-bg: #0b0c0a;
+  --c-bg-1: #131510;
+  --c-bg-2: #1c1f17;
+  --c-surface: rgba(243, 245, 236, 0.03);
+  --c-border: rgba(243, 245, 236, 0.13);
+  --c-text-1: #f3f5ec;
+  --c-text-2: #b4b9a8;
+  --c-text-3: #8d9280;
+  --c-primary: #c8f23d;
+  --c-primary-light: #c8f23d;
+  --c-primary-glow: rgba(200, 242, 61, 0.16);
+  --c-accent: #e6fb9a;
+  --c-on-primary: #0b0c0a;
+  --agency-ink: #c8f23d;
+  --ink-rgb: 243 245 236;
+  --paper-rgb: 11 12 10;
+  --c-success: #8be28b;
+  --c-warning: #f5c56b;
+  --c-danger: #ff8a7a;
+  color-scheme: dark;
+}
+.theme-volta[data-theme='light'] {
+  --c-bg: #f3f2ec;
+  --c-bg-1: #ffffff;
+  --c-bg-2: #e7e6dd;
+  --c-surface: rgba(16, 17, 13, 0.03);
+  --c-border: rgba(16, 17, 13, 0.14);
+  --c-text-1: #10110d;
+  --c-text-2: #4a4d43;
+  --c-text-3: #63665b;
+  --c-primary: #3d6600;
+  --c-primary-light: #3d6600;
+  --c-primary-glow: rgba(61, 102, 0, 0.12);
+  --c-accent: #2c4a00;
+  --c-on-primary: #10110d;
+  --agency-ink: #3d6600;
+  --ink-rgb: 16 17 13;
+  --paper-rgb: 243 242 236;
+  --c-success: #1f7a33;
+  --c-warning: #8a5300;
+  --c-danger: #b42318;
+  color-scheme: light;
+}
+body.volta { margin: 0; background: var(--c-bg); color: var(--c-text-2); font-family: var(--font-sans); overflow-x: clip; }
+body.volta::before { display: none; }
+.volta h1, .volta h2, .volta h3 { font-family: var(--font-sans); }
+.volta ::selection { background: var(--agency-accent); color: #0b0c0a; }
+.volta__main { outline: none; }
+.volta-wrap { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 clamp(1rem, 3vw, 2.5rem); }
+.volta .section-space { padding-block: clamp(3rem, 7vw, 6.5rem); }
+.volta .section-tight { padding-block: clamp(1.5rem, 4vw, 3rem); }
+.volta__skip { position: fixed; top: -60px; left: 12px; z-index: 2000; padding: 0.6rem 1rem; border-radius: 999px; background: var(--agency-accent); color: #0b0c0a; font-weight: 800; transition: top 0.2s ease; }
+.volta__skip:focus { top: 12px; color: #0b0c0a; }
+
+/* Reused library sections, tuned to the Volta look */
+.volta .ftc { --ftc-py: 0; }
+.volta .ftc__title { font-weight: 900; letter-spacing: -0.05em; }

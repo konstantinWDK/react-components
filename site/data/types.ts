@@ -43,5 +43,7 @@ export interface TemplateDoc {
   pages: TemplatePage[];
   newComponents: unknown[];
   reusedComponents: unknown[];
+  /** Optional peer dependencies the template needs (shown instead of "0 deps"). */
+  peerDeps?: string[];
   [key: string]: unknown;
 }

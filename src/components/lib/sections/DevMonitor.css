@@ -1,0 +1,8 @@
+.dvmn:where([data-rk-e3650c]) {
+  --kc-ink: var(--c-text-1);
+  --kc-paper: var(--c-bg);
+  --kc-muted: var(--c-text-3);
+  position: relative;
+  width: 100%;
+  height: var(--dvmn-h);
+}

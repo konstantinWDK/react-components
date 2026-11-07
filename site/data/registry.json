@@ -157,6 +157,18 @@
    "name": "Logos & Partners",
    "description": "Client logo clouds, partner grids, and brand badges.",
    "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 3h12l4 6-10 12L2 9z\"/></svg>"
+  },
+  {
+   "id": "portfolio",
+   "name": "Developer Portfolio",
+   "description": "Monochrome, keyboard-inspired sections for developer portfolios: retyping hero, 3D projects showcase, typing 3D keyboard, repository list, 3D contribution matrix, 3D monitor, project case study, blog and contact.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><path d=\"M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8\"/></svg>"
+  },
+  {
+   "id": "agency",
+   "name": "Agency & Marketing",
+   "description": "Sections for marketing, SEO and web agencies: kinetic hero, services, results, ROI calculator, free audit, pricing, case studies and contact brief.",
+   "icon": "<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z\"/><path d=\"M15.5 8.5a5 5 0 0 1 0 7\"/></svg>"
   }
  ],
  "components": [
@@ -4449,6 +4461,488 @@
     "ecommerce",
     "catalog"
    ]
+  },
+  {
+   "slug": "agency-header",
+   "name": "Agency Header",
+   "description": "Floating pill navigation for agency sites: logo, links, theme toggle, CTA and an animated full-screen mobile menu.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "header",
+    "navbar",
+    "agency",
+    "mobile-menu"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "agency-hero-kinetic",
+   "name": "Agency Hero Kinetic",
+   "description": "Agency hero with an oversized headline whose last word rotates like a marker highlight, CTAs, client proof and floating stickers.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "hero",
+    "agency",
+    "kinetic",
+    "typography"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "agency-page-hero",
+   "name": "Agency Page Hero",
+   "description": "Inner-page hero: breadcrumb, eyebrow, oversized headline with a highlighted word, intro, CTA and key figures.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "hero",
+    "inner-page",
+    "breadcrumb",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-service-pillars",
+   "name": "Agency Service Pillars",
+   "description": "Service cards for a marketing agency (Ads, SEO, Web): icon, pitch, headline KPI, deliverables, price and a stretched link.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "services",
+    "cards",
+    "agency",
+    "marketing"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "agency-services-list",
+   "name": "Agency Services List",
+   "description": "Numbered, expandable service rows: big names, pitch, deliverable chips, timeline and \"from\" price.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "services",
+    "accordion",
+    "agency",
+    "pricing"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-results-band",
+   "name": "Agency Results Band",
+   "description": "Proof band of big results (€42M, 4.8×, +212%) that count up on scroll, with labels and fine print.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "stats",
+    "counters",
+    "results",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-platforms-marquee",
+   "name": "Agency Platforms Marquee",
+   "description": "Two counter-scrolling rows of platforms and tools (Google Ads, Meta, Search Console…) with partner badges.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "marquee",
+    "logos",
+    "partners",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-process-steps",
+   "name": "Agency Process Steps",
+   "description": "\"How we work\" timeline with numbered phases and durations, joined by a line that fills on scroll.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "process",
+    "timeline",
+    "steps",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-audit-cta",
+   "name": "Agency Audit CTA",
+   "description": "Free growth audit lead magnet: website and email form with validation, animated scan and a score gauge with top findings.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "lead-magnet",
+    "form",
+    "audit",
+    "seo",
+    "agency"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "agency-roi-calculator",
+   "name": "Agency ROI Calculator",
+   "description": "Paid-ads ROI calculator: sliders for spend, CPC, conversion rate and order value with live revenue, ROAS and optimised projection.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "calculator",
+    "roi",
+    "ads",
+    "interactive",
+    "agency"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "agency-pricing-packages",
+   "name": "Agency Pricing Packages",
+   "description": "Agency pricing with a tab per service, three packages each and a monthly / 6-month billing switch for retainers.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "pricing",
+    "tabs",
+    "retainer",
+    "agency"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "agency-service-overview",
+   "name": "Agency Service Overview",
+   "description": "Service detail: sticky pitch with outcome figures, tool stack and CTA next to a numbered \"What's included\" list.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "service",
+    "details",
+    "included",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-work-grid",
+   "name": "Agency Work Grid",
+   "description": "Case-study grid with category filter chips, large art tiles, client, title, services and a headline result.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "portfolio",
+    "case-studies",
+    "filter",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-case-study-hero",
+   "name": "Agency Case Study Hero",
+   "description": "Case-study header: back link, client and category, headline, summary, project facts and a big result over generated art.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "case-study",
+    "hero",
+    "agency",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-case-results",
+   "name": "Agency Case Results",
+   "description": "Case-study body: challenge, numbered approach, before/after metrics table, 12-month SVG results chart and client quote.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "case-study",
+    "results",
+    "chart",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-quotes",
+   "name": "Agency Quotes",
+   "description": "Client testimonials with a large lead quote, the measurable result each one produced, avatars and an aggregate rating.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "testimonials",
+    "reviews",
+    "results",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-team-grid",
+   "name": "Agency Team Grid",
+   "description": "Team portraits with role, location, a fun fact revealed on hover or focus, social links and a \"we are hiring\" card.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "team",
+    "people",
+    "agency",
+    "hiring"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "agency-contact-brief",
+   "name": "Agency Contact Brief",
+   "description": "\"Start a project\" brief: service chips, budget pills, timeline, details and message with validation, plus direct contacts.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "contact",
+    "form",
+    "brief",
+    "agency"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "agency-footer-cta",
+   "name": "Agency Footer CTA",
+   "description": "Agency footer led by a giant \"Let's talk\" link, then link columns, offices, socials and the legal line.",
+   "category": "sections",
+   "sectionCategory": "agency",
+   "tags": [
+    "footer",
+    "cta",
+    "agency"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-header",
+   "name": "Dev Header",
+   "description": "Floating navigation with a split logo that collapses on scroll (N·OALINDQVIST·.DEV → N.DEV), pill links, light/dark toggle and a full-screen mobile menu.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "header",
+    "navbar",
+    "portfolio",
+    "theme-toggle"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "dev-hero",
+   "name": "Dev Hero",
+   "description": "Developer hero: an oversized title that retypes itself, the name dropping in with floating blocks, a status pill and an endless tape of skill cards with tooltips, over a 3D dot matrix that parts around the cursor.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "hero",
+    "portfolio",
+    "three",
+    "typewriter",
+    "skills"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "dev-projects-showcase",
+   "name": "Dev Projects Showcase 3D",
+   "description": "3D projects slider: paper cards with ink outlines fanned out in perspective, each with an animated visual chosen by data (code, terminal, equalizer, monitor, endpoints, paint, atom). Drag, keys or arrows to move; click to open a project sheet.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "projects",
+    "slider",
+    "three",
+    "3d",
+    "portfolio",
+    "carousel"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "dev-keyboard",
+   "name": "Dev Keyboard 3D",
+   "description": "Full-width 3D mechanical keyboard that types your stack by itself and echoes each word as a huge backdrop; slot content (e.g. a repo list) floats over the lower rows.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "keyboard",
+    "three",
+    "3d",
+    "typing",
+    "portfolio"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "dev-repo-list",
+   "name": "Dev Repo List",
+   "description": "Frosted list of open-source repositories with language dot, stars, description, source link and a live-site eye; reveals the rest with “Show all”.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "github",
+    "repositories",
+    "list",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-contributions",
+   "name": "Dev Contributions 3D",
+   "description": "GitHub-style contribution matrix in 3D: barely-rounded cubes fly in from the sky and assemble, keep rebuilding, and ripple like water around the cursor; tooltips with date and count. Pass weeks, a URL or use demo data.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "github",
+    "contributions",
+    "calendar",
+    "three",
+    "3d",
+    "portfolio"
+   ],
+   "featured": true
+  },
+  {
+   "slug": "dev-monitor",
+   "name": "Dev Monitor 3D",
+   "description": "3D CRT monitor with ink outlines that drops into place, sways with the cursor and types terminal lines on an inverted screen.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "terminal",
+    "monitor",
+    "three",
+    "3d",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-contact",
+   "name": "Dev Contact",
+   "description": "Contact block with a glass capsule of cards (email, GitHub, LinkedIn…) and an optional CTA to the contact page.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "contact",
+    "cta",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-footer",
+   "name": "Dev Footer",
+   "description": "Minimal footer with a row of mono links, copyright and a small “built with” note.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "footer",
+    "portfolio",
+    "minimal"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-page-hero",
+   "name": "Dev Page Hero",
+   "description": "Inner-page hero with breadcrumb, HUD label, two-line sliding title, intro and an optional slot on the right (e.g. a 3D monitor).",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "hero",
+    "inner-page",
+    "breadcrumb",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-project-grid",
+   "name": "Dev Project Grid",
+   "description": "Keycap-style project cards (ink outline, hard shadow that presses on hover) with number, category, stack, status and stars, plus category filter keys.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "projects",
+    "grid",
+    "filter",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-project-detail",
+   "name": "Dev Project Detail",
+   "description": "Project case study: overview, challenge, solution and highlights next to a sticky spec sheet (role, year, status, stack, metrics, links), with previous / next keys.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "case-study",
+    "project",
+    "spec-sheet",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-post-list",
+   "name": "Dev Post List",
+   "description": "Blog index with a featured latest post and a hairline list (date, category, reading time, excerpt) filtered by category.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "blog",
+    "posts",
+    "list",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-article",
+   "name": "Dev Article",
+   "description": "Blog post layout: meta line, title, lead, tags, reading-progress bar, monochrome prose with code blocks and previous / next keys.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "blog",
+    "article",
+    "prose",
+    "portfolio"
+   ],
+   "featured": false
+  },
+  {
+   "slug": "dev-contact-form",
+   "name": "Dev Contact Form",
+   "description": "Project inquiry form with project-type keys, budget and message, inline validation, success state and an aside with availability and direct contacts.",
+   "category": "sections",
+   "sectionCategory": "portfolio",
+   "tags": [
+    "contact",
+    "form",
+    "validation",
+    "portfolio"
+   ],
+   "featured": false
   }
  ],
  "templates": [
@@ -5003,6 +5497,396 @@
     "footer-mega-section"
    ],
    "storeConfigExample": "---\n// src/pages/app/index.react — pass your own data (e.g. fetched from your API at build time)\nimport { DashboardPage, lobbyData, type LobbyData } from 'react-component-kit-ui/templates/saas-hotel';\n\nconst data: LobbyData = {\n  ...lobbyData,\n  workspace: { name: 'Casa Alba', plan: 'Starter', initials: 'CA' },\n  user: { name: 'Marta Gil', role: 'Owner', email: 'marta@casaalba.com' },\n};\n---\n\n<DashboardPage data={data} theme=\"auto\" />"
+  },
+  {
+   "slug": "agency",
+   "name": {
+    "en": "Marketing Agency",
+    "es": "Agencia de marketing",
+    "ru": "Маркетинговое агентство"
+   },
+   "tagline": {
+    "en": "A complete website for a performance marketing agency selling Paid Ads, SEO and web development.",
+    "es": "Una web completa para una agencia de marketing de resultados que vende Ads, SEO y desarrollo web.",
+    "ru": "Полноценный сайт агентства performance-маркетинга: реклама, SEO и разработка сайтов."
+   },
+   "description": {
+    "en": "Volta is an eight-page agency template built to turn visitors into qualified leads. A kinetic hero and animated results prove credibility, every service (Paid Ads, SEO, Web) has its own page with what is included, process, pricing and FAQ, case studies show before/after metrics with a 12-month chart, and two lead magnets — a free audit that \"scans\" the visitor’s site and an ads ROI calculator — feed the contact brief. Every block is a section in the library, so you can reuse the pricing, calculator or audit on any site, in dark or light mode.",
+    "es": "Volta es una plantilla de agencia de ocho páginas pensada para convertir visitas en leads cualificados. Un hero cinético y resultados animados aportan credibilidad, cada servicio (Ads, SEO, Web) tiene su propia página con lo incluido, proceso, precios y FAQ, los casos de éxito muestran métricas antes/después con un gráfico de 12 meses, y dos ganchos de captación — una auditoría gratis que «escanea» la web del visitante y una calculadora de ROI publicitario — llevan al formulario de contacto. Cada bloque es una sección de la librería, así que puedes reutilizar los precios, la calculadora o la auditoría en cualquier web, en modo oscuro o claro.",
+    "ru": "Volta — восьмистраничный шаблон агентства, который превращает посетителей в квалифицированные заявки. Кинетический hero и анимированные результаты создают доверие, у каждой услуги (реклама, SEO, сайты) есть своя страница с составом работ, процессом, ценами и FAQ, кейсы показывают метрики «до/после» с графиком за 12 месяцев, а два лид-магнита — бесплатный аудит, «сканирующий» сайт посетителя, и калькулятор ROI рекламы — ведут к брифу. Каждый блок — секция библиотеки: цены, калькулятор или аудит можно использовать на любом сайте в тёмной или светлой теме."
+   },
+   "highlights": {
+    "en": [
+     "8 pages: home, services, service detail, case studies, case study, pricing, about and contact",
+     "Free audit lead magnet with animated scan and score",
+     "Paid-ads ROI calculator with live ROAS",
+     "Pricing tabs per service with monthly / 6-month switch",
+     "Case studies with before/after table and SVG chart",
+     "Dark by default, light mode with a toggle",
+     "19 reusable sections in Sections → Agency & Marketing"
+    ],
+    "es": [
+     "8 páginas: inicio, servicios, detalle de servicio, casos, caso de éxito, precios, nosotros y contacto",
+     "Gancho de auditoría gratis con escaneo animado y puntuación",
+     "Calculadora de ROI publicitario con ROAS en vivo",
+     "Precios por servicio en pestañas con selector mensual / 6 meses",
+     "Casos de éxito con tabla antes/después y gráfico SVG",
+     "Oscuro por defecto y modo claro con selector",
+     "19 secciones reutilizables en Secciones → Agencia y Marketing"
+    ],
+    "ru": [
+     "8 страниц: главная, услуги, страница услуги, кейсы, кейс, цены, о нас и контакты",
+     "Лид-магнит «бесплатный аудит» с анимированным сканированием",
+     "Калькулятор ROI рекламы с живым ROAS",
+     "Цены по услугам во вкладках с оплатой помесячно / 6 месяцев",
+     "Кейсы с таблицей «до/после» и SVG-графиком",
+     "Тёмная тема по умолчанию и светлая с переключателем",
+     "19 секций в разделе «Секции → Агентство и маркетинг»"
+    ]
+   },
+   "tags": [
+    "agency",
+    "marketing",
+    "seo",
+    "ads",
+    "web-design",
+    "lead-generation"
+   ],
+   "previewBase": "/preview/agency/",
+   "importPath": "react-component-kit-ui/templates/agency",
+   "pages": [
+    {
+     "id": "home",
+     "path": "",
+     "name": {
+      "en": "Home",
+      "es": "Inicio",
+      "ru": "Главная"
+     },
+     "description": {
+      "en": "Kinetic hero, platforms marquee, service pillars, animated results, case studies, process, quotes and free audit.",
+      "es": "Hero cinético, plataformas, pilares de servicio, resultados animados, casos, proceso, testimonios y auditoría gratis.",
+      "ru": "Кинетический hero, платформы, услуги, анимированные результаты, кейсы, процесс, отзывы и бесплатный аудит."
+     },
+     "file": "src/pages/index.react",
+     "code": "---\nimport { AgencyHomePage } from 'react-component-kit-ui/templates/agency';\n---\n\n<AgencyHomePage theme=\"dark\" />"
+    },
+    {
+     "id": "services",
+     "path": "services/",
+     "name": {
+      "en": "Services",
+      "es": "Servicios",
+      "ru": "Услуги"
+     },
+     "description": {
+      "en": "Services overview with channel cards, expandable service rows, process, results and audit.",
+      "es": "Resumen de servicios con tarjetas por canal, filas desplegables, proceso, resultados y auditoría.",
+      "ru": "Обзор услуг: карточки каналов, раскрывающиеся строки, процесс, результаты и аудит."
+     },
+     "file": "src/pages/services/index.react",
+     "code": "---\nimport { AgencyServicesPage } from 'react-component-kit-ui/templates/agency';\n---\n\n<AgencyServicesPage />"
+    },
+    {
+     "id": "service",
+     "path": "services/ads/",
+     "name": {
+      "en": "Service detail",
+      "es": "Detalle de servicio",
+      "ru": "Страница услуги"
+     },
+     "description": {
+      "en": "One page per service: what is included, ROI calculator or free audit, process, results, pricing and FAQ.",
+      "es": "Una página por servicio: qué incluye, calculadora de ROI o auditoría, proceso, resultados, precios y FAQ.",
+      "ru": "Страница каждой услуги: состав, калькулятор ROI или аудит, процесс, результаты, цены и FAQ."
+     },
+     "file": "src/pages/services/[slug].react",
+     "code": "---\nimport { AgencyServicePage, voltaAgency } from 'react-component-kit-ui/templates/agency';\n\nexport function getStaticPaths() {\n  return voltaAgency.services.map((s) => ({ params: { slug: s.slug } }));\n}\n---\n\n<AgencyServicePage slug={Astro.params.slug} />"
+    },
+    {
+     "id": "work",
+     "path": "work/",
+     "name": {
+      "en": "Case studies",
+      "es": "Casos de éxito",
+      "ru": "Кейсы"
+     },
+     "description": {
+      "en": "Filterable case-study grid (Ads, SEO, Web), results band and client quotes.",
+      "es": "Cuadrícula filtrable de casos (Ads, SEO, Web), franja de resultados y testimonios.",
+      "ru": "Сетка кейсов с фильтром (реклама, SEO, сайты), результаты и отзывы."
+     },
+     "file": "src/pages/work/index.react",
+     "code": "---\nimport { AgencyWorkPage } from 'react-component-kit-ui/templates/agency';\n---\n\n<AgencyWorkPage />"
+    },
+    {
+     "id": "case",
+     "path": "work/nordlys-skincare/",
+     "name": {
+      "en": "Case study",
+      "es": "Caso de éxito",
+      "ru": "Кейс"
+     },
+     "description": {
+      "en": "Headline result, challenge, approach, before/after metrics, 12-month chart, quote and more work.",
+      "es": "Resultado principal, reto, enfoque, métricas antes/después, gráfico de 12 meses, cita y más casos.",
+      "ru": "Главный результат, задача, решение, метрики «до/после», график за 12 месяцев, цитата и другие кейсы."
+     },
+     "file": "src/pages/work/[slug].react",
+     "code": "---\nimport { AgencyCaseStudyPage, voltaAgency } from 'react-component-kit-ui/templates/agency';\n\nexport function getStaticPaths() {\n  return voltaAgency.cases.map((c) => ({ params: { slug: c.slug } }));\n}\n---\n\n<AgencyCaseStudyPage slug={Astro.params.slug} />"
+    },
+    {
+     "id": "pricing",
+     "path": "pricing/",
+     "name": {
+      "en": "Pricing",
+      "es": "Precios",
+      "ru": "Цены"
+     },
+     "description": {
+      "en": "Packages per service with billing switch, ads ROI calculator and pricing FAQ.",
+      "es": "Paquetes por servicio con selector de facturación, calculadora de ROI y FAQ de precios.",
+      "ru": "Пакеты по услугам с выбором оплаты, калькулятор ROI и FAQ по ценам."
+     },
+     "file": "src/pages/pricing.react",
+     "code": "---\nimport { AgencyPricingPage } from 'react-component-kit-ui/templates/agency';\n---\n\n<AgencyPricingPage />"
+    },
+    {
+     "id": "about",
+     "path": "about/",
+     "name": {
+      "en": "About",
+      "es": "Nosotros",
+      "ru": "О нас"
+     },
+     "description": {
+      "en": "Story, values, results, team with fun facts and hiring card, certified platforms.",
+      "es": "Historia, valores, resultados, equipo con datos curiosos y vacantes, plataformas certificadas.",
+      "ru": "История, ценности, результаты, команда с фактами и вакансиями, сертифицированные платформы."
+     },
+     "file": "src/pages/about.react",
+     "code": "---\nimport { AgencyAboutPage } from 'react-component-kit-ui/templates/agency';\n---\n\n<AgencyAboutPage />"
+    },
+    {
+     "id": "contact",
+     "path": "contact/",
+     "name": {
+      "en": "Contact",
+      "es": "Contacto",
+      "ru": "Контакты"
+     },
+     "description": {
+      "en": "Project brief with services, budget and timeline, direct contacts, office and FAQ.",
+      "es": "Brief del proyecto con servicios, presupuesto y plazos, contactos directos, oficina y FAQ.",
+      "ru": "Бриф проекта с услугами, бюджетом и сроками, прямые контакты, офис и FAQ."
+     },
+     "file": "src/pages/contact.react",
+     "code": "---\nimport { AgencyContactPage } from 'react-component-kit-ui/templates/agency';\n---\n\n<!-- Pass action=\"https://your-backend/brief\" to post the form -->\n<AgencyContactPage />"
+    }
+   ],
+   "newComponents": [
+    "agency-header",
+    "agency-hero-kinetic",
+    "agency-page-hero",
+    "agency-service-pillars",
+    "agency-services-list",
+    "agency-results-band",
+    "agency-platforms-marquee",
+    "agency-process-steps",
+    "agency-audit-cta",
+    "agency-roi-calculator",
+    "agency-pricing-packages",
+    "agency-service-overview",
+    "agency-work-grid",
+    "agency-case-study-hero",
+    "agency-case-results",
+    "agency-quotes",
+    "agency-team-grid",
+    "agency-contact-brief",
+    "agency-footer-cta"
+   ],
+   "reusedComponents": [
+    "faq-two-column"
+   ],
+   "storeConfigExample": "---\n// src/pages/index.react — pass the same site + routes to every page\nimport { AgencyHomePage, voltaAgency, type AgencySite } from 'react-component-kit-ui/templates/agency';\n\nconst site: AgencySite = {\n  ...voltaAgency,\n  name: 'Northwind',\n  email: 'hello@northwind.agency',\n  currency: 'USD',\n  locale: 'en-US',\n  // services, cases, pricing, team… — edit or replace any list\n};\n---\n\n<AgencyHomePage\n  site={site}\n  theme=\"auto\"\n  routes={{ home: '/', services: '/services/', service: '/services/', work: '/work/', caseStudy: '/work/', pricing: '/pricing/', about: '/about/', contact: '/contact/' }}\n/>"
+  },
+  {
+   "slug": "portfolio",
+   "name": {
+    "en": "Developer Portfolio",
+    "es": "Portfolio de desarrollador",
+    "ru": "Портфолио разработчика"
+   },
+   "tagline": {
+    "en": "A monochrome, keyboard-inspired portfolio with 3D projects, a typing keyboard and a contribution matrix of flying cubes.",
+    "es": "Un portfolio monocromo inspirado en un teclado, con proyectos en 3D, un teclado que escribe y una matriz de contribuciones de cubos que vuelan.",
+    "ru": "Монохромное портфолио в стиле клавиатуры: 3D-проекты, печатающая клавиатура и матрица вкладов из летающих кубиков."
+   },
+   "description": {
+    "en": "Keycap is a six-page personal site for developers, designed for konstantink.dev and rebuilt as reusable sections. The home page pairs a retyping hero over a breathing dot matrix with a 3D projects showcase whose cards animate code, terminals, equalizers or a paint canvas from your data, a mechanical keyboard that types your stack under your repositories, and a GitHub-style contribution matrix whose cubes fly in and ripple like water. Projects get filterable keycap cards and case studies with a 3D monitor and a spec sheet; the blog has a featured index and a reading-progress article layout; the contact page validates a project brief. Pure white and black by default, with a dark mode the 3D scenes follow.",
+    "es": "Keycap es una web personal de seis páginas para desarrolladores, diseñada para konstantink.dev y reconstruida como secciones reutilizables. La home combina un hero que se reescribe sobre una matriz de puntos que respira con un escaparate 3D de proyectos cuyas tarjetas animan código, terminales, ecualizadores o un lienzo de pintura a partir de tus datos, un teclado mecánico que escribe tu stack bajo tus repositorios y una matriz de contribuciones estilo GitHub cuyos cubos llegan volando y ondulan como agua. Los proyectos tienen tarjetas tipo tecla filtrables y casos con un monitor 3D y ficha técnica; el blog tiene índice con destacado y artículo con barra de progreso; el contacto valida un brief de proyecto. Blanco y negro puros por defecto, con un modo oscuro que siguen también las escenas 3D.",
+    "ru": "Keycap — шестистраничный персональный сайт для разработчиков, созданный для konstantink.dev и пересобранный из переиспользуемых секций. На главной — перепечатывающийся hero на «дышащей» матрице точек, 3D-витрина проектов, где карточки по вашим данным анимируют код, терминал, эквалайзер или холст для рисования, механическая клавиатура, печатающая ваш стек под списком репозиториев, и матрица вкладов в стиле GitHub, кубики которой прилетают и расходятся волнами. У проектов — карточки-клавиши с фильтром и кейсы с 3D-монитором и техпаспортом; у блога — список с избранной статьёй и статья с индикатором чтения; контакты проверяют бриф. По умолчанию чистый белый и чёрный, есть тёмная тема, которой следуют и 3D-сцены."
+   },
+   "highlights": {
+    "en": [
+     "6 pages: home, projects, project case study, blog, article and contact",
+     "3D projects showcase with 7 data-driven card visuals",
+     "Typing 3D keyboard and a 3D monitor",
+     "3D contribution matrix: flying cubes and water ripples, real or demo data",
+     "Light and dark mode — the 3D scenes redraw with the theme",
+     "Accessible: real buttons and dialogs beside every 3D block, reduced motion respected",
+     "15 reusable sections in Sections → Developer Portfolio"
+    ],
+    "es": [
+     "6 páginas: inicio, proyectos, caso de proyecto, blog, artículo y contacto",
+     "Escaparate 3D de proyectos con 7 visuales de tarjeta según tus datos",
+     "Teclado 3D que escribe y un monitor 3D",
+     "Matriz de contribuciones 3D: cubos que vuelan y ondas de agua, con datos reales o demo",
+     "Modo claro y oscuro: las escenas 3D se redibujan con el tema",
+     "Accesible: botones y diálogos reales junto a cada bloque 3D y respeto a «reducir movimiento»",
+     "15 secciones reutilizables en Secciones → Portfolio de desarrollador"
+    ],
+    "ru": [
+     "6 страниц: главная, проекты, кейс проекта, блог, статья и контакты",
+     "3D-витрина проектов с 7 визуалами карточек по данным",
+     "Печатающая 3D-клавиатура и 3D-монитор",
+     "3D-матрица вкладов: летающие кубики и волны, реальные или демо-данные",
+     "Светлая и тёмная тема — 3D-сцены перерисовываются",
+     "Доступность: настоящие кнопки и диалоги рядом с каждым 3D-блоком, учёт reduced motion",
+     "15 секций в разделе «Секции → Портфолио разработчика»"
+    ]
+   },
+   "tags": [
+    "portfolio",
+    "developer",
+    "personal",
+    "three",
+    "3d",
+    "blog",
+    "resume"
+   ],
+   "previewBase": "/preview/portfolio/",
+   "importPath": "react-component-kit-ui/templates/portfolio",
+   "peerDeps": [
+    "three"
+   ],
+   "pages": [
+    {
+     "id": "home",
+     "path": "",
+     "name": {
+      "en": "Home",
+      "es": "Inicio",
+      "ru": "Главная"
+     },
+     "description": {
+      "en": "Retyping hero with skill tape, 3D projects showcase, typing 3D keyboard with repositories, 3D contribution matrix and contact.",
+      "es": "Hero que se reescribe con cinta de habilidades, escaparate 3D de proyectos, teclado 3D con repositorios, matriz 3D de contribuciones y contacto.",
+      "ru": "Перепечатывающийся hero с лентой навыков, 3D-витрина проектов, 3D-клавиатура с репозиториями, 3D-матрица вкладов и контакты."
+     },
+     "file": "src/pages/index.react",
+     "code": "---\n// npm install three\nimport { PortfolioHomePage } from 'react-component-kit-ui/templates/portfolio';\n---\n\n<!-- contributionsSrc: a URL returning { weeks: [{ days: [{ date, count }] }] } -->\n<PortfolioHomePage theme=\"light\" />"
+    },
+    {
+     "id": "projects",
+     "path": "projects/",
+     "name": {
+      "en": "Projects",
+      "es": "Proyectos",
+      "ru": "Проекты"
+     },
+     "description": {
+      "en": "Keycap-style project cards with category filter keys, stack, status and stars.",
+      "es": "Tarjetas de proyecto tipo tecla con filtros por categoría, stack, estado y estrellas.",
+      "ru": "Карточки проектов в виде клавиш с фильтрами по категориям, стеком, статусом и звёздами."
+     },
+     "file": "src/pages/projects/index.react",
+     "code": "---\nimport { PortfolioProjectsPage } from 'react-component-kit-ui/templates/portfolio';\n---\n\n<PortfolioProjectsPage />"
+    },
+    {
+     "id": "project",
+     "path": "projects/tidy/",
+     "name": {
+      "en": "Project case study",
+      "es": "Caso de proyecto",
+      "ru": "Кейс проекта"
+     },
+     "description": {
+      "en": "Hero with a 3D monitor typing the project terminal, overview, challenge, solution, highlights and a sticky spec sheet.",
+      "es": "Hero con un monitor 3D que escribe el terminal del proyecto, resumen, reto, solución, puntos clave y ficha técnica fija.",
+      "ru": "Hero с 3D-монитором, печатающим терминал проекта, обзор, задача, решение, ключевые пункты и закреплённый техпаспорт."
+     },
+     "file": "src/pages/projects/[slug].react",
+     "code": "---\nimport { PortfolioProjectPage, keycapPortfolio } from 'react-component-kit-ui/templates/portfolio';\n\nexport function getStaticPaths() {\n  return keycapPortfolio.projects.map((p) => ({ params: { slug: p.slug } }));\n}\n---\n\n<PortfolioProjectPage slug={Astro.params.slug} />"
+    },
+    {
+     "id": "blog",
+     "path": "blog/",
+     "name": {
+      "en": "Blog",
+      "es": "Blog",
+      "ru": "Блог"
+     },
+     "description": {
+      "en": "Featured latest article and a filterable list with date, category and reading time.",
+      "es": "Último artículo destacado y lista filtrable con fecha, categoría y tiempo de lectura.",
+      "ru": "Избранная последняя статья и список с фильтром, датой, категорией и временем чтения."
+     },
+     "file": "src/pages/blog/index.react",
+     "code": "---\nimport { PortfolioBlogPage } from 'react-component-kit-ui/templates/portfolio';\n---\n\n<PortfolioBlogPage />"
+    },
+    {
+     "id": "post",
+     "path": "blog/instanced-meshes-for-ui/",
+     "name": {
+      "en": "Article",
+      "es": "Artículo",
+      "ru": "Статья"
+     },
+     "description": {
+      "en": "Meta line, lead, tags, reading-progress bar, monochrome prose with code blocks and previous / next keys.",
+      "es": "Metadatos, entradilla, etiquetas, barra de progreso de lectura, prosa monocroma con código y teclas anterior / siguiente.",
+      "ru": "Метаданные, лид, теги, индикатор чтения, монохромная типографика с кодом и клавиши «назад / вперёд»."
+     },
+     "file": "src/pages/blog/[slug].react",
+     "code": "---\nimport { PortfolioPostPage, keycapPortfolio } from 'react-component-kit-ui/templates/portfolio';\n\nexport function getStaticPaths() {\n  return keycapPortfolio.posts.map((p) => ({ params: { slug: p.slug } }));\n}\n---\n\n<PortfolioPostPage slug={Astro.params.slug} />"
+    },
+    {
+     "id": "contact",
+     "path": "contact/",
+     "name": {
+      "en": "Contact",
+      "es": "Contacto",
+      "ru": "Контакты"
+     },
+     "description": {
+      "en": "Hero with a 3D monitor, project brief with type keys, budget and message, inline validation and direct contacts.",
+      "es": "Hero con monitor 3D, brief del proyecto con teclas de tipo, presupuesto y mensaje, validación en línea y contactos directos.",
+      "ru": "Hero с 3D-монитором, бриф с клавишами типа проекта, бюджетом и сообщением, проверка полей и прямые контакты."
+     },
+     "file": "src/pages/contact.react",
+     "code": "---\nimport { PortfolioContactPage } from 'react-component-kit-ui/templates/portfolio';\n---\n\n<!-- Pass action=\"https://your-backend/contact\" to post the form -->\n<PortfolioContactPage />"
+    }
+   ],
+   "newComponents": [
+    "dev-header",
+    "dev-hero",
+    "dev-projects-showcase",
+    "dev-keyboard",
+    "dev-repo-list",
+    "dev-contributions",
+    "dev-monitor",
+    "dev-contact",
+    "dev-footer",
+    "dev-page-hero",
+    "dev-project-grid",
+    "dev-project-detail",
+    "dev-post-list",
+    "dev-article",
+    "dev-contact-form"
+   ],
+   "reusedComponents": [],
+   "storeConfigExample": "---\n// src/pages/index.react — pass the same site + routes to every page\nimport { PortfolioHomePage, keycapPortfolio, type PortfolioSite } from 'react-component-kit-ui/templates/portfolio';\n\nconst site: PortfolioSite = {\n  ...keycapPortfolio,\n  name: 'Ada Example',\n  logo: { initial: 'A', middle: 'DAEXAMPLE', suffix: '.DEV' },\n  phrases: ['REACT', 'SVELTE', 'GO'],\n  // projects (with visual: { kind: 'code' | 'terminal' | 'equalizer' | 'monitor' | 'endpoints' | 'paint' | 'atom' }),\n  // repos, posts, skills, contacts… — edit or replace any list\n};\n---\n\n<PortfolioHomePage\n  site={site}\n  theme=\"auto\"\n  contributionsSrc=\"/api/contributions.json\"\n  routes={{ home: '/', projects: '/projects/', project: '/projects/', blog: '/blog/', post: '/blog/', contact: '/contact/' }}\n/>"
   }
  ]
 }

@@ -1,0 +1,104 @@
+.dvrl:where([data-rk-3e428a]) { color: var(--c-text-1); }
+.dvrl--glass:where([data-rk-3e428a]) {
+  padding: 1.75rem 2rem;
+  border-radius: 20px;
+  background: rgb(var(--paper-rgb, 255 255 255) / 0.85);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgb(var(--ink-rgb, 0 0 0) / 0.09);
+  box-shadow: 0 24px 50px rgb(var(--ink-rgb, 0 0 0) / 0.06), 0 2px 8px rgb(var(--ink-rgb, 0 0 0) / 0.03);
+}
+.dvrl__head:where([data-rk-3e428a]) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; padding-bottom: 0.9rem; margin-bottom: 0.4rem; border-bottom: 1px solid rgb(var(--ink-rgb, 0 0 0) / 0.08); }
+.dvrl__title:where([data-rk-3e428a]) { margin: 0; font-size: 1.15rem; font-weight: 700; }
+.dvrl__profile:where([data-rk-3e428a]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 32px;
+  padding: 0 0.6rem;
+  border-radius: 3px;
+  border: 1px solid rgb(var(--ink-rgb, 0 0 0) / 0.12);
+  color: var(--c-text-1);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.dvrl__profile:hover:where([data-rk-3e428a]) { background: var(--c-text-1); color: var(--c-bg); }
+.dvrl__ext:where([data-rk-3e428a]) { opacity: 0.45; transition: transform 0.2s ease, opacity 0.2s ease; }
+.dvrl__profile:hover:where([data-rk-3e428a]) .dvrl__ext:where([data-rk-3e428a]) { opacity: 1; transform: translate(1px, -1px); }
+
+.dvrl__list:where([data-rk-3e428a]) { list-style: none; margin: 0; padding: 0; }
+.dvrl__row:where([data-rk-3e428a]) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid rgb(var(--ink-rgb, 0 0 0) / 0.06);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+.dvrl__row:hover:where([data-rk-3e428a]) { background: rgb(var(--ink-rgb, 0 0 0) / 0.025); }
+.dvrl__row.is-new:where([data-rk-3e428a]) { animation: dev-repo-list-dvrl-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.dvrl__main:where([data-rk-3e428a]) { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; flex: 1; }
+.dvrl__line:where([data-rk-3e428a]) { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0; }
+.dvrl__name:where([data-rk-3e428a]) { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--c-text-1); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+.dvrl__name:where([data-rk-3e428a]) svg:where([data-rk-3e428a]) { color: var(--c-text-3); flex-shrink: 0; }
+.dvrl__name:hover:where([data-rk-3e428a]) span:where([data-rk-3e428a]) { text-decoration: underline; text-underline-offset: 3px; }
+.dvrl__lang:where([data-rk-3e428a]) { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.08rem 0.38rem; border-radius: 3px; background: rgb(var(--ink-rgb, 0 0 0) / 0.04); font-family: var(--font-mono); font-size: 0.64rem; color: var(--c-text-2); }
+.dvrl__dot:where([data-rk-3e428a]) { width: 6px; height: 6px; border-radius: 50%; }
+.dvrl__stars:where([data-rk-3e428a]) { padding: 0.08rem 0.42rem; border-radius: 3px; border: 1px solid rgb(var(--ink-rgb, 0 0 0) / 0.18); font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; color: var(--c-text-1); }
+.dvrl__desc:where([data-rk-3e428a]) { margin: 0; max-width: 640px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.76rem; color: var(--c-text-2); }
+.dvrl__actions:where([data-rk-3e428a]) { display: flex; gap: 0.35rem; flex-shrink: 0; }
+.dvrl__icon:where([data-rk-3e428a]) {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: var(--c-text-2);
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.dvrl__icon:hover:where([data-rk-3e428a]) { color: var(--c-text-1); background: rgb(var(--ink-rgb, 0 0 0) / 0.05); border-color: rgb(var(--ink-rgb, 0 0 0) / 0.1); transform: scale(1.06); }
+.dvrl__eye-open:where([data-rk-3e428a]) { display: none; }
+.dvrl__row:hover:where([data-rk-3e428a]) .dvrl__eye-open:where([data-rk-3e428a]),
+.dvrl__live:focus-visible:where([data-rk-3e428a]) .dvrl__eye-open:where([data-rk-3e428a]) { display: block; }
+.dvrl__row:hover:where([data-rk-3e428a]) .dvrl__eye-closed:where([data-rk-3e428a]),
+.dvrl__live:focus-visible:where([data-rk-3e428a]) .dvrl__eye-closed:where([data-rk-3e428a]) { display: none; }
+
+.dvrl__more:where([data-rk-3e428a]) { display: flex; justify-content: center; margin-top: 1rem; }
+.dvrl__more-btn:where([data-rk-3e428a]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0 1rem;
+  border: 0;
+  background: none;
+  color: var(--c-text-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  animation: dev-repo-list-dvrl-nudge 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.dvrl__more-btn:hover:where([data-rk-3e428a]) { color: var(--c-text-1); animation: none; }
+.dvrl:where([data-rk-3e428a]) :focus-visible:where([data-rk-3e428a]) { outline: 2px solid var(--c-text-1); outline-offset: 2px; }
+
+@keyframes dev-repo-list-dvrl-in { from { opacity: 0; transform: translateY(8px); } }
+@keyframes dev-repo-list-dvrl-nudge {
+  0%, 85%, 100% { transform: none; }
+  90% { transform: rotateX(20deg) scale(1.08); color: var(--c-text-1); }
+  94% { transform: rotateX(-12deg) scale(1.08); color: var(--c-text-1); }
+}
+@media (max-width: 640px) {
+  .dvrl--glass:where([data-rk-3e428a]) { padding: 1.25rem 1rem; }
+  .dvrl__row:where([data-rk-3e428a]) { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+  .dvrl__desc:where([data-rk-3e428a]) { white-space: normal; }
+  .dvrl__actions:where([data-rk-3e428a]) { align-self: flex-end; }
+}
+@media (prefers-reduced-motion: reduce) { .dvrl__more-btn:where([data-rk-3e428a]), .dvrl__row.is-new:where([data-rk-3e428a]) { animation: none; } }

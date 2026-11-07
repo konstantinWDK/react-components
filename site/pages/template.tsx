@@ -17,7 +17,7 @@ import '../styles/templates-catalog.css';
 
 type L = Record<Locale, string>;
 interface TplPage { id: string; path: string; name: L; description: L; file: string }
-interface Tpl { slug: string; name: L; tagline: L; description: L; highlights: Record<Locale, string[]>; previewBase: string; pages: TplPage[]; newComponents: string[]; reusedComponents: string[] }
+interface Tpl { slug: string; name: L; tagline: L; description: L; highlights: Record<Locale, string[]>; previewBase: string; pages: TplPage[]; newComponents: string[]; reusedComponents: string[]; peerDeps?: string[] }
 type Snip = Record<string, { pages: Record<string, { file: string; code: string }>; storeConfigExample: string }>;
 
 const getTpl = (slug: string) => (templates as unknown as Tpl[]).find((t) => t.slug === slug);
@@ -86,7 +86,9 @@ export function TemplatePage({ slug, lang }: { slug: string; lang: Locale }) {
           <div className="td-header__stats">
             <span><strong>{tpl.pages.length}</strong> {t('templates.pagesCount')}</span>
             <span><strong>{newItems.filter((c) => !c.isSection).length + reused.length}</strong> {t('templates.componentsCount')}</span>
-            <span><strong>0</strong> deps</span>
+            {tpl.peerDeps?.length
+              ? <span><strong>{tpl.peerDeps.join(' + ')}</strong> (optional peer)</span>
+              : <span><strong>0</strong> deps</span>}
           </div>
           <div className="td-header__actions">
             <a className="tpl-btn tpl-btn--primary" href={tpl.previewBase} target="_blank" rel="noopener">{t('templates.openPreview')}{ext}</a>

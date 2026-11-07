@@ -8,7 +8,12 @@ const paths = [
   '/preview/ecommerce-editorial/', '/preview/ecommerce-editorial/shop/', '/preview/ecommerce-editorial/bag/', '/preview/ecommerce-editorial/checkout/',
   '/preview/saas-hotel/', '/preview/saas-hotel/sign-in/', '/preview/saas-hotel/app/', '/preview/saas-hotel/app/reservations/',
   '/preview/saas-hotel/app/rooms/', '/preview/saas-hotel/app/guests/', '/preview/saas-hotel/app/reports/', '/preview/saas-hotel/app/settings/',
+  '/preview/agency/', '/preview/agency/services/', '/preview/agency/services/ads/', '/preview/agency/work/', '/preview/agency/work/casa-alba-hotels/', '/preview/agency/pricing/',
+  '/preview/agency/about/', '/preview/agency/contact/',
+  '/preview/portfolio/', '/preview/portfolio/projects/', '/preview/portfolio/projects/tidy/', '/preview/portfolio/blog/',
+  '/preview/portfolio/blog/instanced-meshes-for-ui/', '/preview/portfolio/contact/',
   '/templates/ecommerce/', '/es/templates/saas-hotel/', '/ru/templates/ecommerce-editorial/',
+  '/templates/agency/', '/es/templates/portfolio/',
 ];
 const browser = await pw.chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });

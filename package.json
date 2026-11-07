@@ -61,6 +61,12 @@
       ],
       "templates/saas-hotel": [
         "./dist/types/components/lib/templates/saas-hotel/index.d.ts"
+      ],
+      "templates/agency": [
+        "./dist/types/components/lib/templates/agency/index.d.ts"
+      ],
+      "templates/portfolio": [
+        "./dist/types/components/lib/templates/portfolio/index.d.ts"
       ]
     }
   },
@@ -140,6 +146,14 @@
     "./templates/saas-hotel": {
       "types": "./dist/types/components/lib/templates/saas-hotel/index.d.ts",
       "import": "./dist/templates/saas-hotel.js"
+    },
+    "./templates/agency": {
+      "types": "./dist/types/components/lib/templates/agency/index.d.ts",
+      "import": "./dist/templates/agency.js"
+    },
+    "./templates/portfolio": {
+      "types": "./dist/types/components/lib/templates/portfolio/index.d.ts",
+      "import": "./dist/templates/portfolio.js"
     },
     "./styles.css": "./dist/styles.css",
     "./global.css": "./dist/global.css"

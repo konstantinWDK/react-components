@@ -148,6 +148,16 @@ export const sectionCategoryTranslations: Record<string, Record<Locale, Localize
     es: { name: 'Pies de Página', description: 'Pies de página completos con columnas de enlaces, newsletter y redes sociales.' },
     ru: { name: 'Футеры', description: 'Полные подвалы сайта с колонками ссылок, подпиской и соцсетями.' },
   },
+  portfolio: {
+    en: { name: 'Developer Portfolio', description: 'Monochrome, keyboard-inspired sections for developer portfolios: retyping hero, 3D projects showcase, typing 3D keyboard, repository list, 3D contribution matrix, 3D monitor, project case study, blog and contact.' },
+    es: { name: 'Portfolio de desarrollador', description: 'Secciones monocromas inspiradas en un teclado para portfolios de desarrollador: hero que se reescribe, escaparate 3D de proyectos, teclado 3D que escribe, lista de repositorios, matriz 3D de contribuciones, monitor 3D, caso de proyecto, blog y contacto.' },
+    ru: { name: 'Портфолио разработчика', description: 'Монохромные секции в стиле клавиатуры для портфолио разработчика: hero с перепечатывающимся заголовком, 3D-витрина проектов, печатающая 3D-клавиатура, список репозиториев, 3D-матрица вкладов, 3D-монитор, кейс проекта, блог и контакты.' },
+  },
+  agency: {
+    en: { name: 'Agency & Marketing', description: 'Sections for marketing, SEO and web agencies: kinetic hero, services, results, ROI calculator, free audit, pricing, case studies and contact brief.' },
+    es: { name: 'Agencia y Marketing', description: 'Secciones para agencias de marketing, SEO y desarrollo web: hero cinético, servicios, resultados, calculadora de ROI, auditoría gratis, precios, casos de éxito y brief de contacto.' },
+    ru: { name: 'Агентство и маркетинг', description: 'Секции для маркетинговых, SEO и веб-агентств: кинетический hero, услуги, результаты, калькулятор ROI, бесплатный аудит, цены, кейсы и бриф.' },
+  },
   commerce: {
     en: { name: 'E-commerce', description: 'Editorial store sections: shop header with mega menu, hero, collections, product rail, lookbook, reviews and footer.' },
     es: { name: 'E-commerce', description: 'Secciones editoriales para tiendas: cabecera con mega menú, hero, colecciones, carrusel de productos, lookbook, reseñas y footer.' },

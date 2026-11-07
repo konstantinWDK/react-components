@@ -1,0 +1,17 @@
+.dvph:where([data-rk-b52a8b]) { padding: clamp(7rem, 14vw, 9rem) 0 clamp(2rem, 5vw, 3rem); color: var(--c-text-1); }
+.dvph__wrap:where([data-rk-b52a8b]) { max-width: 1040px; margin: 0 auto; padding: 0 clamp(1rem, 3vw, 1.5rem); }
+.dvph--split:where([data-rk-b52a8b]) .dvph__wrap:where([data-rk-b52a8b]) { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 2rem; }
+.dvph__crumbs:where([data-rk-b52a8b]) ol:where([data-rk-b52a8b]) { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1rem; padding: 0; list-style: none; font-family: var(--font-mono); font-size: 0.72rem; color: var(--c-text-3); }
+.dvph__crumbs:where([data-rk-b52a8b]) li:where([data-rk-b52a8b]) + li:where([data-rk-b52a8b])::before { content: '/'; margin-right: 0.4rem; }
+.dvph__crumbs:where([data-rk-b52a8b]) a:where([data-rk-b52a8b]) { color: var(--c-text-2); text-decoration: none; }
+.dvph__crumbs:where([data-rk-b52a8b]) a:hover:where([data-rk-b52a8b]) { color: var(--c-text-1); text-decoration: underline; }
+.dvph__label:where([data-rk-b52a8b]) { margin: 0 0 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-text-3); }
+.dvph__label:where([data-rk-b52a8b]) b:where([data-rk-b52a8b]) { color: var(--c-text-1); }
+.dvph__title:where([data-rk-b52a8b]) { display: flex; flex-direction: column; margin: 0; font-size: clamp(2.4rem, 6.5vw, 4.5rem); font-weight: 700; letter-spacing: -0.04em; line-height: 0.95; }
+.dvph__line:where([data-rk-b52a8b]) { opacity: 0; transform: translateY(30px); animation: dev-page-hero-dvph-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; }
+.dvph__line--accent:where([data-rk-b52a8b]) { color: var(--c-text-3); animation-delay: 0.22s; }
+.dvph__line--long:where([data-rk-b52a8b]) { margin-top: 0.35em; font-size: 0.5em; letter-spacing: -0.03em; line-height: 1.1; }
+.dvph__intro:where([data-rk-b52a8b]) { margin: 1.5rem 0 0; max-width: 560px; font-size: 1rem; line-height: 1.7; color: var(--c-text-2); opacity: 0; animation: dev-page-hero-dvph-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards; }
+@keyframes dev-page-hero-dvph-up { to { opacity: 1; transform: none; } }
+@media (max-width: 860px) { .dvph--split:where([data-rk-b52a8b]) .dvph__wrap:where([data-rk-b52a8b]) { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .dvph__line:where([data-rk-b52a8b]), .dvph__intro:where([data-rk-b52a8b]) { animation: none; opacity: 1; transform: none; } }

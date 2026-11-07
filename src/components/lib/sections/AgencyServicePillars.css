@@ -1,0 +1,46 @@
+.asp-cq:where([data-rk-6fdb99]) { container-type: inline-size; }
+.asp:where([data-rk-6fdb99]) { color: var(--c-text-1, #fff); }
+.asp__head:where([data-rk-6fdb99]) { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--sp-4, 1rem) var(--sp-10, 2.5rem); align-items: end; margin-bottom: clamp(1.75rem, 4cqi, 3rem); }
+.asp__eyebrow:where([data-rk-6fdb99]) { grid-column: 1 / -1; margin: 0; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-text-2, #a3a3a3); }
+.asp__title:where([data-rk-6fdb99]) { margin: 0; font-size: clamp(2.2rem, 5.5cqi, 4.2rem); font-weight: 900; line-height: 0.98; letter-spacing: -0.05em; text-wrap: balance; }
+.asp__title:where([data-rk-6fdb99]) mark:where([data-rk-6fdb99]) { padding: 0 0.08em; border-radius: 0.1em; background: var(--agency-accent, var(--c-primary-light, #d4a017)); color: var(--c-on-primary, #050505); }
+.asp__text:where([data-rk-6fdb99]) { margin: 0; font-size: 1.05rem; line-height: 1.6; color: var(--c-text-2, #a3a3a3); }
+.asp__grid:where([data-rk-6fdb99]) { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: var(--sp-4, 1rem); }
+.asp__card:where([data-rk-6fdb99]) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4, 1rem);
+  padding: clamp(1.4rem, 3cqi, 2rem);
+  border-radius: var(--r-xl, 24px);
+  border: 1.5px solid var(--c-border, rgba(255, 255, 255, 0.12));
+  background: var(--c-bg-1, #0d0d0d);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+.asp__card:hover:where([data-rk-6fdb99]), .asp__card:focus-within:where([data-rk-6fdb99]) { transform: translateY(-4px); border-color: var(--c-text-1, #fff); }
+.asp__card.is-featured:where([data-rk-6fdb99]) { background: var(--agency-accent, var(--c-primary-light, #d4a017)); border-color: transparent; color: var(--c-on-primary, #050505); }
+.asp__top:where([data-rk-6fdb99]) { display: flex; justify-content: space-between; align-items: center; }
+.asp__icon:where([data-rk-6fdb99]) { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px; background: rgb(var(--ink-rgb, 255 255 255) / 0.07); }
+.is-featured:where([data-rk-6fdb99]) .asp__icon:where([data-rk-6fdb99]) { background: rgb(0 0 0 / 0.1); }
+.asp__num:where([data-rk-6fdb99]) { font-size: 0.85rem; font-weight: 800; opacity: 0.6; font-variant-numeric: tabular-nums; }
+.asp__name:where([data-rk-6fdb99]) { color: inherit; margin: var(--sp-2, 0.5rem) 0 0; font-size: clamp(1.6rem, 3cqi, 2.1rem); font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; }
+.asp__name:where([data-rk-6fdb99]) a:where([data-rk-6fdb99]) { color: inherit; text-decoration: none; }
+.asp__name:where([data-rk-6fdb99]) a:where([data-rk-6fdb99])::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+.asp__name:where([data-rk-6fdb99]) a:focus-visible:where([data-rk-6fdb99]) { outline: none; }
+.asp__card:has(.asp__name a:focus-visible):where([data-rk-6fdb99]) { outline: 3px solid var(--c-text-1, #fff); outline-offset: 3px; }
+.asp__short:where([data-rk-6fdb99]) { margin: 0; line-height: 1.55; color: var(--c-text-2, #a3a3a3); }
+.is-featured:where([data-rk-6fdb99]) .asp__short:where([data-rk-6fdb99]) { color: inherit; opacity: 0.82; }
+.asp__kpi:where([data-rk-6fdb99]) { display: flex; align-items: baseline; gap: 0.6rem; margin: 0; padding-block: var(--sp-3, 0.75rem); border-block: 1px solid var(--c-border, rgba(255, 255, 255, 0.12)); }
+.is-featured:where([data-rk-6fdb99]) .asp__kpi:where([data-rk-6fdb99]) { border-color: rgb(0 0 0 / 0.15); }
+.asp__kpi:where([data-rk-6fdb99]) strong:where([data-rk-6fdb99]) { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.05em; line-height: 1; }
+.asp__kpi:where([data-rk-6fdb99]) span:where([data-rk-6fdb99]) { font-size: 0.9rem; opacity: 0.75; }
+.asp__tags:where([data-rk-6fdb99]) { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.asp__tags:where([data-rk-6fdb99]) li:where([data-rk-6fdb99]) { padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid currentColor; font-size: 0.78rem; font-weight: 700; opacity: 0.8; }
+.asp__foot:where([data-rk-6fdb99]) { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3, 0.75rem); margin-top: auto; padding-top: var(--sp-2, 0.5rem); font-weight: 800; }
+.asp__from:where([data-rk-6fdb99]) { font-size: 0.9rem; }
+.asp__go:where([data-rk-6fdb99]) { display: inline-flex; gap: 6px; font-size: 0.9rem; }
+.asp__go:where([data-rk-6fdb99]) span:where([data-rk-6fdb99]) { transition: transform 0.25s ease; }
+.asp__card:hover:where([data-rk-6fdb99]) .asp__go:where([data-rk-6fdb99]) span:where([data-rk-6fdb99]) { transform: translateX(4px); }
+
+@container (max-width: 720px) { .asp__head:where([data-rk-6fdb99]) { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .asp__card:where([data-rk-6fdb99]), .asp__go:where([data-rk-6fdb99]) span:where([data-rk-6fdb99]) { transition: none; } }

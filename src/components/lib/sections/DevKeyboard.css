@@ -1,0 +1,46 @@
+.dvkb:where([data-rk-5cdff8]) {
+  --kc-ink: var(--c-text-1);
+  --kc-paper: var(--c-bg);
+  --kc-muted: var(--c-text-3);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--c-bg);
+}
+.dvkb--empty:where([data-rk-5cdff8]) { min-height: var(--dvkb-min); }
+/* The board lives in the top band; slot content overlaps its lower rows. */
+.dvkb__stage:where([data-rk-5cdff8]) { position: absolute; inset: 0 0 auto; height: calc(var(--dvkb-reveal) + 18rem); }
+.dvkb--empty:where([data-rk-5cdff8]) .dvkb__stage:where([data-rk-5cdff8]) { height: 100%; }
+.dvkb__canvas:where([data-rk-5cdff8]) { position: relative; z-index: 1; width: 100%; height: 100%; cursor: pointer; }
+.dvkb__word:where([data-rk-5cdff8]) {
+  position: absolute;
+  top: 15%;
+  left: 57%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-mono);
+  font-size: clamp(3.2rem, 9.2vw, 8.2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgb(var(--ink-rgb, 0 0 0) / 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+.dvkb__cursor:where([data-rk-5cdff8]) { margin-left: 0.15ch; font-weight: 300; color: rgb(var(--ink-rgb, 0 0 0) / 0.45); animation: dev-keyboard-dvkb-blink 0.85s ease-in-out infinite; }
+.dvkb__content:where([data-rk-5cdff8]) {
+  position: relative;
+  z-index: 2;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: var(--dvkb-reveal) clamp(1rem, 3vw, 1.5rem) 1.5rem;
+  pointer-events: none;
+}
+.dvkb__content:where([data-rk-5cdff8]) > * { pointer-events: auto; }
+@keyframes dev-keyboard-dvkb-blink { 0%, 45% { opacity: 1; } 50%, 95% { opacity: 0; } }
+@media (max-width: 768px) {
+  .dvkb__content:where([data-rk-5cdff8]) { padding-top: calc(var(--dvkb-reveal) * 0.75); }
+}
+@media (prefers-reduced-motion: reduce) { .dvkb__cursor:where([data-rk-5cdff8]) { animation: none; } }

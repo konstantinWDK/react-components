@@ -53,6 +53,40 @@ import ShopReviewsEditorial from '../../../src/components/lib/sections/ShopRevie
 import ShopNewsletterEditorial from '../../../src/components/lib/sections/ShopNewsletterEditorial';
 import ShopFooterWordmark from '../../../src/components/lib/sections/ShopFooterWordmark';
 import ShopCategoryHero from '../../../src/components/lib/sections/ShopCategoryHero';
+import AgencyHeader from '../../../src/components/lib/sections/AgencyHeader';
+import AgencyHeroKinetic from '../../../src/components/lib/sections/AgencyHeroKinetic';
+import AgencyPageHero from '../../../src/components/lib/sections/AgencyPageHero';
+import AgencyServicePillars from '../../../src/components/lib/sections/AgencyServicePillars';
+import AgencyServicesList from '../../../src/components/lib/sections/AgencyServicesList';
+import AgencyResultsBand from '../../../src/components/lib/sections/AgencyResultsBand';
+import AgencyPlatformsMarquee from '../../../src/components/lib/sections/AgencyPlatformsMarquee';
+import AgencyProcessSteps from '../../../src/components/lib/sections/AgencyProcessSteps';
+import AgencyAuditCta from '../../../src/components/lib/sections/AgencyAuditCta';
+import AgencyRoiCalculator from '../../../src/components/lib/sections/AgencyRoiCalculator';
+import AgencyPricingPackages from '../../../src/components/lib/sections/AgencyPricingPackages';
+import AgencyServiceOverview from '../../../src/components/lib/sections/AgencyServiceOverview';
+import AgencyWorkGrid from '../../../src/components/lib/sections/AgencyWorkGrid';
+import AgencyCaseStudyHero from '../../../src/components/lib/sections/AgencyCaseStudyHero';
+import AgencyCaseResults from '../../../src/components/lib/sections/AgencyCaseResults';
+import AgencyQuotes from '../../../src/components/lib/sections/AgencyQuotes';
+import AgencyTeamGrid from '../../../src/components/lib/sections/AgencyTeamGrid';
+import AgencyContactBrief from '../../../src/components/lib/sections/AgencyContactBrief';
+import AgencyFooterCta from '../../../src/components/lib/sections/AgencyFooterCta';
+import DevHeader from '../../../src/components/lib/sections/DevHeader';
+import DevHero from '../../../src/components/lib/sections/DevHero';
+import DevProjectsShowcase from '../../../src/components/lib/sections/DevProjectsShowcase';
+import DevKeyboard from '../../../src/components/lib/sections/DevKeyboard';
+import DevRepoList from '../../../src/components/lib/sections/DevRepoList';
+import DevContributions from '../../../src/components/lib/sections/DevContributions';
+import DevMonitor from '../../../src/components/lib/sections/DevMonitor';
+import DevContact from '../../../src/components/lib/sections/DevContact';
+import DevFooter from '../../../src/components/lib/sections/DevFooter';
+import DevPageHero from '../../../src/components/lib/sections/DevPageHero';
+import DevProjectGrid from '../../../src/components/lib/sections/DevProjectGrid';
+import DevProjectDetail from '../../../src/components/lib/sections/DevProjectDetail';
+import DevPostList from '../../../src/components/lib/sections/DevPostList';
+import DevArticle from '../../../src/components/lib/sections/DevArticle';
+import DevContactForm from '../../../src/components/lib/sections/DevContactForm';
 import { AutoPreview } from '../AutoPreview';
 
 const C: Record<string, ComponentType<any>> = {
@@ -107,6 +141,40 @@ const C: Record<string, ComponentType<any>> = {
   "shop-newsletter-editorial": ShopNewsletterEditorial,
   "shop-footer-wordmark": ShopFooterWordmark,
   "shop-category-hero": ShopCategoryHero,
+  "agency-header": AgencyHeader,
+  "agency-hero-kinetic": AgencyHeroKinetic,
+  "agency-page-hero": AgencyPageHero,
+  "agency-service-pillars": AgencyServicePillars,
+  "agency-services-list": AgencyServicesList,
+  "agency-results-band": AgencyResultsBand,
+  "agency-platforms-marquee": AgencyPlatformsMarquee,
+  "agency-process-steps": AgencyProcessSteps,
+  "agency-audit-cta": AgencyAuditCta,
+  "agency-roi-calculator": AgencyRoiCalculator,
+  "agency-pricing-packages": AgencyPricingPackages,
+  "agency-service-overview": AgencyServiceOverview,
+  "agency-work-grid": AgencyWorkGrid,
+  "agency-case-study-hero": AgencyCaseStudyHero,
+  "agency-case-results": AgencyCaseResults,
+  "agency-quotes": AgencyQuotes,
+  "agency-team-grid": AgencyTeamGrid,
+  "agency-contact-brief": AgencyContactBrief,
+  "agency-footer-cta": AgencyFooterCta,
+  "dev-header": DevHeader,
+  "dev-hero": DevHero,
+  "dev-projects-showcase": DevProjectsShowcase,
+  "dev-keyboard": DevKeyboard,
+  "dev-repo-list": DevRepoList,
+  "dev-contributions": DevContributions,
+  "dev-monitor": DevMonitor,
+  "dev-contact": DevContact,
+  "dev-footer": DevFooter,
+  "dev-page-hero": DevPageHero,
+  "dev-project-grid": DevProjectGrid,
+  "dev-project-detail": DevProjectDetail,
+  "dev-post-list": DevPostList,
+  "dev-article": DevArticle,
+  "dev-contact-form": DevContactForm,
 };
 const NAMES: Record<string, string> = {
   "hero-gradient": "Hero Gradient",
@@ -159,7 +227,41 @@ const NAMES: Record<string, string> = {
   "shop-reviews-editorial": "Shop Reviews Editorial",
   "shop-newsletter-editorial": "Shop Newsletter Editorial",
   "shop-footer-wordmark": "Shop Footer Wordmark",
-  "shop-category-hero": "Shop Category Hero"
+  "shop-category-hero": "Shop Category Hero",
+  "agency-header": "Agency Header",
+  "agency-hero-kinetic": "Agency Hero Kinetic",
+  "agency-page-hero": "Agency Page Hero",
+  "agency-service-pillars": "Agency Service Pillars",
+  "agency-services-list": "Agency Services List",
+  "agency-results-band": "Agency Results Band",
+  "agency-platforms-marquee": "Agency Platforms Marquee",
+  "agency-process-steps": "Agency Process Steps",
+  "agency-audit-cta": "Agency Audit CTA",
+  "agency-roi-calculator": "Agency ROI Calculator",
+  "agency-pricing-packages": "Agency Pricing Packages",
+  "agency-service-overview": "Agency Service Overview",
+  "agency-work-grid": "Agency Work Grid",
+  "agency-case-study-hero": "Agency Case Study Hero",
+  "agency-case-results": "Agency Case Results",
+  "agency-quotes": "Agency Quotes",
+  "agency-team-grid": "Agency Team Grid",
+  "agency-contact-brief": "Agency Contact Brief",
+  "agency-footer-cta": "Agency Footer CTA",
+  "dev-header": "Dev Header",
+  "dev-hero": "Dev Hero",
+  "dev-projects-showcase": "Dev Projects Showcase 3D",
+  "dev-keyboard": "Dev Keyboard 3D",
+  "dev-repo-list": "Dev Repo List",
+  "dev-contributions": "Dev Contributions 3D",
+  "dev-monitor": "Dev Monitor 3D",
+  "dev-contact": "Dev Contact",
+  "dev-footer": "Dev Footer",
+  "dev-page-hero": "Dev Page Hero",
+  "dev-project-grid": "Dev Project Grid",
+  "dev-project-detail": "Dev Project Detail",
+  "dev-post-list": "Dev Post List",
+  "dev-article": "Dev Article",
+  "dev-contact-form": "Dev Contact Form"
 };
 
 export default function Demo({ slug, bare, props }: { slug: string; bare?: boolean; props?: Record<string, unknown> }) {

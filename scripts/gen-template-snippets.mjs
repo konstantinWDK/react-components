@@ -13,7 +13,7 @@ const reg = JSON.parse(fs.readFileSync(path.join(root, 'site/data/registry.json'
 const PKG = 'react-component-kit-ui';
 
 const fileFor = (astroFile) => {
-  const p = astroFile.replace(/^src\/pages\//, '').replace(/\.astro$/, '').replace(/(^|\/)index$/, '');
+  const p = astroFile.replace(/^src\/pages\//, '').replace(/\.(astro|react)$/, '').replace(/(^|\/)index$/, '');
   return p ? `app/${p}/page.tsx` : 'app/page.tsx';
 };
 

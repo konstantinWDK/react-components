@@ -1706,6 +1706,176 @@ export const generatedMeta: Record<string, DemoMeta> = {
     "file": "ShopCategoryHero",
     "category": "sections",
     "usage": "<ShopCategoryHero title=\"Clothing\" count={24} links={[{ label: 'All', href: '/shop/', active: true }, { label: 'Knitwear', href: '/shop/knit/' }]} />"
+  },
+  "agency-header": {
+    "file": "AgencyHeader",
+    "category": "sections",
+    "usage": "<AgencyHeader brand=\"Volta\" links={[{ label: 'Services', href: '/services/' }, { label: 'Work', href: '/work/' }]} cta={{ label: 'Free audit', href: '/contact/' }} />"
+  },
+  "agency-hero-kinetic": {
+    "file": "AgencyHeroKinetic",
+    "category": "sections",
+    "usage": "<AgencyHeroKinetic before=\"More customers from\" words={['Google Ads', 'Meta', 'SEO']} />"
+  },
+  "agency-page-hero": {
+    "file": "AgencyPageHero",
+    "category": "sections",
+    "usage": "<AgencyPageHero eyebrow=\"Services\" title=\"Growth you can *measure*\" breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />"
+  },
+  "agency-service-pillars": {
+    "file": "AgencyServicePillars",
+    "category": "sections",
+    "usage": "<AgencyServicePillars services={[{ name: 'Paid Ads', short: 'Campaigns built around profit.', icon: 'ads', kpi: { value: '4.8×', label: 'ROAS' }, href: '/services/ads/' }]} />"
+  },
+  "agency-services-list": {
+    "file": "AgencyServicesList",
+    "category": "sections",
+    "usage": "<AgencyServicesList services={[{ name: 'SEO', pitch: 'Traffic you do not pay for.', deliverables: ['Audit', 'Content'], timeline: 'Monthly', from: '€1,500 / mo' }]} />"
+  },
+  "agency-results-band": {
+    "file": "AgencyResultsBand",
+    "category": "sections",
+    "usage": "<AgencyResultsBand stats={[{ value: '4.8×', label: 'average ROAS' }, { value: '+212%', label: 'organic growth' }]} />"
+  },
+  "agency-platforms-marquee": {
+    "file": "AgencyPlatformsMarquee",
+    "category": "sections",
+    "usage": "<AgencyPlatformsMarquee platforms={['Google Ads', 'Meta', 'TikTok', 'GA4']} badges={['Google Partner']} />"
+  },
+  "agency-process-steps": {
+    "file": "AgencyProcessSteps",
+    "category": "sections",
+    "usage": "<AgencyProcessSteps steps={[{ title: 'Audit', text: 'We size the opportunity.', duration: 'Week 1' }, { title: 'Launch', text: 'Campaigns go live.', duration: 'Week 2' }]} />"
+  },
+  "agency-audit-cta": {
+    "file": "AgencyAuditCta",
+    "category": "sections",
+    "usage": "<AgencyAuditCta cta={{ label: 'Book a call', href: '/contact/' }} />"
+  },
+  "agency-roi-calculator": {
+    "file": "AgencyRoiCalculator",
+    "category": "sections",
+    "usage": "<AgencyRoiCalculator spend={10000} cpc={0.9} cvr={2.2} aov={85} uplift={25} />"
+  },
+  "agency-pricing-packages": {
+    "file": "AgencyPricingPackages",
+    "category": "sections",
+    "usage": "<AgencyPricingPackages tabs={[{ id: 'seo', label: 'SEO', packages: [{ name: 'Starter', price: 1500, billing: 'monthly', note: 'One market.', features: ['Audit', '4 pages / mo'] }] }]} />"
+  },
+  "agency-service-overview": {
+    "file": "AgencyServiceOverview",
+    "category": "sections",
+    "usage": "<AgencyServiceOverview title=\"Everything in our SEO service\" included={[{ title: 'Technical SEO', text: 'Crawl, speed and schema.' }]} tools={['Search Console', 'Ahrefs']} />"
+  },
+  "agency-work-grid": {
+    "file": "AgencyWorkGrid",
+    "category": "sections",
+    "usage": "<AgencyWorkGrid projects={[{ slug: 'nordlys', client: 'Nordlys', title: 'Scaling to 6.2× ROAS', category: 'Ads', result: '6.2× ROAS', hue: 190, href: '/work/nordlys/' }]} />"
+  },
+  "agency-case-study-hero": {
+    "file": "AgencyCaseStudyHero",
+    "category": "sections",
+    "usage": "<AgencyCaseStudyHero client=\"Nordlys\" category=\"Ads\" title=\"Scaling a skincare brand to 6.2× ROAS\" result=\"6.2× ROAS\" hue={190} />"
+  },
+  "agency-case-results": {
+    "file": "AgencyCaseResults",
+    "category": "sections",
+    "usage": "<AgencyCaseResults challenge=\"Tracking missed 30% of sales.\" metrics={[{ label: 'ROAS', before: '2.1×', after: '6.2×', change: '+195%' }]} series={[42, 61, 92, 131, 188]} />"
+  },
+  "agency-quotes": {
+    "file": "AgencyQuotes",
+    "category": "sections",
+    "usage": "<AgencyQuotes quotes={[{ quote: 'They tripled our revenue.', name: 'Freja Lund', role: 'Co-founder', company: 'Nordlys', result: '6.2× ROAS' }]} />"
+  },
+  "agency-team-grid": {
+    "file": "AgencyTeamGrid",
+    "category": "sections",
+    "usage": "<AgencyTeamGrid people={[{ name: 'Marta Ibáñez', role: 'Founder', location: 'Madrid', fact: 'Managed €20M in ads.' }]} />"
+  },
+  "agency-contact-brief": {
+    "file": "AgencyContactBrief",
+    "category": "sections",
+    "usage": "<AgencyContactBrief services={['Paid Ads', 'SEO', 'Web']} budgets={['< €2k / mo', '€2–5k / mo']} />"
+  },
+  "agency-footer-cta": {
+    "file": "AgencyFooterCta",
+    "category": "sections",
+    "usage": "<AgencyFooterCta brand=\"Volta\" email=\"hello@volta.agency\" />"
+  },
+  "dev-header": {
+    "file": "DevHeader",
+    "category": "sections",
+    "usage": "<DevHeader logo={{ initial: 'K', middle: 'EYCAP', suffix: '.DEV' }} links={[{ label: 'Projects', href: '/projects/' }, { label: 'Blog', href: '/blog/' }]} />"
+  },
+  "dev-hero": {
+    "file": "DevHero",
+    "category": "sections",
+    "usage": "{/* npm install three */}\n<DevHero titles={[{ base: 'Soft', ext: 'ware', role: 'Developer' }, { base: 'Front', ext: 'end', role: 'Engineer' }]} name=\"Noa Lindqvist\" status=\"Available for freelance\" skills={[{ category: 'Frontend', skills: [{ name: 'React', description: 'Component architecture and design systems.' }] }]} />"
+  },
+  "dev-projects-showcase": {
+    "file": "DevProjectsShowcase",
+    "category": "sections",
+    "usage": "{/* npm install three */}\n<DevProjectsShowcase projects={[\n  { title: 'Orbit UI', tagline: 'Accessible React kit', category: 'Frontend', description: 'Typed, accessible components.', technologies: ['React', 'TypeScript'], visual: { kind: 'atom' } },\n  { title: 'Tidy', tagline: 'Frees disk space', category: 'Developer Tools', description: 'Removes stale caches safely.', technologies: ['Rust'], visual: { kind: 'terminal' } },\n]} />"
+  },
+  "dev-keyboard": {
+    "file": "DevKeyboard",
+    "category": "sections",
+    "usage": "{/* npm install three */}\n<DevKeyboard phrases={['REACT', 'REACT', 'TYPESCRIPT']}>\n  <DevRepoList repos={repos} />\n</DevKeyboard>"
+  },
+  "dev-repo-list": {
+    "file": "DevRepoList",
+    "category": "sections",
+    "usage": "<DevRepoList profile={{ label: 'github.com/you', href: 'https://github.com/you' }} repos={[{ name: 'orbit-ui', description: 'React kit', language: 'TypeScript', color: '#3178c6', stars: 120, url: '#' }]} />"
+  },
+  "dev-contributions": {
+    "file": "DevContributions",
+    "category": "sections",
+    "usage": "{/* npm install three */}\n<DevContributions title=\"A year of commits\" src=\"/api/contributions.json\" />"
+  },
+  "dev-monitor": {
+    "file": "DevMonitor",
+    "category": "sections",
+    "usage": "{/* npm install three */}\n<DevMonitor lines={['$ npm run build', '> built in 1.2s']} />"
+  },
+  "dev-contact": {
+    "file": "DevContact",
+    "category": "sections",
+    "usage": "<DevContact contacts={[{ kind: 'email', label: 'Email', value: 'hi@you.dev', href: 'mailto:hi@you.dev' }]} cta={{ label: 'Start a project', href: '/contact/' }} />"
+  },
+  "dev-footer": {
+    "file": "DevFooter",
+    "category": "sections",
+    "usage": "<DevFooter name=\"Noa Lindqvist\" links={[{ label: 'Blog', href: '/blog/' }]} note=\"Built with React\" />"
+  },
+  "dev-page-hero": {
+    "file": "DevPageHero",
+    "category": "sections",
+    "usage": "<DevPageHero label=\"PROJECTS // INDEX\" title=\"Things I've\" titleAccent=\"built & shipped.\" />"
+  },
+  "dev-project-grid": {
+    "file": "DevProjectGrid",
+    "category": "sections",
+    "usage": "<DevProjectGrid projects={[{ title: 'Orbit UI', tagline: 'Accessible React kit', category: 'Frontend', href: '/projects/orbit-ui/', status: 'Live' }]} />"
+  },
+  "dev-project-detail": {
+    "file": "DevProjectDetail",
+    "category": "sections",
+    "usage": "<DevProjectDetail project={{ title: 'Tidy', description: 'Frees disk space.', technologies: ['Rust'], role: 'Author', year: '2025' }} />"
+  },
+  "dev-post-list": {
+    "file": "DevPostList",
+    "category": "sections",
+    "usage": "<DevPostList posts={[{ title: 'Damped springs', excerpt: 'Why per-frame tweens feel rubbery.', href: '/blog/springs/', date: '2026-09-14', category: 'animation' }]} />"
+  },
+  "dev-article": {
+    "file": "DevArticle",
+    "category": "sections",
+    "usage": "<DevArticle title=\"Damped springs\" date=\"2026-09-14\" category=\"animation\" html=\"<p>…</p>\" />"
+  },
+  "dev-contact-form": {
+    "file": "DevContactForm",
+    "category": "sections",
+    "usage": "<DevContactForm action=\"https://your-backend/contact\" contacts={[{ label: 'Email', value: 'hi@you.dev', href: 'mailto:hi@you.dev' }]} />"
   }
 };
 

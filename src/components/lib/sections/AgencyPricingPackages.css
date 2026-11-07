@@ -1,0 +1,41 @@
+.app-cq:where([data-rk-17fea4]) { container-type: inline-size; }
+.app:where([data-rk-17fea4]) { color: var(--c-text-1, #fff); }
+.app__head:where([data-rk-17fea4]) { max-width: 46rem; margin-bottom: clamp(1.5rem, 4cqi, 2.5rem); }
+.app__eyebrow:where([data-rk-17fea4]) { margin: 0 0 var(--sp-3, 0.75rem); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-text-2, #a3a3a3); }
+.app__title:where([data-rk-17fea4]) { margin: 0; font-size: clamp(2rem, 5cqi, 3.6rem); font-weight: 900; line-height: 1; letter-spacing: -0.05em; text-wrap: balance; }
+.app__text:where([data-rk-17fea4]) { margin: var(--sp-4, 1rem) 0 0; font-size: 1.05rem; line-height: 1.6; color: var(--c-text-2, #a3a3a3); }
+
+.app__controls:where([data-rk-17fea4]) { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--sp-4, 1rem); margin-bottom: var(--sp-6, 1.5rem); }
+.app__tabs:where([data-rk-17fea4]) { display: inline-flex; padding: 5px; border-radius: 999px; background: rgb(var(--ink-rgb, 255 255 255) / 0.07); }
+.app__tab:where([data-rk-17fea4]) { min-height: 46px; padding: 0 1.25rem; border: 0; border-radius: 999px; background: none; color: var(--c-text-2, #a3a3a3); font: inherit; font-weight: 800; cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
+.app__tab[aria-selected='true']:where([data-rk-17fea4]) { background: var(--c-text-1, #fff); color: var(--c-bg, #050505); }
+.app__tab:focus-visible:where([data-rk-17fea4]) { outline: 2px solid var(--agency-accent, var(--c-primary-light, #d4a017)); outline-offset: 2px; }
+.app__billing:where([data-rk-17fea4]) { display: inline-flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 700; color: var(--c-text-2, #a3a3a3); }
+.app__billing[hidden]:where([data-rk-17fea4]) { display: none; }
+.app__billing:where([data-rk-17fea4]) em:where([data-rk-17fea4]) { font-style: normal; padding: 0.15rem 0.5rem; border-radius: 999px; background: var(--agency-accent, var(--c-primary-light, #d4a017)); color: var(--c-on-primary, #050505); font-weight: 900; }
+.app__switch:where([data-rk-17fea4]) { position: relative; width: 54px; height: 30px; border: 0; border-radius: 999px; background: rgb(var(--ink-rgb, 255 255 255) / 0.18); cursor: pointer; transition: background 0.2s ease; }
+.app__switch:where([data-rk-17fea4]) span:where([data-rk-17fea4]) { position: absolute; top: 4px; left: 4px; width: 22px; height: 22px; border-radius: 50%; background: var(--c-text-1, #fff); transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+.app__switch[aria-checked='true']:where([data-rk-17fea4]) { background: var(--agency-accent, var(--c-primary-light, #d4a017)); }
+.app__switch[aria-checked='true']:where([data-rk-17fea4]) span:where([data-rk-17fea4]) { transform: translateX(24px); background: var(--c-on-primary, #050505); }
+.app__switch:focus-visible:where([data-rk-17fea4]) { outline: 2px solid var(--agency-accent, var(--c-primary-light, #d4a017)); outline-offset: 3px; }
+
+.app__panel:focus-visible:where([data-rk-17fea4]) { outline: none; }
+.app__grid:where([data-rk-17fea4]) { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: var(--sp-4, 1rem); }
+.app__card:where([data-rk-17fea4]) { position: relative; display: flex; flex-direction: column; gap: var(--sp-3, 0.75rem); padding: clamp(1.4rem, 3cqi, 2rem); border-radius: var(--r-xl, 24px); border: 1.5px solid var(--c-border, rgba(255, 255, 255, 0.12)); background: var(--c-bg-1, #0d0d0d); }
+.app__card.is-featured:where([data-rk-17fea4]) { border-color: var(--c-text-1, #fff); box-shadow: 8px 8px 0 var(--agency-accent, var(--c-primary-light, #d4a017)); }
+.app__flag:where([data-rk-17fea4]) { position: absolute; top: -13px; right: 20px; padding: 0.3rem 0.75rem; border-radius: 999px; background: var(--agency-accent, var(--c-primary-light, #d4a017)); color: var(--c-on-primary, #050505); font-size: 0.75rem; font-weight: 900; }
+.app__name:where([data-rk-17fea4]) { margin: 0; font-size: 1.5rem; font-weight: 900; letter-spacing: -0.03em; }
+.app__note:where([data-rk-17fea4]) { margin: 0; font-size: 0.92rem; color: var(--c-text-2, #a3a3a3); }
+.app__price:where([data-rk-17fea4]) { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; margin: var(--sp-2, 0.5rem) 0; }
+.app__price:where([data-rk-17fea4]) strong:where([data-rk-17fea4]) { font-size: clamp(2.2rem, 5cqi, 3rem); font-weight: 900; letter-spacing: -0.05em; line-height: 1; font-variant-numeric: tabular-nums; }
+.app__price:where([data-rk-17fea4]) span:where([data-rk-17fea4]) { font-size: 0.9rem; color: var(--c-text-2, #a3a3a3); }
+.app__features:where([data-rk-17fea4]) { display: grid; gap: 8px; margin: 0 0 var(--sp-4, 1rem); padding: var(--sp-4, 1rem) 0 0; list-style: none; border-top: 1px solid var(--c-border, rgba(255, 255, 255, 0.12)); }
+.app__features:where([data-rk-17fea4]) li:where([data-rk-17fea4]) { display: flex; gap: 8px; font-size: 0.95rem; }
+.app__features:where([data-rk-17fea4]) span:where([data-rk-17fea4]) { color: var(--agency-ink, var(--c-primary-light, #d4a017)); font-weight: 900; }
+.app__cta:where([data-rk-17fea4]) { display: inline-flex; justify-content: center; align-items: center; min-height: 52px; margin-top: auto; border-radius: 999px; border: 1.5px solid currentColor; color: inherit; font-weight: 800; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; }
+.app__cta:hover:where([data-rk-17fea4]) { background: var(--c-text-1, #fff); color: var(--c-bg, #050505); }
+.is-featured:where([data-rk-17fea4]) .app__cta:where([data-rk-17fea4]) { background: var(--agency-accent, var(--c-primary-light, #d4a017)); border-color: transparent; color: var(--c-on-primary, #050505); }
+.app__cta:focus-visible:where([data-rk-17fea4]) { outline: 2px solid var(--agency-accent, var(--c-primary-light, #d4a017)); outline-offset: 3px; }
+.app__foot:where([data-rk-17fea4]) { margin: var(--sp-6, 1.5rem) 0 0; font-size: 0.85rem; color: var(--c-text-3, #777); }
+.sr-only:where([data-rk-17fea4]) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .app__switch:where([data-rk-17fea4]) span:where([data-rk-17fea4]), .app__tab:where([data-rk-17fea4]), .app__cta:where([data-rk-17fea4]) { transition: none; } }

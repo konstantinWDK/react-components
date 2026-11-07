@@ -81,5 +81,71 @@
    }
   },
   "storeConfigExample": "import { DashboardPage, lobbyData, type LobbyData } from 'react-component-kit-ui/templates/saas-hotel';\n\nconst data: LobbyData = {\n  ...lobbyData,\n  workspace: { name: 'Casa Alba', plan: 'Starter', initials: 'CA' },\n  user: { name: 'Marta Gil', role: 'Owner', email: 'marta@casaalba.com' },\n};\n\nexport default function Page() {\n  return <DashboardPage data={data} theme=\"auto\" />;\n}\n"
+ },
+ "agency": {
+  "pages": {
+   "home": {
+    "file": "app/page.tsx",
+    "code": "import { AgencyHomePage } from 'react-component-kit-ui/templates/agency';\n\nexport default function Page() {\n  return <AgencyHomePage theme=\"dark\" />;\n}\n"
+   },
+   "services": {
+    "file": "app/services/page.tsx",
+    "code": "import { AgencyServicesPage } from 'react-component-kit-ui/templates/agency';\n\nexport default function Page() {\n  return <AgencyServicesPage />;\n}\n"
+   },
+   "service": {
+    "file": "app/services/[slug]/page.tsx",
+    "code": "import { AgencyServicePage, voltaAgency } from 'react-component-kit-ui/templates/agency';\n\nexport function getStaticPaths() {\n  return voltaAgency.services.map((s) => ({ params: { slug: s.slug } }));\n}\n\nexport default async function Page({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params;\n  return <AgencyServicePage slug={slug} />;\n}\n"
+   },
+   "work": {
+    "file": "app/work/page.tsx",
+    "code": "import { AgencyWorkPage } from 'react-component-kit-ui/templates/agency';\n\nexport default function Page() {\n  return <AgencyWorkPage />;\n}\n"
+   },
+   "case": {
+    "file": "app/work/[slug]/page.tsx",
+    "code": "import { AgencyCaseStudyPage, voltaAgency } from 'react-component-kit-ui/templates/agency';\n\nexport function getStaticPaths() {\n  return voltaAgency.cases.map((c) => ({ params: { slug: c.slug } }));\n}\n\nexport default async function Page({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params;\n  return <AgencyCaseStudyPage slug={slug} />;\n}\n"
+   },
+   "pricing": {
+    "file": "app/pricing/page.tsx",
+    "code": "import { AgencyPricingPage } from 'react-component-kit-ui/templates/agency';\n\nexport default function Page() {\n  return <AgencyPricingPage />;\n}\n"
+   },
+   "about": {
+    "file": "app/about/page.tsx",
+    "code": "import { AgencyAboutPage } from 'react-component-kit-ui/templates/agency';\n\nexport default function Page() {\n  return <AgencyAboutPage />;\n}\n"
+   },
+   "contact": {
+    "file": "app/contact/page.tsx",
+    "code": "import { AgencyContactPage } from 'react-component-kit-ui/templates/agency';\n\nexport default function Page() {\n  return (\n    <>\n      {/* Pass action=\"https://your-backend/brief\" to post the form */}\n      <AgencyContactPage />\n    </>\n  );\n}\n"
+   }
+  },
+  "storeConfigExample": "import { AgencyHomePage, voltaAgency, type AgencySite } from 'react-component-kit-ui/templates/agency';\n\nconst site: AgencySite = {\n  ...voltaAgency,\n  name: 'Northwind',\n  email: 'hello@northwind.agency',\n  currency: 'USD',\n  locale: 'en-US',\n  // services, cases, pricing, team… — edit or replace any list\n};\n\nexport default function Page() {\n  return <AgencyHomePage site={site} theme=\"auto\" routes={{ home: '/', services: '/services/', service: '/services/', work: '/work/', caseStudy: '/work/', pricing: '/pricing/', about: '/about/', contact: '/contact/' }} />;\n}\n"
+ },
+ "portfolio": {
+  "pages": {
+   "home": {
+    "file": "app/page.tsx",
+    "code": "import { PortfolioHomePage } from 'react-component-kit-ui/templates/portfolio';\n\n// npm install three\n\nexport default function Page() {\n  return (\n    <>\n      {/* contributionsSrc: a URL returning { weeks: [{ days: [{ date, count }] }] } */}\n      <PortfolioHomePage theme=\"light\" />\n    </>\n  );\n}\n"
+   },
+   "projects": {
+    "file": "app/projects/page.tsx",
+    "code": "import { PortfolioProjectsPage } from 'react-component-kit-ui/templates/portfolio';\n\nexport default function Page() {\n  return <PortfolioProjectsPage />;\n}\n"
+   },
+   "project": {
+    "file": "app/projects/[slug]/page.tsx",
+    "code": "import { PortfolioProjectPage, keycapPortfolio } from 'react-component-kit-ui/templates/portfolio';\n\nexport const generateStaticParams = () => keycapPortfolio.projects.map((p) => ({ slug: p.slug }));\n\nexport default async function Page({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params;\n  return <PortfolioProjectPage slug={slug} />;\n}\n"
+   },
+   "blog": {
+    "file": "app/blog/page.tsx",
+    "code": "import { PortfolioBlogPage } from 'react-component-kit-ui/templates/portfolio';\n\nexport default function Page() {\n  return <PortfolioBlogPage />;\n}\n"
+   },
+   "post": {
+    "file": "app/blog/[slug]/page.tsx",
+    "code": "import { PortfolioPostPage, keycapPortfolio } from 'react-component-kit-ui/templates/portfolio';\n\nexport const generateStaticParams = () => keycapPortfolio.posts.map((p) => ({ slug: p.slug }));\n\nexport default async function Page({ params }: { params: Promise<{ slug: string }> }) {\n  const { slug } = await params;\n  return <PortfolioPostPage slug={slug} />;\n}\n"
+   },
+   "contact": {
+    "file": "app/contact/page.tsx",
+    "code": "import { PortfolioContactPage } from 'react-component-kit-ui/templates/portfolio';\n\nexport default function Page() {\n  return (\n    <>\n      {/* Pass action=\"https://your-backend/contact\" to post the form */}\n      <PortfolioContactPage />\n    </>\n  );\n}\n"
+   }
+  },
+  "storeConfigExample": "import { PortfolioHomePage, keycapPortfolio, type PortfolioSite } from 'react-component-kit-ui/templates/portfolio';\n\nconst site: PortfolioSite = {\n  ...keycapPortfolio,\n  name: 'Ada Example',\n  logo: { initial: 'A', middle: 'DAEXAMPLE', suffix: '.DEV' },\n  phrases: ['REACT', 'SVELTE', 'GO'],\n  // projects (with visual: { kind: 'code' | 'terminal' | 'equalizer' | 'monitor' | 'endpoints' | 'paint' | 'atom' }),\n  // repos, posts, skills, contacts… — edit or replace any list\n};\n\nexport default function Page() {\n  return <PortfolioHomePage site={site} theme=\"auto\" contributionsSrc=\"/api/contributions.json\" routes={{ home: '/', projects: '/projects/', project: '/projects/', blog: '/blog/', post: '/blog/', contact: '/contact/' }} />;\n}\n"
  }
 }
