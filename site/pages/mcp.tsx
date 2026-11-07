@@ -59,6 +59,19 @@ const CLIENTS: { id: string; hint: Record<Locale, string>; code: string; lang: s
   },
 ];
 
+/** Input parameters per tool (from mcp/tools.ts). */
+const PARAMS: Record<string, string> = {
+  search_components: 'query, category?, limit?',
+  list_components: 'category',
+  get_component: 'slug',
+  get_component_code: 'slug',
+  list_categories: '—',
+  list_templates: '—',
+  get_template: 'slug, page?',
+  get_design_tokens: '—',
+  get_library_info: '—',
+};
+
 const TOOLS: [string, Record<Locale, string>][] = [
   ['search_components', { en: 'Find components and sections by keyword', es: 'Busca componentes y secciones por palabra clave', ru: 'Поиск компонентов и секций по ключевому слову' }],
   ['list_components', { en: 'Everything in a category', es: 'Todo lo que hay en una categoría', ru: 'Всё содержимое категории' }],
@@ -90,6 +103,122 @@ const PROMPTS: Record<Locale, [string, string][]> = {
     ['Шаблоны', 'Разверни шаблон агентства в моём Next.js-приложении со всеми страницами'],
     ['Темы', 'Покажи дизайн-токены и переключи приложение на светлую тему'],
   ],
+};
+
+
+/** Long-form docs: how it works, verification, FAQ. */
+const DOCS: Record<Locale, {
+  whatTitle: string; whatP: string[]; flowTitle: string; flow: [string, string][];
+  verifyTitle: string; verifyDesc: string; verifyAsk: string; verifyAskText: string; verifyCli: string; verifyHealth: string;
+  toolsDesc: string; thTool: string; thParams: string; thDesc: string; paramsNote: string;
+  faqTitle: string; faq: [string, string][];
+  tocWhat: string; tocVerify: string; tocFaq: string;
+}> = {
+  en: {
+    whatTitle: 'What is MCP?',
+    whatP: [
+      'The Model Context Protocol (MCP) is an open standard that lets AI assistants call external tools. Instead of guessing component names or props from training data, your assistant asks this server and gets the real, current answer.',
+      'The server is read-only and public: it serves the catalog, props, source code and templates of the kit. It never reads your project or your files.',
+    ],
+    flowTitle: 'How it works',
+    flow: [
+      ['Connect', 'Add the server URL to your editor once (config below).'],
+      ['Ask', 'Describe what you want to build in plain language.'],
+      ['Discover', 'The agent calls search_components / list_templates to find the right pieces.'],
+      ['Read', 'It calls get_component for props and imports, or get_component_code for the full source.'],
+      ['Write', 'It writes the code into your project with the correct imports and CSS.'],
+    ],
+    verifyTitle: 'Check the connection',
+    verifyDesc: 'After adding the config, restart your editor (or reload MCP servers) and check that the tools are available.',
+    verifyAsk: 'Ask your assistant',
+    verifyAskText: 'Which react-components MCP tools do you have? Call get_library_info.',
+    verifyCli: 'In Claude Code you can list the configured servers:',
+    verifyHealth: 'Check that the server is up (returns JSON with version and counts):',
+    toolsDesc: 'Tools your assistant can call. Parameters marked with ? are optional.',
+    thTool: 'Tool', thParams: 'Parameters', thDesc: 'Returns',
+    paramsNote: 'slug accepts a kebab-case slug ("glass-button") or a component name ("GlassButton").',
+    faqTitle: 'FAQ and troubleshooting',
+    faq: [
+      ['Do I need to install the npm package?', `No. The agent can either add react-component-kit-ui and import components from it, or copy a single component's .tsx + .css into your project with get_component_code. Tell it which one you prefer.`],
+      ['Is it free? Do I need an API key?', 'Yes, it is free and open. No account, no key and no sign-up.'],
+      ['My client only supports SSE', 'Use https://mcp.reactcomponents.dev/sse instead of /mcp. The tools are the same.'],
+      ['My client only supports local (stdio) servers', 'Wrap the remote server with mcp-remote: command "npx", args ["-y", "mcp-remote", "https://mcp.reactcomponents.dev/mcp"].'],
+      ['Opening /mcp in the browser shows "Method not allowed"', 'That is expected: /mcp only accepts POST requests from MCP clients. Open https://mcp.reactcomponents.dev/ for the server landing page.'],
+      ['I get error 429', 'The server allows 120 requests per minute per IP. Wait a minute and try again.'],
+      ['The agent does not use the tools', 'Mention the kit explicitly, e.g. "use the react-components MCP", and check that the server shows as connected in your editor.'],
+    ],
+    tocWhat: 'What is MCP?', tocVerify: 'Check the connection', tocFaq: 'FAQ',
+  },
+  es: {
+    whatTitle: '¿Qué es MCP?',
+    whatP: [
+      'Model Context Protocol (MCP) es un estándar abierto que permite a los asistentes de IA usar herramientas externas. En lugar de adivinar nombres de componentes o props, tu asistente consulta este servidor y obtiene la respuesta real y actualizada.',
+      'El servidor es público y de solo lectura: sirve el catálogo, las props, el código fuente y las plantillas del kit. Nunca lee tu proyecto ni tus archivos.',
+    ],
+    flowTitle: 'Cómo funciona',
+    flow: [
+      ['Conectar', 'Añade la URL del servidor a tu editor una sola vez (configuración más abajo).'],
+      ['Pedir', 'Describe lo que quieres construir en lenguaje natural.'],
+      ['Descubrir', 'El agente llama a search_components / list_templates para encontrar las piezas adecuadas.'],
+      ['Leer', 'Llama a get_component para ver props e imports, o a get_component_code para el código completo.'],
+      ['Escribir', 'Escribe el código en tu proyecto con los imports y el CSS correctos.'],
+    ],
+    verifyTitle: 'Comprueba la conexión',
+    verifyDesc: 'Después de añadir la configuración, reinicia tu editor (o recarga los servidores MCP) y comprueba que las herramientas están disponibles.',
+    verifyAsk: 'Pregúntale a tu asistente',
+    verifyAskText: '¿Qué herramientas del MCP react-components tienes? Llama a get_library_info.',
+    verifyCli: 'En Claude Code puedes listar los servidores configurados:',
+    verifyHealth: 'Comprueba que el servidor está activo (devuelve JSON con la versión y los totales):',
+    toolsDesc: 'Herramientas que tu asistente puede llamar. Los parámetros con ? son opcionales.',
+    thTool: 'Herramienta', thParams: 'Parámetros', thDesc: 'Devuelve',
+    paramsNote: 'slug acepta un slug en kebab-case ("glass-button") o el nombre del componente ("GlassButton").',
+    faqTitle: 'Preguntas frecuentes y problemas',
+    faq: [
+      ['¿Tengo que instalar el paquete de npm?', 'No. El agente puede instalar react-component-kit-ui e importar desde ahí, o copiar el .tsx + .css de un solo componente en tu proyecto con get_component_code. Dile cuál prefieres.'],
+      ['¿Es gratis? ¿Necesito API key?', 'Sí, es gratis y abierto. Sin cuenta, sin clave y sin registro.'],
+      ['Mi cliente solo admite SSE', 'Usa https://mcp.reactcomponents.dev/sse en lugar de /mcp. Las herramientas son las mismas.'],
+      ['Mi cliente solo admite servidores locales (stdio)', 'Envuelve el servidor remoto con mcp-remote: command "npx", args ["-y", "mcp-remote", "https://mcp.reactcomponents.dev/mcp"].'],
+      ['Al abrir /mcp en el navegador sale "Method not allowed"', 'Es normal: /mcp solo acepta peticiones POST de clientes MCP. Abre https://mcp.reactcomponents.dev/ para ver la página del servidor.'],
+      ['Me da error 429', 'El servidor permite 120 peticiones por minuto por IP. Espera un minuto y vuelve a intentarlo.'],
+      ['El agente no usa las herramientas', 'Menciona el kit explícitamente, por ejemplo "usa el MCP de react-components", y comprueba que el servidor aparece como conectado en tu editor.'],
+    ],
+    tocWhat: '¿Qué es MCP?', tocVerify: 'Comprobar conexión', tocFaq: 'Preguntas frecuentes',
+  },
+  ru: {
+    whatTitle: 'Что такое MCP?',
+    whatP: [
+      'Model Context Protocol (MCP) — открытый стандарт, который позволяет ИИ-ассистентам вызывать внешние инструменты. Вместо того чтобы угадывать названия компонентов и props, ассистент спрашивает этот сервер и получает актуальный ответ.',
+      'Сервер публичный и только для чтения: он отдаёт каталог, props, исходный код и шаблоны набора. Он никогда не читает ваш проект и файлы.',
+    ],
+    flowTitle: 'Как это работает',
+    flow: [
+      ['Подключение', 'Один раз добавьте URL сервера в редактор (конфигурация ниже).'],
+      ['Запрос', 'Опишите обычными словами, что хотите создать.'],
+      ['Поиск', 'Агент вызывает search_components / list_templates, чтобы найти нужные части.'],
+      ['Чтение', 'Вызывает get_component для props и импортов или get_component_code для полного кода.'],
+      ['Код', 'Пишет код в ваш проект с правильными импортами и CSS.'],
+    ],
+    verifyTitle: 'Проверка подключения',
+    verifyDesc: 'После добавления конфигурации перезапустите редактор (или перезагрузите MCP-серверы) и проверьте, что инструменты доступны.',
+    verifyAsk: 'Спросите ассистента',
+    verifyAskText: 'Какие инструменты MCP react-components тебе доступны? Вызови get_library_info.',
+    verifyCli: 'В Claude Code можно вывести список настроенных серверов:',
+    verifyHealth: 'Проверьте, что сервер работает (возвращает JSON с версией и количеством):',
+    toolsDesc: 'Инструменты, которые может вызывать ассистент. Параметры с ? необязательны.',
+    thTool: 'Инструмент', thParams: 'Параметры', thDesc: 'Возвращает',
+    paramsNote: 'slug принимает slug в kebab-case ("glass-button") или имя компонента ("GlassButton").',
+    faqTitle: 'Вопросы и решение проблем',
+    faq: [
+      ['Нужно ли устанавливать npm-пакет?', 'Нет. Агент может установить react-component-kit-ui и импортировать из него или скопировать .tsx + .css одного компонента в проект через get_component_code. Скажите, что предпочитаете.'],
+      ['Это бесплатно? Нужен API-ключ?', 'Да, бесплатно и открыто. Без аккаунта, ключа и регистрации.'],
+      ['Мой клиент поддерживает только SSE', 'Используйте https://mcp.reactcomponents.dev/sse вместо /mcp. Инструменты те же.'],
+      ['Мой клиент поддерживает только локальные (stdio) серверы', 'Оберните удалённый сервер в mcp-remote: command "npx", args ["-y", "mcp-remote", "https://mcp.reactcomponents.dev/mcp"].'],
+      ['При открытии /mcp в браузере — "Method not allowed"', 'Это нормально: /mcp принимает только POST-запросы от MCP-клиентов. Страница сервера — https://mcp.reactcomponents.dev/.'],
+      ['Ошибка 429', 'Сервер допускает 120 запросов в минуту с одного IP. Подождите минуту и повторите.'],
+      ['Агент не использует инструменты', 'Явно упомяните набор, например «используй MCP react-components», и проверьте, что сервер подключён в редакторе.'],
+    ],
+    tocWhat: 'Что такое MCP?', tocVerify: 'Проверка', tocFaq: 'Вопросы',
+  },
 };
 
 const TEXT = {
@@ -151,10 +280,14 @@ export const mcpMetadata = (lang: Locale) => buildMetadata({ path: '/mcp', lang,
 export function McpPage({ lang }: { lang: Locale }) {
   const t = useTranslations(lang);
   const x = TEXT[lang];
+  const d = DOCS[lang];
   const toc = [
+    { id: 'what-is-mcp', text: d.tocWhat },
     { id: 'setup', text: x.tocSetup },
+    { id: 'verify', text: d.tocVerify },
     { id: 'prompts', text: x.tocPrompts },
     { id: 'tools', text: x.tocTools },
+    { id: 'faq', text: d.tocFaq },
   ];
   const stats: [number, string][] = [
     [docsComponents.length, x.sComponents],
@@ -191,6 +324,20 @@ export function McpPage({ lang }: { lang: Locale }) {
         </div>
         <p className="mcp-note mcp-note--endpoint">{x.legacy} <code>{SSE_URL}</code>.</p>
 
+        <section className="install-section anim-slide-up" id="what-is-mcp">
+          <h2 className="step-title">{d.whatTitle}</h2>
+          {d.whatP.map((p) => <p className="step-desc" key={p}>{p}</p>)}
+          <h3 className="step-subtitle">{d.flowTitle}</h3>
+          <ol className="mcp-flow">
+            {d.flow.map(([title, text], i) => (
+              <li className="mcp-flow__step" key={title}>
+                <span className="mcp-flow__num">{i + 1}</span>
+                <div><strong>{title}</strong><p>{text}</p></div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
         <section className="install-section anim-slide-up" id="setup">
           <h2 className="step-title">{x.setupTitle}</h2>
           <p className="step-desc">{x.setupDesc}</p>
@@ -209,6 +356,17 @@ export function McpPage({ lang }: { lang: Locale }) {
           </div>
         </section>
 
+        <section className="install-section anim-slide-up" id="verify">
+          <h2 className="step-title">{d.verifyTitle}</h2>
+          <p className="step-desc">{d.verifyDesc}</p>
+          <h3 className="step-subtitle">{d.verifyAsk}</h3>
+          <div className="code-block-wrap"><CodeBlock code={d.verifyAskText} lang="text" title="prompt" /></div>
+          <p className="mcp-note">{d.verifyCli}</p>
+          <div className="code-block-wrap"><CodeBlock code="claude mcp list" lang="bash" title="terminal" /></div>
+          <p className="mcp-note">{d.verifyHealth}</p>
+          <div className="code-block-wrap"><CodeBlock code="curl https://mcp.reactcomponents.dev/health" lang="bash" title="terminal" /></div>
+        </section>
+
         <section className="install-section anim-slide-up" id="prompts" style={{ animationDelay: '0.1s' }}>
           <h2 className="step-title">{x.promptsTitle}</h2>
           <p className="step-desc">{x.promptsDesc}</p>
@@ -224,12 +382,28 @@ export function McpPage({ lang }: { lang: Locale }) {
 
         <section className="install-section anim-slide-up" id="tools" style={{ animationDelay: '0.2s' }}>
           <h2 className="step-title">{x.toolsTitle}</h2>
-          <div className="mcp-grid">
-            {TOOLS.map(([name, desc]) => (
-              <div className="mcp-card" key={name}>
-                <code className="mcp-card__name">{name}</code>
-                <p className="mcp-card__text mcp-card__text--plain">{desc[lang]}</p>
-              </div>
+          <p className="step-desc">{d.toolsDesc}</p>
+          <div className="ref-table mcp-table">
+            <table>
+              <thead><tr><th>{d.thTool}</th><th>{d.thParams}</th><th>{d.thDesc}</th></tr></thead>
+              <tbody>
+                {TOOLS.map(([name, desc]) => (
+                  <tr key={name}><td><code>{name}</code></td><td><code className="mcp-table__params">{PARAMS[name]}</code></td><td>{desc[lang]}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mcp-note">{d.paramsNote}</p>
+        </section>
+
+        <section className="install-section anim-slide-up" id="faq">
+          <h2 className="step-title">{d.faqTitle}</h2>
+          <div className="mcp-faq">
+            {d.faq.map(([q, a]) => (
+              <details className="mcp-faq__item" key={q}>
+                <summary>{q}</summary>
+                <p>{a}</p>
+              </details>
             ))}
           </div>
         </section>

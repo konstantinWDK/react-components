@@ -65,7 +65,7 @@ const TEXT = {
     readyDesc: 'Browse the component library and start copying components into your project.',
     browseBtn: 'Browse Components',
     viewSectionsBtn: 'View Sections',
-    task: 'Task', cmd: 'Command / Import', rInstall: 'Install library', rTokens: 'Import design tokens', rStyles: 'Import component styles', rBrowse: 'Browse components', rSections: 'Browse sections',
+    task: 'Task', cmd: 'Command / Import', rInstall: 'Install library', rTokens: 'Import design tokens', rStyles: 'Import component styles', rBrowse: 'Browse components', rSections: 'Browse sections', rMcp: 'Use with AI editors (MCP)',
   },
   es: {
     pageTitle: 'Guía de Instalación',
@@ -91,7 +91,7 @@ const TEXT = {
     readyDesc: 'Explora la biblioteca de componentes y empieza a copiarlos en tu proyecto.',
     browseBtn: 'Explorar Componentes',
     viewSectionsBtn: 'Ver Secciones',
-    task: 'Tarea', cmd: 'Comando / Import', rInstall: 'Instalar librería', rTokens: 'Importar tokens globales', rStyles: 'Importar estilos de componentes', rBrowse: 'Ver componentes', rSections: 'Ver secciones',
+    task: 'Tarea', cmd: 'Comando / Import', rInstall: 'Instalar librería', rTokens: 'Importar tokens globales', rStyles: 'Importar estilos de componentes', rBrowse: 'Ver componentes', rSections: 'Ver secciones', rMcp: 'Usar con editores de IA (MCP)',
   },
   ru: {
     pageTitle: 'Руководство по установке',
@@ -117,7 +117,7 @@ const TEXT = {
     readyDesc: 'Изучите каталог компонентов и используйте их в своих проектах прямо сейчас.',
     browseBtn: 'Каталог компонентов',
     viewSectionsBtn: 'Секции страниц',
-    task: 'Задача', cmd: 'Команда / Импорт', rInstall: 'Установка библиотеки', rTokens: 'Импорт дизайн-токенов', rStyles: 'Импорт стилей компонентов', rBrowse: 'Все компоненты', rSections: 'Все секции',
+    task: 'Задача', cmd: 'Команда / Импорт', rInstall: 'Установка библиотеки', rTokens: 'Импорт дизайн-токенов', rStyles: 'Импорт стилей компонентов', rBrowse: 'Все компоненты', rSections: 'Все секции', rMcp: 'Использовать с ИИ-редакторами (MCP)',
   },
 };
 
@@ -197,6 +197,7 @@ export function InstallPage({ lang }: { lang: Locale }) {
                 <tr><td>{x.rStyles}</td><td><code>import &apos;{pkg}/styles.css&apos;</code></td></tr>
                 <tr><td>{x.rBrowse}</td><td><a href={getLocalizedPath('/docs/glass-button', lang)}>{t('nav.components')} →</a></td></tr>
                 <tr><td>{x.rSections}</td><td><a href={getLocalizedPath('/sections', lang)}>{t('nav.sections')} →</a></td></tr>
+                <tr><td>{x.rMcp}</td><td><a href={getLocalizedPath('/mcp', lang)}>{t('nav.mcp')} →</a></td></tr>
               </tbody>
             </table>
           </div>

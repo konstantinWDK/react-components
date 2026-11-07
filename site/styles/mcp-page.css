@@ -53,3 +53,32 @@
 
 .mcp-note--endpoint { margin-bottom: var(--sp-8); }
 .mcp-grid--prompts { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+
+.mcp-flow { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-3); }
+.mcp-flow__step {
+  display: flex; gap: var(--sp-3); align-items: flex-start;
+  padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.02); border: 1px solid var(--c-border);
+}
+.mcp-flow__num {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 0.8rem; font-weight: 800;
+  color: #7dd3fc; background: rgba(56, 189, 248, 0.15);
+}
+.mcp-flow__step strong { font-size: 0.92rem; color: var(--c-text-1); }
+.mcp-flow__step p { margin: 0.15rem 0 0; font-size: 0.875rem; color: var(--c-text-3); line-height: 1.5; }
+
+.mcp-table { overflow-x: auto; margin-bottom: var(--sp-3); }
+.mcp-table td:first-child code { white-space: nowrap; }
+.mcp-table__params { white-space: nowrap; }
+
+.mcp-faq { display: grid; gap: var(--sp-2); }
+.mcp-faq__item {
+  border: 1px solid var(--c-border); border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.02); padding: 0 var(--sp-4);
+}
+.mcp-faq__item summary {
+  cursor: pointer; padding: var(--sp-3) 0; font-weight: 600; font-size: 0.92rem; color: var(--c-text-1);
+}
+.mcp-faq__item[open] summary { color: #7dd3fc; }
+.mcp-faq__item p { margin: 0 0 var(--sp-3); font-size: 0.875rem; line-height: 1.6; color: var(--c-text-2); }
