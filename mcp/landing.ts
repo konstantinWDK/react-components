@@ -19,7 +19,7 @@ const tools: [string, string][] = [
   ['get_component', 'Props interface, usage example and import'],
   ['get_component_code', 'Full .tsx + .css source to copy'],
   ['list_categories', 'Categories, entry points and counts'],
-  ['list_templates', 'Store, editorial shop and hotel SaaS'],
+  ['list_templates', 'Store, shop, hotel SaaS, agency and portfolio'],
   ['get_template', 'Next.js App Router files for every page'],
   ['get_design_tokens', 'Colors, surfaces, radii and theming'],
   ['get_library_info', 'Install, CSS imports and peers'],

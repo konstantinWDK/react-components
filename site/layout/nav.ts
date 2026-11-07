@@ -5,6 +5,7 @@ import { useTranslations, type TranslationKey } from '../i18n/translations';
 export const NAV_ITEMS: { key: TranslationKey; path: string; match: (p: string) => boolean }[] = [
   { key: 'nav.home', path: '/', match: (p) => p === '/' },
   { key: 'nav.install', path: '/install', match: (p) => p.startsWith('/install') },
+  { key: 'nav.mcp', path: '/mcp', match: (p) => p.startsWith('/mcp') },
   { key: 'nav.components', path: '/install', match: (p) => p.startsWith('/docs') },
   { key: 'nav.sections', path: '/sections', match: (p) => p.startsWith('/sections') },
   { key: 'nav.templates', path: '/templates', match: (p) => p.startsWith('/templates') },

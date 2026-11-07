@@ -147,7 +147,7 @@ Always remind the user of the one-time CSS imports from get_library_info.`,
     'list_templates',
     {
       title: 'List templates',
-      description: 'Multi-page production templates (Nova Store e-commerce, Forma editorial shop, Lobby SaaS hotel PMS) with pages and live previews.',
+      description: 'Multi-page production templates (e-commerce store, editorial shop, SaaS hotel PMS, creative agency, developer portfolio) with pages and live previews.',
       annotations: { readOnlyHint: true },
     },
     async () =>
@@ -158,7 +158,7 @@ Always remind the user of the one-time CSS imports from get_library_info.`,
     'get_template',
     {
       title: 'Get template',
-      description: 'Template specification and ready-to-paste Next.js App Router files for every page (or one page). Slugs: "ecommerce", "ecommerce-editorial", "saas-hotel".',
+      description: 'Template specification and ready-to-paste Next.js App Router files for every page (or one page). Use a slug from list_templates (e.g. "ecommerce", "saas-hotel", "agency", "portfolio").',
       inputSchema: {
         slug: z.string().describe('Template slug'),
         page: z.string().optional().describe('Optional page id to return only that page (see list_templates)'),

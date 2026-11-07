@@ -46,7 +46,7 @@ export function getSidebarData(lang: Locale): SidebarData {
 
   const tpl = templates.map((x) => ({ slug: x.slug, name: (x.name as unknown as Record<string, string>)[lang], pages: x.pages.length }));
 
-  const keys = ['sidebar.navLabel', 'sidebar.getStarted', 'sidebar.search', 'sidebar.results', 'sidebar.noResultsFor', 'sidebar.clear', 'sidebar.viewAll', 'sidebar.new', 'sidebar.pages', 'sidebar.explore', 'sidebar.exploreLabel', 'nav.install', 'nav.templates', 'nav.components', 'nav.sections'] as const;
+  const keys = ['sidebar.navLabel', 'sidebar.getStarted', 'sidebar.search', 'sidebar.results', 'sidebar.noResultsFor', 'sidebar.clear', 'sidebar.viewAll', 'sidebar.new', 'sidebar.pages', 'sidebar.explore', 'sidebar.exploreLabel', 'nav.install', 'nav.mcp', 'nav.templates', 'nav.components', 'nav.sections'] as const;
   const labels = Object.fromEntries(keys.map((k) => [k, t(k)]));
   return { componentGroups, sectionGroups, templates: tpl, labels };
 }

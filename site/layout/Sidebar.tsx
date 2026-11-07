@@ -8,6 +8,7 @@ import '../styles/sidebar.css';
 
 const ICONS = {
   install: '<path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/>',
+  mcp: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>',
   templates: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',
   store: '<path d="M6 7h12l-1 13H7z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/>',
 };
@@ -45,6 +46,7 @@ export function Sidebar({ lang, path, data }: { lang: Locale; path: string; data
 
   const getStarted = [
     { label: L['nav.install'], raw: '/install', icon: ICONS.install, active: current.startsWith('/install'), isNew: false },
+    { label: L['nav.mcp'], raw: '/mcp', icon: ICONS.mcp, active: current.startsWith('/mcp'), isNew: true },
     { label: L['nav.templates'], raw: '/templates', icon: ICONS.templates, active: current === '/templates', isNew: true },
   ];
   const componentTotal = data.componentGroups.reduce((n, g) => n + g.items.length, 0);

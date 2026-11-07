@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 
 /** Every page in every locale, with hreflang alternates. */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ['/', '/install', '/sections', '/templates', ...docsComponents.map((c) => `/docs/${c.slug}`), ...sectionComponents.map((c) => `/sections/${c.slug}`), ...templates.map((t) => `/templates/${t.slug}`)];
+  const paths = ['/', '/install', '/mcp', '/sections', '/templates', ...docsComponents.map((c) => `/docs/${c.slug}`), ...sectionComponents.map((c) => `/sections/${c.slug}`), ...templates.map((t) => `/templates/${t.slug}`)];
   return paths.flatMap((p) =>
     SUPPORTED_LOCALES.map((lang) => ({
       url: `${siteConfig.url}${getLocalizedPath(p, lang)}`,
