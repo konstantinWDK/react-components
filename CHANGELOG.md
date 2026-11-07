@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-07
+
 ### Added
 - **Marketing agency template `templates/agency` ("Volta")**: 8 pages (home, services, service detail, case studies, case study, pricing, about, contact), dark by default; live preview at `/preview/agency/`.
 - **Developer portfolio template `templates/portfolio` ("Keycap")**: 6 pages (home, projects, case study, blog, article, contact) with 3D sections; live preview at `/preview/portfolio/`.

@@ -1,6 +1,6 @@
 {
   "name": "react-component-kit-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Free, open-source, accessible UI component library for React: dark-first glassmorphism design, zero runtime dependencies. Sister project of astro-component-kit.",
   "type": "module",
   "main": "./dist/index.js",
